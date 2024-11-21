@@ -1,0 +1,170 @@
+﻿capital = 800 #Gyeongseong
+oob = "KOR_1910"
+
+set_technology = {
+	# Navy
+	ww1_battleship0 = 1
+	ww1_battleship0_mtg = 1
+	
+	ww1_battleship1 = 1
+	ww1_battleship1_mtg = 1
+
+	ww1_heavy_cruiser0 = 1
+	ww1_heavy_cruiser0_mtg = 1 # heavy_cruiser_1890 (Armored Cruiser I)
+	ww1_heavy_cruiser1 = 1
+	ww1_heavy_cruiser1_mtg = 1 # heavy_cruiser_1900 (Armored Cruiser II)
+
+	ww1_light_cruiser0 = 1
+	ww1_light_cruiser0_mtg = 1 # light_cruiser_1890 (Protected Cruiser I)
+	ww1_light_cruiser1 = 1
+	ww1_light_cruiser1_mtg = 1 # light_cruiser_1900 (Protected Cruiser II)
+
+	ww1_destroyer0 = 1
+	ww1_destroyer0_mtg = 1 # destroyer_1890 (Torpedo Boat I)
+	ww1_destroyer1 = 1
+	ww1_destroyer1_mtg = 1 # destroyer_1900 (Destroyer I)
+	ww1_destroyer2 = 1
+	ww1_destroyer2_mtg = 1 # destroyer_1906 (Destroyer II)
+
+	ww1_moduleMTG_mines = 1
+	ww1_moduleMTG_mines_mtg = 1 # Mines
+
+	ww1_submarine0 = 1
+	ww1_submarine0_mtg = 1 # coastal_submarine_1900 (Coastal Submarine 1900, first available Submarine)
+
+	transport = 1
+	transport_mtg = 1 # Naval Transport
+}
+
+set_technology = { 
+	light_field_gun1 = 1
+	 
+	heavy_field_gun1 = 1
+	motorised_infantry = 1
+	electronic_mechanical_engineering = 1
+	infantry_weapons = 1
+	ww1_destroyer0 = 1
+	ww1_destroyer0_mtg = 1
+	ww1_destroyer1 = 1
+	ww1_destroyer1_mtg = 1
+
+	ww1_light_cruiser1 = 1
+	ww1_light_cruiser1_mtg = 1
+	ww1_light_cruiser0 = 1
+	ww1_light_cruiser0_mtg = 1
+
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+}
+
+set_politics = {
+    ruling_party = neutrality
+    last_election = "1910.1.1"
+    election_frequency = 48
+    elections_allowed = no
+}
+set_popularities = {
+    democratic = 0
+    fascism = 0
+    communism = 0
+    neutrality = 100
+}
+
+set_stability = 0.75
+set_convoys=20
+
+1914.1.1 = {
+
+	set_technology = { 
+
+		light_field_gun2 = 1
+		heavy_field_gun2 = 1
+		motorised_infantry = 1
+		electronic_mechanical_engineering = 1
+
+		mechanical_computing=1
+		computing_machine=1
+		basic_encryption=1
+		basic_decryption=1
+		basic_machine_tools=1
+		improved_machine_tools=1
+		concentrated_industry=1
+		concentrated_industry2=1
+		synth_oil_experiments=1
+		oil_plant=1
+		construction1 = 1
+		excavation1=1
+		construction2=1
+		excavation2=1
+		infantry_weapons = 1
+		ww1infantry_weapons1=1
+		marines=1
+		tech_mountaineers = 1
+		ww1_destroyer0 = 1
+	ww1_destroyer0_mtg = 1
+		#basic_machinegun=1
+		ww1_destroyer1 = 1
+	ww1_destroyer1_mtg = 1
+		ww1_destroyer2 = 1
+	ww1_destroyer2_mtg = 1
+		 
+		basic_light_cruiser=1
+		#early_protected_cruiser=1
+		ww1_light_cruiser1 = 1
+	ww1_light_cruiser1_mtg = 1
+		ww1_light_cruiser0 = 1
+	ww1_light_cruiser0_mtg = 1	 
+		 
+		early_battlecruiser=1
+		ww1_battleship0 = 1
+	ww1_battleship0_mtg = 1
+		ww1_battleship1 = 1
+	ww1_battleship1_mtg = 1
+		#early_dreadnought=1
+		ww1_battleship0 = 1
+	ww1_battleship0_mtg = 1
+		transport = 1
+	transport_mtg = 1
+		early_submarine=1
+		ww1_submarine1 = 1
+	ww1_submarine1_mtg = 1 ww1_coastal_submarine1=1
+		ww1_submarine2=1 ww1_coastal_submarine2=1
+		#improved_coastal_submarine=1
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+		tech_military_police=1
+		tech_maintenance_company=1
+		tech_field_hospital = 1
+		tech_logistics_company = 1
+		#KiS #tech_signal_company=1
+		}
+	}
+
+# LEADERS
+recruit_character = KOR_emperor_yunghui
+recruit_character = KOR_yeo_un_hyeong
+
+# ARMY
+recruit_character = KOR_min_shang_ho
+recruit_character = KOR_shin_phal_gewn
+recruit_character = KOR_jhang_hwa_sik
+recruit_character = KOR_baek_seong_gi
+recruit_character = KOR_shin_dol_seok
+recruit_character = KOR_lee_do_jae
+recruit_character = KOR_hyun_young_woon
+recruit_character = KOR_lee_dong_hui
+recruit_character = KOR_hong_bum_do
+recruit_character = KOR_no_baek_rin
+recruit_character = KOR_nha_joong_so
+recruit_character = KOR_kim_jwa_jin
+recruit_character = KOR_han_chang_geol
+recruit_character = KOR_ji_cheong_cheon
+recruit_character = KOR_kim_gyung_cheon
+recruit_character = KOR_oh_ha_mook
+
+# NAVY
+recruit_character = KOR_shin_soon_seong
+recruit_character = KOR_min_hyung_sik
+

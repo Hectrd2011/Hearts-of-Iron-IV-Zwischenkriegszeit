@@ -1,0 +1,15 @@
+characters = {
+	LIB_arthur_barclay = {
+		name = LIB_arthur_barclay
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_LIB_arthur_barclay
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1935.1.1.1"
+			id = -1
+		}
+	}
+}

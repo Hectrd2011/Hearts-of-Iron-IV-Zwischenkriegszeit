@@ -1,0 +1,128 @@
+﻿capital = 46
+oob = "GEO_1910"
+set_fuel_ratio = 0.20
+set_research_slots = 2
+set_technology = { 
+	light_field_gun1 = 1
+	 
+	heavy_field_gun1 = 1
+	motorised_infantry = 1
+	electronic_mechanical_engineering = 1
+	infantry_weapons = 1
+	ww1_destroyer0 = 1
+	ww1_destroyer0_mtg = 1
+	ww1_destroyer1 = 1
+	ww1_destroyer1_mtg = 1
+
+	transport = 1
+	transport_mtg = 1
+	ww1_submarine1 = 1
+	ww1_submarine1_mtg = 1 ww1_coastal_submarine1=1
+	ww1_submarine2=1 ww1_coastal_submarine2=1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+}
+
+
+set_politics = {
+    ruling_party = neutrality
+    last_election = "1910.1.1"
+    election_frequency = 48
+    elections_allowed = yes
+}
+set_popularities = {
+    democratic = 20
+    fascism = 18
+    communism = 2
+    neutrality = 60
+}
+
+add_ideas=neutrality_idea 
+set_stability = 0.75
+set_convoys=10
+
+1914.1.1 = {
+
+	oob="GEO_1914"
+
+	set_technology = { 
+
+		electronic_mechanical_engineering = 1
+		mechanical_computing=1
+		computing_machine=1
+		basic_encryption=1
+		basic_decryption=1
+		basic_machine_tools=1
+		improved_machine_tools=1
+		concentrated_industry=1
+		concentrated_industry2=1
+		synth_oil_experiments=1
+		oil_plant=1
+		construction1 = 1
+		excavation1=1
+		construction2=1
+		excavation2=1
+		infantry_weapons = 1
+		ww1infantry_weapons1=1
+		marines=1
+		tech_mountaineers = 1
+		ww1_destroyer0 = 1
+	ww1_destroyer0_mtg = 1
+		 
+		ww1_destroyer1 = 1
+	ww1_destroyer1_mtg = 1
+		#KiS=1
+		#KiS=1
+		ww1_destroyer2 = 1
+	ww1_destroyer2_mtg = 1
+
+		transport = 1
+	transport_mtg = 1
+		early_submarine=1
+		ww1_submarine1 = 1
+	ww1_submarine1_mtg = 1 ww1_coastal_submarine1=1
+		ww1_submarine2=1 ww1_coastal_submarine2=1
+		#KiS #improved_coastal_submarine=1
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+		tech_military_police=1
+		tech_maintenance_company=1
+		tech_field_hospital = 1
+		tech_logistics_company = 1
+
+	}
+}
+
+
+
+# LEADER
+recruit_character = GEO_nikolay_chkheidze
+
+# ARMY
+recruit_character = GEO_mazniashvili
+recruit_character = GEO_andronikashvili
+recruit_character = GEO_tsulukidze
+recruit_character = GEO_chkheidze
+recruit_character = GEO_gardapkhadze
+recruit_character = GEO_bakradze
+
+
+1919.01.01 = {
+
+	oob = "GEO_1919"
+
+	set_politics = {
+	    ruling_party = democratic
+	    last_election = "1918.5.28"
+	    election_frequency = 48
+	    elections_allowed = yes
+	}
+	set_popularities = {
+	    democratic = 84
+	    communism = 2
+	    neutrality = 14
+	}
+
+}

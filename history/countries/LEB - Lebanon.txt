@@ -1,0 +1,76 @@
+﻿capital = 553
+oob = "LEB_1910"
+
+set_technology = { 
+	light_field_gun1 = 1
+	 
+	heavy_field_gun1 = 1
+	motorised_infantry = 1
+	electronic_mechanical_engineering = 1
+	infantry_weapons = 1
+
+	transport = 1
+	transport_mtg = 1
+
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1910.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 0
+	fascism = 0
+	communism = 0
+	neutrality = 100
+}
+
+set_stability = 0.75
+set_convoys = 5
+
+1914.1.1 = {
+
+	oob = "LEB_1914"
+
+	set_technology = { 
+
+		motorised_infantry = 1
+		electronic_mechanical_engineering = 1
+		mechanical_computing=1
+		computing_machine=1
+		basic_encryption=1
+		basic_decryption=1
+		basic_machine_tools=1
+		improved_machine_tools=1
+		concentrated_industry=1
+		concentrated_industry2=1
+		synth_oil_experiments=1
+		oil_plant=1
+		construction1 = 1
+		excavation1=1
+		construction2=1
+		excavation2=1
+		infantry_weapons = 1
+		ww1infantry_weapons1=1
+
+		ww1_destroyer0 = 1
+	ww1_destroyer0_mtg = 1
+
+		ww1_battleship0 = 1
+	ww1_battleship0_mtg = 1
+
+		transport = 1
+	transport_mtg = 1
+
+		tech_military_police=1
+		tech_maintenance_company=1
+		tech_field_hospital = 1
+		tech_logistics_company = 1
+	}
+}

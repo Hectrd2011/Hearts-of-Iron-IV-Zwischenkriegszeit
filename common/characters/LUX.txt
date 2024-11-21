@@ -1,0 +1,41 @@
+characters = {
+	LUX_marie_adelaide = {
+		name = LUX_marie_adelaide
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_LUX_marie_adelaide
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1935.1.1.1"
+			id = -1
+		}
+	}
+	LUX_aloys_kaiser = {
+		name = LUX_aloys_kaiser
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_LUX_aloys_kaiser
+			}
+		}
+		country_leader = {
+			ideology = stalinism
+			expire = "1935.1.1.1"
+			id = -1
+		}
+	}
+	LUX_william_iv = {
+		name = LUX_william_iv
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_LUX_william_iv
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1935.1.1.1"
+			id = -1
+		}
+	}
+}

@@ -1,0 +1,50 @@
+characters = {
+	HON_rafael_lopez_gutierrez = {
+		name = HON_rafael_lopez_gutierrez
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_HON_rafael_lopez_gutierrez
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1935.1.1.1"
+			id = -1
+		}
+	}
+	HON_miguel_r_davila = {
+		name = HON_miguel_r_davila
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_HON_miguel_r_davila
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1935.1.1.1"
+			id = -1
+		}
+	}
+	HON_carias = {
+		name = HON_carias
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = 40003
+		}
+	}
+	HON_tosta = {
+		name = HON_tosta
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = 40004
+		}
+	}
+}

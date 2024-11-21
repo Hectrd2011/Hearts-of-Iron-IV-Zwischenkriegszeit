@@ -1,0 +1,15 @@
+characters = {
+	INS_frederik_idenburg = {
+		name = INS_frederik_idenburg
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_INS_frederik_idenburg
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1935.1.1.1"
+			id = -1
+		}
+	}
+}

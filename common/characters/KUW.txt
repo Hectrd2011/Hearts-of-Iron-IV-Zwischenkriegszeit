@@ -1,0 +1,28 @@
+characters = {
+	KUW_mubarak_alsabah = {
+		name = KUW_mubarak_alsabah
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_KUW_mubarak_alsabah
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1915.11.28.1"
+			id = -1
+		}
+	}
+	KUW_Salem_Mubarak_Al_Sabah = {
+		name = KUW_Salem_Mubarak_Al_Sabah
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_KUW_Salem_Mubarak_Al_Sabah
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1921.2.23.1"
+			id = -1
+		}
+	}
+}

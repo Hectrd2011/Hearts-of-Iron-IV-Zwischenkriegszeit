@@ -1,0 +1,15 @@
+characters = {
+	MAL_arthur_henderson_young = {
+		name = MAL_arthur_henderson_young
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_MAL_arthur_henderson_young
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1936.1.1.1"
+			id = -1
+		}
+	}
+}

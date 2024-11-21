@@ -1,0 +1,15 @@
+characters = {
+	OMA_faisal_bin_turki = {
+		name = OMA_faisal_bin_turki
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_OMA_faisal_bin_turki
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1935.1.1.1"
+			id = -1
+		}
+	}
+}

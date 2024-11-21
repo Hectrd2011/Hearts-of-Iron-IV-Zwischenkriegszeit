@@ -1,0 +1,50 @@
+﻿capital = 46
+
+set_fuel_ratio = 0.20
+set_research_slots = 2
+
+# Azerbaijan Democratic Republic
+
+set_politics = {
+    ruling_party = neutrality
+    last_election = "1919.1.1"
+    election_frequency = 48
+    elections_allowed = yes
+}
+
+set_popularities = {
+    democratic = 20
+    fascism = 18
+    communism = 2
+    neutrality = 60
+}
+
+set_stability = 0.75
+
+# LEADER
+recruit_character = AZR_alimardan_topchubashov
+
+# ARMY
+recruit_character = AZR_erevanski
+recruit_character = AZR_shikhlinski
+recruit_character = AZR_usubbekov
+recruit_character = AZR_vekilov
+recruit_character = AZR_novruzov
+recruit_character = AZR_selimov
+
+
+1919.01.01 = {
+	set_politics = {
+	    ruling_party = democratic
+	    last_election = "1918.5.28"
+	    election_frequency = 48
+	    elections_allowed = yes
+	}
+	set_popularities = {
+	    democratic = 80
+	    communism = 10
+	    neutrality = 10
+	}
+
+	oob = "AZR_1919"
+}

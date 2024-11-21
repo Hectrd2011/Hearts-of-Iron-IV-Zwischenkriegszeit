@@ -1,0 +1,15 @@
+characters = {
+	QAT_abdullah_bin_jassim_al_thani = {
+		name = QAT_abdullah_bin_jassim_al_thani
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_QAT_abdullah_bin_jassim_al_thani
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1935.1.1.1"
+			id = -1
+		}
+	}
+}

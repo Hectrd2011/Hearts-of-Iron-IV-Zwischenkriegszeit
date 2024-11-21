@@ -1,0 +1,98 @@
+﻿add_namespace = ww1_greece
+
+# George I Assasinated!
+#____________________________________________________________
+country_event = {
+    title = ww1_greece.1.t # George I Assasinated!
+    desc = ww1_greece.1.d # While out on an afternoon walk near the White Tower on 18 March 1913, he was shot at close range in the back by Alexandros Schinas, who was said to belong to a Socialist organization.Constantine I is now King
+    id = ww1_greece.1
+    picture = ww1_greece_1
+    fire_only_once = yes
+    is_triggered_only = no
+    mean_time_to_happen = {
+        days = 1
+    }
+    trigger = {
+        tag = GRE
+        has_government = neutrality
+        not = {
+            has_country_flag = george_died
+        }
+        date > 1913.3.13
+    }
+    option = {
+        name = ww1_greece.1.a
+        ai_chance = {
+            factor = 100
+        }
+        set_country_flag = george_died
+        kill_country_leader = yes
+        create_country_leader = {
+            name = GRE_constantine_i
+            desc = GRE_constantine_i_DESC
+            picture = "gfx/hoi4tgw_portraits/GRE/country_leaders/GRE_constantine_i.dds"
+            expire = "1935.1.1"
+            ideology = despotism
+            traits = {}
+        }
+    }
+}
+#____________________________________________________________
+
+# France Sends Troops - Armée d'Orient
+#____________________________________________________________
+country_event = {
+	id = ww1_greece.5
+	title = ww1_greece.5.t
+	desc = ww1_greece.5.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = ww1_greece.5.a
+	}
+}
+#____________________________________________________________
+
+# GRE can occupy Smyrna (without declaring war on the Ottoman Empire)
+#____________________________________________________________
+country_event = {
+	id = ww1_greece.6
+	title = ww1_greece.6.t
+	desc = ww1_greece.6.d
+	#picture = ww1_greece.6
+	fire_only_once = yes
+	mean_time_to_happen = {
+        days = 2
+    }
+
+	trigger = {
+		tag = GRE
+		has_global_flag = kis_treaty_of_versailles
+		NOT = {
+			has_global_flag = occupation_of_smyrna
+		}
+        TUR = {
+            owns_state = 339 # Smyrna
+        }        
+	}
+	
+	# GRE Yes
+	option = {
+		name = ww1_greece.6.a
+		ai_chance = { factor = 100 }
+		set_global_flag = occupation_of_smyrna
+
+		hidden_effect = {
+			news_event = { hours = 3 random_hours = 3 id = interwar_news.9 }				# Occupation of Smyrna
+			news_event = { days = 4 id = interwar_news.8 }									# The Turkish National Movement, start the Greco-Turkish War
+		}
+	}
+
+	# GRE No
+	option = {
+		name = ww1_greece.6.b
+		ai_chance = { factor = 0 }
+	}
+}
+#____________________________________________________________

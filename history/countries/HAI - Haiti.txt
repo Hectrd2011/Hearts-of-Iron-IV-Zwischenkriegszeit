@@ -1,0 +1,124 @@
+﻿capital = 318
+
+#-------------------------------------------------------
+#					GENERIC VALUES
+#-------------------------------------------------------
+set_fuel_ratio = 0.20
+set_research_slots = 3
+set_stability = 0.40
+set_convoys = 100
+set_country_flag=monroe_doctrine
+#-------------------------------------------------------
+#					POLITICS & ARMY
+#-------------------------------------------------------
+recruit_character = HAI_francois_c_antoine_simon
+recruit_character = HAI_vilbrun_guillaume_sam
+recruit_character = HAI_philippe_sudre_dartiguenave
+recruit_character = HAI_louis_borno
+recruit_character = HAI_Oreste_Zamor
+
+1910.1.1 = {
+	oob = "HAI_1910"
+
+	#-------------------------------------------------------
+	#							NF
+	#-------------------------------------------------------
+
+	#-------------------------------------------------------
+
+	set_technology = {
+
+		# Infantry
+		infantry_weapons = 1
+		support_weapons = 1
+		infantry_binoculars = 1
+		motorised_infantry = 1
+
+
+		# Support
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+		#tech_military_police = 1
+		#tech_maintenance_company = 1
+		#tech_field_hospital = 1
+		#tech_logistics_company = 1
+
+		# Armor
+
+		# Artillery
+		light_field_gun1 = 1
+
+		# Navy
+		#ww1_destroyer0 = 1
+		#ww1_destroyer1 = 1
+		#ww1_light_cruiser1 = 1
+		#ww1_light_cruiser0 = 1
+		#ww1_battlecruiser0 = 1
+		#ww1_battleship0 = 1
+		#ww1_submarine1 = 1
+		#ww1_coastal_submarine1 = 1
+		#transport = 1
+	}
+
+	set_politics = {
+	    ruling_party = democratic
+	    last_election = "1908.1.1"
+	    election_frequency = 36
+	    elections_allowed = yes
+	}
+	set_popularities = {
+	    democratic = 97
+	    fascism = 1
+	    communism = 1
+	    neutrality = 1
+	}
+
+	add_ideas = {
+
+	}	
+}
+
+1914.1.1 = {
+
+	#-------------------------------------------------------
+	#							NF
+	#-------------------------------------------------------
+
+	#Army
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = ww1_artillery_effort_1
+	complete_national_focus = doctrine_effort
+	complete_national_focus = ww1_trenchwarfare
+
+	#Industrial
+	complete_national_focus = industrial_effort
+	complete_national_focus = infrastructure_effort
+
+	#Political
+	complete_national_focus = political_effort
+
+	#Diplomatic
+	complete_national_focus = ww1_diplomatic_effort
+	complete_national_focus = neutrality_focus
+	complete_national_focus = ww1_military_reserve
+	
+
+	#-------------------------------------------------------
+
+	set_politics = {
+	    ruling_party = democratic
+	    last_election = "1911.7.1"
+	    election_frequency = 36
+	    elections_allowed = yes
+	}
+
+	set_popularities = {
+	    democratic = 97
+	    fascism = 1
+	    communism = 1
+	    neutrality = 1
+	}
+
+}

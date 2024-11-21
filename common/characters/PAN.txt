@@ -1,0 +1,89 @@
+characters = {
+	PAN_ernesto_t_lefevre = {
+		name = PAN_ernesto_t_lefevre
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_PAN_ernesto_t_lefevre
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1935.1.1.1"
+			id = -1
+		}
+	}
+	PAN_ramon_maximiliano_valdes = {
+		name = PAN_ramon_maximiliano_valdes
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_PAN_ramon_maximiliano_valdes
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1935.1.1.1"
+			id = -1
+		}
+	}
+	PAN_ciro_urriola = {
+		name = PAN_ciro_urriola
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_PAN_ciro_urriola
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1935.1.1.1"
+			id = -1
+		}
+	}
+	PAN_jose_maria_blazquez_de_pedro = {
+		name = PAN_jose_maria_blazquez_de_pedro
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_PAN_jose_maria_blazquez_de_pedro
+			}
+		}
+		country_leader = {
+			ideology = stalinism
+			expire = "1935.1.1.1"
+			id = -1
+		}
+	}
+	PAN_pablo_arosemena = {
+		name = PAN_pablo_arosemena
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_PAN_pablo_arosemena
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1935.1.1.1"
+			id = -1
+		}
+	}
+	PAN_quinzada = {
+		name = PAN_quinzada
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = 66003
+		}
+	}
+	PAN_lamb = {
+		name = PAN_lamb
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = 66004
+		}
+	}
+}

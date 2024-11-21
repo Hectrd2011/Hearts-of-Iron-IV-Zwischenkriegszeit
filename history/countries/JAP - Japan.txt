@@ -1,0 +1,646 @@
+﻿capital = 282
+
+#-------------------------------------------------------
+#					GENERIC VALUES
+#-------------------------------------------------------
+set_fuel_ratio = 0.20
+set_research_slots = 3
+set_stability = 0.7
+set_convoys = 400
+create_import = { resource = oil amount = 12 exporter = USA }
+puppet = KOR
+
+#-------------------------------------------------------
+#					POLITICS & ARMY
+#-------------------------------------------------------
+
+# LEADERS
+recruit_character = JAP_emperor_meiji
+recruit_character = JAP_yoshihito
+
+1912.1.1 = {
+	retire_character = JAP_emperor_meiji
+	JAP_yoshihito = {
+		add_country_leader_role = {
+			country_leader = {
+				ideology = autocracy
+				traits = {  }					
+			}
+		}
+	}
+}
+
+# ARMY
+recruit_character = JAP_kamio # FIELD MARSHAL
+recruit_character = JAP_okazawa # FIELD MARSHAL
+
+recruit_character = JAP_fukushima
+recruit_character = JAP_hishikari
+recruit_character = JAP_ishimoto
+recruit_character = JAP_katsura
+recruit_character = JAP_kawamura_k
+recruit_character = JAP_kigoshi
+recruit_character = JAP_kodama
+recruit_character = JAP_kuroki
+recruit_character = JAP_matsuishi
+recruit_character = JAP_matsukawa
+recruit_character = JAP_miura
+recruit_character = JAP_murata
+recruit_character = JAP_nagaoka
+recruit_character = JAP_nambu
+recruit_character = JAP_nitahara
+recruit_character = JAP_nogi
+recruit_character = JAP_nozu
+recruit_character = JAP_oku
+recruit_character = JAP_osako_n
+recruit_character = JAP_oyama
+recruit_character = JAP_shimakawa
+recruit_character = JAP_shioden
+recruit_character = JAP_tanaka_k
+recruit_character = JAP_ueda_k
+recruit_character = JAP_uehara
+recruit_character = JAP_yamanashi
+recruit_character = JAP_yui
+
+# NAVY
+recruit_character = JAP_inoue_y
+recruit_character = JAP_kato_k
+recruit_character = JAP_kato_t
+recruit_character = JAP_prince_arisugawa_takehito
+recruit_character = JAP_sakurai
+recruit_character = JAP_shibayama
+recruit_character = JAP_takeshita
+recruit_character = JAP_togo_h
+recruit_character = JAP_yamamoto_g
+recruit_character = JAP_yoshimi
+recruit_character = JAP_chisaka
+recruit_character = JAP_prince_fushimi_h
+
+# ADVISORS
+recruit_character = JAP_ichiki_otohiko
+recruit_character = JAP_uehara_yosaku
+recruit_character = JAP_hara_takashi
+recruit_character = JAP_goto_shinpei
+recruit_character = JAP_makino_nobuaki
+recruit_character = JAP_oku_yasukata
+recruit_character = JAP_murakami_kakuichi
+recruit_character = JAP_terauchi_masatake
+recruit_character = JAP_sakatani_yoshio
+recruit_character = JAP_kaninnomiya_kotohito
+recruit_character = JAP_tokugawa_yoshitoshi
+recruit_character = JAP_ijuin_goro
+recruit_character = JAP_arahata_kanson
+recruit_character = JAP_kigoshi_yasutsuna
+recruit_character = JAP_shirakawa_yoshinori
+recruit_character = JAP_tanaka_giichi
+recruit_character = JAP_kato_hiroharu
+recruit_character = JAP_kato_tomosaburo
+recruit_character = JAP_saionji_kinmochi
+recruit_character = JAP_oka_ichinosuke
+recruit_character = JAP_yamamoto_eisuke
+recruit_character = JAP_inoue_ikutaro
+recruit_character = JAP_hino_kumazo
+recruit_character = JAP_saito_makoto
+recruit_character = JAP_yasumasa_fukushima
+recruit_character = JAP_takashima_tomonosuke
+recruit_character = JAP_okuma_shigenobu
+recruit_character = JAP_kusunose_yukihiko
+recruit_character = JAP_hamaguchi_osachi
+recruit_character = JAP_fushiminomiya_hiroyasu
+recruit_character = JAP_motono_ichiro
+recruit_character = JAP_oshima_kenichi
+recruit_character = JAP_hasegawa_yoshimichi
+recruit_character = JAP_togo_heihachiro
+recruit_character = JAP_takarabe_takeshi
+recruit_character = JAP_yashiro_rokuro
+recruit_character = JAP_ishii_kikujiro
+
+1910.1.1 = {
+	oob = "JAP_1910"
+
+	#-------------------------------------------------------
+	#							NF
+	#-------------------------------------------------------
+
+	#-------------------------------------------------------
+
+	set_technology = {
+
+		# Train
+		ww1_train = 1
+
+		# Infantry
+		infantry_weapons = 1
+		ww1infantry_weapons1 = 1
+		support_weapons = 1
+		infantry_binoculars = 1
+		infantry_grenade = 1
+		motorised_infantry = 1
+		ww1_ambulance1 = 1
+
+		# Support
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+
+		# Armor
+		gwtank=1 # 1910 Armored Car
+		gwtank__nostepback=1
+
+		# Artillery
+		light_field_gun1 = 1
+		heavy_field_gun1 = 1
+
+		# Navy
+		ww1_heavy_cruiser0 = 1
+	ww1_heavy_cruiser0_mtg = 1
+		ww1_heavy_cruiser1 = 1
+	ww1_heavy_cruiser1_mtg = 1
+		ww1_battlecruiser0 = 1
+	ww1_battlecruiser0_mtg = 1
+		ww1_battlecruiser1 = 1
+	ww1_battlecruiser1_mtg = 1
+		ww1_light_cruiser0 = 1
+	ww1_light_cruiser0_mtg = 1
+		ww1_light_cruiser1 = 1
+	ww1_light_cruiser1_mtg = 1
+		ww1_light_cruiser2 = 1
+	ww1_light_cruiser2_mtg = 1
+		ww1_light_cruiser3 = 1
+	ww1_light_cruiser3_mtg = 1
+		ww1_submarine0 = 1
+	ww1_submarine0_mtg = 1
+		ww1_submarine1 = 1
+	ww1_submarine1_mtg = 1
+		ww1_coastal_submarine1 = 1
+	ww1_coastal_submarine1_mtg = 1
+		ww1_battleship0 = 1
+	ww1_battleship0_mtg = 1
+		ww1_battleship1 = 1
+	ww1_battleship1_mtg = 1
+		ww1_battleship2 = 1
+	ww1_battleship2_mtg = 1
+		ww1_battleship3 = 1
+	ww1_battleship3_mtg = 1
+		ww1_destroyer0 = 1
+	ww1_destroyer0_mtg = 1
+		ww1_destroyer1 = 1
+	ww1_destroyer1_mtg = 1
+		ww1_moduleMTG_mines = 1
+	ww1_moduleMTG_mines_mtg = 1 # Mines
+		transport = 1
+	transport_mtg = 1
+
+		# Naval Modules Techs
+		heavy_navalmodule_1890 = 1
+	heavy_navalmodule_1890_mtg = 1
+		heavy_navalmodule_1900 = 1
+	heavy_navalmodule_1900_mtg = 1
+		medium_navalmodule_1890 = 1
+	medium_navalmodule_1890_mtg = 1
+		medium_navalmodule_1900 = 1
+	medium_navalmodule_1900_mtg = 1
+		light_navalmodule_1890 = 1
+	light_navalmodule_1890_mtg = 1
+		light_navalmodule_1900 = 1
+	light_navalmodule_1900_mtg = 1
+
+		# Air
+		ww1_fighter1 = 1
+		ww1_zeppelin1 = 1
+			bba_ww1_fighter1 = 1
+			bba_ww1_zeppelin1 = 1
+
+		# Engineering
+		electronic_mechanical_engineering = 1
+		chemical_research = 1
+
+		# Industry
+		ww1_fortification1 = 1
+	}
+
+	set_politics = {
+	    ruling_party = neutrality
+	    last_election = "1908.5.15"
+	    election_frequency = 48
+	    elections_allowed = no
+	}
+	set_popularities = {
+	    democratic = 5
+	    fascism = 10
+	    communism = 0
+	    neutrality = 85
+	}
+
+	add_ideas = {
+		limited_conscription
+		partial_economic_mobilisation
+		state_shintoism
+		JAP_zaibatsus
+	}
+	
+	create_equipment_variant={ name="Admiral Ushakov Class" type=battleship_1890 parent_version = 0 obsolete=yes upgrades={ ship_gun_upgrade=0 ship_armor_upgrade=0 ship_engine_upgrade=2 ship_reliability_upgrade=2           } }
+	create_equipment_variant={ name="Chin Yen Class" type=battleship_1890 parent_version = 1 obsolete=yes upgrades={ ship_gun_upgrade=5 ship_armor_upgrade=3 ship_engine_upgrade=0 ship_reliability_upgrade=5           } }
+	create_equipment_variant={ name="Fuji Class" type=battleship_1890 parent_version = 2 obsolete=yes upgrades={ ship_gun_upgrade=5 ship_armor_upgrade=5 ship_engine_upgrade=5 ship_reliability_upgrade=5           } }
+	create_equipment_variant={ name="Shikishima Class" type=battleship_1890 parent_version = 3 obsolete=yes upgrades={ ship_gun_upgrade=5 ship_armor_upgrade=0 ship_engine_upgrade=5 ship_reliability_upgrade=5           } }
+	create_equipment_variant={ name="Mikasa Class" type=battleship_1890 parent_version = 4 obsolete=yes upgrades={ ship_gun_upgrade=5 ship_armor_upgrade=5 ship_engine_upgrade=5 ship_reliability_upgrade=5           } }
+	create_equipment_variant={ name="Peresviet Class" type=battleship_1900 parent_version = 0 obsolete=yes upgrades={ ship_gun_upgrade=0 ship_armor_upgrade=2 ship_engine_upgrade=0 ship_reliability_upgrade=2           } }
+	create_equipment_variant={ name="Retvisan Class" type=battleship_1900 parent_version = 1 obsolete=yes upgrades={ ship_gun_upgrade=3 ship_armor_upgrade=2 ship_engine_upgrade=0 ship_reliability_upgrade=5           } }
+	create_equipment_variant={ name="Petroplavsk Class" type=battleship_1900 parent_version = 2 obsolete=yes upgrades={ ship_gun_upgrade=3 ship_armor_upgrade=5 ship_engine_upgrade=0 ship_reliability_upgrade=5           } }
+	create_equipment_variant={ name="Imperator Alexander II Class" type=battleship_1900 parent_version = 3 obsolete=yes upgrades={ ship_gun_upgrade=1 ship_armor_upgrade=4 ship_engine_upgrade=0 ship_reliability_upgrade=5           } }
+	create_equipment_variant={ name="Kashima Class" type=battleship_1900 parent_version = 4 obsolete=yes upgrades={ ship_gun_upgrade=5 ship_armor_upgrade=2 ship_engine_upgrade=1 ship_reliability_upgrade=5           } }
+	create_equipment_variant={ name="Satsuma Class" type=battleship_1900 parent_version = 5 obsolete=yes upgrades={ ship_gun_upgrade=5 ship_armor_upgrade=2 ship_engine_upgrade=0 ship_reliability_upgrade=5           } }
+	create_equipment_variant={ name="Asama Class" type=heavy_cruiser_1890 parent_version = 0 obsolete=yes upgrades={ ship_gun_upgrade=0 ship_armor_upgrade=2 ship_engine_upgrade=4 ship_reliability_upgrade=5           } }
+	create_equipment_variant={ name="Yakumo Class" type=heavy_cruiser_1890 parent_version = 1 obsolete=yes upgrades={ ship_gun_upgrade=0 ship_armor_upgrade=2 ship_engine_upgrade=3 ship_reliability_upgrade=5           } }
+	create_equipment_variant={ name="Adzumo Class" type=heavy_cruiser_1890 parent_version = 2 obsolete=yes upgrades={ ship_gun_upgrade=0 ship_armor_upgrade=2 ship_engine_upgrade=2 ship_reliability_upgrade=4           } }
+	create_equipment_variant={ name="Bayan Class" type=heavy_cruiser_1900 parent_version = 0 obsolete=yes upgrades={ ship_gun_upgrade=0 ship_armor_upgrade=5 ship_engine_upgrade=1 ship_reliability_upgrade=5           } }
+	create_equipment_variant={ name="Tsukuba Class" type=heavy_cruiser_1900 parent_version = 1 obsolete=no upgrades={ ship_gun_upgrade=5 ship_armor_upgrade=5 ship_engine_upgrade=0 ship_reliability_upgrade=5           } }
+	create_equipment_variant={ name="Matshushima Class" type=light_cruiser_1890 parent_version = 0 obsolete=yes upgrades={ ship_gun_upgrade=5  ship_engine_upgrade=1 ship_reliability_upgrade=5 ship_anti_air_upgrade=0          } }
+	create_equipment_variant={ name="Akitsushima Class" type=light_cruiser_1890 parent_version = 1 obsolete=yes upgrades={ ship_gun_upgrade=5  ship_engine_upgrade=4 ship_reliability_upgrade=5 ship_anti_air_upgrade=0          } }
+	create_equipment_variant={ name="Suma Class" type=light_cruiser_1890 parent_version = 2 obsolete=yes upgrades={ ship_gun_upgrade=4  ship_engine_upgrade=5 ship_reliability_upgrade=5 ship_anti_air_upgrade=0          } }
+	create_equipment_variant={ name="Chitose Class" type=light_cruiser_1890 parent_version = 3 obsolete=yes upgrades={ ship_gun_upgrade=5  ship_engine_upgrade=5 ship_reliability_upgrade=5 ship_anti_air_upgrade=0          } }
+	create_equipment_variant={ name="Otowa Class" type=light_cruiser_1900 parent_version = 0 obsolete=yes upgrades={ ship_gun_upgrade=0  ship_engine_upgrade=2 ship_reliability_upgrade=5 ship_anti_air_upgrade=0          } }
+	create_equipment_variant={ name="Pallada Class" type=light_cruiser_1900 parent_version = 1 obsolete=yes upgrades={ ship_gun_upgrade=5  ship_engine_upgrade=0 ship_reliability_upgrade=5 ship_anti_air_upgrade=0          } }
+	create_equipment_variant={ name="Varyag Class" type=light_cruiser_1900 parent_version = 2 obsolete=yes upgrades={ ship_gun_upgrade=5  ship_engine_upgrade=4 ship_reliability_upgrade=5 ship_anti_air_upgrade=0          } }
+	create_equipment_variant={ name="Novik Class" type=light_cruiser_1900 parent_version = 3 obsolete=yes upgrades={ ship_gun_upgrade=0  ship_engine_upgrade=5 ship_reliability_upgrade=5 ship_anti_air_upgrade=0          } }
+	create_equipment_variant={ name="Tone Class" type=light_cruiser_1906 parent_version = 0 obsolete=yes upgrades={ ship_gun_upgrade=5  ship_engine_upgrade=0 ship_reliability_upgrade=5 ship_anti_air_upgrade=0          } }
+	create_equipment_variant={ name="Murakumo Class" type=destroyer_1890 parent_version = 0 obsolete=yes upgrades={     ship_anti_air_upgrade=0    ship_ASW_upgrade=0 destroyer_engine_upgrade=2    ship_torpedo_upgrade=4 } }
+	create_equipment_variant={ name="Akatsuki Class" type=destroyer_1890 parent_version = 1 obsolete=yes upgrades={     ship_anti_air_upgrade=0    ship_ASW_upgrade=0 destroyer_engine_upgrade=3    ship_torpedo_upgrade=4 } }
+	create_equipment_variant={ name="Shirakumo Class" type=destroyer_1890 parent_version = 2 obsolete=yes upgrades={     ship_anti_air_upgrade=0    ship_ASW_upgrade=0 destroyer_engine_upgrade=3    ship_torpedo_upgrade=4 } }
+	create_equipment_variant={ name="Harusame Class" type=destroyer_1890 parent_version = 3 obsolete=yes upgrades={     ship_anti_air_upgrade=0    ship_ASW_upgrade=0 destroyer_engine_upgrade=1    ship_torpedo_upgrade=4 } }
+	create_equipment_variant={ name="Boiki Class" type=destroyer_1900 parent_version = 0 obsolete=yes upgrades={     ship_anti_air_upgrade=0    ship_ASW_upgrade=0 destroyer_engine_upgrade=0    ship_torpedo_upgrade=2 } }
+	create_equipment_variant={ name="Asakaze Class" type=destroyer_1900 parent_version = 1 obsolete=no upgrades={     ship_anti_air_upgrade=0    ship_ASW_upgrade=0 destroyer_engine_upgrade=1    ship_torpedo_upgrade=2 } }
+	create_equipment_variant={ name="Kaigun-Holland Class" type=coastal_submarine_1900 parent_version = 0 obsolete=yes upgrades={    ship_reliability_upgrade=2       sub_torpedo_upgrade=1 sub_stealth_upgrade=2 sub_engine_upgrade=2  } }
+
+}
+
+1914.1.1 = {
+	oob = "JAP_1914"
+	remove_unit_leader = 90200 # Prince Arisugawa Takehito {ADMIRAL} (he died on July 3, 1913)
+
+	#-------------------------------------------------------
+	#							NF
+	#-------------------------------------------------------
+	#Army
+	complete_national_focus = JAP_ww1_army_effort
+	complete_national_focus = JAP_ww1_equipment_effort
+	complete_national_focus = JAP_ww1_artillery_effort_1
+	complete_national_focus = JAP_ww1_doctrine_effort
+	complete_national_focus = JAP_ww1_trenchwarfare
+
+	# Air
+	complete_national_focus = JAP_ww1_aviation_effort
+	complete_national_focus = JAP_ww1_IJNAS
+	complete_national_focus = JAP_ww1_aviation_effort_2
+
+	# Industry
+	complete_national_focus = JAP_ww1_industrial_effort
+	complete_national_focus = JAP_ww1_infrastructure_effort
+	complete_national_focus = JAP_ww1_airfield_expansion_1
+	complete_national_focus = JAP_ww1_construction_effort
+	complete_national_focus = JAP_ww1_production_effort
+	complete_national_focus = JAP_ww1_dockyard_effort_1
+
+	# Naval
+	complete_national_focus = JAP_ww1_naval_effort
+	complete_national_focus = JAP_ww1_newnavalcanons_1
+	complete_national_focus = JAP_ww1_dreadnought_effort
+
+	#Political
+	complete_national_focus = JAP_ww1_political_effort
+	complete_national_focus = JAP_ww1_support_republic
+	complete_national_focus = spiritual_mobilization_focus
+
+	#Diplomatic
+	complete_national_focus = JAP_ww1_diplomatic_effort
+	unlock_national_focus = JAP_ww1_Japan_Korea_Treaty
+	complete_national_focus = JAP_ww1_Japanese_Expansionism
+	complete_national_focus = JAP_ww1_Xinhai_Revolution_Opportunity
+	#-------------------------------------------------------
+
+	set_technology = {
+
+		# Infantry
+		infantry_weapons = 1
+		ww1infantry_weapons1 = 1
+		ww1_infantry_equip1 = 1
+		support_weapons = 1
+		support_weapons2 = 1
+		infantry_binoculars = 1
+		infantry_grenade = 1
+		motorised_infantry = 1
+		ww1_ambulance1 = 1
+		tech_mountaineers = 1
+
+		# Support
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+		tech_military_police = 1
+		tech_maintenance_company = 1
+		tech_field_hospital = 1
+		tech_logistics_company = 1
+
+		# Armor
+		gwtank=1 # 1910 Armored Car
+		ww1_armored_car_2 = 1
+
+		# Artillery
+		light_field_gun1 = 1
+		bonus_artillery1 = 1
+		heavy_field_gun1 = 1
+		bonus_bertha1 = 1
+
+		# Land Doctrine
+		ww1_landdoctrine = 1
+		ww1_directfire = 1
+
+		# Navy
+		ww1_battlecruiser2 = 1
+		ww1_submarine2 = 1
+		ww1_battleship4 = 1
+		ww1_destroyer2 = 1
+	ww1_destroyer2_mtg = 1
+		ww1_destroyer3 = 1
+	ww1_destroyer3_mtg = 1
+
+		ww1_heavy_cruiser0 = 1
+	ww1_heavy_cruiser0_mtg = 1
+		ww1_heavy_cruiser1 = 1
+	ww1_heavy_cruiser1_mtg = 1
+		ww1_battlecruiser0 = 1
+	ww1_battlecruiser0_mtg = 1
+		ww1_battlecruiser1 = 1
+	ww1_battlecruiser1_mtg = 1
+		ww1_light_cruiser0 = 1
+	ww1_light_cruiser0_mtg = 1
+		ww1_light_cruiser1 = 1
+	ww1_light_cruiser1_mtg = 1
+		ww1_light_cruiser2 = 1
+	ww1_light_cruiser2_mtg = 1
+		ww1_light_cruiser3 = 1
+	ww1_light_cruiser3_mtg = 1
+		ww1_submarine0 = 1
+	ww1_submarine0_mtg = 1
+		ww1_submarine1 = 1
+	ww1_submarine1_mtg = 1
+		ww1_coastal_submarine1 = 1
+	ww1_coastal_submarine1_mtg = 1
+		ww1_battleship0 = 1
+	ww1_battleship0_mtg = 1
+		ww1_battleship1 = 1
+	ww1_battleship1_mtg = 1
+		ww1_battleship2 = 1
+	ww1_battleship2_mtg = 1
+		ww1_battleship3 = 1
+	ww1_battleship3_mtg = 1
+		ww1_destroyer0 = 1
+	ww1_destroyer0_mtg = 1
+		ww1_destroyer1 = 1
+	ww1_destroyer1_mtg = 1
+		ww1_moduleMTG_mines = 1
+	ww1_moduleMTG_mines_mtg = 1 # Mines
+		transport = 1
+	transport_mtg = 1
+
+		# Air
+		ww1_fighter1 = 1
+		ww1_fighter1b = 1
+		ww1_zeppelin1 = 1
+			bba_ww1_fighter1 = 1
+			bba_ww1_fighter1b = 1
+			bba_ww1_zeppelin1 = 1
+
+		# Air Doctrine
+		ww1_airdoctrine = 1
+		ww1_airdoctrine_2 = 1
+		ww1_airdoctrine_3 = 1
+
+		# Navy Doctrine
+		ww1_navaldoctrine = 1
+		ww1_navaldoctrine_2 = 1
+		ww1_navaldoctrine_3 = 1
+
+		# Engineering
+		electronic_mechanical_engineering = 1
+		mechanical_computing = 1
+		chemical_research = 1
+		tank_unlocker1 = 1
+		radio = 1
+		supertech1 = 1
+		tankaircraft1 = 1
+		torpedotech1 = 1
+
+		# Industry
+		ww1_tools1 = 1
+		ww1_medicine1 = 1
+		ww1_fortification1 = 1
+		ww1_fortification2 = 1
+	}
+
+	set_politics = {
+	    ruling_party = neutrality
+	    last_election = "1912.5.15"
+	    election_frequency = 48
+	    elections_allowed = no
+	}
+	set_popularities = {
+	    democratic = 5
+	    fascism = 10
+	    communism = 0
+	    neutrality = 85
+	}
+
+	add_ideas = {
+		limited_conscription
+		partial_economic_mobilisation
+		state_shintoism
+		JAP_zaibatsus
+	}
+
+	set_global_flag = kis_japankorea_annexation
+	set_country_flag = Meiji_dead
+	
+	create_equipment_variant={ name="Kaba Class" type=destroyer_1910 parent_version = 0 obsolete=no upgrades={     ship_anti_air_upgrade=0    ship_ASW_upgrade=0 destroyer_engine_upgrade=0    ship_torpedo_upgrade=0 } }
+
+}
+
+1919.1.1 = {
+
+	add_ideas = { interwar_spirit_TheGreatWar_Winner }
+
+	set_technology = {
+		# Infantry
+		support_weapons2 = 1
+		support_weapons3 = 1
+		ww1infantry_weapons2 = 1
+		ww1_infantry_equip1 = 1
+		ww1_infantry2_equip = 1
+		infantry_gasmask = 1
+		infantry_ww1_mortar1 = 1
+		infantry_flamethrower1 = 1
+		infantry_ww1_machinegun1 = 1
+		early_motorised = 1
+		ww1_ambulance2 = 1
+		tech_mountaineers = 1
+		tech_mountaineers2 = 1
+		marines = 1
+		marines = 2
+
+		# Support
+		tech_signal_company = 1
+
+		tech_engineers2 = 1
+		tech_recon2 = 1
+		tech_military_police2 = 1
+		tech_maintenance_company2 = 1
+		tech_field_hospital2 = 1
+		tech_logistics_company2 = 1
+		tech_signal_company2 = 1
+
+		tech_engineers3 = 1
+		tech_recon3 = 1
+		tech_military_police3 = 1
+		tech_maintenance_company3 = 1
+		tech_field_hospital3 = 1
+		tech_logistics_company3 = 1
+		tech_signal_company3 = 1
+
+		# Armor
+		ww1_armored_car_2 = 1
+		ww1_armored_car_3 = 1
+		ww1_light_tank = 1
+		ww1_heavy_tank = 1
+
+		# Artillery
+		light_field_gun2 = 1
+		heavy_field_gun2 = 1
+		bonus_artillery1 = 1
+		bonus_artillery4 = 1
+		bonus_bertha1 = 1
+		bonus_bertha4 = 1
+		bonus_artillery2 = 1
+
+		# Land Doctrine
+		ww1_landdoctrine = 1
+		ww1_directfire = 1
+		ww1_rifle_ammo = 1
+		ww1_long_march = 1
+		ww1_battlefield = 1
+		ww1_target = 1
+		ww1_night = 1
+
+		# Navy
+		ww1_battleship4 = 1
+		ww1_battleship4_mtg = 1
+		ww1_battleship5 = 1
+		ww1_battleship5_mtg = 1
+		ww1_battlecruiser1 = 1
+		ww1_battlecruiser1_mtg = 1
+		ww1_battlecruiser1 = 1
+		ww1_battlecruiser1_mtg = 1
+		ww1_battlecruiser2 = 1
+		ww1_battlecruiser2_mtg = 1
+		ww1_battlecruiser3 = 1
+		ww1_battlecruiser3_mtg = 1
+		ww1_light_cruiser1 = 1
+		ww1_light_cruiser1_mtg = 1
+		ww1_light_cruiser3 = 1
+		ww1_light_cruiser3_mtg = 1
+		ww1_light_cruiser4 = 1
+		ww1_light_cruiser4_mtg = 1
+		ww1_light_cruiser5 = 1
+		ww1_light_cruiser5_mtg = 1
+		ww1_destroyer3 = 1
+		ww1_destroyer3_mtg = 1
+		ww1_destroyer4 = 1
+		ww1_destroyer4_mtg = 1
+		ww1_destroyer5 = 1
+		ww1_destroyer5_mtg = 1
+		ww1_submarine2 = 1
+		ww1_submarine2_mtg = 1
+		ww1_submarine3 = 1
+		ww1_submarine3_mtg = 1
+		ww1_submarine4 = 1
+		ww1_submarine4_mtg = 1
+		ww1_coastal_submarine2 = 1
+		ww1_coastal_submarine2_mtg = 1
+		ww1_coastal_submarine3 = 1
+		ww1_coastal_submarine3_mtg = 1
+		ww1_coastal_submarine4 = 1
+		ww1_coastal_submarine4_mtg = 1
+		ww1_cruiser_submarine1 = 1
+		ww1_cruiser_submarine1_mtg = 1
+		ww1_cruiser_submarine2 = 1
+		ww1_cruiser_submarine2_mtg = 1
+		ww1_smoke_generator = 1
+		ww1_smoke_generator_mtg = 1
+		seaplane_carrier = 1
+		seaplane_carrier_mtg = 1
+
+		# Naval Doctrine
+		ww1_navaldoctrine = 1
+		ww1_navaldoctrine_2 = 1
+		ww1_navaldoctrine_3 = 1
+		ww1_navaldoctrine_4 = 1
+		ww1_navaldoctrine_5b = 1
+		ww1_navaldoctrine_6b = 1
+
+		# Air
+		ww1_fighter2 = 1
+		ww1_fighter2b = 1
+		ww1_fighter3 = 1
+		ww1_fighter4 = 1
+		ww1_seaplane1 = 1
+		ww1_seaplane2 = 1
+		ww1_bomber1 = 1
+		ww1_bomber2 = 1
+			bba_ww1_fighter2 = 1
+			bba_ww1_fighter2b = 1
+			bba_ww1_fighter3 = 1
+			bba_ww1_fighter4 = 1
+			bba_ww1_seaplane1 = 1
+			bba_ww1_seaplane2 = 1
+			bba_ww1_bomber1 = 1
+			bba_ww1_bomber2 = 1
+
+		# Engineering
+		supertech1 = 1
+		torpedotech1 = 1
+		tankaircraft1 = 1
+		radio = 1
+		radio2 = 1
+		hoi4tgw_encryption = 1
+		hoi4tgw_decryption = 1
+		dingfelder_engine1 = 1
+		tanktrack1 = 1
+		subhulltech1 = 1
+		mechanical_computing = 1
+		mechanical_computing2 = 1
+		chemical_research2 = 1
+		tank_unlocker2 = 1
+			tank_unlocker2__nostepback = 1
+
+		# Industry
+		ww1_tools1 = 1
+		ww1_tools2 = 1
+		ww1_tools3 = 1
+		ww1_camera1 = 1
+		ww1_camera2 = 1
+		ww1_industry1 = 1
+		ww1_industry2 = 1
+		ww1_medicine1 = 1
+		ww1_medicine2 = 1
+		ww1_medicine3 = 1
+		ww1_construction1 = 1
+		ww1_construction2 = 1
+		ww1_mining1 = 1
+		ww1_mining2 = 1
+		ww1_oil1 = 1
+		ww1_oil2 = 1
+		ww1_fortification2 = 1
+		ww1_fortification3 = 1
+		ww1_fortification3b = 1
+
+	}
+}

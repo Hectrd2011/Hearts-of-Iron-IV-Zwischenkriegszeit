@@ -1,0 +1,15 @@
+characters = {
+	PHI_william_cameron_forbes = {
+		name = PHI_william_cameron_forbes
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_PHI_william_cameron_forbes
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1935.1.1.1"
+			id = -1
+		}
+	}
+}

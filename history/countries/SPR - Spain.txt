@@ -1,0 +1,330 @@
+﻿capital = 41
+
+set_research_slots = 3
+set_stability = 0.85
+set_war_support = 0.60
+set_convoys = 150
+
+1910.1.1 = {
+
+	oob = "SPR_1910"
+
+	# Starting tech
+	set_technology = {
+
+		# Train
+		ww1_train = 1
+
+		# Infantry
+		infantry_weapons = 1
+		support_weapons = 1
+		infantry_binoculars = 1
+		motorised_infantry = 1
+		ww1_ambulance1 = 1
+
+		# Support
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+		#tech_military_police = 1
+		#tech_maintenance_company = 1
+		#tech_field_hospital = 1
+		#tech_logistics_company = 1
+
+		# Artillery
+		light_field_gun1 = 1
+		heavy_field_gun1 = 1
+
+		# Navy
+		ww1_heavy_cruiser0 = 1
+	ww1_heavy_cruiser0_mtg = 1
+		ww1_heavy_cruiser1 = 1
+	ww1_heavy_cruiser1_mtg = 1
+		ww1_light_cruiser0 = 1
+	ww1_light_cruiser0_mtg = 1
+		ww1_light_cruiser1 = 1
+	ww1_light_cruiser1_mtg = 1
+		ww1_submarine1 = 1
+	ww1_submarine1_mtg = 1
+		ww1_submarine2 = 1
+		ww1_submarine0 = 1
+	ww1_submarine0_mtg = 1
+		ww1_coastal_submarine1 = 1
+	ww1_coastal_submarine1_mtg = 1
+		ww1_battleship0 = 1
+	ww1_battleship0_mtg = 1
+		ww1_battleship1 = 1
+	ww1_battleship1_mtg = 1
+		ww1_destroyer0 = 1
+	ww1_destroyer0_mtg = 1
+		ww1_destroyer1 = 1
+	ww1_destroyer1_mtg = 1
+		ww1_destroyer2 = 1
+	ww1_destroyer2_mtg = 1
+		ww1_moduleMTG_mines = 1
+	ww1_moduleMTG_mines_mtg = 1 # Mines
+		transport = 1
+	transport_mtg = 1
+
+		# Naval Modules Techs
+		heavy_navalmodule_1890 = 1
+	heavy_navalmodule_1890_mtg = 1
+		heavy_navalmodule_1900 = 1
+	heavy_navalmodule_1900_mtg = 1
+		medium_navalmodule_1890 = 1
+	medium_navalmodule_1890_mtg = 1
+		medium_navalmodule_1900 = 1
+	medium_navalmodule_1900_mtg = 1
+		light_navalmodule_1890 = 1
+	light_navalmodule_1890_mtg = 1
+		light_navalmodule_1900 = 1
+	light_navalmodule_1900_mtg = 1
+		
+		# Air
+
+		# Engineering
+		electronic_mechanical_engineering = 1
+		chemical_research = 1
+
+		# Industry
+		ww1_tools1 = 1
+		ww1_fortification1 = 1
+	}
+
+	set_popularities = {
+		democratic = 9
+		fascism = 4
+		communism = 2
+		neutrality = 85
+	}
+
+	set_politics = {
+		ruling_party = neutrality last_election = "1913.6.17"
+		election_frequency = 48 elections_allowed = yes
+	}
+	
+	add_ideas = {
+		ww1_Scramble_for_Africa
+		neutrality_idea
+		limited_conscription
+		SPR_ww1_idea_tiempos
+		SPR_ww1_idea_industria
+		SPR_ww1_idea_quintas
+		SPR_ww1_idea_generacion98
+		SPR_ww1_idea_turnismo
+		SPR_ww1_idea_caciquismo
+		SPR_ww1_idea_uniones
+		SPR_ww1_idea_semanatragica
+	}	
+}	
+
+1914.1.1 = {
+	remove_unit_leader = 86089 # Basilio Augustín ( Death 7/8/1910 )
+	oob = "SPR_1914"
+	
+	complete_national_focus = SPR_ww1_alfonsoxiii
+	complete_national_focus = SPR_ww1_tratadodefez
+	complete_national_focus = SPR_ww1_africanismo
+	complete_national_focus = SPR_ww1_lasemanatragica
+
+	set_technology = {
+
+		# Infantry
+		ww1infantry_weapons1 = 1
+		support_weapons = 1
+		infantry_binoculars = 1
+		infantry_grenade = 1
+		motorised_infantry = 1
+		ww1_ambulance1 = 1
+
+		# Support
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+		tech_military_police = 1
+		tech_maintenance_company = 1
+		tech_field_hospital = 1
+		tech_logistics_company = 1
+
+		# Armor
+		gwtank = 1 # 1910 Armored Car
+
+		# Artillery
+		light_field_gun1 = 1
+		bonus_artillery1 = 1
+		heavy_field_gun1 = 1
+		bonus_bertha1 = 1
+
+		# Navy
+		ww1_light_cruiser1 = 1
+		ww1_light_cruiser1_mtg = 1
+		ww1_light_cruiser0 = 1
+		ww1_light_cruiser0_mtg = 1
+		ww1_heavy_cruiser0 = 1
+		ww1_heavy_cruiser0_mtg = 1
+		ww1_battlecruiser0 = 1
+		ww1_battlecruiser0_mtg = 1
+		ww1_battleship0 = 1
+		ww1_battleship0_mtg = 1
+		ww1_battleship1 = 1
+		ww1_battleship1_mtg = 1
+		ww1_battleship2 = 1
+		ww1_battleship2_mtg = 1
+		ww1_battleship3 = 1
+		ww1_battleship3_mtg = 1
+		ww1_submarine0 = 1
+		ww1_submarine0_mtg = 1
+		ww1_submarine1 = 1
+		ww1_submarine1_mtg = 1
+		ww1_coastal_submarine1 = 1
+		ww1_coastal_submarine1_mtg = 1
+		transport = 1
+		transport_mtg = 1
+
+		# Air
+		ww1_fighter1 = 1
+			bba_ww1_fighter1 = 1
+
+		# Engineering
+		electronic_mechanical_engineering = 1
+
+		# Industry
+	}
+
+	set_politics = {
+		ruling_party = neutrality last_election = "1913.6.17"
+		election_frequency = 48 elections_allowed = yes
+	}
+
+	set_popularities = {
+		democratic = 10
+		fascism = 4
+		communism = 3
+		neutrality = 83
+	}
+	
+	add_ideas = {
+		neutrality_idea
+		limited_conscription
+		SPR_ww1_idea_africanismo
+		SPR_ww1_idea_tiempos
+		SPR_ww1_idea_industria
+		SPR_ww1_idea_quintas
+		SPR_ww1_idea_generacion98
+		SPR_ww1_idea_turnismo
+		SPR_ww1_idea_caciquismo
+		SPR_ww1_idea_uniones
+	}	
+}
+
+#-------------------------------------------------------------------------------
+# LEADERS
+recruit_character = SPR_alfonso_xiii
+recruit_character = SPR_primo_de_rivera_m
+recruit_character = SPR_antonio_garcia_quejido
+recruit_character = SPR_julian_besteiro
+recruit_character = SPR_ramon_lamoneda
+recruit_character = SPR_alejandro_lerroux
+recruit_character = SPR_pablo_iglesias
+
+#-------------------------------------------------------------------------------
+
+# ARMY
+recruit_character = SPR_berenguer_d
+recruit_character = SPR_cavalcanti
+recruit_character = SPR_martinez_anido
+recruit_character = SPR_milans_del_bosch
+recruit_character = SPR_navarro
+recruit_character = SPR_primo_de_rivera_f
+recruit_character = SPR_silvestre
+recruit_character = SPR_Jose_Villalba_Riquelme
+recruit_character = SPR_Manuel_Macias_Casado
+recruit_character = SPR_weyler
+recruit_character = SPR_augustin
+
+#-------------------------------------------------------------------------------
+
+# NAVY
+recruit_character = SPR_Victor_Maria_Concas
+recruit_character = SPR_aznar_cabanas
+recruit_character = SPR_miranda_y_godoy
+recruit_character = SPR_rodriguez
+
+
+# ======================================================================
+### Air Chief ###
+
+recruit_character = SPR_emilio_herrera
+
+# ======================================================================
+
+### GENERIC ADVISORS
+
+recruit_character = SPR_Generic_PoliticalAdvisor01
+recruit_character = SPR_Generic_PoliticalAdvisor02
+recruit_character = SPR_Generic_PoliticalAdvisor03
+
+recruit_character = SPR_Generic_Theorist01
+
+recruit_character = SPR_Generic_ChiefofArmy01
+
+recruit_character = SPR_Generic_ChiefofNavy01
+
+recruit_character = SPR_Generic_ChiefofAirforce01
+
+recruit_character = SPR_Generic_MilitaryHighCommand01
+recruit_character = SPR_Generic_MilitaryHighCommand02
+recruit_character = SPR_Generic_MilitaryHighCommand03
+
+# ======================================================================
+
+#-------------------------------------------------------------------------------
+
+create_equipment_variant = { 
+	name = "Cataluna Class" 
+	type = heavy_cruiser_1890 
+	parent_version = 0 
+	obsolete = yes 
+	upgrades = { 
+		ship_gun_upgrade = 0 
+		ship_armor_upgrade = 0 
+		ship_engine_upgrade = 1 
+		ship_reliability_upgrade = 1
+	}
+}
+create_equipment_variant = { 
+	name = "Reina Regente Class" 
+	type = light_cruiser_1890 
+	parent_version = 0 
+	obsolete = yes 
+	upgrades = { 
+		ship_gun_upgrade = 0  
+		ship_engine_upgrade = 5 
+		ship_reliability_upgrade = 5 
+		ship_anti_air_upgrade = 0
+	} 
+}
+create_equipment_variant = { 
+	name = "Rio De La Plata Class" 
+	type = light_cruiser_1890 
+	parent_version = 0 
+	obsolete = yes 
+	upgrades = { 
+		ship_gun_upgrade = 0
+		ship_engine_upgrade = 5
+		ship_reliability_upgrade = 5
+		ship_anti_air_upgrade = 0
+	}
+}
+create_equipment_variant = { 
+	name = "Reina Regente II Class" 
+	type = light_cruiser_1900 
+	parent_version = 0 
+	obsolete = yes 
+	upgrades = { 
+		ship_gun_upgrade = 0
+		ship_engine_upgrade = 5
+		ship_reliability_upgrade = 5
+		ship_anti_air_upgrade = 0
+	}
+}

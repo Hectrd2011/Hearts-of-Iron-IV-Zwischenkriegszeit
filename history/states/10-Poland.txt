@@ -1,0 +1,36 @@
+state = {
+	id=10
+	name="STATE_10"
+	local_supplies = 1.0
+	manpower = 3089000
+	state_category=large_city
+	provinces={ 402 467 524 3482 3544 6511 9400 11492 12562 }
+
+	resources={
+		wood=0
+	}
+
+	history={
+		victory_points={ 3544 20 }
+		owner=RUS
+		add_core_of=RUS
+
+		buildings={
+			3544 = {
+				supply_node = 1
+				trench = 1 
+				bunker = 3 
+			}
+
+			infrastructure=4
+			industrial_complex=2
+			air_base=1
+			arms_factory=1
+		}
+
+		1919.1.1 = {
+			owner = POL
+			add_core_of = POL
+		}
+	}
+}

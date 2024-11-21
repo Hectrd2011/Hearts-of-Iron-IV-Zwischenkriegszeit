@@ -1,0 +1,37 @@
+﻿# French protectorate of Tunisia
+# ------------------
+# https://en.wikipedia.org/wiki/French_protectorate_of_Tunisia
+
+capital = 458 # Tunis
+
+#-------------------------------------------------------
+#					GENERIC VALUES
+#-------------------------------------------------------
+set_fuel_ratio = 0.20
+set_research_slots = 2
+set_stability = 0.66
+set_convoys = 12
+
+#-------------------------------------------------------
+#					POLITICS & ARMY
+#-------------------------------------------------------
+#LEADERS
+recruit_character = TUN_naceur_bey
+
+set_politics = {
+    ruling_party = neutrality
+    last_election = "1910.1.1"
+    election_frequency = 48
+    elections_allowed = no
+}
+set_popularities = {
+    democratic = 5
+    fascism = 0
+    communism = 0
+    neutrality = 95
+}
+
+add_ideas = {
+	ww1_Faith_Allah
+	limited_conscription
+}
