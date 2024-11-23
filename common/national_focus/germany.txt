@@ -51,11 +51,12 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_National_Mourning
 		}
-		icon = GFX_goal_generic_alliance
+		icon = GFX_hoi4tgw_ger_honor
 		available = {
 		}
 		completion_reward = {
-			add_stability = 0.05
+			add_stability = 0.1
+			add_war_support = 0.05
 		}
 		cost = 10
 		x = 0

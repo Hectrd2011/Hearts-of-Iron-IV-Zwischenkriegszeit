@@ -201,6 +201,11 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
+		name = "GFX_hoi4tgw_ger_honor"
+		texturefile = "gfx/interface/goals/hoi4tgw/ww1_ger_honor.dds"
+	}
+
+	SpriteType = {
 		name = "GFX_hoi4tgw_auh_end_dual_monarchy_emperor"
 		texturefile = "gfx/interface/goals/hoi4tgw/ww1_auh_end_dual_monarchy_emperor.dds"
 	}
