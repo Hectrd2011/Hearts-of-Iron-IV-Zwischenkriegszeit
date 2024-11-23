@@ -78,6 +78,7 @@
  GER_ww1_Hierusalem_desc:0 ""
  GER_ww1_CrusaderKing:0 "Crusader King"
  GER_ww1_CrusaderKing_desc:0 ""
+ GER_political_effort:0 "WW1"
 
  TUR_army_effort:0 "Army Effort"
  TUR_equipment_effort:0 "Equipment Effort"
