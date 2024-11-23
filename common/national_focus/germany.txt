@@ -22,7 +22,7 @@ focus_tree = {
 			add_war_support = -0.10
 		}
 		cost = 10
-		x = 1
+		x = -1
 		y = 0
 		ai_will_do = {
 			factor = 1
