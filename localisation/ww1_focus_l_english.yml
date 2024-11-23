@@ -33,6 +33,10 @@
 
  GER_National_Mourning:0 "National Mourning"
  GER_National_Mourning_desc:0 "The scars of war are visible everywhere, not just in the ruined cities but in the hearts of our people. We must provide time and space to grieve."
+ GER_Support_Veterans:0 "Support for War Veterans"
+ GER_Support_Veterans_desc:0 "Our soldiers gave everything for the Fatherland. Now, the Fatherland must give everything for them."
+ GER_Honor_Fallen:0 "Honor the Fallen"
+ GER_Honor_Fallen_desc:0 "By remembering the sacrifices of our fallen, we can ensure their legacy guides us into the future."
 
 
  TUR_army_effort:0 "Army Effort"
