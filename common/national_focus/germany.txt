@@ -12,21 +12,42 @@ focus_tree = {
 	# POLITICAL
 	###########################################################################################################################
 	focus = {
-		id = GER_political_effort
+		id = GER_National_Mourning
 		icon = GFX_focus_generic_treaty
 		available = {
 			has_global_flag = kis_treaty_of_versailles
 		}
 		completion_reward = {
-			add_stability = 0.1
+			add_stability = 0.05
+			add_war_support = -0.10
 		}
-		cost = 3
-		x = 9
-		y = 9
+		cost = 10
+		x = 3
+		y = 0
 		ai_will_do = {
 			factor = 1
 		}
 	}
-
+    focus = {
+		id = collectivist_ethos
+		prerequisite = {
+			focus = political_effort
+		}
+		icon = GFX_goal_generic_alliance
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+		cost = 10
+		x = 2
+		y = 1
+		mutually_exclusive = {
+			focus = ww1_sovereignist_ethos
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 	################ VANILLA END
 }

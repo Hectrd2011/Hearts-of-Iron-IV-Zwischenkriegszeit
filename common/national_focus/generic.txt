@@ -7,7 +7,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ww1_interwar_Aftermath
-		icon = 
+		icon = GFX_focus_generic_treaty
 		available = {
 			has_global_flag = kis_treaty_of_versailles
 		}
@@ -348,7 +348,7 @@ focus_tree = {
 	# POLITICAL
 	###########################################################################################################################
 	focus = {
-		id = political_effort
+		id = National_Mourning
 		icon = GFX_goal_generic_demand_territory
 		completion_reward = {
 			add_political_power = 100
