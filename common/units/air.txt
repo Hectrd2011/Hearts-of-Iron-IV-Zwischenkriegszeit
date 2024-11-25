@@ -1,4 +1,5 @@
 sub_units = {
+
 	# Small airframe
 
 	fighter = {
@@ -8,6 +9,7 @@ sub_units = {
 		type = fighter
 		need = { small_plane_airframe = 1 }
 		categories = { category_fighter }
+		#carrier_air_wing_size = 10
 		land_air_wing_size = 100
 	}
 	cv_fighter = {
@@ -143,6 +145,7 @@ sub_units = {
 		need = { jet_fighter_equipment = 1 }
 		categories = { category_fighter }
 		land_air_wing_size = 100
+		#carrier_air_wing_size = 10
 	}
 
 	jet_tac_bomber = {
@@ -193,26 +196,137 @@ sub_units = {
 		need = { guided_missile_equipment = 1 }
 		land_air_wing_size = 100
 	}
-
-
-	# HOI4 TGW
-	airship_bomber = {
-		sprite = airship_airframe
-		priority = 1
+	explosive_ammo = {
+		sprite = missile_default
+		priority = 8
 		active = yes
-		type = strategic_bomber
-		need = { airship_bomber_equipment = 1 }
-		categories = { category_strat_bomber }
-		land_air_wing_size = 15
+		type = emplacement_gun_ammo
+		need = { explosive_ammo_equipment = 1 }
+		land_air_wing_size = 1
 	}
+	
 
-	# HOI4 TGW
-	seaplane = {
-		sprite = light_plane
-		priority = 0
+	####NEW AIRCRAFT
+	zeppelin = {
+		sprite = airship_plane
+		priority = 5
 		active = yes
-		type = naval_bomber
-		need = { ww1_seaplane_equipment_1 = 1 }
+		need = { zeppelin_airframe = 1 }
+		type = strategic_bomber
+		categories = { category_zeppelin }
 		land_air_wing_size = 100
 	}
+	mega_zeppelin = {
+		sprite = airship_plane
+		priority = 5
+		active = yes
+		need = { mega_zeppelin_airframe = 1 }
+		type = strategic_bomber
+		categories = { category_zeppelin }
+		land_air_wing_size = 100
+	}
+	jet_interceptor = {
+		sprite = light_plane
+		priority = 1
+		active = yes
+		type = { interceptor }
+		need = { jet_interceptor_equipment = 1 }
+		categories = { category_fighter }
+		land_air_wing_size = 100
+	}
+	
+	jet_cas = {
+		sprite = light_plane
+		priority = 1
+		active = yes
+		type = { fighter cas }
+		need = { jet_CAS_equipment = 1 }
+		categories = { category_cas }
+		land_air_wing_size = 100
+		#carrier_air_wing_size = 10
+	}
+	srbm = {
+		sprite = missile_default
+		priority = 1
+		active = yes
+		type = nuclear_missile
+		need = { srbm_equipment = 1 }
+		land_air_wing_size = 100
+	}
+
+	irbm = {
+		sprite = missile_default
+		priority = 1
+		active = yes
+		type = nuclear_missile
+		need = { irbm_equipment = 1 }
+		land_air_wing_size = 100
+	}
+
+	zeppelin_bomber = {
+		sprite = airship_plane
+		priority = 5
+		active = yes
+		type = strategic_bomber
+		need = { zeppelin_airframe = 1 }
+		categories = { category_strat_bomber category_scout_plane }
+		land_air_wing_size = 2
+	}
+
+	zeppelin_scout = {
+		sprite = airship_plane
+		priority = 5
+		active = yes
+		type = scout_plane
+		need = { zeppelin_airframe = 1 }
+		categories = { category_scout_plane }
+		land_air_wing_size = 2
+	}
+	icbm = {
+		sprite = missile_default
+		priority = 1
+		active = yes
+		type = nuclear_missile
+		need = { icbm_equipment = 1 }
+		land_air_wing_size = 100
+	}
+	ballistic_missile = {
+		sprite = missile_default
+		priority = 8
+		active = yes
+		type = ballistic_missile
+		need = { ballistic_missile_equipment = 1 }
+		land_air_wing_size = 100
+		carrier_air_wing_size = 10
+	}
+	
+	#nuclear_missile = {
+	#	sprite = missile_default
+	#	priority = 8
+	#	active = yes
+	#	type = nuclear_missile
+	#	need = { nuclear_missile_equipment = 1 }
+	#	land_air_wing_size = 2
+	#	carrier_air_wing_size = 1
+	#}
+	mothership = {
+		sprite = light_plane
+		priority = 6
+		active = yes
+		type = fighter
+		need = { mothership_equipment_0 = 1 }
+		categories = { category_fighter }
+		land_air_wing_size = 10
+		mega_carrier_air_wing_size = 10
+	}
+	sam_missile = {
+		sprite = missile_default
+		priority = 8
+		active = yes
+		type = sam_missile
+		need = { sam_missile_equipment = 1 }
+		land_air_wing_size = 100
+		carrier_air_wing_size = 10
+	}
+
 }

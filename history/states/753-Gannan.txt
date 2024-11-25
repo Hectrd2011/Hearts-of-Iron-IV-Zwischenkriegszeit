@@ -1,18 +1,35 @@
 state = {
-	id=753
-	name="STATE_753"
-	local_supplies = 1.0 manpower=650000
-	state_category=rural
-	provinces={ 4635 1310 12484 1283 12107 10147 12123 1222 1242 7409 10974 12135 4317 7305 4289 7362 4329 7378 7333 10231 7349 4346 12995 10260 10248 }
-	resources={
-		wood=0
-		}
-	history={
-		victory_points={ 4329 1 }
-		owner=AST
-		buildings={
-			infrastructure=2
-			4329={ naval_base=3  }
-			}
-		}
+	id = 753
+	name = "STATE_753"
+	provinces = {
+		1257 2045 4375 4403 5193 9966 10787 10903
 	}
+	manpower = 3000000
+	buildings_max_level_factor = 1.000
+	state_category = rural
+	history = {
+		owner = QIN
+		add_core_of = XSM
+		add_core_of = QIN
+		add_core_of = CHI add_core_of = BOX
+		victory_points = {
+			2045 1
+		}
+		buildings = {
+			infrastructure = 3
+
+		}
+
+		1912.1.1 = { owner = CHI controller = CHI add_core_of = CHI }
+		1919.7.1 = { owner = XSM controller = XSM }
+		1933.1.1 = {
+			owner = XSM
+			controller = XSM
+		}
+
+		1946.1.1 = { owner = CHI controller = CHI add_core_of = PRC}
+
+
+		1950.1.1 = { owner = PRC controller = PRC }
+	}
+}

@@ -1,30 +1,37 @@
 state = {
-	id=765
-	name="STATE_765"
-	local_supplies = 1.0
-	manpower = 51600
-	state_category = pastoral
+	id = 765
+	name = "STATE_765"
+	manpower = 34300    state_category = pastoral
 
-	history={
-		owner = QAT
+	history = {
 		add_core_of = QAT
-		add_claim_by = TUR
-
+		owner = OTT
 		victory_points = {
 			8051 1
 		}
 		buildings = {
-			infrastructure=2
+			infrastructure = 2
 			8051 = {
 				naval_base = 2
 			}
 		}
-		1914.1.1 = {
+		1910.1.1 = {
+			owner = OTT
+			controller = OTT
+		}
+		1918.11.11 = {
 			owner = ENG
+			controller = ENG
+		}
+
+		1972.1.1 = {
+			owner = QAT
+			controller = QAT
 		}
 	}
 
-	provinces={
+	provinces = {
 		8051
 	}
+	local_supplies=0.0 
 }

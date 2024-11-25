@@ -1,24 +1,33 @@
-state = {
-	id=124
-	name="STATE_124"
-	local_supplies = 1.0 manpower = 56988
-	state_category=small_island
-	provinces={ 408 6258 }
-	resources={
-		wood=0
-		}
-	history={
-		owner=SWE
-		1936.1.1={ 
-			owner=SWE
-			buildings={
-				infrastructure=4
-				408={ naval_base=1 }
-				}
-			}
-		buildings={
-			infrastructure=4
-			408={ naval_base=1 }
+state =
+{
+	id = 124
+	name = "STATE_124"
+	manpower = 56988
+
+	state_category = small_island
+
+	history = {
+		owner = KNS
+
+		buildings = {
+			infrastructure = 6
+			408 = {
+				naval_base = 1
 			}
 		}
+
+		add_core_of = SWE
+		add_core_of = KNS
+
+		1905.10.26 = {
+			owner = SWE
+			controller = SWE
+		}
+
+
 	}
+	provinces = {
+		408 6258
+	}
+	local_supplies=0.0 
+}

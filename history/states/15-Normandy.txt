@@ -1,28 +1,62 @@
 state = {
 	id = 15
 	name = "STATE_15"
-	local_supplies = 1.0
-	manpower = 2332100
-	state_category = city
-	provinces = { 485 539 553 3534 3549 3579 6449 6569 6599 9434 9550 9578 11521 11535 11563 }
 	resources = {
-		wood = 5
-		steel = 51
+		steel = 21.000
 	}
 
 	history = {
-		victory_points = { 9434 5 }
-		victory_points = { 6449 15 }
-		victory_points = { 11563 5 }
 		owner = FRA
-		add_core_of = FRA
-
-		buildings = {
-			infrastructure=4
-			industrial_complex = 1
-			air_base=1
-			6449 = { naval_base = 5 coastal_bunker = 1 }
-			485 = { naval_base = 1 }
+		victory_points = {
+			6449 3
 		}
+		victory_points = {
+			6599 10
+		}
+		victory_points = {
+			9578 5
+		}
+		victory_points = {
+			11535 1
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 1
+			air_base = 6
+			6449 = {
+				naval_base = 3
+				coastal_bunker = 1
+
+			}
+
+		}
+		add_core_of = FRA add_core_of = VIF
+
+		1941.1.1 = { owner = GER controller = GER }
+
+		1944.1.1 = { owner = FRA controller = FRA
+
+
+
+			GER = {
+				set_province_controller = 6449
+				set_province_controller = 553
+				set_province_controller = 6578
+				set_province_controller = 3534
+				set_province_controller = 3549
+			}
+
+		}
+
+		1945.1.1 = { owner = FRA controller = FRA }
+
 	}
+
+	provinces = {
+		539 553 3534 3549 3579 6449 6599 9550 9578 11521 11535
+	}
+	manpower = 1401100
+	buildings_max_level_factor = 1.000
+	state_category = large_town
+	local_supplies=0.0 
 }

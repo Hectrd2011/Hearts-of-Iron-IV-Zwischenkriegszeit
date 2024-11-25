@@ -1,145 +1,571 @@
 ideas = {
-	political_advisor = {
-		CHI_kuo_sung_ling = { allowed = { tag=CHI } traits={ compassionate_gentleman } ai_will_do={ factor=1 } }
-		CHI_ch_eng_te_ch_uan = { allowed = { tag=CHI } traits={ prince_of_terror } ai_will_do={ factor=1 } }
-		CHI_ch_en_lu = { allowed = { tag=CHI } traits={ ideological_crusader } ai_will_do={ factor=1 } }
-		CHI_tang_shaoyi = { allowed = { tag=CHI } traits={ captain_of_industry } ai_will_do={ factor=1 } }
-		CHI_xiong_xiling = { allowed = { tag=CHI } traits={ quartermaster_general } ai_will_do={ factor=1 } }
-		CHI_liang_ruhao = { allowed = { tag=CHI } traits={ smooth_talking_charmer } ai_will_do={ factor=1 } }
-		CHI_zhou_xuexi = { allowed = { tag=CHI } traits={ armaments_organizer } ai_will_do={ factor=1 } }
-		CHI_zhu_qiqian = { allowed = { tag=CHI } traits={ silent_workhorse } ai_will_do={ factor=1 } }
-	}
-	theorist = {
-		CHI_ch_en_ch_i_mei = {
-			ledger = army
-			allowed = { tag=CHI } traits={ military_theorist } ai_will_do={ factor=1 }
-		}
-		CHI_chen_chin_tang = {
-			ledger = army
-			allowed = { tag=CHI } traits={ military_theorist } ai_will_do={ factor=1 }
-		}
-		CHI_liu_kuiyi = {
-			ledger = army
-			allowed = { tag=CHI } traits={ military_theorist } ai_will_do={ factor=1 }
-		}
-	}
-	army_chief = {
-		CHI_chang_ching_hui = { allowed = { tag=CHI } traits={ army_chief_offensive_1 } ai_will_do={ factor=1 } }
-		CHI_hsu_shao_chen = { allowed = { tag=CHI } traits={ army_chief_maneuver_1 } ai_will_do={ factor=1 } }
-		CHI_pao_kuei_ch_ing = { allowed = { tag=CHI } traits={ army_chief_offensive_1 } ai_will_do={ factor=1 } }
-		CHI_li_lieh_chun = { allowed = { tag=CHI } traits={ army_chief_maneuver_1 } ai_will_do={ factor=1 } }
-		CHI_chang_huai_chih = { allowed = { tag=CHI } traits={ army_chief_defensive_1 } ai_will_do={ factor=1 } }
-		CHI_chou_tzu_ch_i = { allowed = { tag=CHI } traits={ army_chief_offensive_1 } ai_will_do={ factor=1 } }
-		CHI_duan_qirui = { allowed = { tag=CHI } traits={ army_chief_defensive_1 } ai_will_do={ factor=1 } }
-	}
-	navy_chief = {
-		CHI_tu_hsi_kuei = { allowed = { tag=CHI } traits={ navy_chief_commerce_raiding_1 } ai_will_do={ factor=1 } }
-		CHI_sa_chen_ping = { allowed = { tag=CHI } traits={ navy_chief_naval_aviation_1 } ai_will_do={ factor=1 } }
-		CHI_ch_eng_pi_kuang = { allowed = { tag=CHI } traits={ navy_chief_decisive_battle_1 } ai_will_do={ factor=1 } }
-		CHI_liu_guanxiong = { allowed = { tag=CHI } traits={ navy_chief_reform_1 } ai_will_do={ factor=1 } }
-	}
-	high_command = {
-		CHI_chang_hsueh_liang = {
-			ledger = air
-			allowed = { tag=CHI } traits={ air_close_air_support_1 } ai_will_do={ factor=1 }
-		}
-		CHI_chang_hs_un = {
-			ledger = army
-			allowed = { tag=CHI } traits={ army_infantry_1 } ai_will_do={ factor=1 }
-		}
-		CHI_huang_chung_yin = {
-			ledger = navy
-			allowed = { tag=CHI } traits={ navy_anti_submarine_1 } ai_will_do={ factor=1 }
-		}
-		CHI_huang_hsin = {
-			ledger = army
-			allowed = { tag=CHI } traits={ army_infantry_1 } ai_will_do={ factor=1 }
-		}
-		CHI_tuan_chih_kuei = {
-			ledger = army
-			allowed = { tag=CHI } traits={ army_entrenchment_1 } ai_will_do={ factor=1 }
-		}
-		CHI_wang_shih_chen = {
-			ledger = army
-			allowed = { tag=CHI } traits={ army_logistics_1 } ai_will_do={ factor=1 }
-		}
-		CHI_chin_yun_peng = {
-			ledger = army
-			allowed = { tag=CHI } traits={ army_commando_1 } ai_will_do={ factor=1 }
-		}
-		CHI_liu_kuan_hsiung = {
-			ledger = navy
-			allowed = { tag=CHI } traits={ navy_carrier_1 } ai_will_do={ factor=1 }
-		}
-	}
-	naval_manufacturer = {
-		designer = yes 
-		jiangnan_shipyard_group_a={ allowed={ TAG=CHI } research_bonus={ naval_equipment=0.10 } traits={ naval_manufacturer } }
-		mingsong_dock_and_engineering_works_d={ allowed={ TAG=CHI } research_bonus={ naval_equipment=0.10 } traits={ naval_manufacturer } picture=generic_naval_manufacturer_3 }
-		dagu_shipyard_d={ allowed={ TAG=CHI } research_bonus={ naval_equipment=0.10 } traits={ naval_manufacturer } picture=generic_naval_manufacturer_1 }
-		guangzhou_shipyard={ allowed={ TAG=CHI } research_bonus={ naval_equipment=0.10 } traits={ naval_manufacturer } picture=generic_naval_manufacturer_2 }
-	}
-	aircraft_manufacturer = {
-		designer = yes 
-		camco={ allowed={ TAG=CHI } research_bonus={ air_equipment=0.10 } traits={ medium_aircraft_manufacturer } }
-	}
-	materiel_manufacturer = {
-		designer = yes 
-		hanyang_arsenal_CHI={ allowed={ TAG=CHI } research_bonus={ artillery=0.10 } traits={ artillery_manufacturer } picture=generic_artillery_manufacturer_2 }
-		chang_an_factory_CHI={ allowed={ TAG=CHI } research_bonus={ artillery=0.10 } traits={ artillery_manufacturer } picture=generic_artillery_manufacturer_3 }
-		taiyuan_arsenal_CHI={ allowed={ TAG=CHI } research_bonus={ artillery=0.10 } traits={ artillery_manufacturer } picture=generic_artillery_manufacturer_1 }
-		guangdong_arsenal_CHI={ allowed={ TAG=CHI } research_bonus={ artillery=0.10 } traits={ artillery_manufacturer } picture=generic_artillery_manufacturer_2 }
-		guangzhou_diesel_engine_factory_CHI={ allowed={ TAG=CHI } research_bonus={ motorized_equipment=0.10 } traits={ motorized_equipment_manufacturer } picture=generic_motorized_equipment_manufacturer_3 }
-		yunnan_ordnance_companies_CHI={ allowed={ TAG=CHI } research_bonus={ artillery=0.10 } traits={ artillery_manufacturer } picture=generic_artillery_manufacturer_1 }
-	}
-	industrial_concern = {
-			designer = yes 
-			kaiping_coal_mine_CHI={ allowed={ TAG=CHI }    research_bonus = {
-							    industry = 0.10
-							    
-							   } traits={ industrial_concern } picture=generic_tank_manufacturer_2 }
-			kailan_mining_administration__CHI={ allowed={ TAG=CHI }    research_bonus = {
-							    industry = 0.10
-							    
-							   } traits={ industrial_concern } picture=generic_tank_manufacturer_3 }
-			zhong_xing_coal_company_CHI={ allowed={ TAG=CHI }    research_bonus = {
-							    industry = 0.10
-							    
-							   } traits={ industrial_concern } picture=generic_tank_manufacturer_1 }
-			tianjin_belgian_tram_and_electric_co_CHI={ allowed={ TAG=CHI }    research_bonus = {
-							    industry = 0.10
-							    
-							   } traits={ industrial_concern } picture=generic_tank_manufacturer_2 }
-			zhili_industrial_bureau_CHI={ allowed={ TAG=CHI }    research_bonus = {
-							    industry = 0.10
-							    
-							   } traits={ industrial_concern } picture=generic_tank_manufacturer_3 }
-			electric_traction_company_of_hong_kong__CHI={ allowed={ TAG=CHI }    research_bonus = {
-							    electronics = 0.10
-							   } traits={ electronics_concern } picture=generic_tank_manufacturer_1 }
-			hong_kong_tramways_ltd__CHI={ allowed={ TAG=CHI }    research_bonus = {
-							    industry = 0.10
-							    
-							   } traits={ industrial_concern } picture=generic_tank_manufacturer_2 }
-			hong_kong_electric_co_ltd__CHI={ allowed={ TAG=CHI }    research_bonus = {
-							    electronics = 0.10
-							   } traits={ electronics_concern } picture=generic_tank_manufacturer_3 }
-			shanghai_international_tram_authority_CHI={ allowed={ TAG=CHI }    research_bonus = {
-							    industry = 0.10
-							    
-							   } traits={ industrial_concern } picture=generic_tank_manufacturer_1 }
-			yunnan_tin_company_CHI={ allowed={ TAG=CHI }    research_bonus = {
-							    industry = 0.10
-							    
-							   } traits={ industrial_concern } picture=generic_tank_manufacturer_2 }
-			yunnan_vietnam_railway_authority_CHI={ allowed={ TAG=CHI }    research_bonus = {
-							    industry = 0.10
-							    
-							   } traits={ industrial_concern } picture=generic_tank_manufacturer_3 }
+	hidden_ideas = {
+		
+		boxer_protocols = {
+			allowed = {
+				always = no
+
 			}
-	country={
-			german_advisors={ allowed={ always=no } allowed_civil_war={ NOT={ has_government=communism } } removal_cost=-1 research_bonus={ land_doctrine=0.07 } }
-			CHI_civil_war_deserters={ picture=generic_morale_bonus allowed={ always=no } allowed_civil_war={ NOT={ OR={ has_government=communism has_government=fascism } } } removal_cost=-1 modifier={ army_morale_factor=-0.2 } }
-			CHI_communist_uprisings={ picture=FRA_scw_intervention_republicans_focus allowed={ always=no } allowed_civil_war={ NOT={ has_government=communism } } removal_cost=-1 modifier={ } }
+			cancel = {
+				date > 1922.1.1
 			}
+			modifier = {
+				industrial_capacity_factory = -500
+				industrial_capacity_dockyard = -500
+			}
+		}
+
 	}
+	country = {
+	
+		CHI_No_Surrender_Until_Clearly_Lost = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+			}
+			available = {
+			}
+			picture = RON_chinese_resistance_strategy
+			modifier = {
+				surrender_limit = 0.3
+			}
+		}
+
+		RON_ukrainian_resistance_strategy = {
+
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			cancel = {
+				OR = {
+					NOT = { has_war_with = RUS }
+				}
+			}
+
+			modifier = {
+				max_dig_in_factor = 0.5
+			}
+
+			targeted_modifier = {
+				tag = RUS
+				defense_bonus_against = 0.50
+				attack_bonus_against = -0.40
+			}
+
+		}
+		RON_chinese_resistance_strategy = {
+
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			cancel = {
+				OR = {
+					NOT = { has_war_with = JAP }
+					AND = {
+						date > 1946.1.1
+						NOT = { has_global_flag = RON_Axis_Victory }
+					}
+				}
+			}
+
+			modifier = {
+				max_dig_in_factor = 0.5
+			}
+
+			targeted_modifier = {
+				tag = JAP
+				defense_bonus_against = 0.50
+			}
+
+			targeted_modifier = {
+				tag = MAN
+				defense_bonus_against = 0.50
+			}
+
+			targeted_modifier = {
+				tag = MEN
+				defense_bonus_against = 0.50
+			}
+
+		}
+RON_RUS_bogged_down_in_ukraine = {
+
+			allowed = { 
+has_war_with = UKR
+always = no 
+}
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			cancel = {
+					NOT = { has_war_with = UKR }
+			}
+			modifier = {
+				ai_call_ally_desire_factor = -200
+			}
+			targeted_modifier = {
+				tag = UKR
+				attack_bonus_against = -0.50
+			}
+		}		
+RON_syria_civil_war = {
+
+			allowed = { 
+				has_war = yes
+always = no 
+}
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			cancel = {
+					has_war = no
+			}
+				modifier = {
+					surrender_limit = 1
+				max_dig_in_factor = 1
+				army_attack_factor = -1
+				army_speed_factor = -1		
+				army_org_regain = -0.4
+				}
+			targeted_modifier = {
+				tag = IRQ
+				defense_bonus_against = 0.80
+			}		
+			targeted_modifier = {
+				tag = ISS
+				defense_bonus_against = 0.80
+			}
+			targeted_modifier = {
+				tag = SIG
+				defense_bonus_against = 0.80
+			}	
+			targeted_modifier = {
+				tag = ROJ
+				defense_bonus_against = 0.80
+			}			
+			targeted_modifier = {
+				tag = KUR
+				defense_bonus_against = 0.80
+			}					
+			targeted_modifier = {
+				tag = SYR
+				defense_bonus_against = 0.80
+			}
+		}			
+RON_CSTO_member = {
+
+			allowed = { 
+				RUS = {
+has_war_with = UKR
+				}
+always = no 
+}
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			cancel = {
+					NOT = { RUS = { has_war_with = UKR } }
+			}
+
+			targeted_modifier = {
+				tag = UKR
+				attack_bonus_against = -0.50
+			}
+			modifier = {
+				ai_join_ally_desire_factor = -300
+			}
+		}		
+
+		RON_japanese_bogged_down_in_china = {
+
+			allowed = { 
+has_war_with = CHI
+always = no 
+}
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			cancel = {
+				OR = {
+					NOT = { has_war_with = CHI }
+					AND = {
+						date > 1946.1.1
+						NOT = { has_global_flag = RON_Axis_Victory }
+					}
+				}
+			}
+
+			targeted_modifier = {
+				tag = CHI
+				attack_bonus_against = -0.50
+			}
+
+			targeted_modifier = {
+				tag = PRC
+				attack_bonus_against = -0.50
+			}
+
+			targeted_modifier = {
+				tag = XSM
+				attack_bonus_against = -0.50
+			}
+
+			targeted_modifier = {
+				tag = SHX
+				attack_bonus_against = -0.50
+			}
+
+			targeted_modifier = {
+				tag = GXC
+				attack_bonus_against = -0.50
+			}
+
+			targeted_modifier = {
+				tag = YUN
+				attack_bonus_against = -0.50
+			}
+
+			targeted_modifier = {
+				tag = SIK
+				attack_bonus_against = -0.50
+			}
+
+		}
+
+		ww1_army_corruption = {
+			allowed = {
+				always = no
+			}
+			picture = chi_army_corruption
+			modifier = {
+				army_attack_factor = -0.25
+			}
+		}
+
+		ww1_private_railway_construction = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_infrastructure_factor = 0.02
+			}
+		}
+		ww1_nationalized_railway_construction = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+		ww1_anti_qing_sentiment = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.2
+			}
+
+		}
+		boxer_protocols_visible = {
+			picture = generic_army_problems
+			allowed = {
+				always = no
+			}
+			cancel = {
+				date > 1922.1.1
+			}
+			on_add = {
+				country_lock_all_division_template = yes
+			}
+			on_remove = {
+				country_lock_all_division_template = no
+			}
+			modifier = {
+				custom_modifier_tooltip = no_army_production
+			}
+		}
+		
+		CHI_ww1_heavy_GER_inf = {
+			picture = generic_disjointed_gov
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+			}
+
+		}
+		CHI_ww1_heavy_FRA_inf = {
+			allowed = {
+				always = no
+			}
+			picture = generic_disjointed_gov
+			removal_cost = -1
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+			}
+
+		}
+		german_advisors = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+		}
+
+		#####################
+		##### WTT IDEAS #####
+		#####################
+
+
+		CHI_army_corruption_1 = {
+
+			picture = chi_army_corruption
+
+			name = CHI_army_corruption
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = -0.5
+				army_defence_factor = -0.5
+				mobilization_speed = -0.3
+			}
+
+		}
+
+		CHI_army_corruption_2 = {
+
+			picture = chi_army_corruption2
+
+			name = CHI_army_corruption
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = -0.33
+				army_defence_factor = -0.33
+				mobilization_speed = -0.2
+			}
+
+		}
+
+		CHI_army_corruption_3 = {
+
+			picture = chi_army_corruption3
+
+			name = CHI_army_corruption
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = -0.16
+				army_defence_factor = -0.16
+				mobilization_speed = -0.1
+			}
+
+		}
+
+		#####################
+		##### From focus ####
+		#####################
+
+		CHI_executive_yuan = {
+
+			picture = generic_constitutional_guarantees
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.25
+			}
+		}
+
+		CHI_legislative_yuan = {
+
+			picture = generic_democratic_drift_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.25
+				democratic_drift = 0.02
+			}
+		}
+
+		CHI_war_of_resistance = {
+
+			picture = chi_war_of_resistance
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_core_defence_factor = 0.1
+			}
+		}
+
+		CHI_war_of_resistance_2 = {
+
+			name = CHI_war_of_resistance
+
+			picture = chi_war_of_resistance2
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
+			}
+		}
+
+		CHI_war_of_national_liberation = {
+
+			picture = chi_war_of_resistance3
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_core_attack_factor = 0.1
+			}
+		}
+
+		CHI_forced_conscription = {
+
+			picture = chi_forced_conscription
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.02
+				war_support_factor = -0.1
+			}
+		}
+
+		CHI_war_of_anti_imperialism = {
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+
+			targeted_modifier = {
+				tag = MAN
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+	}
+
+}

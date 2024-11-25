@@ -1,301 +1,289 @@
-﻿capital = 107
+RON_universal_setup = yes
+capital = 107
+oob = "SER_1900"
 
-#-------------------------------------------------------
-#					GENERIC VALUES
-#-------------------------------------------------------
-set_fuel_ratio = 0.20
 set_research_slots = 3
+set_convoys = 10
 set_stability = 0.6
-set_war_support = 0.80
-set_convoys = 0
 
-#-------------------------------------------------------
-#					POLITICS & ARMY
-#-------------------------------------------------------
+if = {
+	limit = {
+		has_start_date < 1910.01.01
+	}
+	add_ideas = {
+		SER_unpopular_monarchy
+		SER_legacy_of_serbo_bulgarian_war
+	}
+}
 
-# LEADERS
-recruit_character = SER_peter_i
-recruit_character = SER_filip_filipovic
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1900.1.1"
+	election_frequency = 60
+	elections_allowed = no
+}
 
-# ARMY
+set_popularities = {
+	fascism = 10
+	neutrality = 80
+	communism = 10
+}
+
+recruit_character = SER_alexander_i
+recruit_character = SER_petar_i
+recruit_character = SER_george_iii
+recruit_character = SER_alexander_ii
+recruit_character = SER_milan_ii
+recruit_character = SER_dragutin_dimitrijevic_apis
+recruit_character = SER_jakov_prodanovic
+
 recruit_character = SER_radomir_putnik
-recruit_character = SER_stepa_stepanovic
-recruit_character = SER_zivojin_misic # Also Advisor
-recruit_character = SER_jurisic_sturm
 recruit_character = SER_petar_bojovic
-
-# ADVISORS
-recruit_character = SER_lazar_pacu
-recruit_character = SER_petar_pesic
-recruit_character = SER_mihailo_rasic
-recruit_character = SER_mihailo_gavrilovic
-recruit_character = SER_stojan_novakovic
-recruit_character = SER_momcilo_nincic
-recruit_character = SER_milos_vasic
+recruit_character = SER_pavle_jurisic_sturm
+recruit_character = SER_stepa_stepanovic
 recruit_character = SER_stevan_hadzic
-recruit_character = SER_zivko_pavlovic
-recruit_character = SER_jovan_jovanovic_pizon
-recruit_character = SER_stojan_protic
-recruit_character = SER_milovan_milovanovic
-recruit_character = SER_svetozar_pribicevic
-recruit_character = SER_duro_dakovic
-recruit_character = SER_milenko_vesnic
-recruit_character = SER_kosta_miletic # Air Chief
+recruit_character = SER_milos_vasic
+recruit_character = SER_ilija_gojkovic
+recruit_character = SER_bogoljub_ilic
+recruit_character = SER_zivojin_misic
+recruit_character = SER_bozidar_jankovic
+recruit_character = SER_mihailo_zivkovic
+recruit_character = SER_petar_zivkovic
+recruit_character = SER_vladimir_kondic
 
+recruit_character = SER_acd2
+recruit_character = SER_communist_guy
+recruit_character = SER_fascist_guy
+recruit_character = SER_aa2
+recruit_character = SER_democratic_guy
+recruit_character = SER_ncm
+recruit_character = SER_nt
+recruit_character = SER_ar
+recruit_character = SER_stc
+recruit_character = SER_ai2
+recruit_character = SER_aco2
+recruit_character = SER_ncs
+recruit_character = SER_coi
+recruit_character = SER_acas
+recruit_character = SER_pot
+recruit_character = SER_nccr
+recruit_character = SER_mt
+
+### WW1 Start Date
 
 1910.1.1 = {
 	oob = "SER_1910"
 
-	set_technology = {
-
-		# Train
-		ww1_train = 1
-
-		# Infantry
-		infantry_weapons = 1
-		ww1infantry_weapons1 = 1
-		support_weapons = 1
-		infantry_binoculars = 1
-		infantry_grenade = 1
-		motorised_infantry = 1
-		ww1_ambulance1 = 1
-
-		# Support
-		tech_support = 1
-		tech_engineers = 1
-		tech_recon = 1
-		#tech_military_police = 1
-		#tech_maintenance_company = 1
-		#tech_field_hospital = 1
-		#tech_logistics_company = 1
-
-		# Armor
-		gwtank=1 # 1910 Armored Car
-
-		# Artillery
-		light_field_gun1 = 1
-		heavy_field_gun1 = 1
-
-		# Navy
-		ww1_destroyer0 = 1
-	ww1_destroyer0_mtg = 1
-		ww1_destroyer1 = 1
-	ww1_destroyer1_mtg = 1
-		ww1_light_cruiser0 = 1
-	ww1_light_cruiser0_mtg = 1
-		ww1_light_cruiser1 = 1
-	ww1_light_cruiser1_mtg = 1
-		ww1_battlecruiser0 = 1
-	ww1_battlecruiser0_mtg = 1
-		#ww1_battlecruiser0b = 1
-		ww1_battlecruiser1 = 1
-	ww1_battlecruiser1_mtg = 1
-		ww1_battleship0 = 1
-	ww1_battleship0_mtg = 1
-		ww1_battleship1 = 1
-	ww1_battleship1_mtg = 1
-		ww1_submarine1 = 1
-	ww1_submarine1_mtg = 1
-		ww1_coastal_submarine1 = 1
-	ww1_coastal_submarine1_mtg = 1
-		transport = 1
-	transport_mtg = 1
-
-		# Air
-		ww1_fighter1 = 1
-		ww1_zeppelin1 = 1
-			bba_ww1_fighter1 = 1
-			bba_ww1_zeppelin1 = 1
-
-		# Engineering
-		electronic_mechanical_engineering = 1
-		chemical_research = 1
-
-		# Industry
-		ww1_fortification1 = 1
+	if = {
+		limit = {
+			has_start_date > 1909.1.1
+			has_start_date < 1911.1.1
+		}
+		country_event = { id = ww1_serbia.1 days = 762 }
+		country_event = { id = ww1_serbia.1 days = 762 }
 	}
 
 	set_politics = {
-	    ruling_party = democratic
-	    last_election = "1908.5.31"
-	    election_frequency = 36
-	    elections_allowed = yes
+		ruling_party = neutrality
+		last_election = "1907.1.12"
+		election_frequency = 60
+		elections_allowed = no
 	}
+
 	set_popularities = {
-	    democratic = 78
-	    fascism = 2
-	    communism = 8
-	    neutrality = 12
+		fascism = 10
+		neutrality = 80
+		communism = 10
 	}
 
-	add_ideas = {
-		SER_ww1_zduhac
-		SER_ww1_blackhand
-		limited_conscription
-		partial_economic_mobilisation
+	set_technology = {
+		tech_support = 1
+		early_infantry_weapons = 1
+		light_field_gun1 = 1
+		heavy_field_gun1 = 1
+		# Navy
+		ww1_destroyer0 = 1
+		ww1_destroyer1 = 1
+		ww1_light_cruiser1 = 1
+		ww1_light_cruiser0 = 1
+		ww1_battlecruiser0 = 1
+		ww1_battleship0 = 1
+		ww1_submarine1 = 1
+		ww1_coastal_submarine1 = 1
+		transport = 1
+		horses = 1
+		ww1_electronic_mechanical_engineering = 1
 	}
+    recruit_character = SER_acr
+    recruit_character = SER_awt
+	recruit_character = SER_acgs
+	recruit_character = SER_dimitrije_tucovic 
+	promote_character = SER_dimitrije_tucovic	
+}
 
-	add_manpower = 25874
+1925.1.1 = {
+	recruit_character = SER_milan_nedic
+	recruit_character = SER_aleksandar_rankovic
+	recruit_character = SER_draza_mihailovic
+	promote_character = SER_aleksandar_rankovic	
+	recruit_character = SER_prince_paul
+	promote_character = SER_prince_paul
+	recruit_character = SER_peter_ii
 }
 
 1914.1.1 = {
 	oob = "SER_1914"
+}
 
-	#-------------------------------------------------------
-	#							NF
-	#-------------------------------------------------------
-	#Army
-	complete_national_focus = SER_ww1_army_effort
-	complete_national_focus = SER_ww1_equipment_effort
-	complete_national_focus = SER_ww1_artillery_effort_1
-	complete_national_focus = SER_ww1_doctrine_effort
-	complete_national_focus = SER_ww1_trenchwarfare
-	
-	# Air
-	complete_national_focus = SER_ww1_aviation_effort
-	complete_national_focus = SER_ww1_aviation_effort_2
-	
-	# Industry
-	complete_national_focus = SER_ww1_industrial_effort
-	complete_national_focus = SER_ww1_infrastructure_effort
-	complete_national_focus = SER_ww1_airfield_expansion_1
-	complete_national_focus = SER_ww1_construction_effort
-	complete_national_focus = SER_ww1_production_effort
-	
-	# Naval
-
-	#Political
-	complete_national_focus = SER_ww1_political_effort
-	complete_national_focus = SER_ww1_Reconciliation
-	complete_national_focus = SER_ww1_LimitDemocracy
-	complete_national_focus = SER_ww1_reorganization_act
-
-	#Diplomatic
-	complete_national_focus = SER_ww1_diplomatic_effort
-	complete_national_focus = SER_ww1_BalkansPolitics
-	complete_national_focus = SER_ww1_anti_ottoman
-	complete_national_focus = SER_ww1_italo_turkish_opportunity
-	unlock_national_focus = SER_balkan_league
-	unlock_national_focus = SER_first_balkan
-	complete_national_focus = SER_ww1_GreeceFriend
-	complete_national_focus = SER_second_balkan
-	complete_national_focus = SER_ww1_assert_position_west
-	complete_national_focus = SER_ww1_assert_position_east
-	complete_national_focus = SER_ww1_anti_auh
-	complete_national_focus = SER_ww1_pro_fra
-	complete_national_focus = SER_ww1_pro_rus
-	complete_national_focus = SER_ww1_equip_rus
-	#-------------------------------------------------------
-
-	set_technology = {
-
-		# Infantry
-		infantry_weapons = 1
-		ww1infantry_weapons1 = 1
-		ww1_infantry_equip1 = 1
-		support_weapons = 1
-		support_weapons2 = 1
-		infantry_binoculars = 1
-		infantry_grenade = 1
-		motorised_infantry = 1
-		ww1_ambulance1 = 1
-		tech_mountaineers = 1
-
-		# Support
-		tech_support = 1
-		tech_engineers = 1
-		tech_recon = 1
-		tech_military_police = 1
-		tech_maintenance_company = 1
-		tech_field_hospital = 1
-		tech_logistics_company = 1
-
-		# Armor
-		gwtank=1 # 1910 Armored Car
-		ww1_armored_car_2 = 1
-
-		# Artillery
-		light_field_gun1 = 1
-		bonus_artillery1 = 1
-		heavy_field_gun1 = 1
-		bonus_bertha1 = 1
-
-		# Land Doctrine
-		ww1_landdoctrine = 1
-		ww1_directfire = 1
-
-		# Navy
-		ww1_destroyer0 = 1
-	ww1_destroyer0_mtg = 1
-		ww1_destroyer1 = 1
-	ww1_destroyer1_mtg = 1
-		ww1_destroyer2 = 1
-	ww1_destroyer2_mtg = 1
-		ww1_light_cruiser0 = 1
-	ww1_light_cruiser0_mtg = 1
-		ww1_light_cruiser1 = 1
-	ww1_light_cruiser1_mtg = 1
-		ww1_battlecruiser0 = 1
-	ww1_battlecruiser0_mtg = 1
-		#ww1_battlecruiser0b = 1
-		ww1_battlecruiser1 = 1
-	ww1_battlecruiser1_mtg = 1
-		ww1_battleship0 = 1
-	ww1_battleship0_mtg = 1
-		ww1_battleship1 = 1
-	ww1_battleship1_mtg = 1
-		ww1_submarine1 = 1
-	ww1_submarine1_mtg = 1
-		ww1_coastal_submarine1 = 1
-	ww1_coastal_submarine1_mtg = 1
-		transport = 1
-	transport_mtg = 1
-
-		# Air
-		ww1_fighter1 = 1
-		ww1_fighter1b = 1
-		ww1_zeppelin1 = 1
-			bba_ww1_fighter1 = 1
-			bba_ww1_fighter1b = 1
-			bba_ww1_zeppelin1 = 1
-
-		# Air Doctrine
-		ww1_airdoctrine = 1
-		ww1_airdoctrine_2 = 1
-		ww1_airdoctrine_3 = 1
-
-		# Engineering
-		electronic_mechanical_engineering = 1
-		mechanical_computing = 1
-		chemical_research = 1
-		tank_unlocker1 = 1
-		radio = 1
-		supertech1 = 1
-		tankaircraft1 = 1
-
-		# Industry
-		ww1_tools1 = 1
-		ww1_medicine1 = 1
-		ww1_fortification1 = 1
-		ww1_fortification2 = 1
-
+### END OF WW1 Start Date
+1936.1.1 = {
+	set_air_oob = "SER_1936_air_bba"
+	if = {
+		limit = {
+			has_start_date < 1949.01.01
+		}
+		add_ideas = {
+			anti_german_military
+		}
 	}
-
 	set_politics = {
-	    ruling_party = democratic
-	    last_election = "1911.5.31"
-	    election_frequency = 36
-	    elections_allowed = yes
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 36
+		elections_allowed = yes
 	}
 	set_popularities = {
-	    democratic = 78
-	    fascism = 2
-	    communism = 8
-	    neutrality = 12
+		democratic = 20
+		fascism = 30
+		communism = 20
+		neutrality = 30
 	}
 
-	add_ideas = {		
-		limited_conscription
-		partial_economic_mobilisation
+	set_technology = {
+		tech_support = 1
+		tech_engineers = 1
+		tech_mountaineers = 1
+		basic_light_tank = 1
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		fuel_silos = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_submarine = 1
+		transport = 1
+	}
+	if = {
+		limit = {
+			has_dlc = "No Step Back"
+		}
+		set_technology = {
+			basic_light_tank_chassis = 1
+		}
+	}
+}
+
+1941.1.1 = {
+	oob = "SER_1941"
+	set_politics = {
+		ruling_party = fascism
+		last_election = "1941.1.1"
+		election_frequency = 60
+		elections_allowed = no
+	}
+	set_popularities = {
+		fascism = 100
+	}
+	promote_character = SER_peter_ii
+	set_portraits = {
+		character = SER_peter_ii
+		army = {
+			large = "gfx/leaders/YUG/Portrait_Yugoslavia_Peter_II.dds"
+		}
+	}
+}
+
+1942.1.1 = {
+	oob = "SER_1942"
+}
+
+1943.1.1 = {
+	oob = "SER_1943"
+}
+
+1949.1.1 = {
+	if = {
+		limit = {
+			has_start_date > 1948.01.01
+		}
+		set_cosmetic_tag = SER_MODERN
+	}
+}
+
+1960.1.1 = {
+	retire_character = SER_radomir_putnik
+	retire_character = SER_petar_bojovic
+	retire_character = SER_pavle_jurisic_sturm
+	retire_character = SER_stepa_stepanovic
+	retire_character = SER_stevan_hadzic
+	retire_character = SER_milos_vasic
+	retire_character = SER_ilija_gojkovic
+	retire_character = SER_bogoljub_ilic
+	retire_character = SER_zivojin_misic
+	retire_character = SER_bozidar_jankovic
+	retire_character = SER_mihailo_zivkovic
+	retire_character = SER_petar_zivkovic
+	retire_character = SER_vladimir_kondic
+}
+
+2000.1.1 = {
+	oob = "SER_2000"
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "2000.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		neutrality = 100
+	}
+	create_country_leader = {
+		name = "Aleksandar Vucic"
+		picture = "gfx/leaders/SER/MD/Serbia-Aleksandar_Vucic.dds"
+		
+		ideology = nationalism
+	}
+}
+2008.1.1 = {
+	create_country_leader = {
+		name = "Boris Tadić"
+		picture = "gfx/leaders/SER/MD/Serbia_Boris_Tadić.dds"
+		
+		ideology = democratic_socialism
+	}
+}
+2016.1.1 = {
+	oob = "SER_2016"
+	set_popularities = {
+		fascism = 15
+		democratic = 70
+		communism = 15
+	}
+}
+
+2020.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "2020.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		neutrality = 100
+	}
+	create_country_leader = {
+		name = "Aleksandar Vučić"
+		picture = "gfx/leaders/SER/MD/SER_Aleksandar_Vučić_Populism.dds"
+		
+		ideology = populism
 	}
 }

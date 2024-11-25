@@ -1,0 +1,4583 @@
+focus_tree = {
+	id = RON_Latvia
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			original_tag  = LAT
+		}
+	}
+
+	default = no 
+ reset_on_civilwar = no
+
+	continuous_focus_position = { x = 700 y = 1000 }
+
+	###############################################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
+	##########WORLD WAR 2 FOCUS####################################################################################################
+	#################1933-1948#####################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
+	#The Will of the People
+	focus = {
+		id = LAT1933_the_will_of_the_people
+		icon = GFX_goal_support_communism
+		x = 60
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		allow_branch = {
+			date > 1932.12.31
+			date < 1949.1.1
+		}
+		available = {
+			date < 1936.1.1
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = RI_commies_rise
+				days = 1095
+			}
+		}
+		mutually_exclusive = { focus = LAT1933_strenghten_the_government  focus = LAT1933_fascism_leads_the_way }
+	}
+
+	#Fight the Great Depresion
+	focus = {
+		id = LAT1933_fight_the_great_depresion
+		icon = GFX_focus_hol_abandon_the_gold_standard
+		x = 13
+		y = 2
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = RI_economic_recovery
+				days = 1095
+			}
+		}
+		prerequisite = { focus = LAT1933_strenghten_the_government }
+	}
+
+	#Strenghten the Government
+	focus = {
+		id = LAT1933_strenghten_the_government
+		icon = GFX_focus_generic_support_the_left_right
+		x = 13
+		y = 0
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			date > 1932.12.31
+			date < 1949.1.1
+		}
+		available = {
+			date < 1936.1.1
+			AND = {
+				NOT = { has_government = fascism }
+				NOT = { has_government = communism }
+			}
+		}
+		completion_reward = {
+			add_political_power = 150
+		}
+		mutually_exclusive = { focus = LAT1933_the_will_of_the_people  focus = LAT1933_fascism_leads_the_way }
+		ai_will_do = { factor = 100 }
+	}
+
+
+
+	#Fascism leads the way
+	focus = {
+		id = LAT1933_fascism_leads_the_way
+		icon = GFX_fascism6
+		x = 7
+		y = 0
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		allow_branch = {
+			date > 1932.12.31
+			date < 1949.1.1
+		}
+		available = {
+			date < 1936.1.1
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = RI_fascists_rise
+				days = 1095
+			}
+		}
+		mutually_exclusive = { focus = LAT1933_strenghten_the_government focus = LAT1933_the_will_of_the_people }
+	}
+
+	#Fight the unemployment
+	focus = {
+		id = LAT1933_fight_the_unemployment
+		icon = GFX_focus_generic_industry_1
+		x = 11
+		y = 3
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_manpower = -5000
+		}
+		prerequisite = { focus = LAT1933_fight_the_great_depresion }
+	}
+
+	#An Axis Of Our Own
+	focus = {
+		id = LAT1933_an_axis_of_our_own
+		icon = GFX_goal_support_fascism
+		x = 9
+		y = 6
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
+			add_political_power = 150
+		}
+		prerequisite = { focus = LAT1933_guide_the_public_opinion }
+		mutually_exclusive = { focus = LAT1933_join_the_axis }
+	}
+
+	#Seek International Cooperation
+	focus = {
+		id = LAT1933_seek_international_cooperation
+		icon = GFX_goal_generic_major_alliance
+		x = 17
+		y = 3
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 150
+		}
+		prerequisite = { focus = LAT1933_fight_the_great_depresion }
+	}
+
+	#League of Neutral States
+	focus = {
+		id = LAT1933_league_of_neutral_states
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = 17
+		y = 5
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
+			add_political_power = 150
+		}
+		prerequisite = { focus = LAT1933_seek_international_cooperation }
+		mutually_exclusive = { focus = LAT1933_seek_to_join_allies }
+	}
+
+	#Seek to join Allies
+	focus = {
+		id = LAT1933_seek_to_join_allies
+		icon = GFX_focus_hol_the_fourth_ally
+		x = 15
+		y = 5
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				RON_ww2_allies = no
+			}
+			modifier = {
+				factor = 0
+				is_subject = yes
+			}
+			modifier = {
+				factor = 0
+				ENG = {
+					has_capitulated = yes
+				}
+			}
+		}
+		available = {
+			ENG = {
+				has_government = democratic
+			}
+			country_exists = ENG
+			is_in_faction = no
+			threat > 0.9
+
+		}
+		completion_reward = {
+			ENG = {
+				country_event = generic.2
+			}
+		}
+		prerequisite = { focus = LAT1933_seek_international_cooperation }
+		mutually_exclusive = { focus = LAT1933_league_of_neutral_states }
+	}
+
+	#Government Contracts
+	focus = {
+		id = LAT1933_government_contracts
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 13
+		y = 5
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = RI_government_contracts
+				days = 1095
+			}
+		}
+		prerequisite = { focus = LAT1933_fight_the_unemployment  focus = LAT1933_build_up_the_civilian_industry }
+	}
+
+	#Create militias
+	focus = {
+		id = LAT1933_create_militias
+		icon = GFX_militarism1
+		x = 4
+		y = 1
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LAT1933_the_will_of_the_people focus = LAT1933_fascism_leads_the_way }
+		completion_reward = {
+			add_ideas = RI_militias
+		}
+	}
+
+	#March to the *Capital*
+	focus = {
+		id = LAT1933_march_to_the_capital
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		x = 7
+		y = 2
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			fascism > 0.50
+		}
+		completion_reward = {
+
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				add_political_power = 150
+			}
+
+			if = {
+				limit = {
+					NOT = { has_government = fascism }
+				}
+
+				if = {
+					limit = {
+						fascism < 0.60
+					}
+					random_list = {
+						50 = {
+							start_civil_war = {
+								ruling_party = fascism
+								ideology = ROOT
+								size = 0.5
+							}
+						}
+						50 = {
+							country_event = {
+								id = ww2tree.10
+								days = 1
+							}
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						fascism > 0.59
+						fascism < 0.70
+					}
+					random_list = {
+						40 = {
+							start_civil_war = {
+								ruling_party = fascism
+								ideology = ROOT
+								size = 0.4
+							}
+						}
+						60 = {
+							country_event = {
+								id = ww2tree.10
+								days = 1
+							}
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						fascism > 0.69
+						fascism < 0.80
+					}
+					random_list = {
+						30 = {
+							start_civil_war = {
+								ruling_party = fascism
+								ideology = ROOT
+								size = 0.3
+							}
+						}
+						70 = {
+							country_event = {
+								id = ww2tree.10
+								days = 1
+							}
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						fascism > 0.79
+						fascism < 0.90
+					}
+					random_list = {
+						20 = {
+							start_civil_war = {
+								ruling_party = fascism
+								ideology = ROOT
+								size = 0.2
+							}
+						}
+						80 = {
+							country_event = {
+								id = ww2tree.10
+								days = 1
+							}
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						fascism > 0.89
+					}
+					random_list = {
+						10 = {
+							start_civil_war = {
+								ruling_party = fascism
+								ideology = ROOT
+								size = 0.1
+							}
+						}
+						90 = {
+							country_event = {
+								id = ww2tree.10
+								days = 1
+							}
+						}
+					}
+				}
+			}
+		}
+		prerequisite = { focus = LAT1933_fascism_leads_the_way }
+		prerequisite = { focus = LAT1933_create_militias }
+	}
+
+	#Lenin's Legacy
+	focus = {
+		id = LAT1933_lenins_legacy
+		icon = leninism1
+		x = 0
+		y = 2
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			communism > 0.50
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_government = communism
+				}
+				add_political_power = 150
+			}
+
+			if = {
+				limit = {
+					NOT = { has_government = communism }
+				}
+				if = {
+					limit = {
+						communism < 0.60
+					}
+					random_list = {
+						50 = {
+							start_civil_war = {
+								ruling_party = communism
+								ideology = ROOT
+								size = 0.5
+							}
+						}
+						50 = {
+							country_event = {
+								id = ww2tree.3
+								days = 1
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						communism > 0.59
+						communism < 0.70
+					}
+					random_list = {
+						40 = {
+							start_civil_war = {
+								ruling_party = communism
+								ideology = ROOT
+								size = 0.4
+							}
+						}
+						60 = {
+							country_event = {
+								id = ww2tree.3
+								days = 1
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						communism > 0.69
+						communism < 0.80
+					}
+					random_list = {
+						30 = {
+							start_civil_war = {
+								ruling_party = communism
+								ideology = ROOT
+								size = 0.3
+							}
+						}
+						70 = {
+							country_event = {
+								id = ww2tree.3
+								days = 1
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						communism > 0.79
+						communism < 0.90
+					}
+					random_list = {
+						20 = {
+							start_civil_war = {
+								ruling_party = communism
+								ideology = ROOT
+								size = 0.2
+							}
+						}
+						80 = {
+							country_event = {
+								id = ww2tree.3
+								days = 1
+							}
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						communism > 0.89
+					}
+					random_list = {
+						10 = {
+							start_civil_war = {
+								ruling_party = communism
+								ideology = ROOT
+								size = 0.1
+							}
+						}
+						90 = {
+							country_event = {
+								id = ww2tree.3
+								days = 1
+							}
+						}
+					}
+				}
+			}
+		}
+		prerequisite = { focus = LAT1933_the_will_of_the_people }
+		prerequisite = { focus = LAT1933_create_militias }
+	}
+
+	#Assert our position
+	focus = {
+		id = LAT1933_assert_our_position
+		icon = GFX_nationalism
+		x = 7
+		y = 3
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			remove_ideas = {
+				RI_political_resistance
+			}
+			remove_ideas = {
+				RI_military_resistance
+			}
+		}
+		prerequisite = { focus = LAT1933_march_to_the_capital }
+	}
+
+	##Nationalize the Industry
+	focus = {
+		id = LAT1933_nationalize_the_industry
+		icon = GFX_goal_generic_construction
+		x = 6
+		y = 4
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = -100
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		prerequisite = { focus = LAT1933_assert_our_position }
+	}
+
+	#Guide the Public Opinion
+	focus = {
+		id = LAT1933_guide_the_public_opinion
+		icon = GFX_focus_generic_military_academy
+		x = 8
+		y = 4
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_popularity = {
+				popularity = 0.1
+				ideology = fascism
+			}
+		}
+		prerequisite = { focus = LAT1933_assert_our_position }
+	}
+
+	#Fulfill our promises
+	focus = {
+		id = LAT1933_fulfill_our_promises
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 10
+		y = 5
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = -100
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		prerequisite = { focus = LAT1933_nationalize_the_industry  focus = LAT1933_guide_the_public_opinion }
+	}
+
+	#Nationwide infrastructure
+	focus = {
+		id = LAT1933_nationwide_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 6
+		y = 5
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			random_owned_state = {
+				if = {
+					limit = {
+						is_owned_and_controlled_by = ROOT
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			random_owned_state = {
+				if = {
+					limit = {
+						is_owned_and_controlled_by = ROOT
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			random_owned_state = {
+				if = {
+					limit = {
+						is_owned_and_controlled_by = ROOT
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			random_owned_state = {
+				if = {
+					limit = {
+						is_owned_and_controlled_by = ROOT
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		prerequisite = { focus = LAT1933_nationalize_the_industry }
+	}
+
+	##Unite the masses
+	focus = {
+		id = LAT1933_unite_the_masses
+		icon = GFX_focus_focus_fra_liberte_egalite_solidarite
+		x = 0
+		y = 4
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			remove_ideas = {
+				RI_political_resistance
+			}
+			remove_ideas = {
+				RI_military_resistance
+			}
+		}
+		prerequisite = { focus = LAT1933_persecute_the_rich  focus = LAT1933_nationalize_the_industry_communism  focus = LAT1933_institute_of_national_propaganda }
+	}
+
+	#Mobilize the masses
+	focus = {
+		id = LAT1933_mobilize_the_masses
+		icon = GFX_focus_YUG_pan_slavic_congress
+		x = 0
+		y = 5
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = RI_state_unions
+		}
+		prerequisite = { focus = LAT1933_unite_the_masses }
+	}
+
+	#Persecute the Rich
+	focus = {
+		id = LAT1933_persecute_the_rich
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 0
+		y = 3
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LAT1933_lenins_legacy }
+		completion_reward = {
+			add_timed_idea = {
+				idea = RI_persecute_the_rich
+				days = 1095
+			}
+		}
+	}
+
+	#Nationalize the Industry
+	focus = {
+		id = LAT1933_nationalize_the_industry_communism
+		icon = GFX_goal_generic_construction
+		x = -2
+		y = 3
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = -50
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		prerequisite = { focus = LAT1933_lenins_legacy }
+	}
+
+	#Institute of National Propaganda
+	focus = {
+		id = LAT1933_institute_of_national_propaganda
+		icon = GFX_focus_por_workers_of_iberia
+		x = 3
+		y = 3
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LAT1933_lenins_legacy }
+		completion_reward = {
+			add_popularity = {
+				popularity = 0.1
+				ideology = communism
+			}
+		}
+	}
+
+	#5 Year Plan
+	focus = {
+		id = LAT1933_5_year_plan
+		icon = GFX_goal_generic_soviet_construction
+		x = 0
+		y = 7
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = RI_five_year_plan
+				days = 1800
+			}
+			remove_ideas = {
+				RI_commie_unions
+			}
+		}
+		prerequisite = { focus = LAT1933_mobilize_the_masses }
+	}
+
+	#Military Technical Institute
+	focus = {
+		id = LAT1933_military_technical_institute
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 19
+		y = 0
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			date > 1932.12.31
+			date < 1949.1.1
+		}
+		available = {
+			date < 1936.1.1
+		}
+		completion_reward = {
+			army_experience = 100
+		}
+	}
+
+	#Light Cruiser Advancement
+	focus = {
+		id = LAT1933_light_cruiser_advancement
+		icon = GFX_goal_generic_navy_cruiser
+		x = 30
+		y = 4
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LAT1933_raider_fleet }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = cl_tech
+			}
+		}
+	}
+
+	#Submarine advancement
+	focus = {
+		id = LAT1933_submarine_advancement
+		icon = GFX_goal_generic_navy_anti_submarine
+		x = 31
+		y = 3
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = navy_bonus
+				bonus = 1
+				uses = 2
+				category = ss_tech
+			}
+		}
+		prerequisite = { focus = LAT1933_raider_fleet }
+	}
+
+	#Raider Fleet
+	focus = {
+		id = LAT1933_raider_fleet
+		icon = GFX_goal_generic_navy_anti_submarine
+		x = 30
+		y = 2
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LAT1933_institute_of_navy }
+		mutually_exclusive = { focus = LAT1933_fleet_in_being }
+	}
+
+	#Fleet in being
+	focus = {
+		id = LAT1933_fleet_in_being
+		icon = GFX_focus_generic_navy_battleship2
+		x = 35
+		y = 2
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = navdoctrine_bonus
+				bonus = 1
+				uses = 2
+				category = cat_fleet_in_being
+			}
+		}
+		prerequisite = { focus = LAT1933_institute_of_navy }
+		mutually_exclusive = { focus = LAT1933_raider_fleet }
+	}
+
+	#Heavy Cruiser Advancement
+	focus = {
+		id = LAT1933_heavy_cruiser_advancement
+		icon = GFX_focus_generic_navy_battleship2
+		x = 33
+		y = 3
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LAT1933_fleet_in_being }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = ca_tech
+			}
+		}
+	}
+
+	#Battleship advancement
+	focus = {
+		id = LAT1933_battleship_advancement
+		icon = GFX_goal_generic_navy_battleship
+		x = 35
+		y = 3
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = bb_tech
+			}
+		}
+		prerequisite = { focus = LAT1933_fleet_in_being }
+	}
+
+	#Destroyer Advancement
+	focus = {
+		id = LAT1933_destroyer_advancement
+		icon = GFX_focus_generic_destroyer
+		x = 29
+		y = 3
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = dd_tech
+			}
+		}
+		prerequisite = { focus = LAT1933_raider_fleet }
+	}
+
+	#Build up the Military Industry
+	focus = {
+		id = LAT1933_build_up_the_military_industry
+		icon = GFX_GER_military_industrial_complex
+		x = 15
+		y = 3
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = -100
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		prerequisite = { focus = LAT1933_fight_the_great_depresion }
+	}
+
+	#Build up the Civilian Industry
+	focus = {
+		id = LAT1933_build_up_the_civilian_industry
+		icon = GFX_goal_continuous_non_factory_construct
+		x = 13
+		y = 3
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = -100
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		prerequisite = { focus = LAT1933_fight_the_great_depresion }
+	}
+
+	#Research funding
+	focus = {
+		id = LAT1933_research_funding
+		icon = GFX_focus_research
+		x = 13
+		y = 6
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+		prerequisite = { focus = LAT1933_government_contracts }
+	}
+
+	#Big Brother's Help
+	focus = {
+		id = LAT1933_big_brothers_help
+		icon = GFX_align_to_soviet_union
+		x = 2
+		y = 5
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				RON_ww2_comintern = no
+			}
+			modifier = {
+				factor = 0
+				is_subject = yes
+			}
+			modifier = {
+				factor = 0
+				SOV = {
+					has_capitulated = yes
+				}
+			}
+		}
+		available = {
+			SOV = {
+				has_government = communism
+			}
+			country_exists = SOV
+			is_in_faction = no
+			NOT = {
+				has_war_with = SOV
+			}
+			threat > 0.9
+
+		}
+		bypass = {
+			is_in_faction_with = SOV
+		}
+		prerequisite = { focus = LAT1933_institute_of_national_propaganda }
+		mutually_exclusive = { focus = LAT1933_commune_of_our_own }
+		completion_reward = {
+			SOV = {
+				country_event = generic.2
+			}
+		}
+	}
+
+	#Commune of our own
+	focus = {
+		id = LAT1933_commune_of_our_own
+		icon = GFX_goal_support_fourth_int
+		x = 4
+		y = 5
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		prerequisite = { focus = LAT1933_institute_of_national_propaganda }
+		mutually_exclusive = { focus = LAT1933_big_brothers_help }
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
+			add_political_power = 150
+		}
+	}
+
+	#International Research Agreement
+	focus = {
+		id = LAT1933_international_research_agreement
+		icon = GFX_goal_continuous_research
+		x = 3
+		y = 6
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LAT1933_big_brothers_help focus = LAT1933_commune_of_our_own }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#Infantry Advancement
+	focus = {
+		id = LAT1933_infantry_advancement
+		icon = GFX_focus_secret_rearmament
+		x = 16
+		y = 2
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+		prerequisite = { focus = LAT1933_military_technical_institute }
+	}
+
+	#Military Aeronatical Institute
+	focus = {
+		id = LAT1933_military_aeronatical_institute
+		icon = GFX_goal_generic_air_fighter2
+		x = 26
+		y = 0
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			date > 1932.12.31
+			date < 1949.1.1
+		}
+		available = {
+			date < 1936.1.1
+		}
+		completion_reward = {
+			air_experience = 100
+		}
+	}
+
+	#Institute of Navy
+	focus = {
+		id = LAT1933_institute_of_navy
+		icon = GFX_goal_generic_build_navy
+		x = 32
+		y = 0
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		allow_branch = {
+			date > 1932.12.31
+			date < 1949.1.1
+		}
+		available = {
+			date < 1936.1.1
+			any_state = {
+				is_controlled_by = ROOT
+				is_coastal = yes
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			navy_experience = 100
+		}
+	}
+
+	#Artillery Advancement
+	focus = {
+		id = LAT1933_artillery_advancement
+		icon = GFX_goal_generic_army_artillery2
+		x = 18
+		y = 2
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 1
+				uses = 2
+				category = artillery
+			}
+		}
+		prerequisite = { focus = LAT1933_military_technical_institute }
+	}
+
+	#Mechanization Advancement
+	focus = {
+		id = LAT1933_mechanization_advancement
+		icon = motorized
+		x = 20
+		y = 2
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 1
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+		prerequisite = { focus = LAT1933_military_technical_institute }
+	}
+
+	#Armor Advancement
+	focus = {
+		id = LAT1933_armor_advancement
+		icon = GFX_goal_generic_army_tanks
+		x = 22
+		y = 2
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1
+				uses = 2
+				category = armor
+			}
+		}
+		prerequisite = { focus = LAT1933_military_technical_institute }
+	}
+
+	#Carrier Advancement
+	focus = {
+		id = LAT1933_carrier_advancement
+		icon = GFX_goal_generic_navy_carrier
+		x = 37
+		y = 3
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LAT1933_fleet_in_being }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cv_tech
+			}
+		}
+	}
+
+	#Military Academy
+	focus = {
+		id = LAT1933_military_academy
+		icon = GFX_focus_generic_military_academy
+		x = 19
+		y = 3
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			army_experience = 35
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = land_doctrine
+			}
+		}
+		prerequisite = { focus = LAT1933_infantry_advancement  focus = LAT1933_artillery_advancement  focus = LAT1933_mechanization_advancement  focus = LAT1933_armor_advancement }
+	}
+
+	#Fighter focus
+	focus = {
+		id = LAT1933_fighter_focus
+		icon = GFX_goal_generic_air_fighter
+		x = 24
+		y = 2
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+			}
+		}
+		prerequisite = { focus = LAT1933_military_aeronatical_institute }
+	}
+
+	#CAS Advancement
+	focus = {
+		id = LAT1933_cas_advancement
+		icon = GFX_goal_generic_CAS
+		x = 26
+		y = 2
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+		}
+		prerequisite = { focus = LAT1933_military_aeronatical_institute }
+	}
+
+	#Bomber Advancement
+	focus = {
+		id = LAT1933_bomber_advancement
+		icon = GFX_goal_generic_air_bomber
+		x = 28
+		y = 2
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+		}
+		prerequisite = { focus = LAT1933_military_aeronatical_institute }
+	}
+
+	##Aeronautical Academy
+	focus = {
+		id = LAT1933_aeronautical_academy
+		icon = airforce
+		x = 26
+		y = 3
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			air_experience = 35
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		prerequisite = { focus = LAT1933_fighter_focus  focus = LAT1933_cas_advancement  focus = LAT1933_bomber_advancement }
+	}
+
+	#Dockyard focus
+	focus = {
+		id = LAT1933_dockyard_focus
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 32
+		y = 5
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LAT1933_raider_fleet }
+		prerequisite = { focus = LAT1933_fleet_in_being }
+		completion_reward = {
+			if = {
+				limit = {
+					any_state = {
+						is_coastal = yes
+						is_controlled_by = ROOT
+					}
+				}
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = dockyard
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = dockyard
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	#Join the Axis
+	focus = {
+		id = LAT1933_join_the_axis
+		icon = GFX_align_to_germany2
+		x = 7
+		y = 6
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				AND = {
+					RON_ww2_axis = no
+					RON_ww2_japan_faction = no
+				}
+			}
+			modifier = {
+				factor = 0
+				is_subject = yes
+			}
+			modifier = {
+				factor = 0
+				GER = {
+					has_capitulated = yes
+				}
+			}
+		}
+		available = {
+			GER = {
+				has_government = fascism
+			}
+			country_exists = GER
+			is_in_faction = no
+			NOT = {
+				has_war_with = GER
+			}
+			threat > 0.9
+
+		}
+		bypass = {
+			is_in_faction_with = GER
+		}
+		prerequisite = { focus = LAT1933_guide_the_public_opinion }
+		mutually_exclusive = { focus = LAT1933_an_axis_of_our_own }
+		completion_reward = {
+			GER = {
+				country_event = generic.2
+			}
+		}
+	}
+
+	#Join Research Effort
+	focus = {
+		id = LAT1933_join_research_effort
+		icon = GFX_focus_research2
+		x = 8
+		y = 7
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LAT1933_join_the_axis focus = LAT1933_an_axis_of_our_own }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	##Naval Academy
+	focus = {
+		id = LAT1933_naval_academy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 32
+		y = 6
+		relative_position_id = LAT1933_the_will_of_the_people
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = LAT1933_dockyard_focus }
+		completion_reward = {
+			navy_experience = 35
+			add_tech_bonus = {
+				name = HOL_cornerstone_of_colonial_defense
+				bonus = 1
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+	}
+
+
+	focus = {
+		id = LAT_VEF_radio_production
+		icon = GFX_focus_ron_radio
+		x = 3
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		allow_branch = {
+			date > 1932.12.31
+			date < 1949.1.1
+
+		}
+		available = {
+			RON_can_do_focuses_1936 = yes
+			has_country_flag = LAT_political_path_decided
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_tech = radio
+					}
+				}
+				set_technology = {
+					radio = 1
+				}
+				else = {
+					add_tech_bonus = {
+						name = electronics_bonus
+						bonus = 1.0
+						uses = 1
+						category = electronics
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = LAT_VEF_electronics_primacy
+		icon = GFX_goal_generic_production2
+		mutually_exclusive = { focus = LAT_VEF_airplanes_primacy }
+		prerequisite = { focus = LAT_VEF_radio_production }
+		relative_position_id = LAT_VEF_radio_production
+		x = -1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 1.0
+				uses = 1
+				category = electronics
+			}
+			add_tech_bonus = {
+				name = radio_focus
+				bonus = 1.0
+				ahead_reduction = 0.5
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+	focus = {
+		id = LAT_fighter_development
+		icon = GFX_goal_generic_air_fighter2
+		relative_position_id = LAT_VEF_electronics_primacy
+		prerequisite = { focus = LAT_VEF_electronics_primacy }
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			air_experience = 100
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 1
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+			}
+		}
+	}
+	focus = {
+		id = LAT_VEF_airplanes_primacy
+		icon = GFX_goal_generic_air_fighter
+		relative_position_id = LAT_VEF_radio_production
+		prerequisite = { focus = LAT_VEF_radio_production }
+		mutually_exclusive = { focus = LAT_VEF_electronics_primacy }
+		x = 1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			air_experience = 30
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 1
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+			}
+			add_tech_bonus = {
+				name = radio_focus
+				bonus = 1.0
+				ahead_reduction = 0.5
+				uses = 2
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+			}
+		}
+	}
+	focus = {
+		id = LAT_VEF_electronics_sideprojects
+		icon = GFX_goal_generic_production2
+		relative_position_id = LAT_VEF_airplanes_primacy
+		prerequisite = { focus = LAT_VEF_airplanes_primacy }
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 1.0
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+	focus = {
+		id = LAT_VEF_industrial_development
+		icon = GFX_goal_generic_construct_mil_factory
+		relative_position_id = LAT_fighter_development
+		prerequisite = { focus = LAT_fighter_development focus = LAT_VEF_electronics_sideprojects }
+		x = 1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 12 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+
+			}
+		}
+	}
+	focus = {
+		id = LAT_modernized_signal_corps
+		icon = GFX_focus_ron_computer
+		relative_position_id = LAT_VEF_industrial_development
+		prerequisite = { focus = LAT_VEF_industrial_development }
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = radio_focus
+				bonus = 1.0
+				ahead_reduction = 0.5
+				uses = 2
+				category = signal_company_tech
+			}
+		}
+	}
+	focus = {
+		id = LAT_VEF_modern_cameras
+		icon = GFX_goal_generic_more_territorial_claims
+		relative_position_id = LAT_VEF_industrial_development
+		prerequisite = { focus = LAT_fighter_development }
+		prerequisite = { focus = LAT_VEF_industrial_development }
+		x = -1
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = LAT_modern_cameras
+		}
+	}
+	focus = {
+		id = LAT_VEF_radar_experiments
+		icon = GFX_goal_generic_radar
+		relative_position_id = LAT_VEF_modern_cameras
+		prerequisite = { focus = LAT_VEF_modern_cameras }
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = radar_focus
+				bonus = 1.5
+				uses = 1
+				category = radar_tech
+			}
+		}
+	}
+	focus = {
+		id = LAT_VEF_technological_breakthrough
+		icon = GFX_focus_research2
+		relative_position_id = LAT_VEF_radar_experiments
+		prerequisite = { focus = LAT_VEF_radar_experiments focus = LAT_VEF_design_bombing_sights }
+		prerequisite = { focus = LAT_modernized_signal_corps }
+		x = 2
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+			num_of_factories > 40
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = LAT_VEF_larger_planes
+		icon = GFX_goal_generic_air_bomber
+		relative_position_id = LAT_VEF_electronics_sideprojects
+		prerequisite = { focus = LAT_VEF_electronics_sideprojects }
+		mutually_exclusive = { focus = LAT_VEF_light_bombers }
+		x = 1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			air_experience = 5
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				ahead_reduction = 0.5
+				uses = 1
+				category = cat_heavy_fighter
+			}
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 0.5
+				uses = 1
+				technology = early_bomber
+				category = tactical_bomber
+			}
+		}
+	}
+	focus = {
+		id = LAT_VEF_light_bombers
+		icon = GFX_goal_generic_CAS
+		relative_position_id = LAT_VEF_electronics_sideprojects
+		prerequisite = { focus = LAT_VEF_electronics_sideprojects }
+		mutually_exclusive = { focus = LAT_VEF_larger_planes }
+		x = 3
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			air_experience = 5
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 0.5
+				uses = 1
+				category = cas_bomber
+			}
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 0.5
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+	focus = {
+		id = LAT_VEF_design_bombing_sights
+		icon = GFX_focus_generic_cryptologic_bomb
+		relative_position_id = LAT_VEF_larger_planes
+		prerequisite = { focus = LAT_VEF_industrial_development }
+		prerequisite = { focus = LAT_VEF_larger_planes  focus = LAT_VEF_light_bombers }
+		x = 1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = LAT_bombing_sights
+		}
+	}
+	focus = {
+		id = LAT_modernized_air_doctrine
+		icon = airforce
+		relative_position_id = LAT_VEF_airplanes_primacy
+		prerequisite = { focus = LAT_VEF_airplanes_primacy focus = LAT_VEF_electronics_primacy }
+		prerequisite = { focus = LAT_rely_on_foreign_attaches }
+		x = 4
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			air_experience = 100
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	#	focus = {
+	#		id = LAT_advanced_air_doctrine
+	#		icon = air_doctrine
+	#		relative_position_id = LAT_modernized_air_doctrine
+	#		prerequisite = { focus = LAT_modernized_air_doctrine}
+	#		prerequisite = { focus = LAT_fighter_development focus = LAT_VEF_electronics_sideprojects}
+	#		x = 0
+	#		y = 1
+	#		cost = 10
+
+	#		available_if_capitulated = yes
+
+	#		completion_reward = {
+	#            air_experience = 100
+	#            add_tech_bonus = {
+	#                name = air_doc_bonus
+	#                bonus = 1.0
+	#               uses = 2
+	#                category = air_doctrine
+	#			}
+	#		}
+	#	}
+	focus = {
+		id = LAT_trained_air_mechanics
+		icon = GFX_goal_generic_air_production
+		relative_position_id = LAT_modernized_air_doctrine
+		prerequisite = { focus = LAT_modernized_air_doctrine }
+		x = 0
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = CRO_idea_trained_mechanics
+		}
+	}
+	focus = {
+		id = LAT_export_technical_experience
+		icon = GFX_goal_generic_production
+		relative_position_id = LAT_trained_air_mechanics
+		prerequisite = { focus = LAT_trained_air_mechanics }
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CRO_recovery_focus
+				bonus = 1.5
+				uses = 1
+				category = maintenance_company_tech
+			}
+		}
+	}
+	focus = {
+		id = LAT_revitalize_civilian_economy
+		icon = GFX_goal_generic_construction
+		x = 24
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+			date > 1932.12.31
+			date < 1949.1.1
+
+		}
+		available = {
+			RON_can_do_focuses_1936 = yes
+			has_country_flag = LAT_political_path_decided
+		}
+
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 190 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+
+			}
+			#	random_owned_controlled_state = {  #changed to one state because Riga region was overcrowded
+			#		prioritize = { 12 }
+			#		add_building_construction = {
+			#			type = industrial_complex
+			#			level = 1
+			#			instant_build = yes
+			#		}
+			#		add_extra_state_shared_building_slots = 1
+			#	}
+
+		}
+	}
+	focus = {
+		id = LAT_contact_foreign_industrial_partners #change?
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = LAT_revitalize_civilian_economy }
+		relative_position_id = LAT_revitalize_civilian_economy
+		x = -1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = LAT_sentab
+			add_ideas = HUN_invite_foreign_investors
+			SWE = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = small_increase
+				}
+			}
+		}
+	}
+	focus = {
+		id = LAT_mobilize_the_banks
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = LAT_revitalize_civilian_economy }
+		relative_position_id = LAT_revitalize_civilian_economy
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = LAT_latvian_credit_bank
+			add_political_power = 50
+		}
+	}
+	#	focus = {
+	#		id = LAT_mobilization_of_the_workforce
+	#		icon = GFX_goal_generic_construction2
+	#		prerequisite = { focus = LAT_revitalize_civilian_economy }
+	#		mutually_exclusive = { focus = LAT_contact_foreign_industrial_partners }
+	#		relative_position_id = LAT_revitalize_civilian_economy
+	#		x = 1
+	#		y = 1
+	#		cost = 10
+	#
+	#		available_if_capitulated = yes
+	#
+	#		completion_reward = {
+	#
+	#		}
+	#	}
+	focus = {
+		id = LAT_kegums_power_plant #move later? finished in 1939 iirc
+		icon = power_plant
+		prerequisite = { focus = LAT_contact_foreign_industrial_partners }
+		prerequisite = { focus = LAT_mobilize_the_banks }
+		relative_position_id = LAT_contact_foreign_industrial_partners
+		x = 1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+			12 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			add_timed_idea = {
+				idea = LAT_kegums_power_plant_construction_idea
+				days = 780
+			}
+			unlock_decision_category_tooltip = LAT_kegums_power_plant_construction
+			unlock_decision_tooltip = { decision = LAT_organize_public_subscription }#show_effect_tooltip = yes
+			unlock_decision_tooltip = { decision = LAT_reallocate_investments }
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = LAT_devaluate_the_lats
+		icon = GFX_goal_LAT_devaulate_the_currency
+		prerequisite = { focus = LAT_kegums_power_plant }
+		relative_position_id = LAT_kegums_power_plant
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			remove_ideas = LAT_overevaluated_currency_idea
+		}
+	}
+	focus = {
+		id = LAT_increase_research_budget
+		icon = GFX_focus_research2
+		relative_position_id = LAT_devaluate_the_lats
+		prerequisite = { focus = LAT_devaluate_the_lats }
+		x = 3
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = LAT_save_ford_vairogs
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = LAT_devaluate_the_lats }
+		relative_position_id = LAT_devaluate_the_lats
+		x = -1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available_if_capitulated = yes
+
+		available = {
+			controls_state = 12
+			controls_state = 190
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 12 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+
+			}
+			custom_effect_tooltip = available_materiel_manufacturer
+			show_ideas_tooltip = LAT_ford_vairogs
+
+			#		    190 = {
+			#                add_building_construction = {
+			#                    type = infrastructure
+			#                    level = 1
+			#                    instant_build = yes
+			#                }
+			#            }
+		}
+	}
+	focus = {
+		id = LAT_military_motorization_program
+		icon = motorized
+		mutually_exclusive = { focus = LAT_bicycle_infantry }
+		prerequisite = { focus = LAT_save_ford_vairogs }
+		prerequisite = { focus = LAT_general_modernization_plan }
+		relative_position_id = LAT_save_ford_vairogs
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 12 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_tech = motorised_infantry
+					}
+				}
+				add_tech_bonus = {
+					name = motorized_bonus
+					bonus = 0.75
+					technology = motorised_infantry
+				}
+				else = {
+					add_tech_bonus = {
+						name = motorized_bonus
+						bonus = 1.0
+						uses = 1
+						category = logistics_tech
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = LAT_G_erenpreis_bicycle_factory
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = LAT_devaluate_the_lats }
+		relative_position_id = LAT_devaluate_the_lats
+		x = 1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 12 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+
+			}
+			#add idea reducing support equipment cost
+		}
+	}
+	focus = {
+		id = LAT_bicycle_infantry
+		icon = GFX_goal_generic_special_forces
+		mutually_exclusive = { focus = LAT_military_motorization_program }
+		prerequisite = { focus = LAT_G_erenpreis_bicycle_factory }
+		prerequisite = { focus = LAT_general_modernization_plan }
+		relative_position_id = LAT_G_erenpreis_bicycle_factory
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 20
+			#set_technology = { bicycle_infantry = 1 }
+			division_template = {
+				name = "Karo Dviratininkas"        # more cyclists, we can build them, we have the factory for it.
+				division_names_group = LAT_INF_01
+				regiments = {
+					bicycle_battalion = { x = 0 y = 0 }
+					bicycle_battalion = { x = 0 y = 1 }
+					bicycle_battalion = { x = 1 y = 1 }
+					bicycle_battalion = { x = 1 y = 0 }
+					bicycle_battalion = { x = 2 y = 0 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+				}
+			}
+			add_tech_bonus = {
+				name = YUG_motorized_recon_companies
+				bonus = 1.0
+				uses = 1
+				category = recon_tech
+			}
+			random_owned_controlled_state = {
+				prioritize = { 12 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+
+			}
+		}
+	}
+	focus = {
+		id = LAT_national_tank_program
+		icon = GFX_goal_generic_army_tanks
+		relative_position_id = LAT_military_motorization_program
+		prerequisite = { focus = LAT_bicycle_infantry focus = LAT_military_motorization_program }
+		x = 1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+	focus = {
+		id = LAT_rely_on_foreign_attaches
+		icon = army_officers
+		relative_position_id = LAT_revitalize_civilian_economy
+		x = -11
+		y = 0
+		cost = 5
+
+		available_if_capitulated = yes
+
+		allow_branch = {
+			date > 1932.12.31
+			date < 1949.1.1
+
+		}
+		available = {
+			RON_can_do_focuses_1936 = yes
+			has_country_flag = LAT_political_path_decided
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			unlock_decision_category_tooltip = LAT_contact_attaches
+			custom_effect_tooltip = available_materiel_manufacturer
+			show_ideas_tooltip = LAT_foreign_artillery_manufacturers
+		}
+	}
+	focus = {
+		id = LAT_study_foreign_firearm_prototypes
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = LAT_rely_on_foreign_attaches }
+		relative_position_id = LAT_rely_on_foreign_attaches
+		x = 3
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+			has_country_flag = ask_attache_about_firearms
+			has_country_flag = LAT_inquired_2_attaches_about_armament
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_army_modernisation
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = {
+		id = LAT_general_modernization_plan
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = LAT_rely_on_foreign_attaches }
+		relative_position_id = LAT_rely_on_foreign_attaches
+		x = 5
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			army_experience = 100
+			add_tech_bonus = {
+				name = POL_romanian_bridgehead_strategy
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = LAT_draw_new_mobilization_plans
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = LAT_general_modernization_plan }
+		relative_position_id = LAT_general_modernization_plan
+		x = -3
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			unlock_decision_category_tooltip = LAT_mobilization_plans
+			unlock_decision_tooltip = { decision = LAT_plan_A show_effect_tooltip = yes }
+			unlock_decision_tooltip = { decision = LAT_plan_D show_effect_tooltip = yes }
+			unlock_decision_tooltip = { decision = LAT_plan_K show_effect_tooltip = yes }
+
+		}
+	}
+	#	focus = {
+	#		id = LAT_incorporate_paramilitary_units
+	#		icon = GFX_goal_manpower
+	#		prerequisite = { focus = LAT_draw_new_mobilization_plans}
+	#		relative_position_id = LAT_draw_new_mobilization_plans
+	#		x = -1
+	#		y = 1
+	#		cost = 10
+	#
+	#		available_if_capitulated = yes
+	#
+	#		completion_reward = {
+	#
+	#		}
+	#	}
+	focus = {
+		id = LAT_special_forces
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = LAT_draw_new_mobilization_plans }
+		prerequisite = { focus = LAT_modern_infantry }
+		relative_position_id = LAT_draw_new_mobilization_plans
+		x = 1
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = special_forces
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				#category = r56_jaeger_infantry_tech
+				category = marine_tech
+				category = mountaineers_tech
+				category = para_tech
+				#category = r56_shock_infantry_tech
+			}
+		}
+	}
+	focus = {
+		id = LAT_fortify_the_border
+		icon = city_fort
+		prerequisite = { focus = LAT_draw_new_mobilization_plans }
+		relative_position_id = LAT_draw_new_mobilization_plans
+		x = -1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			add_ideas = LAT_fortifications
+			add_tech_bonus = {
+				name = LAT_engineers
+				bonus = 3
+				uses = 1
+				category = engineers_tech
+			}
+		}
+	}
+	focus = {
+		id = LAT_sellier_and_bellot_ammunitions
+		icon = GFX_ammunition_factory
+		prerequisite = { focus = LAT_general_modernization_plan }
+		relative_position_id = LAT_general_modernization_plan
+		x = -1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 12 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+
+
+			}
+			custom_effect_tooltip = available_materiel_manufacturer
+			show_ideas_tooltip = LAT_sellier_and_bellot_riga
+		}
+	}
+	focus = {
+		id = LAT_modern_infantry
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = LAT_sellier_and_bellot_ammunitions }
+		relative_position_id = LAT_sellier_and_bellot_ammunitions
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_army_modernisation
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = {
+		id = LAT_artillery_modernization
+		icon = artillery
+		prerequisite = { focus = LAT_general_modernization_plan }
+		relative_position_id = LAT_general_modernization_plan
+		x = 2
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_artillery_modernisation
+				bonus = 0.75
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = LAT_anti_tank_artillery
+		icon = artillery3
+		mutually_exclusive = { focus = LAT_anti_air_artillery }
+		prerequisite = { focus = LAT_artillery_modernization }
+		relative_position_id = LAT_artillery_modernization
+		x = -1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_anti_tank_guns
+				bonus = 0.75
+				uses = 1
+				category = cat_anti_tank
+			}
+		}
+	}
+	focus = {
+		id = LAT_anti_air_artillery
+		icon = GFX_goal_generic_fortify_aa
+		mutually_exclusive = { focus = LAT_anti_tank_artillery }
+		prerequisite = { focus = LAT_artillery_modernization }
+		relative_position_id = LAT_artillery_modernization
+		x = 1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_artillery_modernisation
+				bonus = 0.75
+				uses = 1
+				technology = interwar_antiair
+				technology = antiair1
+				technology = antiair2
+				technology = antiair3
+				technology = antiair4
+				technology = antiair5
+			}
+		}
+	}
+	focus = {
+		id = LAT_foreign_submarine_contract
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = LAT_rely_on_foreign_attaches }
+		mutually_exclusive = { focus = LAT_foreign_destroyer_contract }
+		relative_position_id = LAT_rely_on_foreign_attaches
+		x = -3
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+			has_decision = LAT_discuss_with_attache
+			check_variable = { var_LAT_count_attache_1 > 1 }
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = LAT_submarine_contract_tt
+		}
+	}
+	focus = {
+		id = LAT_foreign_destroyer_contract
+		icon = GFX_focus_generic_destroyer
+		prerequisite = { focus = LAT_rely_on_foreign_attaches }
+		mutually_exclusive = { focus = LAT_foreign_submarine_contract }
+		relative_position_id = LAT_rely_on_foreign_attaches
+		x = -1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+			has_decision = LAT_discuss_with_attache
+			check_variable = { var_LAT_count_attache_1 > 1 }
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = LAT_destroyer_contract_tt
+		}
+	}
+	focus = {
+		id = LAT_riga_shipyard
+		icon = GFX_focus_generic_shipbuilding
+		prerequisite = { focus = LAT_foreign_submarine_contract focus = LAT_foreign_destroyer_contract }
+		mutually_exclusive = { focus = LAT_liepaja_naval_base }
+		relative_position_id = LAT_foreign_submarine_contract
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			12 = {
+				is_controlled_by = ROOT
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 100
+			12 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+
+			add_equipment_to_stockpile = { type = convoy_1 amount = 10 }
+		}
+	}
+	focus = {
+		id = LAT_liepaja_naval_base
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = LAT_foreign_submarine_contract focus = LAT_foreign_destroyer_contract }
+		mutually_exclusive = { focus = LAT_riga_shipyard }
+		relative_position_id = LAT_riga_shipyard
+		x = 2
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			190 = {
+				is_controlled_by = ROOT
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 100
+			190 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					#province = 9340
+					instant_build = yes
+				}
+			}
+
+			add_equipment_to_stockpile = { type = convoy_1 amount = 10 }
+		}
+	}
+	focus = {
+		id = LAT_rethink_naval_doctrine
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = LAT_riga_shipyard focus = LAT_liepaja_naval_base }
+		relative_position_id = LAT_riga_shipyard
+		x = 1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		available = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 100
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+	focus = {
+		id = LAT_reinforce_the_navy_air_branch
+		icon = GFX_focus_ron_generic_small_navy
+		prerequisite = { focus = LAT_rethink_naval_doctrine focus = LAT_modernized_air_doctrine }
+		relative_position_id = LAT_rethink_naval_doctrine
+		x = -2
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 1
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+	focus = {
+		id = LAT_submarine_strategy
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = LAT_rethink_naval_doctrine }
+		mutually_exclusive = { focus = LAT_modernized_small_ships }
+		relative_position_id = LAT_rethink_naval_doctrine
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 1
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+	focus = {
+		id = LAT_modernized_small_ships
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = LAT_rethink_naval_doctrine }
+		mutually_exclusive = { focus = LAT_submarine_strategy }
+		relative_position_id = LAT_rethink_naval_doctrine
+		x = 2
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 1
+				uses = 1
+				category = cl_tech
+				category = dd_tech
+			}
+		}
+	}
+	focus = {
+		id = LAT_new_flagship
+		icon = GFX_focus_generic_navy_battleship2
+		prerequisite = { focus = LAT_submarine_strategy focus = LAT_modernized_small_ships }
+		relative_position_id = LAT_submarine_strategy
+		x = 1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		available = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 100
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 1
+				uses = 1
+				category = ca_tech
+				category = bb_tech
+				category = bc_tech
+				category = cv_tech
+			}
+		}
+	}
+	focus = {
+		id = LAT_enforce_the_succession_law
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		x = 32
+		y = 0
+		cost = 3
+
+		available_if_capitulated = yes
+
+		allow_branch = {
+			date > 1932.12.31
+			date < 1949.1.1
+
+		}
+		available = {
+			RON_can_do_focuses_1936 = yes
+			NOT = {
+				has_completed_focus = LAT_a_rejection_of_ulmanis
+			}
+		}
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+			add_political_power = 20
+			set_country_flag = LAT_political_path_decided
+		}
+	}
+	focus = {
+		id = LAT_ulmanis_in_control_of_the_government
+		icon = GFX_goal_LAT_ulmanis
+		relative_position_id = LAT_enforce_the_succession_law
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = LAT_enforce_the_succession_law }
+
+		available_if_capitulated = yes
+
+		available = {
+			has_country_flag = LAT_kviesis_retired
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			add_political_power = 120
+			add_country_leader_trait = LAT_ulmanis
+			set_country_flag = LAT_political_path_decided
+		}
+	}
+
+	focus = {
+		id = LAT_aizsargi
+		icon = GFX_goal_LAT_aizsargi
+		prerequisite = { focus = LAT_ulmanis_in_control_of_the_government }
+		relative_position_id = LAT_ulmanis_in_control_of_the_government
+		x = 2
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			add_ideas = LAT_aizsargi
+		}
+	}
+
+
+	focus = {
+		id = LAT_corporate_statism
+		icon = central_management
+		prerequisite = { focus = LAT_ulmanis_in_control_of_the_government }
+		relative_position_id = LAT_ulmanis_in_control_of_the_government
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+			add_ideas = LAT_corporate_statism
+		}
+	}
+
+	focus = {
+		id = LAT_house_of_proffesions
+		icon = golden_shield
+		prerequisite = { focus = LAT_corporate_statism }
+		relative_position_id = LAT_corporate_statism
+		x = -1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			add_ideas = LAT_house_of_proffesions
+		}
+	}
+
+	focus = {
+		id = LAT_assimilate_minorities
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = LAT_corporate_statism }
+		relative_position_id = LAT_corporate_statism
+		x = 1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = LAT_assimilate_minorities
+		}
+	}
+
+
+	focus = {
+		id = LAT_equal_latvia
+		icon = GFX_goal_LAT_flag
+		prerequisite = { focus = LAT_house_of_proffesions }
+		prerequisite = { focus = LAT_assimilate_minorities }
+		relative_position_id = LAT_assimilate_minorities
+		x = -1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			add_ideas = LAT_equal_latvia
+		}
+	}
+
+
+
+	focus = {
+		id = LAT_nationalize_important_industries
+		icon = GFX_goal_seize_industry
+		prerequisite = { focus = LAT_ulmanis_in_control_of_the_government }
+		relative_position_id = LAT_ulmanis_in_control_of_the_government
+		x = -3
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			add_ideas = LAT_nationalize_industry
+			random_owned_controlled_state = {
+				prioritize = { 12 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LAT_micromanage_the_economy
+		icon = give_money
+		prerequisite = { focus = LAT_nationalize_important_industries }
+		relative_position_id = LAT_nationalize_important_industries
+		x = 0
+		y = 1
+		cost = 7.15
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			add_ideas = LAT_micromanaged_economy
+		}
+	}
+
+	focus = {
+		id = LAT_top_of_the_line_agrarianism
+		icon = agriculture5
+		prerequisite = { focus = LAT_micromanage_the_economy }
+		prerequisite = { focus = LAT_house_of_proffesions }
+		relative_position_id = LAT_micromanage_the_economy
+		x = 1
+		y = 1
+		cost = 7.15
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			add_ideas = LAT_top_of_the_line_agrarianism
+		}
+	}
+
+	focus = {
+		id = LAT_a_rejection_of_ulmanis
+		icon = GFX_goal_LAT_reject_ulmanis
+		x = 44
+		y = 0
+		cost = 5
+
+		available_if_capitulated = yes
+
+		allow_branch = {
+			date > 1932.12.31
+			date < 1949.1.1
+
+		}
+
+		available = {
+			date < 1936.02.26
+			OR = {
+				NOT = {
+					has_completed_focus = LAT_enforce_the_succession_law
+				}
+				has_government = fascism
+				has_government = democratic
+				has_government = communism
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		select_effect = {
+			if = {
+				limit = {
+					has_country_leader = { ruling_only = yes name = "Alberts Kviesis" }
+				}
+				remove_country_leader_trait = LAT_ulmanis_puppet
+				add_country_leader_trait = cabinet_crisis
+			}
+
+			set_country_flag = LAT_invalidation
+			set_country_flag = LAT_political_path_decided
+		}
+
+		completion_reward = {
+			add_political_power = 150
+			add_stability = -0.05
+
+		}
+	}
+
+	focus = {
+		id = LAT_assemble_a_new_seima
+		icon = GFX_goal_LAT_assemble_parliament
+		prerequisite = { focus = LAT_a_rejection_of_ulmanis }
+		relative_position_id = LAT_a_rejection_of_ulmanis
+		x = -4
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+			if = {
+				limit = {
+					date > 1937.01.01
+				}
+				has_government = democratic
+			}
+			else = {
+				has_country_flag = LAT_alberts_kviesis_reestablished_democracy
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			country_event = { id = LAT_event.6 }
+			add_political_power = 120
+			set_party_name = { ideology = democratic long_name = "The 5th Seima" name = "5th Seima" }
+			add_timed_idea = {
+				idea = democratic_influence
+				days = 120
+			}
+		}
+	}
+
+	focus = {
+		id = LAT_liberal_economic_reforms
+		icon = GFX_focus_mex_privatisation
+		prerequisite = { focus = LAT_assemble_a_new_seima }
+		relative_position_id = LAT_assemble_a_new_seima
+		x = 1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 3
+		}
+
+
+		completion_reward = {
+			add_ideas = free_trade
+			add_ideas = LAT_liberal_welfare
+			random_owned_controlled_state = {
+				prioritize = { 190 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LAT_redraft_the_constitution
+		icon = agreement
+		prerequisite = { focus = LAT_assemble_a_new_seima }
+		relative_position_id = LAT_assemble_a_new_seima
+		x = -1
+		y = 1
+		cost = 7.15
+
+		available_if_capitulated = yes
+
+		available = {
+			has_government = democratic
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+
+		completion_reward = {
+			add_ideas = LAT_redraft_the_constitution
+		}
+	}
+
+	focus = {
+		id = LAT_discredit_totalitarianism
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		prerequisite = { focus = LAT_redraft_the_constitution }
+		relative_position_id = LAT_redraft_the_constitution
+		x = 1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+			has_government = democratic
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.15
+			}
+			every_other_country = {
+				limit = {
+					has_government = fascism
+				}
+				ROOT = {
+					add_opinion_modifier = {
+						target = PREV
+						modifier = medium_decrease
+					}
+				}
+				PREV = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = medium_decrease
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LAT_baltic_cooperation
+		icon = GFX_goal_baltic_cooperation
+		prerequisite = { focus = LAT_redraft_the_constitution focus = LAT_ulmanis_in_control_of_the_government }
+		mutually_exclusive = { focus = LAT_a_western_ally }
+		relative_position_id = LAT_redraft_the_constitution
+		x = -1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				has_war = no
+			}
+		}
+
+		bypass = {
+			is_in_faction = yes
+			EST = {
+				OR = {
+					is_in_faction_with = LAT
+					exists = no
+					has_completed_focus = EST_create_our_faction
+					has_completed_focus = EST_create_our_own_faction
+				}
+			}
+		}
+
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
+			create_faction = baltic_union
+			LIT = {
+				country_event = generic.5
+			}
+		}
+	}
+
+	focus = {
+		id = LAT_a_western_ally
+		icon = GFX_align_to_britain
+		prerequisite = { focus = LAT_redraft_the_constitution focus = LAT_ulmanis_in_control_of_the_government }
+		mutually_exclusive = { focus = LAT_baltic_cooperation }
+		relative_position_id = LAT_baltic_cooperation
+		x = -2
+		y = 0
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				has_war = no
+			}
+		}
+
+		available = {
+			has_government = democratic
+			NOT = {
+				is_in_faction = yes
+			}
+			ENG = {
+				NOT = { has_war_with = ROOT }
+				exists = yes
+				has_capitulated = no
+				has_government = democratic
+			}
+		}
+		bypass = {
+			is_in_faction_with = ENG
+		}
+		completion_reward = {
+			ENG = {
+				country_event = generic.2
+			}
+		}
+	}
+
+	focus = {
+		id = LAT_democratic_gem_of_eastern_europe
+		icon = GFX_goal_bastion_of_democracy
+		prerequisite = { focus = LAT_baltic_cooperation }
+		prerequisite = { focus = LAT_discredit_totalitarianism }
+		relative_position_id = LAT_redraft_the_constitution
+		x = 0
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+			has_government = democratic
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+
+		completion_reward = {
+			add_ideas = LAT_democratic_gem_of_eastern_europe
+		}
+	}
+
+
+	focus = {
+		id = LAT_befriend_estonia
+		icon = GFX_goal_LAT_befriend_estonia
+		prerequisite = { focus = LAT_baltic_cooperation }
+		relative_position_id = LAT_baltic_cooperation
+		x = -1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+			LIT = {
+				is_in_faction_with = LAT
+				exists = no
+			}
+		}
+
+		completion_reward = {
+			EST = {
+				country_event = generic.5
+			}
+		}
+	}
+
+	focus = {
+		id = LAT_coalition_with_the_communists
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = LAT_a_rejection_of_ulmanis }
+		relative_position_id = LAT_a_rejection_of_ulmanis
+		x = 3
+		y = 1
+		cost = 7.15
+
+		available_if_capitulated = yes
+
+		available = {
+			if = {
+				limit = {
+					date > 1937.01.01
+				}
+				has_government = communism
+			}
+			else = {
+				has_country_flag = LAT_communist_influence_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+			has_government = communism
+		}
+
+		completion_reward = {
+			add_popularity = { ideology = communism popularity = 0.1 }
+			add_timed_idea = {
+				idea = internationalism
+				days = 365
+			}
+		}
+	}
+
+	focus = {
+		id = LAT_proclaim_the_peoples_republic
+		icon = GFX_goal_LAT_communists_win
+		prerequisite = { focus = LAT_coalition_with_the_communists }
+		relative_position_id = LAT_coalition_with_the_communists
+		x = 0
+		y = 1
+		cost = 7.15
+
+		available_if_capitulated = yes
+
+		available = {
+			OR = {
+				AND = {
+					has_country_flag = LAT_communist_influence_flag
+					communism > 0.35
+				}
+				has_government = communism
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			country_event = { id = LAT_event.8 }
+			add_political_power = 100
+		}
+	}
+
+
+	focus = {
+		id = LAT_rally_the_workers
+		icon = communism13
+		prerequisite = { focus = LAT_proclaim_the_peoples_republic }
+		relative_position_id = LAT_proclaim_the_peoples_republic
+		x = -2
+		y = 1
+		cost = 7.15
+
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			add_ideas = LAT_rally_the_workers
+
+		}
+	}
+
+	focus = {
+		id = LAT_liberate_estonia
+		icon = communism12
+		prerequisite = { focus = LAT_rally_the_workers }
+		relative_position_id = LAT_rally_the_workers
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+					create_wargoal = {			
+				expire = 100
+				target = EST
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = LAT_liberate_lithuania
+		icon = communism10
+		prerequisite = { focus = LAT_rally_the_workers }
+		relative_position_id = LAT_rally_the_workers
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+					create_wargoal = {			
+				expire = 100
+				target = LIT
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = LAT_support_the_international_fight
+		icon = propaganda_communist
+		prerequisite = { focus = LAT_rally_the_workers }
+		relative_position_id = LAT_rally_the_workers
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			add_ideas = LAT_support_the_international_fight
+		}
+	}
+
+	focus = {
+		id = LAT_form_the_baltic_union
+		icon = baltic_development
+		prerequisite = { focus = LAT_liberate_estonia }
+		prerequisite = { focus = LAT_liberate_lithuania }
+		relative_position_id = LAT_rally_the_workers
+		x = 0
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+			has_war = no
+			has_full_control_of_state = 13
+			has_full_control_of_state = 191
+			has_full_control_of_state = 12
+			has_full_control_of_state = 190
+			has_full_control_of_state = 11
+			has_full_control_of_state = 189
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = BAL_UNIFIED
+			13 = { add_core_of = ROOT }
+			191 = { add_core_of = ROOT }
+			11 = { add_core_of = ROOT }
+			189 = { add_core_of = ROOT }
+			188 = { add_core_of = ROOT }
+			784 = { add_core_of = ROOT }
+		}
+	}
+
+	focus = {
+		id = LAT_spread_the_revolution
+		icon = communism7
+		prerequisite = { focus = LAT_form_the_baltic_union }
+		relative_position_id = LAT_form_the_baltic_union
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			add_ideas = LAT_spread_the_revolution
+		}
+	}
+
+	focus = {
+		id = LAT_join_comintern
+		icon = GFX_align_to_soviet_union
+		prerequisite = { focus = LAT_proclaim_the_peoples_republic }
+		relative_position_id = LAT_proclaim_the_peoples_republic
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			has_government = communism
+			NOT = {
+				is_in_faction = yes
+			}
+			SOV = {
+				NOT = { has_war_with = ROOT }
+				exists = yes
+				has_capitulated = no
+				has_government = communism
+			}
+		}
+		bypass = {
+			is_in_faction_with = SOV
+		}
+		completion_reward = {
+			SOV = {
+				country_event = generic.2
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = medium_increase
+				}
+			}
+			ROOT = {
+				add_opinion_modifier = {
+					target = SOV
+					modifier = medium_increase
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LAT_centralize_farming_production
+		icon = GFX_focus_ron_generic_agrarian_society
+		prerequisite = { focus = LAT_proclaim_the_peoples_republic }
+		relative_position_id = LAT_proclaim_the_peoples_republic
+		x = 2
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			add_ideas = LAT_centralize_farming_production
+		}
+	}
+
+	focus = {
+		id = LAT_eliminate_capitalism
+		icon = destroy_establishment
+		prerequisite = { focus = LAT_centralize_farming_production }
+		relative_position_id = LAT_centralize_farming_production
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		completion_reward = {
+			add_ideas = LAT_eliminate_capitalism
+		}
+	}
+
+	focus = {
+		id = LAT_radical_opposition
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = LAT_a_rejection_of_ulmanis }
+		relative_position_id = LAT_a_rejection_of_ulmanis
+		x = 10
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+			if = {
+				limit = {
+					date > 1937.01.01
+				}
+				has_government = fascism
+			}
+			else = {
+				has_country_flag = LAT_fascist_influence_flag
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+			has_government = fascism
+		}
+
+		completion_reward = {
+			add_popularity = { ideology = fascism popularity = 0.1 }
+			add_timed_idea = {
+				idea = nationalism
+				days = 365
+			}
+		}
+	}
+
+
+	focus = {
+		id = LAT_proclaim_the_new_state
+		icon = GFX_goal_LAT_thunder_cross
+		prerequisite = { focus = LAT_radical_opposition }
+		relative_position_id = LAT_radical_opposition
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+			OR = {
+				AND = {
+					has_country_flag = LAT_fascist_influence_flag
+					fascism > 0.35
+				}
+				has_government = fascism
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = { ideology = fascism popularity = 0.1 }
+			set_politics = { ruling_party = fascism elections_allowed = no }
+		}
+	}
+
+	focus = {
+		id = LAT_latvian_militarism
+		icon = GFX_militarism1
+		prerequisite = { focus = LAT_proclaim_the_new_state }
+		relative_position_id = LAT_proclaim_the_new_state
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			add_ideas = militarism_focus
+		}
+	}
+
+	focus = {
+		id = LAT_irridentist_youth
+		icon = small_arms5
+		prerequisite = { focus = LAT_latvian_militarism }
+		relative_position_id = LAT_latvian_militarism
+		x = -1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			add_ideas = LAT_fascist_volunteers
+		}
+	}
+
+	focus = {
+		id = LAT_latvian_chauvinism
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = LAT_latvian_militarism }
+		relative_position_id = LAT_latvian_militarism
+		x = 1
+		y = 1
+		cost = 7.15
+
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			add_ideas = LAT_latvian_chauvinism
+			set_rule = {
+				can_create_factions = yes
+			}
+		}
+	}
+
+	focus = {
+		id = LAT_baltics_under_one_flag
+		icon = GFX_align_to_baltic_states
+		prerequisite = { focus = LAT_latvian_chauvinism focus = LAT_irridentist_youth }
+		relative_position_id = LAT_latvian_militarism
+		x = 0
+		y = 2
+		cost = 14.30
+
+		available_if_capitulated = no
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			13 = { add_core_of = ROOT }
+			191 = { add_core_of = ROOT }
+			11 = { add_core_of = ROOT }
+			189 = { add_core_of = ROOT }
+			188 = { add_core_of = ROOT }
+			784 = { add_core_of = ROOT }
+					create_wargoal = {			
+				expire = 100
+				target = EST
+				type = annex_everything
+			}
+					create_wargoal = {			
+				expire = 100
+				target = LIT
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = LAT_privatize_the_industry
+		icon = GFX_renewed_arms
+		prerequisite = { focus = LAT_proclaim_the_new_state }
+		relative_position_id = LAT_proclaim_the_new_state
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 190 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+
+			}
+			random_owned_controlled_state = {
+				prioritize = { 12 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+
+			}
+		}
+	}
+
+	focus = {
+		id = LAT_hail_the_struggle
+		icon = GFX_PER_fascist_path
+		prerequisite = { focus = LAT_proclaim_the_new_state }
+		relative_position_id = LAT_proclaim_the_new_state
+		x = -2
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			add_ideas = LAT_hail_the_struggle
+		}
+	}
+}

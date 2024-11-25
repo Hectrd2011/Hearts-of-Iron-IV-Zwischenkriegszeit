@@ -1,81 +1,124 @@
-characters = {
+characters={
+#########################################Country Leader############################################
+########## 1910-1920 ##########
+
+	AZR_mammad_rasulzadeh = {
+		name = AZR_mammad_rasulzadeh
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AZR/WW1/AZR_mammad_rasulzadeh.dds"
+			}
+		}
+		country_leader = {
+			ideology = islam_nationalism
+			traits = {
+				nationalist_symbol
+			}
+			expire="1953.9.27"
+			id=-1
+		}
+	}	
+
 	AZR_alimardan_topchubashov = {
 		name = AZR_alimardan_topchubashov
 		portraits = {
 			civilian = {
-				large = GFX_Portrait_AZR_alimardan_topchubashov
+				large = "gfx/leaders/AZR/WW1/AZR_Alimardan_Topchubashov.dds"
 			}
 		}
 		country_leader = {
-			ideology = conservatism
-			expire = "1935.1.1.1"
-			id = -1
+			ideology = islam_nationalism
+			traits = {
+				charismatic_speaker
+			}
+			expire="1934.11.8"
+			id=-1
 		}
-	}
-	AZR_erevanski = {
-		name = AZR_erevanski
-		corps_commander = {
-			skill = 2
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 8002
+	}	
+
+	AZR_stepan_shaumian = {
+		name = AZR_stepan_shaumian
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/WW1/SOV_stepan_shaumianv.dds"
+			}
 		}
-	}
-	AZR_shikhlinski = {
-		name = AZR_shikhlinski
-		corps_commander = {
-			skill = 2
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 8003
+		country_leader = {
+			ideology = leninism
+			traits = {
+				the_caucasian_lenin
+			}
+			expire="1934.11.8"
+			id=-1
 		}
-	}
-	AZR_usubbekov = {
-		name = AZR_usubbekov
-		corps_commander = {
-			skill = 2
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 8004
+	}	
+
+	AZR_aslan_bey_safikurdski = {
+		name = AZR_aslan_bey_safikurdski
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AZR/WW1/AZR_Aslan_bey_Safikurdski.dds"
+			}
 		}
-	}
-	AZR_vekilov = {
-		name = AZR_vekilov
-		corps_commander = {
-			skill = 2
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 8005
+		country_leader = {
+			ideology = socialism
+			traits = {
+			}
+			expire="1937.1.1"
+			id=-1
 		}
-	}
-	AZR_novruzov = {
-		name = AZR_novruzov
-		corps_commander = {
-			skill = 2
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 8006
+	}	
+
+	AZR_gara_bey_garabeyov = {
+		name = AZR_gara_bey_garabeyov
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AZR/WW1/AZR_gara_bey_garabeyov.dds"
+			}
 		}
-	}
-	AZR_selimov = {
-		name = AZR_selimov
-		corps_commander = {
-			skill = 3
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 8007
+		country_leader = {
+			ideology = islamic_republican
+			traits = {
+			}
+			expire="1953.9.27"
+			id=-1
 		}
-	}
+	}	
+
+########## 1920-1950 ##########
+
+	AZR_mirza_davud_huseynov = {
+		name = AZR_mirza_davud_huseynov
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AZR/WW1/Azerbaijan_MirzaDavudHuseynov.dds"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			traits = {
+				communist_revolutionary
+			}
+			expire="1938.11.8"
+			id=-1
+		}
+	}	
+
+	AZR_mir_jafar_baghirov = {
+		name = AZR_mir_jafar_baghirov
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AZR/Mir_Jafar_Baghirov.dds"
+			}
+		}
+		country_leader = {
+			ideology = stalinism
+			traits = {
+				staunch_stalinist
+			}
+			expire="1956.5.7"
+			id=-1
+		}
+	}	
+
 }

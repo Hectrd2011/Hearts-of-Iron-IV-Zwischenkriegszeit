@@ -1,35 +1,41 @@
 state = {
-	id=611
-	name="STATE_611" # South Chahar
-	local_supplies = 1.0
+	id = 611
+	name = "STATE_611" # South Chahar
 	manpower = 1470000
-	state_category=pastoral
-	provinces={ 828 952 1137 1489 1590 4495 4612 6904 7545 7674 9776 10397 11752 }
-	resources={
-		wood=0
+
+	state_category = pastoral
+
+	history = {
+		owner = QIN
+		add_core_of = MEN
+		add_core_of = QIN
+		add_core_of = CHI add_core_of = BOX
+		add_core_of = ANH
+
+		1912.1.1 = { owner = CHI controller = CHI add_core_of = CHI }
+		1919.7.1 = { owner = ANH controller = ANH }
+		1933.1.1 = {
+			owner = MEN
+			controller = MEN
 		}
-	history={
-		victory_points={ 11752 3 }
-		owner=QIN
-		add_core_of=MEN
-		add_core_of=QIN
-		#add_core_of=PRC
-		1912.2.12={ owner=CHI }
-		1936.1.1={ 
-			owner=MEN
-			add_core_of=MEN
-			add_core_of=CHI
-			#add_core_of=PRC
-			victory_points={ 11752 3 }
-			buildings={
-				infrastructure=2
-				industrial_complex=1
-				}
-			}
-		1939.1.1={ owner=JAP controller=JAP }
-		buildings={
-			infrastructure=2
-			industrial_complex=0
-			}
+
+
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			11752 3
+		}
+
+		1946.1.1 = {
+			owner = PRC
+			controller = PRC
+			add_core_of = PRC
 		}
 	}
+
+	provinces = {
+		828 952 1137 1489 1590 4495 4612 6904 7545 7674 9776 10397 11752
+	}
+}

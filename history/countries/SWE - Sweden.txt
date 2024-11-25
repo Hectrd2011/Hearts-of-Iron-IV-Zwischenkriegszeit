@@ -1,263 +1,638 @@
-﻿capital = 141
+RON_universal_setup = yes
+  
+capital = 141
+oob = "SWE_1910"
+add_ideas = {
+	export_focus
+	tax_average
+	tariffs_average
+	civilian_economy
+	press_free
+	private_control
+	fdi_allowed
+	foreign_volunteers
+	train_medium
+	officer_train_low
+	security_liberty_first
+	education_budget5
+	health_budget5
+	foreign_neutral
+	police_budget5
+}
 
-#-------------------------------------------------------
-#					GENERIC VALUES
-#-------------------------------------------------------
-set_fuel_ratio = 0.20
 set_research_slots = 3
-set_stability = 0.9
 set_convoys = 25
+set_stability = 0.9
+add_ideas = {
+	en_svensk_tiger
+	neutrality_idea
+}
 
-#-------------------------------------------------------
-#					POLITICS & ARMY
-#-------------------------------------------------------
+set_stability = 0.9
+set_war_support = 0.1
 
-# LEADERS
-recruit_character = SWE_gustaf_v # The King is still the King (unless communism)
-recruit_character = SWE_zeth_hoglund
+set_politics = {
+	ruling_party = democratic
+	last_election = "1891.6.10"
+	election_frequency = 60
+	elections_allowed = yes
+}
 
-# GENERALS
-recruit_character = SWE_von_matern
-recruit_character = SWE_fallenius
-recruit_character = SWE_morcke
-recruit_character = SWE_nordenskjold
-recruit_character = SWE_uggla
-recruit_character = SWE_hasselroth
-recruit_character = SWE_von_platen
-recruit_character = SWE_munck
-recruit_character = SWE_carleson
-recruit_character = SWE_jungstedt
-recruit_character = SWE_wrangel
-recruit_character = SWE_toll
-recruit_character = SWE_nystrom
-recruit_character = SWE_wikander
-recruit_character = SWE_bergstrom
-recruit_character = SWE_hammarskjold
-recruit_character = SWE_schmidt
+set_popularities = {
+	democratic = 90
+	communism = 9
+	fascism = 1
+}
 
-# ADVISORS
-recruit_character = SWE_carl_gustaf_ekman
-recruit_character = SWE_knut_gillis_bildt
-recruit_character = SWE_carl_gustaf_hammarskjold
-recruit_character = SWE_carsten_warberg
-recruit_character = SWE_sten_ankarcrona
-recruit_character = SWE_lars_tingsten
-recruit_character = SWE_henning_von_krusenstjerna
-recruit_character = SWE_alfred_lagerheim
-recruit_character = SWE_ludvig_sidner
-recruit_character = SWE_theodor_carl_adam_sandstrom
-recruit_character = SWE_ernst_meyer
-recruit_character = SWE_otto_grimlund
-recruit_character = SWE_karl_staaff
-recruit_character = SWE_axel_vennersten
-recruit_character = SWE_ludvig_douglas
-recruit_character = SWE_anton_nilsson
+if = {
+	limit = {
+		has_start_date > 1907.12.8
+		has_start_date < 1950.10.29
+	}
+	add_ideas = {
+		kungen_gustaf_v
+	}
+}
+
+recruit_character = SWE_oscar_ii
+recruit_character = SWE_erik_gustaf_bostrom
 recruit_character = SWE_fredrik_von_otter
-recruit_character = SWE_erik_gustav_bostrom
-recruit_character = SWE_fredrik_wachtmeister
-recruit_character = SWE_christian_lundeberg
+recruit_character = SWE_knut_gillis_bildt
+recruit_character = SWE_elise_ottesen
+recruit_character = SWE_constantin_fallenius
+recruit_character = SWE_emil_morcke
+recruit_character = SWE_carl_gustaf_hammarskjold
+recruit_character = SWE_ernst_linder
+recruit_character = SWE_sten_ankarcrona
+recruit_character = SWE_ernst_meyer
+recruit_character = SWE_axel_vennersten
+recruit_character = SWE_otto_lybeck
+recruit_character = SWE_lise_meitner
 
+1900.9.12 = {
+ promote_character = SWE_fredrik_von_otter
+}
 
+1902.6.5 = {
+ promote_character = SWE_erik_gustaf_bostrom
+}
 
-set_technology = {
+1905.1.1 = {
+ recruit_character = SWE_claes_lindstrom
+ recruit_character = SWE_johan_ramstedt 
+ retire_character = SWE_fredrik_von_otter 
+}
 
-	# Train
-	ww1_train = 1
+1905.1.2 = {
+ promote_character = SWE_johan_ramstedt 
+}
 
-	# Navy
-	ww1_battleship0 = 1
-	ww1_battleship0_mtg = 1
-	
-	ww1_battleship1 = 1
-	ww1_battleship1_mtg = 1
-	
-	ww1_heavy_cruiser0 = 1
-	ww1_heavy_cruiser0_mtg = 1 # heavy_cruiser_1890 (Armored Cruiser I)
-	ww1_heavy_cruiser1 = 1
-	ww1_heavy_cruiser1_mtg = 1 # heavy_cruiser_1900 (Armored Cruiser II)
+1905.1.3 = {
+ retire_character = SWE_erik_gustaf_bostrom	
+ recruit_character = SWE_karl_staaff
+}
 
-	ww1_light_cruiser0 = 1
-	ww1_light_cruiser0_mtg = 1 # light_cruiser_1890 (Protected Cruiser I)
-	ww1_light_cruiser1 = 1
-	ww1_light_cruiser1_mtg = 1 # light_cruiser_1900 (Protected Cruiser II)
+1905.11.7 = {
+ retire_character = SWE_johan_ramstedt 	
+ promote_character = SWE_karl_staaff
+}
 
-	ww1_destroyer0 = 1
-	ww1_destroyer0_mtg = 1 # destroyer_1890 (Torpedo Boat I)
-	ww1_destroyer1 = 1
-	ww1_destroyer1_mtg = 1 # destroyer_1900 (Destroyer I)
-	ww1_destroyer2 = 1
-	ww1_destroyer2_mtg = 1 # destroyer_1906 (Destroyer II)
+1905.11.8 = { 	
+ recruit_character = SWE_arvid_lindman
+}
 
-	ww1_moduleMTG_mines = 1
-	ww1_moduleMTG_mines_mtg = 1 # Mines
+1906.5.29 = { 	
+ promote_character = SWE_arvid_lindman
+}
 
-	ww1_submarine0 = 1
-	ww1_submarine0_mtg = 1 # coastal_submarine_1900 (Coastal Submarine 1900, first available Submarine)
-	ww1_submarine1 = 1
-	ww1_submarine1_mtg = 1 # submarine_1906 (Submarine I)
+1907.12.7 = {
+ recruit_character = SWE_gustaf_adolf_v_dnc
+}
 
-	transport = 1
-	transport_mtg = 1 # Naval Transport
-
-	ww1_coastal_submarine1 = 1
-	ww1_coastal_submarine1_mtg = 1
-	ww1_coastal_submarine2 = 1
-	
-	# Industry
-	ww1_tools1 = 1
-	ww1_fortification1 = 1
+1907.12.8 = {
+ retire_character = SWE_oscar_ii
 }
 
 1910.1.1 = {
-	oob = "SWE_1910"
+	set_politics = {
+	ruling_party = democratic
+	last_election = "1906.5.29"
+	election_frequency = 60
+	elections_allowed = yes
+    }
 
-	#-------------------------------------------------------
-	#							NF
-	#-------------------------------------------------------
-
-	#-------------------------------------------------------
-	
-	#Diplomatic
-	complete_national_focus = SWE_ww1_diplomatic_effort
-	complete_national_focus = SWE_ww1_boden_fortress
-		
 	set_technology = {
-	
-		# Infantry
-		infantry_weapons = 1
-		support_weapons = 1
-		infantry_binoculars = 1
-		motorised_infantry = 1
-		ww1_ambulance1 = 1
-
-		# Support
 		tech_support = 1
-		tech_recon = 1
-		tech_military_police = 1
-
-		# Artillery
+		early_infantry_weapons = 1
 		light_field_gun1 = 1
 		heavy_field_gun1 = 1
-
-		# Engineering
-		electronic_mechanical_engineering = 1
-
-		# Industry
+		# Navy
+		ww1_destroyer0 = 1
+		ww1_destroyer1 = 1
+		ww1_light_cruiser1 = 1
+		ww1_light_cruiser0 = 1
+		ww1_battlecruiser0 = 1
+		ww1_battleship0 = 1
+		ww1_submarine1 = 1
+		ww1_coastal_submarine1 = 1
+		transport = 1
+		horses = 1
+		ww1_electronic_mechanical_engineering = 1
 	}
+	recruit_character = SWE_per_sylvan
+    recruit_character = SWE_hugo_sillen		
+}
 
-	set_politics = {
-	    ruling_party = democratic # "democratic" goverment, but "neutrality" got the power in reality
-	    last_election = "1908.9.1"
-	    election_frequency = 36
-	    elections_allowed = yes
-	}
+1911.11.7 = { 	
+ retire_character = SWE_arvid_lindman
+}
 
-	# https://en.wikipedia.org/wiki/1911_Swedish_general_election
-	set_popularities = {
-	    democratic = 72 # Liberals 44% + Social Democrats 28%
-	    fascism = 0
-	    communism = 0
-	    neutrality = 28 # General Electoral League 28 %
-	}
-
-	add_ideas = {
-		neutrality_idea
-		SWE_ww1_idea_russophobia
-	}
-	
-	create_equipment_variant = {
-		name="Oden Class" type=battleship_1890 parent_version = 0 obsolete=yes upgrades={ ship_gun_upgrade=0 ship_armor_upgrade=0 ship_engine_upgrade=3 ship_reliability_upgrade=3 } }
-	create_equipment_variant = {
-		name="Dristigheten Class" type=battleship_1890 parent_version = 1 obsolete=yes upgrades={ ship_gun_upgrade=0 ship_armor_upgrade=0 ship_engine_upgrade=3 ship_reliability_upgrade=3 } }
-	create_equipment_variant = {
-		name="Oscar II Class" type=battleship_1900 parent_version = 0 obsolete=no upgrades={ ship_gun_upgrade=0 ship_armor_upgrade=0 ship_engine_upgrade=0 ship_reliability_upgrade=0 } }
-	create_equipment_variant = {
-		name="Magne Class" type=destroyer_1900 parent_version = 0 obsolete=yes upgrades={     ship_anti_air_upgrade=0    ship_ASW_upgrade=0 destroyer_engine_upgrade=2    ship_torpedo_upgrade=2 } }
-	create_equipment_variant = {
-		name="Wale Class" type=destroyer_1900 parent_version = 1 obsolete=yes upgrades={     ship_anti_air_upgrade=0    ship_ASW_upgrade=0 destroyer_engine_upgrade=2    ship_torpedo_upgrade=2 } }
-	create_equipment_variant = {
-		name="Hugin Class" type=destroyer_1906 parent_version = 0 obsolete=no upgrades={     ship_anti_air_upgrade=0    ship_ASW_upgrade=0 destroyer_engine_upgrade=0    ship_torpedo_upgrade=0 } }
-	create_equipment_variant = {
-		name="U2 Class" type=coastal_submarine_1906 parent_version = 0 obsolete=no upgrades={    ship_reliability_upgrade=0       sub_torpedo_upgrade=0 sub_stealth_upgrade=0 sub_engine_upgrade=0  } }
-
+1911.11.8 = { 	
+ recruit_character = SWE_hjalmar_hammarskjold
 }
 
 1914.1.1 = {
 	oob = "SWE_1914"
-
-	#-------------------------------------------------------
-	#							NF
-	#-------------------------------------------------------
-
-	#Army
-	complete_national_focus = SWE_ww1_army_effort
-	complete_national_focus = SWE_ww1_equipment_effort
-	complete_national_focus = SWE_ww1_artillery_effort_1
-	complete_national_focus = SWE_ww1_doctrine_effort
-	complete_national_focus = SWE_ww1_trenchwarfare
-
-	#Industrial
-	complete_national_focus = SWE_ww1_industrial_effort
-	complete_national_focus = SWE_ww1_infrastructure_effort
-
-	#Political
-	complete_national_focus = SWE_political_effort
-
-	#Diplomatic
-	complete_national_focus = SWE_ww1_diplomatic_effort
-	complete_national_focus = SWE_ww1_boden_fortress
-	complete_national_focus = SWE_ww1_disarmament
-	complete_national_focus = SWE_ww1_neutrality_focus
-	
-	#-------------------------------------------------------
-
-	set_technology = {
-
-		# Infantry
-		ww1infantry_weapons1 = 1
-		infantry_binoculars = 1
-		infantry_grenade = 1
-		ww1_ambulance1 = 1
-
-		# Support
-		tech_maintenance_company = 1
-		tech_field_hospital = 1
-		tech_logistics_company = 1
-
-		# Armor
-		gwtank = 1 # 1910 Armored Car
-
-		# Artillery
-		bonus_artillery1 = 1
-		heavy_field_gun1 = 1
-		bonus_bertha1 = 1
-
-		# Air
-		ww1_fighter1 = 1
-			bba_ww1_fighter1 = 1
-
-		# Engineering
-		electronic_mechanical_engineering = 1
-
-		# Industry
-	}
-
 	set_politics = {
-	    ruling_party = democratic
-	    last_election = "1911.9.1"
-	    election_frequency = 36
-	    elections_allowed = yes
+	ruling_party = democratic
+	last_election = "1911.10.7"
+	election_frequency = 60
+	elections_allowed = yes
+    }
+	recruit_character = SWE_harald_malmberg
+    recruit_character = SWE_axel_rappe			
+}
+
+1914.2.17 = { 	
+ promote_character = SWE_hjalmar_hammarskjold
+}
+
+1915.1.1 = { 	
+ retire_character = SWE_karl_staaff
+ recruit_character = SWE_carl_swartz 
+}
+
+1917.3.30 = { 	
+ retire_character = SWE_hjalmar_hammarskjold
+}
+
+1919.1.1 = {
+	oob = "SWE_1914"
+	set_politics = {
+	ruling_party = democratic
+	last_election = "1917.10.19"
+	election_frequency = 60
+	elections_allowed = yes
+    }
+	recruit_character = SWE_charles_de_champs
+	recruit_character = SWE_harald_akermark	
+	recruit_character = SWE_osten_unden	
+	recruit_character = SWE_ernst_wigforss
+    recruit_character = SWE_henry_peyron
+    recruit_character = SWE_sven_linderot
+
+	retire_character = SWE_knut_gillis_bildt
+	retire_character = SWE_axel_vennersten			
+}
+
+1925.2.1 = {
+ recruit_character = SWE_gustaf_adolf_v_ww2
+ recruit_character = SWE_per_albin_hansson 
+ retire_character = SWE_hugo_sillen 
+}
+
+1925.2.2 = {
+ retire_character = SWE_gustaf_adolf_v_dnc
+ recruit_character = SWE_gustaf_adolf_vi_ww2
+}
+
+1926.11.6 = { 	
+ retire_character = SWE_carl_swartz
+}
+
+1930.1.1 = {
+	recruit_character = SWE_gunnar_bjurner
+	recruit_character = SWE_helge_stromback	
+	recruit_character = SWE_jens_stefenson	
+	recruit_character = SWE_torsten_friis
+	recruit_character = SWE_stig_ericson
+	recruit_character = SWE_axel_ljungdahl
+	recruit_character = SWE_arne_beurling
+	recruit_character = SWE_per_engdahl
+	recruit_character = SWE_hilding_hagberg
+	recruit_character = SWE_alf_lysholm
+	recruit_character = SWE_helge_jung
+	recruit_character = SWE_olof_thornell
+	recruit_character = SWE_ivar_holmquist
+	recruit_character = SWE_thord_bonde	
+	recruit_character = SWE_viking_tamm	
+	recruit_character = SWE_folke_hogberg
+    recruit_character = SWE_erik_af_edholm
+    recruit_character = SWE_archibald_douglas
+    recruit_character = SWE_nils_bjork
+    recruit_character = SWE_birger_furugard
+    recruit_character = SWE_tage_erlander
+    recruit_character = SWE_sven_olov_lindholm
+    retire_character = SWE_constantin_fallenius	
+    retire_character = SWE_ernst_meyer																		
+}
+
+1933.1.1 = {
+	if = {
+		limit = {
+			has_dlc = "By Blood Alone"
+		}
+		create_equipment_variant = {
+			name = "Svenska Jaktfalken" 
+			type = small_plane_airframe_7
+			modules = {
+				fixed_main_weapon_slot = light_mg_2x
+				engine_type_slot = engine_1_1x
+				#special_type_slot_1 = empty
+			}
+			obsolete = yes
+		}
+	}
+	set_air_oob = "SWE_1936_air_bba"
+	oob = "SWE_1933"
+	set_naval_oob = "SWE_1933_naval_legacy"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1932.9.18"
+		election_frequency = 48
+		elections_allowed = yes
 	}
 	set_popularities = {
-	    democratic = 72
-	    fascism = 0
-	    communism = 0
-	    neutrality = 28
+		democratic = 75
+		neutrality = 14
+		communism = 8
+		fascism = 3
 	}
 
-	add_ideas = {
-		neutrality_idea
-		SWE_ww1_idea_russophobia
+	if = {
+		limit = {
+			has_start_date > 1930.01.01
+			has_start_date < 1949.01.01
+		}
+		add_ideas = {
+			en_svensk_tiger
+			neutrality_idea
+		}
 	}
-	create_equipment_variant={ name="Delfinen Class" type=coastal_submarine_1910 parent_version = 0 obsolete=no upgrades={    ship_reliability_upgrade=1       sub_torpedo_upgrade=0 sub_stealth_upgrade=1 sub_engine_upgrade=1  } }
+ recruit_character = SWE_gosta_ehrensvard
+ recruit_character = SWE_fabian_tamm 
+ recruit_character = SWE_erik_anderberg
+ recruit_character = SWE_torsten_rapp
+ recruit_character = SWE_bengt_nordenskiold 
+ recruit_character = SWE_albin_strom  
+ recruit_character = SWE_karl_kilbom 
+ recruit_character = SWE_anton_nilsson
+ recruit_character = SWE_per_edvin_skold
+ recruit_character = SWE_axel_wennergren
+ recruit_character = SWE_christian_gunther
+ recruit_character = SWE_thorwald_bergquist
+ recruit_character = SWE_carl_petersen
+ recruit_character = SWE_oscar_nygren
+ recruit_character = SWE_axel_gyllenkrok 
+ recruit_character = SWE_ernst_af_klercker 
+ recruit_character = SWE_gosta_bagge      
+}
+
+### END OF WW1 Start Date
+1936.1.1 = {
+	set_air_oob = "SWE_1936_air_bba"
+	oob = "SWE_1936"
+	set_naval_oob = "SWE_1936_naval_legacy"
+	set_technology = {
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		tech_recon = 1
+		tech_support = 1
+		tech_engineers = 1
+		basic_light_tank = 1
+		early_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		transport = 1
+	}
+	if = {
+		limit = {
+			has_dlc = "No Step Back"
+		}
+		set_technology = {
+			basic_light_tank_chassis = 1
+		}
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1932.9.18"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 75
+		neutrality = 14
+		communism = 8
+		fascism = 3
+	}
+
+	### VARIANTS ###
+	# 1936 Start #
+	### Ship Variants ###
+	create_equipment_variant = {
+		name = "Draken Class"
+		type = submarine_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			sub_engine_upgrade = 1
+			sub_stealth_upgrade = 1
+			sub_torpedo_upgrade = 1
+		}
+	}
+
+ recruit_character = SWE_folke_bernadotte	
+ recruit_character = SWE_lennart_peyron 
+ recruit_character = SWE_bertil_bernadotte  
+}
+
+1936.11.1 = { 	
+ retire_character = SWE_birger_furugard
+}
+
+1939.1.1 = {
+	oob = "SWE_1939"
+	set_naval_oob = "SWE_1939_naval_legacy"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1936.9.20"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 85
+		neutrality = 10
+		communism = 4
+		fascism = 1
+	}
+ retire_character = SWE_emil_morcke	
+}
+
+1940.1.1 = {
+	oob = "SWE_1940"
+	set_naval_oob = "SWE_1940_naval_legacy"
+ retire_character = SWE_carl_gustaf_hammarskjold
+ retire_character = SWE_otto_lybeck 	
+}
+
+1941.1.1 = {
+ retire_character = SWE_oscar_nygren
+}
+
+1943.1.1 = {
+ retire_character = SWE_ernst_linder
+}
+
+1944.1.1 = {
+ retire_character = SWE_ivar_holmquist
+}
+
+1945.1.1 = {
+ retire_character = SWE_axel_gyllenkrok
+ retire_character = SWE_fabian_tamm 
+ retire_character = SWE_claes_lindstrom 
+ retire_character = SWE_charles_de_champs 
+ retire_character = SWE_harald_akermark 
+}
+
+1946.10.6 = {
+ retire_character = SWE_per_albin_hansson 
+}
+
+1947.1.1 = {
+ retire_character = SWE_ernst_af_klercker
+ retire_character = SWE_gunnar_bjurner 
+}
+
+1948.1.1 = {
+ retire_character = SWE_archibald_douglas
+ retire_character = SWE_harald_malmberg 
+ retire_character = SWE_henry_peyron 
+}
+
+1948.9.17 = {
+ retire_character = SWE_folke_bernadotte
+}
+
+1949.1.1 = {
+	oob = "SWE_1949"
+	set_naval_oob = "SWE_1949_naval_legacy"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1949.1.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 100
+	}	
+ retire_character = SWE_folke_hogberg 
+ recruit_character = SWE_frank_baude
+ recruit_character = SWE_goran_assar_oredsson 
+}
+
+1950.1.1 = {
+ retire_character = SWE_olof_thornell
+ retire_character = SWE_erik_af_edholm 
+}
+
+1950.6.1 = {
+ retire_character = SWE_sven_olov_lindholm
+}
+
+1950.10.29 = {
+ retire_character = SWE_gustaf_adolf_v_ww2 
+}
+
+1951.1.1 = {
+ retire_character = SWE_helge_jung
+}
+
+1953.1.1 = {
+ retire_character = SWE_helge_stromback
+}
+
+1955.1.1 = {
+ retire_character = SWE_sven_linderot
+ retire_character = SWE_jens_stefenson 
+}
+
+1957.1.1 = {
+ retire_character = SWE_erik_anderberg
+}
+
+1960.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1960.1.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 100
+	}
+ recruit_character = SWE_gustaf_adolf_vi_cw
+ retire_character = SWE_elise_ottesen
+ recruit_character = SWE_olof_palme  
+}
+
+1960.2.1 = {
+ retire_character = SWE_gustaf_adolf_vi_ww2
+ recruit_character = SWE_nils_olof_falldin
+}
+
+1960.2.1 = {
+ recruit_character = SWE_carl_xvi_gustaf_cw
+}
+
+1961.1.1 = {
+ retire_character = SWE_viking_tamm
+}
+
+1963.1.1 = {
+ retire_character = SWE_thord_bonde
+ retire_character = SWE_nils_bjork 
+}
+
+1969.10.14 = {
+ retire_character = SWE_tage_erlander
+}
+
+1970.1.1 = {
+	oob = "SWE_1970"
+	set_naval_oob = "SWE_1970_naval_legacy"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1969.10.14"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 100
+	}
+}
+
+1973.11.11 = {
+ retire_character = SWE_gustaf_adolf_vi_cw
+}
+
+1975.1.1 = {
+ retire_character = SWE_bertil_bernadotte 
+}
+
+1976.10.8 = {
+ promote_character = SWE_nils_olof_falldin
+}
+
+1980.1.1 = {
+
+}
+
+1982.10.8 = {
+ retire_character = SWE_nils_olof_falldin
+}
+
+1990.1.1 = {
+
+}
+
+2000.1.1 = {
+	oob = "SWE_2000"
+	set_naval_oob = "SWE_2000_naval_legacy"
+	set_popularities = {
+		neutrality = 7
+		communism = 6
+		fascism = 1
+		democratic = 86
+	}
+	create_country_leader = {
+		name = "Göran Persson"
+		picture = "gfx/leaders/SWE/MD/Sweden_Göran_Persson.dds"
+		
+		ideology = socialism
+	}
+	create_country_leader = {
+		name = "Abdirizak Waberi"
+		picture = "gfx/leaders/SWE/MD/Sweden_Abdirizak_Waberi_Islamic_Republican_2000.dds"
+		
+		ideology = islamic_republican
+	}
+	create_country_leader = {
+		name = "Anders Carlsson"
+		picture = "gfx/leaders/SWE/MD/Sweden_Anders_Carlsson_Marxism_2000.dds"
+		
+		ideology = marxism
+	}
+	create_country_leader = {
+		name = "Carl XVI"
+		picture = "gfx/leaders/SWE/MD/Sweden_Carl_XVI_Gustav_Despotism_2000.dds"
+		
+		ideology = despotism
+	}
+	create_country_leader = {
+		name = "Daniel Höglund"
+		picture = "gfx/leaders/SWE/MD/Sweden_Daniel_Höglund_Neo_Nazism_2000.dds"
+		
+		ideology = neo_nazism
+	}
+}
+2008.1.1 = {
+	create_country_leader = {
+		name = "Carl_XVI_Gustaf King of Sweden"
+		picture = "gfx/leaders/SWE/MD/Sweden_Carl_XVI_Gustaf_King_of_Sweden.dds"
+		
+		ideology = despotism
+	}
+
+	create_country_leader = {
+		name = "Fredrik Reinfeld"
+		picture = "gfx/leaders/SWE/MD/Sweden_Fredrik_Reinfeldt.dds"
+		
+		ideology = liberalism
+	}
+}
+
+2016.1.1 = {
+	oob = "SWE_2016"
+	set_popularities = {
+		fascism = 8
+		neutrality = 6
+		communism = 6
+		democratic = 80
+
+	}
+	create_country_leader = {
+		name = "Stefan Lofven"
+		picture = "gfx/leaders/SWE/MD/Sweden-Stefan_Lofven.dds"
+		
+		ideology = socialism
+	}
+}
+
+2020.1.1 = {
+	create_country_leader = {
+		name = "Stefan Lofven"
+		picture = "gfx/leaders/SWE/MD/SWE_Stefan_Löfven_Social_Democracy.dds"
+		
+		ideology = socialism
+	}
+	create_country_leader = {
+		name = "Carl XVI Gustaf"
+		picture = "gfx/leaders/SWE/MD/SWE_Carl_XVI_Gustaf_Despotism.dds"
+		
+		ideology = despotism
+	}
 }

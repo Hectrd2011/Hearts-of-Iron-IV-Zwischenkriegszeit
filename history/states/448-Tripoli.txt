@@ -1,32 +1,46 @@
 state = {
-	id=448
-	name="STATE_448"
-	local_supplies = 1.0 manpower = 469136
-	state_category=town
-	provinces={ 1118 1149 1189 4194 7066 7209 9980 12039 }
-	resources={
-		wood=0
+	id = 448
+	name = "STATE_448"
+	manpower = 469136
+
+	state_category = town
+
+	history = {
+		owner = OTT
+
+		victory_points = {
+			1149 10
 		}
-	history={
-		victory_points={ 1149 20 }
-		owner=TUR
-		add_core_of=LBA
-		add_core_of=TUR
-		1912.10.18 = { owner = ITA }
-		1936.1.1={ 
-			owner=ITA
-			add_core_of=LBA
-			victory_points={ 1149 10 }
-			buildings={
-				infrastructure=2
-				air_base=6
-				1149={ naval_base=5 }
-				}
+		buildings = {
+			infrastructure = 3
+			air_base = 6
+			1149 = {
+				naval_base = 5
 			}
-		buildings={
-			infrastructure=2
-			air_base=1
-			1149={ naval_base=5 }
-			}
+		}
+		add_core_of = LBA # #add_core_of = OTT 
+		1910.1.1 = {
+			owner = OTT
+			controller = OTT
+		}
+		1914.1.1 = {
+			owner = ITA
+			controller = ITA
+		}
+
+		1943.1.1 = {
+			owner = ENG
+			controller = ENG
+		}
+
+
+		1951.1.1 = {
+			owner = LBA
+			controller = LBA
 		}
 	}
+
+	provinces = {
+		1118 1149 1189 4194 7066 7209 9980 12039
+	}
+}

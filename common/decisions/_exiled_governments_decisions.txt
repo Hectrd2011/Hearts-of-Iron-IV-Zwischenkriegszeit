@@ -42,9 +42,9 @@ governments_in_exile = {
 		icon = eng_install_government
 
 		available = {
-		    FROM = {
-		    	has_legitimacy < 95
-		    }
+			FROM = {
+				has_legitimacy < 95
+			}
 			OR = {
 				political_power_daily > 0.25
 				has_political_power > 30
@@ -53,9 +53,9 @@ governments_in_exile = {
 
 		visible = {
 			FROM = { is_exiled_in = ROOT }
-		    FROM = {
-		    	has_legitimacy < 100
-		    }
+			FROM = {
+				has_legitimacy < 100
+			}
 		}
 
 
@@ -78,20 +78,12 @@ governments_in_exile = {
 			factor = 0.03
 			modifier = {
 				has_political_power < 150
-				political_power_daily < 0.85
 				factor = 0
 			}
 			modifier = {
 				factor = 0
 				FROM = {
 					has_legitimacy > 60
-				}
-			}
-			modifier = {
-				factor = 0
-				has_opinion = {
-					target = FROM
-					value < 60
 				}
 			}
 		}
@@ -110,7 +102,9 @@ governments_in_exile = {
 
 		visible = {
 			FROM = { is_hosting_exile = ROOT }
-		    has_legitimacy < 100
+			FROM = {
+				has_legitimacy < 100
+			}
 		}
 
 
@@ -127,10 +121,6 @@ governments_in_exile = {
 
 		ai_will_do = {
 			factor = 0.1
-			modifier = {
-				factor = 0
-				has_war = no
-			}
 		}
 	}
 
@@ -148,9 +138,9 @@ governments_in_exile = {
 		visible = {
 			is_major = yes
 			FROM = { is_in_faction_with = ROOT }
-		    FROM = {
-		    	has_legitimacy < 100
-		    }
+			FROM = {
+				has_legitimacy < 100
+			}
 		}
 
 
@@ -179,7 +169,7 @@ governments_in_exile = {
 		}
 
 		days_remove = 120
-	
+
 		ai_will_do = {
 			factor = 0
 		}
@@ -196,26 +186,22 @@ governments_in_exile = {
 				political_power_daily > 1.0
 				has_political_power > 120
 			}
-		    FROM = {
-		    	has_legitimacy > 20
-		    }
+			FROM = {
+				has_legitimacy > 20
+			}
 		}
 
 		visible = {
-			has_war = yes
 			FROM = { is_hosting_exile = ROOT }
-		    FROM = {
-		    	has_legitimacy > 10
-		    }
+			FROM = {
+				has_legitimacy > 10
+			}
 		}
 
 
 		targets = { host }
 
-		target_trigger = {
-			FROM = { is_hosting_exile = ROOT }
-			FROM = { NOT = { original_tag = POL } }
-		}
+		target_trigger = { FROM = { is_hosting_exile = ROOT } }
 
 		modifier = {
 			political_power_cost = 1.0
@@ -223,10 +209,9 @@ governments_in_exile = {
 		}
 
 		ai_will_do = {
-			factor = 0.01
+			factor = 0.1
 			modifier = {
-				has_political_power < 150
-				political_power_daily < 0.75
+				has_political_power < 250
 				factor = 0
 			}
 		}
@@ -247,30 +232,26 @@ governments_in_exile = {
 		custom_cost_text = custom_cost_joint_training_exercise
 
 		available = {
-		    FROM = {
-		    	has_legitimacy > 40
-		    }
-		    FROM = {
-		    	any_war_score > 4
-		    }
+			FROM = {
+				has_legitimacy > 40
+			}
+			FROM = {
+				any_war_score > 4
+			}
 		}
 
 		visible = {
-			has_war = yes
 			FROM = { is_exiled_in = ROOT }
-		    FROM = {
-		    	has_legitimacy > 30
-		    	any_war_score > 2
-		    }
+			FROM = {
+				has_legitimacy > 30
+				any_war_score > 2
+			}
 		}
 
 
 		target_array = exiles
 
-		target_trigger = {
-			FROM = { is_exiled_in = ROOT }
-			FROM = { NOT = { original_tag = POL } }
-		}
+		target_trigger = { FROM = { is_exiled_in = ROOT } }
 
 		targeted_modifier = {
 			tag = FROM
@@ -284,15 +265,11 @@ governments_in_exile = {
 		}
 
 		ai_will_do = {
-			factor = 0.05
+			base = 0
 
 			modifier = {
-				factor = 0 # Save for more immediately useful stuff
-				command_power < 50
-			}
-			modifier = {
-				factor = 100
-				command_power > 98 # Not doing you any good so spend it
+				add = 1 # Save for more immediately useful stuff
+				command_power > 99
 			}
 		}
 	}
@@ -302,24 +279,24 @@ governments_in_exile = {
 		icon = generic_political_discourse
 
 		available = {
-		    FROM = {
-		    	has_legitimacy > 50
-		    	OR = {
-		    		fascism > 0.1
-		    		communism > 0.1
-		    	}
-		    }
+			FROM = {
+				has_legitimacy > 50
+				OR = {
+					fascism > 0.1
+					communism > 0.1
+				}
+			}
 		}
 
 		visible = {
 			FROM = {
 				is_exiled_in = ROOT
-		    	has_legitimacy > 40
-		    	OR = {
-		    		fascism > 0.05
-		    		communism > 0.05
-		    	}
-		    }
+				has_legitimacy > 40
+				OR = {
+					fascism > 0.05
+					communism > 0.05
+				}
+			}
 		}
 
 		target_array = exiles
@@ -327,36 +304,37 @@ governments_in_exile = {
 		target_trigger = {
 			FROM = {
 				is_exiled_in = ROOT
-		    	has_legitimacy > 40
-		    	OR = {
-		    		fascism > 0.05
-		    		communism > 0.05
-		    	}
-		    }
+				has_legitimacy > 40
+				OR = {
+					fascism > 0.05
+					communism > 0.05
+				}
+			}
 		}
 
-		#targeted_modifier = {
-		#	tag = ETH
-		#	targeted_legitimacy_daily = -1
-		#	democratic_drift = 0.05
-		#}
-		#complete_effect = {
-		#	FROM = {
-		#		add_timed_idea = {
-		#			idea = ETH_purge_ideology_boost_idea
-		#			days = 30
-		#		}
-		#	}			
-		#}
+		targeted_modifier = {
+			tag = FROM
+			targeted_legitimacy_daily = -1
+			democratic_drift = 0.05
+		}
 
 		remove_effect = {
 			add_political_power = 50
-		}  
+		}
 
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 0
+			base = 0
+
+			modifier = {
+				add = 1000
+
+				FROM = {
+					has_navy_size = { size > 10 }
+					has_legitimacy > 80
+				}
+			}
 		}
 	}
 
@@ -369,18 +347,18 @@ governments_in_exile = {
 		days_remove = 360
 
 		available = {
-		    FROM = {
-		    	has_legitimacy > 60
-		    	any_war_score > 9
-		    }
+			FROM = {
+				has_legitimacy > 60
+				any_war_score > 9
+			}
 		}
 
 		visible = {
 			FROM = {
 				is_exiled_in = ROOT
-		    	has_legitimacy > 50
-		    	any_war_score > 5
-		    }
+				has_legitimacy > 50
+				any_war_score > 5
+			}
 		}
 
 
@@ -390,15 +368,17 @@ governments_in_exile = {
 
 		modifier = {
 			industrial_factory_donations = 1
+		}
+
+		targeted_modifier = {
+			tag = FROM
 			military_factory_donations = 1
 		}
 
 		ai_will_do = {
-			factor = 0.05
-			modifier = {
-				factor = 0
-				has_war = no
-			}
+			base = 0
+
+			modifier = { add = 1000 has_political_power > 200 }
 		}
 	}
 
@@ -410,9 +390,9 @@ governments_in_exile = {
 		fire_only_once = yes
 
 		available = {
-		    FROM = {
-		    	has_legitimacy < 80
-		    }
+			FROM = {
+				has_legitimacy < 80
+			}
 		}
 
 		visible = {
@@ -426,7 +406,7 @@ governments_in_exile = {
 			FROM = {
 				is_exiled_in = ROOT
 				has_navy_size = {
-				    size > 0
+					size > 0
 				}
 			}
 		}
@@ -448,7 +428,40 @@ governments_in_exile = {
 		}
 
 		ai_will_do = {
-			factor = 5
+			base = 0
+			modifier = {
+				add = 1000
+				FROM = {
+					has_navy_size = { size > 0 }
+
+					if = { limit = { original_tag = FRA }
+
+						any_other_country = { original_tag = FRA has_government = fascism }
+					}
+				}
+			}
+			modifier = {
+				add = 1000
+				FROM = {
+					has_navy_size = { size > 10 }
+
+					if = { limit = { original_tag = FRA }
+
+						any_other_country = { original_tag = FRA has_government = fascism }
+					}
+				}
+			}
+			modifier = {
+				add = 1000
+				FROM = {
+					has_navy_size = { size > 20 }
+
+					if = { limit = { original_tag = FRA }
+
+						any_other_country = { original_tag = FRA has_government = fascism }
+					}
+				}
+			}
 		}
 	}
 }
@@ -469,15 +482,15 @@ category_exile_forces = {
 				}
 				multiply_temp_variable = { resistance_equipment_needed = 75 }
 			}
-		    has_equipment = { infantry_equipment > resistance_equipment_needed }
-		    FROM = {
-		    	has_legitimacy > 25
-		    }
+			has_equipment = { infantry_equipment > resistance_equipment_needed }
+			FROM = {
+				has_legitimacy > 25
+			}
 		}
 
 		visible = {
-		    FROM = {
-		    	has_legitimacy > 15
+			FROM = {
+				has_legitimacy > 15
 				is_exiled_in = ROOT
 			}
 			any_enemy_country = {
@@ -519,7 +532,13 @@ category_exile_forces = {
 		}
 
 		ai_will_do = {
-			factor = 0.01
+			base = 0
+
+			modifier = {
+				add = 1000
+				has_political_power > 200
+				has_equipment = { infantry_equipment > 20000 }
+			}
 		}
 	}
 
@@ -530,22 +549,21 @@ category_exile_forces = {
 		cost = 50
 
 		available = {
-		    FROM = {
-		    	has_legitimacy > 50
-		    	any_war_score > 2
-		    }
-		    has_war_support < 0.8
+			FROM = {
+				has_legitimacy > 50
+				any_war_score > 2
+			}
+			has_war_support < 0.8
 		}
 
 		visible = {
-			has_war = yes
 			FROM = {
 				is_exiled_in = ROOT
-		    	has_legitimacy > 40
-		    }
+				has_legitimacy > 40
+			}
 		}
 
-		fire_only_once = yes
+
 		target_array = exiles
 
 		target_trigger = { FROM = { is_exiled_in = ROOT } }
@@ -566,7 +584,7 @@ category_exile_forces = {
 			factor = 0.03
 			modifier = {
 				factor = 0
-		    	has_war_support > 0.7
+				has_war_support > 0.7
 			}
 			modifier = {
 				has_political_power < 150
@@ -599,18 +617,17 @@ category_exile_forces = {
 		custom_cost_text = custom_cost_joint_training_exercise
 
 		available = {
-		    FROM = {
-		    	has_legitimacy > 35
-		    	any_war_score > 9
-		    }
+			FROM = {
+				has_legitimacy > 35
+				any_war_score > 9
+			}
 		}
 
 		visible = {
-			has_war = yes
 			FROM = {
 				is_exiled_in = ROOT
-		    	has_legitimacy > 25
-		    }
+				has_legitimacy > 25
+			}
 		}
 
 
@@ -636,36 +653,13 @@ category_exile_forces = {
 		}
 
 		ai_will_do = {
-			factor = 0.05
-			modifier = {
-				OR = {
-					has_army_experience < 25
-					has_air_experience < 25
-					has_navy_experience < 25
-				}
-				factor = 2
-			}
+			factor = 10000
 
 			modifier = {
-				factor = 0 # Save for more immediately useful stuff
-				command_power < 50
-			}
-			modifier = {
-				factor = 100
-				command_power > 98 # Not doing you any good so spend it
-			}
-			modifier = {
-				factor = 0.1 # Reached limit of an experience type
-				OR = {
-					has_army_experience > 475
-					has_air_experience > 450
-					has_navy_experience > 450
-				}
-			}
-			modifier = {
-				factor = 0 # Spend some of your damn experience!!
-				has_army_experience > 475
-				has_air_experience > 450
+				factor = 0
+
+				check_variable = { army_xp > 450 }
+				check_variable = { air_xp > 450 }
 				has_navy_experience > 450
 			}
 		}

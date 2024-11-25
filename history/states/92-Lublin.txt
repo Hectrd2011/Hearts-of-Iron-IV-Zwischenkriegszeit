@@ -1,33 +1,44 @@
 state = {
-    id = 92
-    name = "STATE_92"
-    local_supplies = 1.0
-    manpower = 2464600
-    state_category = town
-    provinces = {
-        3521 3559 6484 6580 9452 9521 9544 11399 11466
-    }
-    resources = {
-        wood = 0
-    }
-    history = {
-        owner = RUS
-        # add_core_of = POL
-        add_core_of = RUS
+	id = 92
+	name = "STATE_92"
 
-        buildings = {
-            infrastructure=3
-            industrial_complex = 2
+	history = {
+		victory_points = {
+			11399 1
+		}
+		owner = RUS
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			air_base = 1
 
-            11466 = {
-                trench = 1
-                bunker = 3
-            }
+		}
+		add_core_of = POL  add_core_of = RUS
+		set_state_flag = RUS_core  1918.11.11 = { owner = POL controller = POL }
+		1939.1.1 = {
+			buildings = {
+				air_base = 3
 
-        }
-        1919.1.1 = {
-            owner = POL
-            add_core_of = POL
-        }
-    }
+			}
+
+		}
+
+		1940.1.1 = { owner = GER controller = GER }
+
+		1945.1.1 = {
+			owner = SOV
+			controller = SOV
+		}
+
+		1946.1.1 = { owner = POL controller = POL }
+
+	}
+
+	provinces = {
+		402 3521 3559 6484 6580 9452 9494 9521 9544 11399 11466
+	}
+	manpower = 2464600
+	buildings_max_level_factor = 1.000
+	state_category = town
+	local_supplies=9.0 
 }

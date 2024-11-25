@@ -1,32 +1,36 @@
 state = {
-	id=474
-	name="STATE_474"
-	local_supplies = 1.0 manpower = 840289
-	state_category=rural
-	provinces={ 4904 4965 12715 }
-	resources={
-		wood=45
-		oil=30
-		}
-	history={
-		owner=MEX
-		add_core_of=MEX
-		1936.1.1={
-			owner=MEX
-			add_core_of=MEX
-			buildings={
-				infrastructure=3
-				air_base=1
-				arms_factory=1
-				4904={ naval_base=2 }
-				4965={ naval_base=3 }
-				}
+	id = 474
+	name = "STATE_474"
+	manpower = 440289
+
+	state_category = rural
+
+	history = {
+		owner = MEX
+		buildings = {
+			infrastructure = 3
+			air_base = 1
+			4904 = {
+				naval_base = 2
 			}
-		buildings={
-			infrastructure=3
-			arms_factory=1
-			4904={ naval_base=2 }
-			4965={ naval_base=3 }
+			4965 = {
+				naval_base = 3
 			}
 		}
+		add_core_of = MEX
+		#victory_points = {
+		#	12715 3
+		#}
+		victory_points = {
+			4904 1
+		}
+		#victory_points = {
+		#	4965 5
+		#}
 	}
+
+	provinces = {
+		4904 4965 12715
+	}
+
+}

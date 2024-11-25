@@ -1,1 +1,0 @@
-﻿capital = 474 #Cancún, Yucatan

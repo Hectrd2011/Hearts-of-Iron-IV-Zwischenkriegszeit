@@ -1,32 +1,52 @@
 state = {
 	id = 328
-	name = "STATE_328" # Kirin
-	local_supplies = 1.0
-	manpower = 7536266
-	state_category = rural
-
-	provinces = { 800 861 887 927 945 946 1567 3860 3888 3913 3929 3932 3947 3949 4503 4572 6868 6905 6947 7523 7591 7652 7663 9759 9782 9803 9841 9848 9866 9883 9913 9928 10433 11744 11781 11823 11850 11862 11864 12412 }
-
+	name = "STATE_328"
 	resources = {
-		wood = 3
+		aluminium = 7.000
 	}
 
 	history = {
-		victory_points = { 4572 1 }
-		victory_points = { 10433 1 }
 		owner = QIN
-		add_core_of = CHI
 		add_core_of = QIN
+		add_core_of = MAN
+		add_core_of = CHI add_core_of = BOX
+		add_core_of = FEN
 
-		1912.2.12 = { owner = CHI }
+		1900.1.1 = {
+			set_state_flag = JAP_influence
 
-		1919.1.1 = {
-			owner = FEC
-			add_core_of = FEC
-		}		
+		}
+
+		1905.1.1 = { owner = RUS controller = RUS }
+		1906.1.1 = { owner = QIN controller = QIN }
+
+		1912.1.1 = { owner = CHI controller = CHI add_core_of = CHI }
+		1919.7.1 = { owner = FEN controller = FEN }
+		1933.1.1 = {
+			owner = MAN
+			controller = MAN
+		}
 
 		buildings = {
-			infrastructure = 3
+			infrastructure = 5
+
 		}
+		victory_points = {
+			10433 10
+		}
+
+		1946.1.1 = {
+			owner = PRC
+			controller = PRC
+			add_core_of = PRC 
+		}
+
 	}
+
+	provinces = {
+		946 7523 7591 7652 9782 9913 9928 10433 11864 12412
+	}
+	manpower = 2231111
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

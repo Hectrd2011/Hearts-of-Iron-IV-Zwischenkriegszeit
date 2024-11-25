@@ -1,4 +1,5 @@
-﻿###################################################################
+###################################################################
+
 division_template = {
 	name = "Infantry Division"
 	regiments = {
@@ -27,8 +28,11 @@ division_template = {
 		cavalry = { x = 1 y = 1 }
 	}
 }
+
 ###################################################################
+
 units = {
+
 	fleet = {
 		name = "Chilean Fleet Fleet"
 		naval_base = 8222 # Santiago
@@ -55,71 +59,43 @@ units = {
 			ship = { name = "Capitan Thompson" definition = destroyer equipment = { destroyer_1900 = { amount = 1 owner = CHL version_name = "Capitan Thompson Class" } } }
 		}
 	}
-	
+
 	division = {
 		name = "1. División de Infantería"
-		location = 650		# Santiago
+		location = 650 # Santiago
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
 	}
+
+
 	division = {
 		name = "2. División de Infantería"
-		location = 650		# Santiago
+		location = 650 # Santiago
 		division_template = "Infantry Division"
 		start_experience_factor = 0.1
 	}
+
+
 	division = {
 		name = "3. División de Infantería"
-		location = 650		# Santiago
+		location = 650 # Santiago
 		division_template = "Infantry Division"
 		start_experience_factor = 0.05
 	}
+
+
 	division = {
 		name = "División Caballería nro. 1"
-		location = 650		# Santiago
+		location = 650 # Santiago
 		division_template = "Cavalry Division"
 		start_experience_factor = 0.15
 	}
-}
 
-air_wings = {
 }
-
 instant_effect = {
-	add_equipment_production = {
-		equipment = {
-			type = infantry_equipment_0
-			creator = "CHL"
-		}
-		requested_factories = 1
-		progress = 0.1
-		efficiency = 50
-	}
-	add_equipment_production = {
-		equipment = {
-			type = support_equipment_1
-			creator = "CHL"
-		}
-		requested_factories = 1
-		progress = 0.1
-		efficiency = 50
-	}
-	add_equipment_production = {
-		equipment = {
-			type = light_field_gun_equipment_1
-			creator = "CHL"
-		}
-		requested_factories = 1
-		progress = 0.1
-		efficiency = 50
-	}
-	add_equipment_production = {
-		equipment = {
-			type = motorized_equipment_0
-			creator = "CHL"
-		}
-		requested_factories = 1
-		progress = 0.1
-		efficiency = 50
-	}
+	add_equipment_production = { equipment = { type = early_infantry_equipment_0 creator = "CHL" } requested_factories = 1 progress = 0.1 efficiency = 50 }
+
+	add_equipment_production = { equipment = { type = support_equipment_1 creator = "CHL" } requested_factories = 1 progress = 0.1 efficiency = 50 }
+	add_equipment_production = { equipment = { type = light_field_gun_equipment_1 creator = "CHL" } requested_factories = 1 progress = 0.1 efficiency = 50 }
+	add_equipment_production = { equipment = { type = ww1_motorized_equipment_0 creator = "CHL" } requested_factories = 1 progress = 0.1 efficiency = 50 }
 }

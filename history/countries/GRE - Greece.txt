@@ -1,464 +1,667 @@
-﻿capital = 47
+RON_universal_setup = yes
 
-#-------------------------------------------------------
-#					GENERIC VALUES
-#-------------------------------------------------------
-set_fuel_ratio = 0.20
+
+
+capital = 47
+oob = "GRE_1900"
+add_ideas = {
+	limited_conscription
+}
+
+add_ideas = {
+	export_focus
+	tax_low
+	tariffs_average
+	civilian_economy
+	press_regulated
+	key_industries
+	fdi_allowed
+	foreign_volunteers
+	train_none
+	education_budget2
+	health_budget2
+	officer_train_low
+	security_minor_restrictions
+	foreign_isolationism
+	extensive_conscription
+	age_18
+	age_45
+}
+
 set_research_slots = 3
-set_stability = 0.4 #crisis after Athens coup of 1909
-set_war_support = 0.70
 set_convoys = 10
+set_stability = 0.7
 
-#-------------------------------------------------------
-#					POLITICS & ARMY
-#-------------------------------------------------------
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1900.1.1"
+	election_frequency = 60
+	elections_allowed = no
+}
 
-# Leaders
-recruit_character = GRE_alexandros_i
-recruit_character = GRE_george_i
+set_popularities = {
+	neutrality = 53
+	democratic = 34
+	fascism = 1
+	communism = 12
+}
 
-### Army Leaders ###
-recruit_character = GRE_panagiotis_danglis
-recruit_character = GRE_nikolaos_trikoupis
-recruit_character = GRE_victor_dousmanis
-
-recruit_character = GRE_emmanouil_zymvrakakis
-recruit_character = GRE_konstantinos_nider
-recruit_character = GRE_anastasios_papoulas
-recruit_character = GRE_paraskevopoulos
-recruit_character = GRE_georgios_hatzianestis
-recruit_character = GRE_konstantinos_sapountzakis
-recruit_character = GRE_prince_andreas
-recruit_character = GRE_theodoros_pangalos
-recruit_character = GRE_konstantinos_mazarakis
-recruit_character = GRE_alexandros_othonaios
-recruit_character = GRE_georgios_kondylis
-recruit_character = GRE_plastiras
-recruit_character = GRE_constantine_of_the_hellenes
-
-### Naval Leaders ###
-recruit_character = GRE_paulos_kountouriotis
-recruit_character = GRE_hatzikiriakos
-
-### Advisors ###
-recruit_character = GRE_dimitrios_rallis
-recruit_character = GRE_alexandros_zaimis
-recruit_character = GRE_dimitrios_gounaris
-recruit_character = GRE_spiridon_lambros
-recruit_character = GRE_nikolaos_stratos
-recruit_character = GRE_petros_protopapadakis
-recruit_character = GRE_emmanouil_repoulis
-recruit_character = GRE_eleftherios_venizelos
-recruit_character = GRE_mark_kerr
-
-
-
-
-
-recruit_character = GRE_generic_advisor_1
-recruit_character = GRE_generic_advisor_2
-recruit_character = GRE_generic_advisor_3
-recruit_character = GRE_generic_advisor_4
-recruit_character = GRE_generic_advisor_5
-recruit_character = GRE_generic_advisor_6
-recruit_character = GRE_generic_advisor_7
-recruit_character = GRE_generic_advisor_8
-recruit_character = GRE_generic_advisor_9
-
-
-
-
-
-
-
-
-
-
-
-
-set_technology = {
-
-	# Train
-	ww1_train = 1
-
-	# Navy
-	ww1_battleship0 = 1
-	ww1_battleship0_mtg = 1
+create_country_leader = {
+	name = "George I"
+	picture = "gfx/leaders/GRE/DNC/GRE_George_I.dds"
 	
-	ww1_battleship1 = 1
-	ww1_battleship1_mtg = 1
+	ideology = despotism
+}
 
-	ww1_heavy_cruiser0 = 1
-	ww1_heavy_cruiser0_mtg = 1 # heavy_cruiser_1890 (Armored Cruiser I)
-	ww1_heavy_cruiser1 = 1
-	ww1_heavy_cruiser1_mtg = 1 # heavy_cruiser_1900 (Armored Cruiser II)
+create_country_leader = {
+	name = "Eleftherios Venizelos"
+	picture = "DNC/Eleftherios_Venizelos.dds"
+	expire = "1936.3.18"
+	ideology = liberalism
+}
 
-	ww1_light_cruiser0 = 1
-	ww1_light_cruiser0_mtg = 1 # light_cruiser_1890 (Protected Cruiser I)
-	ww1_light_cruiser1 = 1
-	ww1_light_cruiser1_mtg = 1 # light_cruiser_1900 (Protected Cruiser II)
-	###ww1_light_cruiser2 = 0 # light_cruiser_1906 (Light Cruiser I)
-	###ww1_light_cruiser3 = 0 # light_cruiser_1910 (Light Cruiser II)
-	###ww1_light_cruiser4 = 0 # light_cruiser_1914 (Light Cruiser III)
-
-	ww1_destroyer0 = 1
-	ww1_destroyer0_mtg = 1 # destroyer_1890 (Torpedo Boat I)
-	ww1_destroyer1 = 1
-	ww1_destroyer1_mtg = 1 # destroyer_1900 (Destroyer I)
-	ww1_destroyer2 = 1
-	ww1_destroyer2_mtg = 1 # destroyer_1906 (Destroyer II)
-	###ww1_destroyer3 = 0 # destroyer_1910 (Destroyer III)
-	###ww1_destroyer4 = 0 # destroyer_1914 (Destroyer IV)	
-
-	ww1_moduleMTG_mines = 1
-	ww1_moduleMTG_mines_mtg = 1 # Mines
-
-	ww1_submarine0 = 1
-	ww1_submarine0_mtg = 1 # coastal_submarine_1900 (Coastal Submarine 1900, first available Submarine)
-	###ww1_submarine1 = 0 # submarine_1906 (Submarine I)
-	###ww1_submarine2 = 0 # submarine_1910 (Submarine II)
-	###ww1_submarine3 = 0 # submarine_1914 (Submarine III)
-
-	transport = 1
-	transport_mtg = 1 # Naval Transport
-
-		# Naval Modules Techs
-		heavy_navalmodule_1890 = 1
-	heavy_navalmodule_1890_mtg = 1
-		medium_navalmodule_1890 = 1
-	medium_navalmodule_1890_mtg = 1
-		light_navalmodule_1890 = 1
-	light_navalmodule_1890_mtg = 1
+create_country_leader = {
+	name = "Dimitrios Gounaris"
+	picture = "gfx/leaders/GRE/WW1/Greece_RightWing_DimitriosGounaris.dds"
 	
+	ideology = rw_nationalism
+}
+
+create_country_leader = {
+	name = "Markos Vafiadis"
+	desc = "POLITICS_MARKOS_VAFIADIS_DESC"
+	picture = "gfx/leaders/GRE/Portrait_Greece_Markos_Vafiadis.dds"
+	
+	ideology = marxism
+	traits = {
+		stalins_puppet
+	}
+}
+
+if = {
+	limit = {
+
+		has_start_date < 1930.01.01
+	}
+	create_corps_commander = {
+		name = "Emmanouil Zymvrakakis"
+		picture = "WW1/General-Emmanouil_Zymvrakakis.dds"
+		skill = 1
+	}
+	create_corps_commander = {
+		name = "Leonidas Paraskevopoulos"
+		picture = "WW1/General-Leonidas_Paraskevopoulos.dds"
+		skill = 1
+	}
+	create_corps_commander = {
+		name = "Panagiotis Danglis"
+		picture = "WW1/General-Panagiotis_Danglis.dds"
+		skill = 1
+	}
+	create_corps_commander = {
+		name = "Konstantinos Kallaris"
+		picture = "WW1/Greece_Gen_KonstantinosKallaris.dds"
+		skill = 1
+	}
+	create_corps_commander = {
+		name = "Konstantinos Sapountzakis"
+		picture = "WW1/Greece_Gen_KonstantinosSapountzakis.dds"
+		skill = 1
+	}
+	create_corps_commander = {
+		name = "Peter Soumilas"
+		picture = "WW1/Greece_Gen_PeterSoumilas.dds"
+		skill = 1
+	}
+	create_navy_leader = {
+		name = "Pavlos Kountouriotis"
+		picture = "WW1/Admiral-Pavlos_Kountouriotis.dds"
+		skill = 1
+	}
 }
 
 1910.1.1 = {
+	### WW1 Start Date
 	oob = "GRE_1910"
 
-	#-------------------------------------------------------
-	#							NF
-	#-------------------------------------------------------
-
-	#-------------------------------------------------------
-
-	set_technology = {
-
-		# Infantry
-		infantry_weapons = 1
-		support_weapons = 1
-		infantry_binoculars = 1
-		motorised_infantry = 1
-		ww1_ambulance1 = 1
-
-
-		# Support
-		tech_support = 1
-		tech_engineers = 1
-		tech_recon = 1
-		#tech_military_police = 1
-		#tech_maintenance_company = 1
-		#tech_field_hospital = 1
-		#tech_logistics_company = 1
-
-		# Armor
-
-		# Artillery
-		light_field_gun1 = 1
-		heavy_field_gun1 = 1
-
-		# Air
-
-		# Engineering
-		electronic_mechanical_engineering = 1
-
-		# Industry
-		ww1_fortification1 = 1
+	if = {
+		limit = {
+			has_start_date > 1909.1.1
+			has_start_date < 1911.1.1
+		}
+		country_event = { id = ww1_greece.1 days = 1172 }
 	}
 
 	set_politics = {
-	    ruling_party = neutrality
-	    last_election = "1906.5.31"
-	    election_frequency = 48
-	    elections_allowed = yes
+		ruling_party = neutrality
+		last_election = "1907.1.12"
+		election_frequency = 60
+		elections_allowed = yes
 	}
+
 	set_popularities = {
-	    democratic = 10
-	    fascism = 5
-	    communism = 2
-	    neutrality = 83
+		neutrality = 53
+		democratic = 34
+		fascism = 1
+		communism = 12
 	}
 
-	add_ideas = {
-		limited_conscription
+	create_country_leader = {
+		name = "Alexander"
+		desc = "POLITICS_ALEXANDER_GRE_DESC"
+		picture = "gfx/leaders/GRE/WW1/Greece_Alexander.dds"
+		expire = "1920.10.25"
+		ideology = despotism
 	}
 
-	
-	create_equipment_variant = {
-	    name = "Basilissa Olga Class"
-	    type = heavy_cruiser_1890 parent_version = 0 obsolete = yes upgrades = {
-	        ship_gun_upgrade = 0 ship_armor_upgrade = 0 ship_engine_upgrade = 0 ship_reliability_upgrade = 0
-	    }
+	create_country_leader = {
+		name = "Constantine I"
+		desc = "POLITICS_CONSTANTINE_I_DESC"
+		picture = "gfx/leaders/GRE/WW1/Portrait_Greece_Constantine_I.dds"
+		expire = "1917.6.11"
+		ideology = despotism
 	}
-	create_equipment_variant = {
-	    name = "Hydra Class"
-	    type = heavy_cruiser_1890 parent_version = 1 obsolete = yes upgrades = {
-	        ship_gun_upgrade = 0 ship_armor_upgrade = 5 ship_engine_upgrade = 0 ship_reliability_upgrade = 5
-	    }
+
+	# create_country_leader = {
+	# 	name = "George I"
+	# 	desc = "POLITICS_GEORGE_I_DESC"
+	# 	picture = "gfx/leaders/GRE/DNC/GRE_George_I.dds"
+	# 	expire = "1913.3.18"
+	# 	ideology = despotism
+	# }
+
+	create_country_leader = {
+		name = "Eleftherios Venizelos"
+		picture = "gfx/leaders/GRE/WW1/Greece_Democracy_EleftheriosVenizelos.dds"
+		
+		ideology = democratic_republicanism
 	}
-	create_equipment_variant = {
-	    name = "Pisa Class"
-	    type = heavy_cruiser_1890 parent_version = 2 obsolete = no upgrades = {
-	        ship_gun_upgrade = 3 ship_armor_upgrade = 4 ship_engine_upgrade = 5 ship_reliability_upgrade = 5
-	    }
-	}
-	create_equipment_variant = {
-	    name = "Hellas Class"
-	    type = light_cruiser_1890 parent_version = 0 obsolete = no upgrades = {
-	        ship_gun_upgrade = 5 ship_engine_upgrade = 0 ship_reliability_upgrade = 5 ship_anti_air_upgrade = 0
-	    }
+
+
+	set_technology = {
+		tech_support = 1
+		early_infantry_weapons = 1
+		light_field_gun1 = 1
+		heavy_field_gun1 = 1
+		# Navy
+		ww1_destroyer0 = 1
+		ww1_destroyer1 = 1
+		ww1_light_cruiser1 = 1
+		ww1_light_cruiser0 = 1
+		ww1_battlecruiser0 = 1
+		ww1_battleship0 = 1
+		ww1_submarine1 = 1
+		ww1_coastal_submarine1 = 1
+		transport = 1
+		horses = 1
+		ww1_electronic_mechanical_engineering = 1
 	}
 
 }
 
 1914.1.1 = {
 	oob = "GRE_1914"
-
-	create_country_leader={ name = GRE_constantine_i desc = GRE_constantine_i_DESC picture="gfx/hoi4tgw_portraits/GRE/country_leaders/GRE_constantine_i.dds" expire="1935.1.1" ideology=despotism traits = { } }
-	set_country_flag=george_died
-
-	#-------------------------------------------------------
-	#							NF
-	#-------------------------------------------------------
-
-	#Army
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = ww1_artillery_effort_1
-	complete_national_focus = doctrine_effort
-	complete_national_focus = ww1_trenchwarfare
-
-	#Industrial
-	complete_national_focus = industrial_effort
-	complete_national_focus = infrastructure_effort
-
-	#Political
-	complete_national_focus = political_effort
-
-	#Diplomatic
-	complete_national_focus = ww1_diplomatic_effort
-	complete_national_focus = ww1_takeposition	
-	complete_national_focus = ww1_supportfrance
-	complete_national_focus = ww1_supportrussia	
-	complete_national_focus = interventionism_focus
-	complete_national_focus = volunteer_corps
-	complete_national_focus = foreign_expeditions
-	
-
-	#-------------------------------------------------------
-
-	set_technology = {
-
-		# Infantry
-		infantry_weapons = 1
-		ww1infantry_weapons1 = 1
-		support_weapons = 1
-		infantry_binoculars = 1
-		infantry_grenade = 1
-		motorised_infantry = 1
-		ww1_ambulance1 = 1
-
-
-		# Support
-		tech_support = 1
-		tech_engineers = 1
-		tech_recon = 1
-		tech_military_police = 1
-		tech_maintenance_company = 1
-		tech_field_hospital = 1
-		tech_logistics_company = 1
-
-		# Armor
-		gwtank = 1 # 1910 Armored Car
-
-		# Artillery
-		light_field_gun1 = 1
-		bonus_artillery1 = 1
-		heavy_field_gun1 = 1
-		bonus_bertha1 = 1
-
-		ww1_destroyer3 = 1
-	ww1_destroyer3_mtg = 1
-
-		# Air
-		ww1_fighter1 = 1
-			bba_ww1_fighter1 = 1
-
-		# Navy Doctrine
-		ww1_navaldoctrine = 1
-		ww1_navaldoctrine_2 = 1
-		ww1_navaldoctrine_3 = 1
-		ww1_coastal_submarine1 = 1
-	ww1_coastal_submarine1_mtg = 1
-		ww1_coastal_submarine2 = 1
-
-		# Engineering
-		electronic_mechanical_engineering = 1
-		mechanical_computing = 1
-		chemical_research = 1
-		tank_unlocker1 = 1
-		radio = 1
-		supertech1 = 1
-		tankaircraft1 = 1
-		torpedotech1 = 1
-
-		# Industry
-		ww1_tools1 = 1
-		ww1_medicine1 = 1
-		ww1_fortification1 = 1
-		ww1_fortification2 = 1
-	}
-
-	set_politics = {
-	    ruling_party = democratic
-	    last_election = "1911.5.28"
-	    election_frequency = 48
-	    elections_allowed = yes
-	}
-	set_popularities = {
-	    democratic = 89
-	    fascism = 5
-	    communism = 5
-	    neutrality = 1
-	}
-
-	add_ideas = {
-		limited_conscription
-	}
 }
 
 1919.1.1 = {
 	oob = "GRE_1919"
 
-	#-------------------------------------------------------
-	#							NF
-	#-------------------------------------------------------
-	unlock_national_focus = ww1_joinfrance
-	#-------------------------------------------------------
+}
 
+### END OF WW1 Start Date
+1919.1.1 = {
+                    set_rule = {
+                         can_join_factions = no
+                    }	
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1919.1.1"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 100
+	}
+	add_ai_strategy = {
+		type = antagonize
+		id = OTT
+		value = 200
+	}
 
+	create_country_leader = {
+		name = "Constantine I"
+		picture = "gfx/leaders/GRE/WW1/Portrait_Greece_Constantine_I.dds"
+		expire = "1922.9.27"
+		ideology = constitutional_monarchism
+	}
+	create_country_leader = {
+		name = "Alexander"
+		picture = "gfx/leaders/GRE/WW1/Greece_Alexander.dds"
+		expire = "1920.10.25"
+		ideology = constitutional_monarchism
+	}
+	create_country_leader = {
+		name = "Pavlos Kountouriotis"
+		picture = "gfx/leaders/GRE/INT/Pavlos_Kountouriotis.dds"
+		
+		ideology = republicanism
+	}
+}
+
+1933.1.1 = {
+	set_air_oob = "GRE_1936_air_bba"
+                    set_rule = {
+                         can_join_factions = yes
+                    }
+	add_ideas = {
+		extensive_conscription
+		age_18
+		age_45
+		GRE_george_ii
+		GRE_debt_to_the_ifc
+		GRE_foreign_monopolies
+		GRE_schachtplan
+		GRE_political_instability
+		GRE_agrarian_society
+
+	}
+
+	oob = "GRE_1933"
+	set_naval_oob = "GRE_1933_naval_legacy"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1933.1.1"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 100
+	}
+	create_country_leader = {
+		name = "Konstantinos Demertzis"
+		desc = "POLITICS_KONSTANTINOS_DMERTZIS_DESC"
+		picture = "gfx/leaders/GRE/Portrait_Greece_Konstantinos_Demertzis.dds"
+		expire = "1936.4.12"
+		ideology = despotism
+	}
+	create_country_leader = {
+		name = "Ioannis Metaxas"
+		desc = "POLITICS_IOANNIS_METAXAS_DESC"
+		picture = "gfx/leaders/GRE/Portrait_Greece_Ioannis_Metaxas.dds"
+		
+		ideology = metaxism
+		traits = {
+			anti_communist
+			dictator
+			stout_defender
+		}
+	}
+	# create_country_leader = {
+	# 	name = "Markos Vafiadis"
+	# 	desc = "POLITICS_MARKOS_VAFIADIS_DESC"
+	# 	picture = "gfx/leaders/GRE/Portrait_Greece_Markos_Vafiadis.dds"
+		
+	# 	ideology = marxism
+	# 	traits = {
+	# 		stalins_puppet
+	# 	}
+	# }
+	create_country_leader = {
+		name = "Konstantinos Tsaldaris"
+		desc = "POLITICS_KONSTANTINOS_TSALDARIS_DESC"
+		picture = "gfx/leaders/GRE/gre_konstantinos_tsaldaris.dds"
+		
+		ideology = conservatism
+	}
+	create_country_leader = {
+		name = "Georgios Kosmidis"
+		desc = "POLITICS_GEORGIOS_KOSMIDIS_DESC"
+		picture = "gfx/leaders/GRE/kosmidis.dds"
+		
+		ideology = fascism_ideology
+	}
+	create_country_leader = {
+		name = "Alexandros Zaimis"
+		picture = "gfx/leaders/GRE/INT/Greece_Alexandros_Zaimis.dds"
+		expire = "1935.10.10"
+		ideology = conservatism
+	}
+
+}
+
+1936.1.1 = {
+	set_air_oob = "GRE_1936_air_bba"
+
+	### Guarantee Romania
+	if = {
+		limit = {
+			has_start_date > 1935.01.01
+			has_start_date < 1937.01.01
+		}
+		give_guarantee = ROM
+		give_guarantee = TUR
+		give_guarantee = YUG
+	}
+
+	if = {
+		limit = {
+			has_start_date > 1921.01.01
+			has_start_date < 1948.01.01
+		}
+		add_ideas = {
+			king_george_ii
+		}
+	}
+	oob = "GRE_1936"
+	set_naval_oob = "GRE_1936_naval_legacy"
 	set_technology = {
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		tech_mountaineers = 1
+		tech_support = 1
+		tech_recon = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		transport = 1
+	}
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1935.6.9"
+		election_frequency = 12
+		elections_allowed = yes        # none after offset 1
+	}
+	set_popularities = {
+		democratic = 20
+		fascism = 15
+		communism = 20
+		neutrality = 45
+	}
+	create_country_leader = {
+		name = "Konstantinos Demertzis"
+		desc = "POLITICS_KONSTANTINOS_DMERTZIS_DESC"
+		picture = "gfx/leaders/GRE/Portrait_Greece_Konstantinos_Demertzis.dds"
+		expire = "1936.4.12"
+		ideology = despotism
+	}
+	create_country_leader = {
+		name = "Ioannis Metaxas"
+		desc = "POLITICS_IOANNIS_METAXAS_DESC"
+		picture = "gfx/leaders/GRE/Portrait_Greece_Ioannis_Metaxas.dds"
+		
+		ideology = metaxism
+		traits = {
+			anti_communist
+			dictator
+			stout_defender
+		}
+	}
+	create_country_leader = {
+		name = "Markos Vafiadis"
+		desc = "POLITICS_MARKOS_VAFIADIS_DESC"
+		picture = "gfx/leaders/GRE/Portrait_Greece_Markos_Vafiadis.dds"
+		
+		ideology = marxism
+		traits = {
+			stalins_puppet
+		}
+	}
+	create_country_leader = {
+		name = "Konstantinos Tsaldaris"
+		desc = "POLITICS_KONSTANTINOS_TSALDARIS_DESC"
+		picture = "gfx/leaders/GRE/gre_konstantinos_tsaldaris.dds"
+		
+		ideology = conservatism
+	}
+	# create_country_leader = {
+	# 	name = "Georgios Kosmidis"
+	# 	desc = "POLITICS_GEORGIOS_KOSMIDIS_DESC"
+	# 	picture = "gfx/leaders/GRE/kosmidis.dds"
+		
+	# 	ideology = fascism_ideology
+	# }
 
-        # Infantry
-        ww1infantry_weapons1 = 1
-        ww1infantry_weapons2 = 1
-        ww1_infantry_equip1 = 1
-        ww1_infantry2_equip = 1
-        support_weapons = 1
-        support_weapons2 = 1
-        infantry_binoculars = 1
-        infantry_grenade = 1
-        motorised_infantry = 1
-        ww1_ambulance1 = 1
-        tech_mountaineers = 1
-        infantry_gasmask = 1
-        infantry_ww1_machinegun1 = 1
+	if = {
+		limit = {
+			has_start_date > 1932.01.01
+			has_start_date < 1949.01.01
+		}
+		add_ideas = {
+			GRE_unpopular_dicatorship
+			limited_conscription
+		}
+	}
 
-        # Support
-        tech_support = 1
-        tech_engineers = 1
-        tech_recon = 1
-        tech_military_police = 1
-        tech_maintenance_company = 1
-        tech_field_hospital = 1
-        tech_logistics_company = 1
+	### VARIANTS ###
+	# 1936 Start #
+	### Ship Variants ###
+	create_equipment_variant = {
+		name = "Hydra Class"
+		type = destroyer_1
+		upgrades = {
+			ship_torpedo_upgrade = 2
+			destroyer_engine_upgrade = 2
+			ship_ASW_upgrade = 2
+			ship_anti_air_upgrade = 2
+		}
+	}
+}
 
-        tech_signal_company = 1
+1939.1.1 = {
+	oob = "GRE_1939"
+	set_naval_oob = "GRE_1939_naval_legacy"
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.4.12"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	create_country_leader = {
+		name = "Ioannis Metaxas"
+		desc = "POLITICS_IOANNIS_METAXAS_DESC"
+		picture = "Portrait_Greece_Ioannis_Metaxas.dds"
+		
+		ideology = metaxism
+		traits = {
+			anti_communist
+		}
+	}
+}
 
-        tech_engineers2 = 1
-        tech_recon2 = 1
-        tech_military_police2 = 1
-        tech_maintenance_company2 = 1
-        tech_field_hospital2 = 1
-        tech_logistics_company2 = 1
-        tech_signal_company2 = 1
+1940.1.1 = {
+	oob = "GRE_1940"
+	set_naval_oob = "GRE_1940_naval_legacy"
+}
 
-        # Armor
-        gwtank=1 # 1910 Armored Car
-        ww1_armored_car_2 = 1
-        ww1_armored_car_3 = 1
+1949.1.1 = {
+	oob = "GRE_1949"
+	set_naval_oob = "GRE_1949_naval_legacy"
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1949.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		neutrality = 100
+	}
+	create_country_leader = {
+		name = "Paul I"
+		picture = "gfx/leaders/GRE/CW/Paul_I.dds"
+		
+		ideology = despotism
+	}
+	create_country_leader = {
+		name = "Georgios Papandreou"
+		picture = "gfx/leaders/GRE/CW/Greece_Georgios_Papandreou_Liberalism_1970.dds"
+		
+		ideology = liberalism
+	}
+	create_country_leader = {
+		name = "Ioannis Passalidis"
+		picture = "gfx/leaders/GRE/CW/Greece_Ioannis_Passalidis_LW_Socialism_1970.dds"
+		
+		ideology = lw_socialism
+	}
+	create_country_leader = {
+		name = "Konstantinos Plevris"
+		picture = "gfx/leaders/GRE/CW/Greece_Konstantinos_Plevris_Neo_Fascism_1970.dds"
+		
+		ideology = neo_fascism
+	}
 
-        # Artillery
-        light_field_gun1 = 1
-        bonus_artillery1 = 1
-        heavy_field_gun1 = 1
-        bonus_bertha1 = 1
-        light_field_gun2 = 1
-        heavy_field_gun2 = 1
+}
 
-        # Land Doctrine
-        ww1_landdoctrine = 1
-        ww1_directfire = 1
-        ww1_rifle_ammo = 1
-        ww1_long_march = 1
-        ww1_battlefield = 1
-        ww1_target = 1
+1960.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1960.1.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 100
+	}
+	create_country_leader = {
+		name = "Konstantinos Karamanlis"
+		picture = "gfx/leaders/GRE/CW/Greece-Konstantinos_Karamanlis.dds"
+		
+		ideology = conservatism
+	}
+	create_country_leader = {
+		name = "Georgios Papadopoulos"
+		picture = "gfx/leaders/GRE/CW/Greece-Georgios_Papadopoulos.dds"
+		
+		ideology = nationalism
+	}
+}
 
-        # Air
-        ww1_fighter1 = 1
-        ww1_fighter1b = 1
-        ww1_fighter2 = 1
-        ww1_fighter2b = 1
-        ww1_seaplane1 = 1
-        ww1_bomber1 = 1
-        ww1_bomber2 = 1
-        ww1_zeppelin1 = 1
-	        bba_ww1_fighter1 = 1
-	        bba_ww1_fighter1b = 1
-	        bba_ww1_fighter2 = 1
-	        bba_ww1_fighter2b = 1
-	        bba_ww1_seaplane1 = 1
-	        bba_ww1_bomber1 = 1
-	        bba_ww1_bomber2 = 1
-	        bba_ww1_zeppelin1 = 1
+1970.1.1 = {
+	oob = "GRE_1970"
+	set_naval_oob = "GRE_1970_naval_legacy"
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1970.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		neutrality = 100
+	}
+}
 
-        # Air Doctrine
-        ww1_airdoctrine = 1
-        ww1_airdoctrine_2 = 1
-        ww1_airdoctrine_3 = 1
+1980.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1980.1.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 100
+	}
+	create_country_leader = {
+		name = "Konstantinos Tsatsos"
+		picture = "gfx/leaders/GRE/CW/Greece_KonstantinosTsatsos.dds"
+		
+		ideology = christian_democracy
+	}
+}
 
-        # Navy Doctrine
-        ww1_navaldoctrine = 1
-        ww1_navaldoctrine_2 = 1
-        ww1_navaldoctrine_3 = 1
+1990.1.1 = {
+	create_country_leader = {
+		name = "Christos Sartzetakis"
+		picture = "gfx/leaders/GRE/CW/Greece_ChristosSartzetakis.dds"
+		
+		ideology = market_liberalism
+	}
+}
 
-        # Engineering
-        electronic_mechanical_engineering = 1
-        mechanical_computing = 1
-        chemical_research = 1
-        tank_unlocker1 = 1
-        radio = 1
-        supertech1 = 1
-        tankaircraft1 = 1
-        torpedotech1 = 1
+2000.1.1 = {
+	oob = "GRE_2000"
+	set_naval_oob = "GRE_2000_naval_legacy"
+	set_popularities = {
+		fascism = 5
+		neutrality = 10
+		democratic = 70
+		communism = 15
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2000.1.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 100
+	}
+	create_country_leader = {
+		name = "Costas Simitis"
+		picture = "gfx/leaders/GRE/MD/Greece_Costas_Simitis.dds"
+		
+		ideology = socialism
+	}
+	create_country_leader = {
+		name = "Aleka Papariga"
+		picture = "gfx/leaders/GRE/MD/Greece_Aleka_Papariga_Marxism_2000.dds"
+		
+		ideology = marxism
+	}
+	create_country_leader = {
+		name = "Constantine II"
+		picture = "gfx/leaders/GRE/MD/Greece_Constantine_II_Despotism_2000.dds"
+		
+		ideology = despotism
+	}
+	create_country_leader = {
+		name = "Nikolaos Michaloliakos"
+		picture = "gfx/leaders/GRE/MD/Greece_Nikolaos_Michaloliakos_Neo_Nazism_2000.dds"
+		
+		ideology = neo_nazism
+	}
 
-        # Industry
-        ww1_tools1 = 1
-        ww1_medicine1 = 1
-        ww1_fortification1 = 1
-        ww1_fortification2 = 1
-        ww1_tools2 = 1
-        ww1_tools3 = 1
-        ww1_camera1 = 1
-        ww1_industry1 = 1
-        ww1_industry2 = 1
-        ww1_medicine2 = 1
-        ww1_construction1 = 1
-        ww1_construction2 = 1
-        ww1_mining1 = 1
-        ww1_oil1 = 1
-        ww1_oil2 = 1
-        ww1_fortification3 = 1
-        ww1_fortification3b = 1
+}
+2008.1.1 = {
+	create_country_leader = {
+		name = "Karolos Papoulias"
+		picture = "gfx/leaders/GRE/MD/Greece_Karolos_Papoulias.dds"
+		
+		ideology = democratic_socialism
+	}
+}
 
-    }
+
+2016.1.1 = {
+	oob = "GRE_2016"
+	set_popularities = {
+		fascism = 8
+		neutrality = 10
+		democratic = 73
+		communism = 9
+	}
+	create_country_leader = {
+		name = "Alexis Tsipras"
+		picture = "gfx/leaders/GRE/MD/Greece-Alexis_Tsipras.dds"
+		
+		ideology = christian_democracy
+	}
+}
+
+2020.1.1 = {
+	create_country_leader = {
+		name = "Katerina Sakellaropoulou"
+		picture = "gfx/leaders/GRE/MD/GRE_Katerina_Sakellaropoulou_Independent.dds"
+		
+		ideology = democratic_independent
+	}
+	create_country_leader = {
+		name = "Prokopis Pavlopoulos"
+		picture = "gfx/leaders/GRE/MD/GRE_Prokopis_Pavlopoulos_Conservatism.dds"
+		expire = "2020.3.13"
+		ideology = conservatism
+	}
 }

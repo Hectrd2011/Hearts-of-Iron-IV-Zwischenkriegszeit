@@ -1,0 +1,10 @@
+spriteTypes = {
+
+### ISLAM
+
+spriteType = {
+		name = "GFX_ideology_islamism_group"
+		texturefile = "gfx/interface/ideologies/islamism_group.dds"
+	}
+
+}

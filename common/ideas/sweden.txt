@@ -1,96 +1,499 @@
 ideas = {
-
-	naval_manufacturer={
-		designer = yes 
-		marinvarkstaderna={ allowed={ TAG=SWE } research_bonus={ naval_equipment=0.10 } traits={ coastal_defence_naval_manufacturer } picture=generic_naval_manufacturer_2 }
-		kockums={ allowed={ TAG=SWE } research_bonus={ naval_equipment=0.10 } traits={ raiding_fleet_naval_manufacturer } picture=generic_naval_manufacturer_3 }
-	}
-	aircraft_manufacturer={
-		designer = yes 
-		ab_enoch_thulins_aeroplansfabrik={ allowed={ TAG=SWE } research_bonus={ air_equipment=0.10 } traits={ light_aircraft_manufacturer } picture=aeta }
-	}
-	materiel_manufacturer={
-		designer = yes 
-		bofors={ allowed={ TAG=SWE } research_bonus={ artillery=0.10 } traits={ artillery_manufacturer } }
-		husqvarna={ allowed={ TAG=SWE } research_bonus={ infantry_weapons=0.10 } traits={ infantry_equipment_manufacturer } }
-		scania={ allowed={ TAG=SWE } research_bonus={ motorized_equipment=0.10 } traits={ motorized_equipment_manufacturer } }
-	}
-	industrial_concern={
-		designer = yes 
-		ab_lm_ericsson_and_co={ allowed={ TAG=SWE }    research_bonus = {
-						    electronics = 0.10
-						   } traits={ electronics_concern } picture=generic_tank_manufacturer_2 }
-		skf={ allowed={ TAG=SWE }    research_bonus = {
-						    industry = 0.10
-						   } traits={ industrial_concern } picture=generic_tank_manufacturer_3 }
-		aga={ allowed={ TAG=SWE }    research_bonus = {
-						    industry = 0.05
-						    synth_resources = 0.1
-						   } traits={ refinery_concern } picture=generic_tank_manufacturer_1 }
-		munktells_mekaniska_verkstads_ab={ allowed={ TAG=SWE }    research_bonus = {
-						    industry = 0.10
-						   } traits={ industrial_concern } picture=generic_tank_manufacturer_2 }
-	}
-
-	tank_manufacturer={
-		designer = yes
-		landsverk_ab={ allowed={ TAG=SWE } research_bonus = { armor = 0.05 } traits={ fast_tank_manufacturer } picture=landsverk }
-	}
-
-	country= {
-		SWE_ww1_idea_russophobia = {
-			allowed = {
-				always = no
-			}
-			removal_cost = -1
-			picture = FRA_fortification_focus
-			
-			modifier = {
-				political_power_cost  = 1
-				army_core_defence_factor = 0.1
-				
-			}
-		}
+	# country = {
 	
-		SWE_ww1_idea_executive_monarchy = {
+	# 	en_svensk_tiger = {
+			
+	# 		allowed = {
+	# 			always = no
+	# 		}
+
+	# 		allowed_civil_war = {
+	# 			has_government = democratic
+	# 		}
+
+	# 		removal_cost = -1
+
+	# 		picture = generic_spy_intel
+			
+	# 		modifier = {
+	# 			drift_defence_factor = 0.1
+	# 			enemy_justify_war_goal_time = 0.1
+	# 			stability_factor = 0.05
+	# 			intelligence_agency_defense = 0.5
+	# 			crypto_strength = 1
+	# 		}
+	# 	}
+	
+	# }
+
+	# political_advisor = {
+
+	# 	SWE_thorwald_bergquist = {
+
+	# 		picture = generic_political_advisor_europe_5
+			
+	# 		allowed = {
+	# 			original_tag = SWE
+	# 		}
+			
+	# 		traits = { compassionate_gentleman }
+	# 	}
+
+	# 	SWE_osten_unden = {
+
+	# 		picture = generic_political_advisor_europe_2
+
+	# 		allowed = {
+	# 			original_tag = SWE
+	# 		}
+			
+	# 		traits = { silent_workhorse }
+	# 	}
+
+	# 	SWE_ernst_wigforss = {
+
+	# 		picture = generic_political_advisor_europe_3
+			
+	# 		allowed = {
+	# 			original_tag = SWE
+	# 		}
+			
+	# 		traits = { captain_of_industry }
+	# 	}
+	# }
+
+	theorist = {
+
+	
+
+		SWE_erik_palmstierna = {
+			ledger = navy
+					
+					
 			allowed = {
-				always = no
+				original_tag = SWE
 			}
-			removal_cost = -1
-			picture = general_staff
-
+			
+			picture = generic_political_advisor_europe_1
+			
 			research_bonus = {
-				land_doctrine = 0.10
 				naval_doctrine = 0.10
-				air_doctrine = -0.10
 			}
-			modifier = {
-				cavalry_attack_factor = 0.1	
-				army_morale_factor = 0.1
-			}
+			
+			traits = { naval_theorist }
 		}
+	}
+	# MILITARY
+	army_chief = {
 
-		SWE_ww1_idea_absolute_monarchy = {
-			allowed = {
-				always = no
-			}
-			removal_cost = -1
-			picture = vittoria_mutilata
+# 		SWE_olof_thornell = {
+# 			
+# 			picture = generic_army_europe_5
+# 			
+# 			allowed = {
+# 				original_tag = SWE
+# 			}
+# 			
+# 
+# 			
+# 			traits = { army_chief_old_guard }
+# 			
+# 			ai_will_do = {
+# 				factor = 1
+# 			}
+# 		}
 
-			research_bonus = {
-				land_doctrine = 0.10
-				naval_doctrine = 0.10
-				industry = -0.15
-			}
-			modifier = {
-				cavalry_attack_factor = 0.1	
-				army_morale_factor = 0.1
-				political_advisor_cost_factor = -0.25
-				industrial_concern_cost_factor = -0.25
-				stability_weekly = -0.003
-				conscription = +0.005
-			}
-		}
+# 		SWE_ivar_holmquist = {
+# 			
+# 			picture = generic_army_europe_1
+# 			
+# 			allowed = {
+# 				original_tag = SWE
+# 			}
+# 			
+# 
+# 			
+# 			traits = { army_chief_organizational_2 }
+# 			
+# 			ai_will_do = {
+# 				factor = 1
+# 			}
+# 		}
+
+# 		SWE_per_sylvan = {
+# 			
+# 			picture = generic_army_europe_6
+# 			
+# 			allowed = {
+# 				original_tag = SWE
+# 			}
+# 			
+# 
+# 			
+# 			traits = { army_chief_defensive_1 }
+# 			
+# 			ai_will_do = {
+# 				factor = 1
+# 			}
+# 		}
+
+# 		SWE_oscar_nygren = {
+# 			
+# 			picture = generic_army_europe_3
+# 			
+# 			allowed = {
+# 				original_tag = SWE
+# 			}
+# 			
+# 
+# 			
+# 			traits = { army_chief_drill_2 }
+# 			
+# 			ai_will_do = {
+# 				factor = 1
+# 			}
+# 		}
+	}
+
+	air_chief = {
+		
+
+# 		SWE_bengt_nordenskiold = {
+# 			
+# 			picture = generic_air_europe_3
+# 			
+# 			allowed = {
+# 				original_tag = SWE
+# 			}
+# 			
+# 
+# 			
+# 			traits = { air_chief_ground_support_2 }
+# 			
+# 			ai_will_do = {
+# 				factor = 1
+# 			}
+# 		}
+
+# 		SWE_torsten_friis = {
+# 			
+# 			picture = generic_air_europe_3
+# 			
+# 			allowed = {
+# 				original_tag = SWE
+# 			}
+# 			
+# 
+# 			
+# 			traits = { air_chief_all_weather_2 }
+# 			
+# 			ai_will_do = {
+# 				factor = 1
+# 			}
+# 		}
+
+	}
+
+	navy_chief = {
+
+# 		SWE_gosta_ehrensvard = {
+# 			
+# 			picture = generic_navy_europe_2
+# 			
+# 			allowed = {
+# 				original_tag = SWE
+# 			}
+# 			
+# 
+# 			
+# 			traits = { navy_chief_commerce_raiding_2 }
+# 			
+# 			ai_will_do = {
+# 				factor = 1
+# 			}
+# 		}
+
+# 		SWE_fabian_tamm = {
+# 			
+# 			picture = generic_navy_europe_1
+# 			
+# 			allowed = {
+# 				original_tag = SWE
+# 			}
+# 			
+# 
+# 			
+# 			traits = { navy_chief_reform_2 }
+# 			
+# 			ai_will_do = {
+# 				factor = 1
+# 			}
+# 		}
+
+# 		SWE_charles_de_champs = {
+# 			
+# 			picture = generic_navy_europe_2
+# 			
+# 			allowed = {
+# 				original_tag = SWE
+# 			}
+# 			
+# 
+# 			
+# 			traits = { navy_chief_decisive_battle_2 }
+# 			
+# 			ai_will_do = {
+# 				factor = 1
+# 			}
+# 		}
+
+	}
+
+	high_command = {
+
+# 		SWE_axel_rappe = {
+# 			ledger = army
+# 			
+# 			picture = generic_army_europe_1
+# 			
+# 			allowed = {
+# 				original_tag = SWE
+# 			}
+# 			
+# 
+# 			
+# 			traits = { army_artillery_2 }
+# 			
+# 			ai_will_do = {
+# 				factor = 1
+# 			}
+# 		}
+	
+# 		SWE_archibald_douglas = {
+# 			ledger = army
+# 			
+# 			picture = generic_army_europe_2
+# 
+# 			allowed = {
+# 				original_tag = SWE
+# 			}
+# 			
+# 
+# 			
+# 			traits = { army_infantry_2 }
+# 			
+# 			ai_will_do = {
+# 				factor = 1
+# 			}
+# 		}
+
+# 		SWE_axel_ljungdahl = {
+# 			ledger = air
+# 			
+# 			picture = generic_air_europe_2
+# 			
+# 			allowed = {
+# 				original_tag = SWE
+# 			}
+# 			
+# 
+# 			
+# 			traits = { air_bomber_interception_2 }
+# 			
+# 			ai_will_do = {
+# 				factor = 1
+# 			}
+# 		}
+
+# 		SWE_helge_stromback = {
+# 			ledger = navy
+# 			
+# 			picture = generic_navy_europe_2
+# 			
+# 			allowed = {
+# 				original_tag = SWE
+# 			}
+# 			
+# 
+# 			
+# 			traits = { navy_fleet_logistics_2 }
+# 			
+# 			ai_will_do = {
+# 				factor = 1
+# 			}
+# 		}
+	}
+
+	# tank_manufacturer = { 
+		
+	# 	designer = yes
+		
+	# 	landsverk = {
+			
+	# 		picture = generic_tank_manufacturer_2
+
+			
+	# 		allowed = {
+	# 			original_tag = SWE
+	# 		}
+			
+	# 		research_bonus = {
+	# 			armor = 0.15
+	# 		}
+			
+	# 		traits = { tank_manufacturer }
+			
+	# 		modifier = {
+	# 			# notable tanks L-120 and L-60, lighter tanks as well as the medium tank Stridsvagn m/42, that was mobile and well protected.
+	# 		}
+	# 	}
+
+	# }
+	
+	# naval_manufacturer = { 
+			
+	# 	designer = yes
+		
+	# 	marinvarkstaderna = { #Karlskrona
+			
+	# 		picture = generic_naval_manufacturer_1
+
+			
+	# 		allowed = {
+	# 			original_tag = SWE
+	# 		}
+			
+	# 		research_bonus = {
+	# 			naval_equipment = 0.15
+	# 		}
+			
+	# 		equipment_bonus = {
+	# 			# mer research
+	# 		}
+			
+	# 		traits = { coastal_defence_naval_manufacturer }
+			
+	# 		modifier = {
+	# 		}
+	# 	}
+
+	# 	gotaverken = {
+			
+	# 		picture = generic_naval_manufacturer_2
+
+			
+	# 		allowed = {
+	# 			original_tag = SWE
+	# 		}
+			
+	# 		research_bonus = {
+	# 			naval_equipment = 0.15
+	# 		}
+			
+	# 		equipment_bonus = {
+	# 			# worlds biggest shipyard by launched gross tonnes
+	# 		}
+			
+	# 		traits = { atlantic_fleet_naval_manufacturer }
+			
+	# 		modifier = {
+	# 		}
+	# 	}
+
+	# 	kockums = {
+			
+	# 		picture = generic_naval_manufacturer_3
+
+			
+	# 		allowed = {
+	# 			original_tag = SWE
+	# 		}
+			
+	# 		research_bonus = {
+	# 			naval_equipment = 0.15
+	# 		}
+			 
+	# 		equipment_bonus = {
+	# 			# submarines and ship_hull_heavys
+	# 		}
+			
+	# 		traits = { raiding_fleet_naval_manufacturer }
+			
+	# 		modifier = {
+	# 		}
+	# 	}
+	# }
+
+
+	materiel_manufacturer = {
+		
+		designer = yes
+	
+		# bofors = {
+			
+		# 	picture = generic_artillery_manufacturer_1
+
+			
+		# 	allowed = {
+		# 		original_tag = SWE
+		# 	}
+			
+		# 	research_bonus = {
+		# 		artillery = 0.15
+		# 	}
+			
+		# 	equipment_bonus = {
+		# 		artillery = {
+		# 			reliability = 0.20
+		# 		}
+		# 	}
+			
+		# 	traits = { artillery_manufacturer }
+			
+		# 	modifier = {
+		# 	}
+		# }
+	
+		# husqvarna = {
+			
+		# 	picture = generic_infantry_equipment_manufacturer_2
+
+			
+		# 	allowed = {
+		# 		original_tag = SWE
+		# 	}
+			
+		# 	research_bonus = {
+		# 		infantry_weapons = 0.15
+		# 	}
+			
+		# 	equipment_bonus = {
+		# 		# rifles and pistols
+		# 	}
+			
+		# 	traits = { infantry_equipment_manufacturer }
+			
+		# 	modifier = {
+		# 	}
+		# }
+		# scania = {
+			
+
+			
+		# 	allowed = {
+		# 		original_tag = SWE
+		# 	}
+			
+		# 	research_bonus = {
+		# 		motorized_equipment = 0.15
+		# 	}
+			
+		# 	traits = { motorized_equipment_manufacturer }
+			
+		# 	modifier = {
+		# 		# more info
+		# 	}
+		# }
 		
 	}
 }

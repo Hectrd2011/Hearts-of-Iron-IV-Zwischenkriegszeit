@@ -1,50 +1,108 @@
-JAP_intervene_in_china = {
+JAP_political_struggle = {
 	allowed = {
+		date > 1932.12.31
+		date < 1949.1.1
 		original_tag = JAP
 	}
-}
-
-JAP_southern_expansion = {
-	allowed = {
-		original_tag = JAP
-	}
-
 	visible = {
-		is_puppet = no
+		#Hidden Cause No loc
+		always = no
 	}
+	visible_when_empty = yes
+	scripted_gui = jap_political_map
+	priority = 85
 }
 
-JAP_pacific_guardian = {
-	allowed = {
-		original_tag = JAP
-	}
+# JAP_intervene_in_china = {
+# 	allowed = {
+# 		date > 1932.12.31
+# 		date < 1949.1.1
+# 		original_tag = JAP
+# 	}
 
-	visible = {
-		is_puppet = no
-		has_completed_focus = JAP_pacific_guardian
-	}
-}
+# 	visible = {
+# 		date > 1932.12.31
+# 		date < 1949.1.1
+# 	}
 
-JAP_colonial_independence = {
-	allowed = {
-		original_tag = JAP
-	}
+# 	available = {
+# 		has_completed_focus = JAP_greater_east_asia_co_prosperity_sphere
 
-	visible = {
-		is_puppet = no
-		has_completed_focus = JAP_pacific_guardian
-	}
-}
-JAP_interservice_rivalry = {
-	allowed = {
-		original_tag = JAP
-		has_dlc = "Waking the Tiger"
-		OR = {
-			has_idea = JAP_interservice_rivalry_army_dominant
-			has_idea = JAP_interservice_rivalry_army_strengthened
-			has_idea = JAP_interservice_rivalry_balanced
-			has_idea = JAP_interservice_rivalry_navy_strengthened
-			has_idea = JAP_interservice_rivalry_navy_dominant
-		}
-	}
-}
+# 	}
+# }
+
+# JAP_southern_expansion = {
+# 	allowed = {
+# 		date > 1932.12.31
+# 		date < 1949.1.1
+# 		original_tag = JAP
+# 	}
+
+# 	visible = {
+# 		date > 1932.12.31
+# 		date < 1949.1.1
+# 	}
+
+# 	available = {
+# 		has_completed_focus = JAP_greater_east_asia_co_prosperity_sphere
+# 	}
+# }
+
+# JAP_pacific_guardian = {
+# 	allowed = {
+# 		date > 1932.12.31
+# 		date < 1949.1.1
+# 		original_tag = JAP
+# 	}
+
+# 	visible = {
+# 		date > 1932.12.31
+# 		date < 1949.1.1
+# 		is_puppet = no
+# 		has_completed_focus = JAP_pacific_guardian
+# 	}
+# }
+
+# JAP_colonial_independence = {
+# 	allowed = {
+# 		date > 1932.12.31
+# 		date < 1949.1.1
+# 		original_tag = JAP
+# 	}
+
+# 	visible = {
+# 		date > 1932.12.31
+# 		date < 1949.1.1
+# 		is_puppet = no
+# 		has_completed_focus = JAP_pacific_guardian
+# 	}
+# }
+
+# JAP_MAN_path_to_nishinihon_cat = {
+# 	allowed = {
+# 		date > 1932.12.31
+# 		date < 1949.1.1
+# 		original_tag = JAP
+# 	}
+
+# 	visible = {
+# 		date > 1932.12.31
+# 		date < 1949.1.1
+# 		has_completed_focus = JAP_MAN_path_to_nishinihon
+# 	}
+# }
+
+# JAP_interservice_rivalry_cat = {
+# 	allowed = {
+# 		date > 1932.12.31
+# 		date < 1949.1.1
+# 		original_tag = JAP
+# 		has_dlc = "Waking the Tiger"
+# 	}
+
+# 	visible = {
+# 		date > 1932.12.31
+# 		date < 1949.1.1
+# 		has_completed_focus = JAP_fukoku_kyohei
+# 	}
+# }

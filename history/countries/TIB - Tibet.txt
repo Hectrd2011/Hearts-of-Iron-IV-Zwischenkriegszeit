@@ -1,99 +1,158 @@
-﻿capital = 322
-oob = "TIB_1910"
-
-set_technology = { 
-	light_field_gun1 = 1
-
-	motorised_infantry = 1
-	electronic_mechanical_engineering = 1
-	infantry_weapons = 1
-
-	transport = 1
-	transport_mtg = 1
-
-	tech_support = 1
-	tech_engineers = 1
-	tech_recon = 1
-}
+RON_universal_setup = yes
+  
+capital = 757
+oob = "TIB_1936"
 
 set_politics = {
-    ruling_party = neutrality
-    last_election = "1910.1.1"
-    election_frequency = 48
-    elections_allowed = no
+	ruling_party = neutrality
+	last_election = "1879.7.31"
+	election_frequency = 60
+	elections_allowed = no
 }
 
 set_popularities = {
-    democratic = 0
-    fascism = 0
-    communism = 0
-    neutrality = 100
+	neutrality = 100
 }
 
-set_stability = 0.75
+recruit_character = TIB_thirteen_dalai_lama_dnc
+recruit_character = TIB_zhao_erfeng
 
-1914.1.1 = {
-	
-	oob="TIB_1914"
+1910.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1910.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
 
-	set_technology = { 
+	set_popularities = {
+		neutrality = 60
+		islamism = 40
+	}
 
-		light_field_gun2 = 1
-		 
-		heavy_field_gun1 = 1
-		heavy_field_gun2=1
-		motorised_infantry = 1
-		electronic_mechanical_engineering = 1
-		mechanical_computing=1
-		computing_machine=1
-		basic_encryption=1
-		basic_decryption=1
-		basic_machine_tools=1
-		improved_machine_tools=1
-		concentrated_industry=1
-		concentrated_industry2=1
-		synth_oil_experiments=1
-		oil_plant=1
-		construction1 = 1
-		excavation1=1
-		construction2=1
-		excavation2=1
-		infantry_weapons = 1
-		ww1infantry_weapons1=1
-		marines=1
-		tech_mountaineers = 1
+	recruit_character = TIB_surkhang_wangchen_tseten
+	recruit_character = TIB_changra_depron
+}
 
-		transport = 1
-	transport_mtg = 1
+1911.1.1 = {
+retire_character = TIB_zhao_erfeng
+}
 
-		tech_support = 1
-		tech_engineers = 1
-		tech_recon = 1
-		tech_military_police=1
-		tech_maintenance_company=1
-		tech_field_hospital = 1
-		tech_logistics_company = 1
+1919.1.1 = {
+recruit_character = TIB_sonam_wangdu
+}
+
+1924.12.31 = {
+recruit_character = TIB_thirteen_dalai_lama_int
+}
+
+1925.1.1 = {
+retire_character = TIB_thirteen_dalai_lama_dnc
+recruit_character = TIB_thubten_kunphela
+}
+
+1933.1.1 = {	
+	set_air_oob = "TIB_1936_air_bba"
+recruit_character = TIB_kunga_wangchuk_langdun
+recruit_character = TIB_tashi_dondrub
+recruit_character = TIB_taring_jigme
+recruit_character = TIB_wangchen_geleg_surkhang
+recruit_character = TIB_surkhang_lhawang_topgyal
+recruit_character = TIB_ngabo_ngawang_jigme
+recruit_character = TIB_wangchuk_deden_shakabpa
+recruit_character = TIB_liushar_thubten_tharpa
+recruit_character = TIB_yuthok_tashi_dhondup
+recruit_character = TIB_jamphel_yeshe_gyaltsen
+
+}
+
+1933.12.17 = {
+retire_character = TIB_thirteen_dalai_lama_int
+}
+
+1936.1.1 = {
+	set_air_oob = "TIB_1936_air_bba"
+
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+
+	set_popularities = {
+		neutrality = 70
+		islamism = 30
+			}
+
+ recruit_character = TIB_ngawang_sungrab_thutob
+}
+
+1939.1.1 = {
+retire_character = TIB_changra_depron
+}
+
+1940.1.1 = {
+recruit_character = TIB_phuntsok_wangyal_goranga
+}
+
+1940.2.22 = {
+recruit_character = TIB_fourteen_dalai_lama_wwii
+}
+
+1941.1.1 = {
+promote_character = TIB_ngawang_sungrab_thutob
+}
+
+1941.1.2 = {
+retire_character = TIB_jamphel_yeshe_gyaltsen
+}
+
+1949.1.1 = {
+	oob = "TIB_1949"
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1940.2.22"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		neutrality = 100
 	}
 }
 
-# LEADERS
-recruit_character = TIB_dalai_lama_thubten_gyatso
+1950.1.1 = {
+retire_character = TIB_ngawang_sungrab_thutob
+}
 
-# ARMY
-recruit_character = TIB_tethong
-recruit_character = TIB_tsarong_dzasa
-recruit_character = TIB_changra_depsn
-recruit_character = TIB_dingja
-recruit_character = TIB_kalon_lama
-recruit_character = TIB_khyungram_theji
-recruit_character = TIB_ladingser
-recruit_character = TIB_langserling
-recruit_character = TIB_miru_gyalwa
-recruit_character = TIB_neto
-recruit_character = TIB_tendong_shappe
-recruit_character = TIB_trimon_shappe
-recruit_character = TIB_tsoko
+1953.1.1 = {
+retire_character = TIB_surkhang_wangchen_tseten
+}
 
-1936.1.1={ 
-	create_country_leader={ name=TIB_POLITICS_JAMPHEL_YESHE_GYALTSEN desc = "POLITICS_JAMPHEL_YESHE_GYALTSEN_DESC" picture="Portrait_Tibet_Jamphel_Yeshe_Gyaltsen.dds" expire="1965.1.1" ideology=despotism traits = { } }
+1953.7.5 = {
+recruit_character = TIB_fourteen_dalai_lama_cw
+}
+
+1953.7.6 = {
+retire_character = TIB_fourteen_dalai_lama_wwii
+recruit_character = TIB_tibetan_council
+}
+
+1960.1.1 = {
+retire_character = TIB_phuntsok_wangyal_goranga
+retire_character = TIB_thubten_kunphela
+}
+
+1970.1.1 = {
+retire_character = TIB_surkhang_lhawang_topgyal
+retire_character = TIB_liushar_thubten_tharpa
+retire_character = TIB_sonam_wangdu
+}
+
+1975.1.1 = {
+retire_character = TIB_wangchuk_deden_shakabpa
+}
+
+1985.1.1 = {
+retire_character = TIB_yuthok_tashi_dhondup
 }

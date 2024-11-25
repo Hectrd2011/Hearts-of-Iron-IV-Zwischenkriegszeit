@@ -1,172 +1,305 @@
-﻿capital = 315
+RON_universal_setup = yes
 
-#-------------------------------------------------------
-#					GENERIC VALUES
-#-------------------------------------------------------
-set_fuel_ratio = 0.20
-set_research_slots = 3
-set_stability = 0.75
+
+
+capital = 315
+oob = "CUB_1900"
+
+set_country_flag = monroe_doctrine
+set_war_support = 0.1
 set_convoys = 20
-set_country_flag=monroe_doctrine
-#-------------------------------------------------------
-#					POLITICS & ARMY
-#-------------------------------------------------------
 
-# LEADERS
-recruit_character = CUB_jose_miguel_gomez # Also General
-recruit_character = CUB_alfredo_zayas_y_alfonso
-recruit_character = CUB_albert_grey
-# NAVY
-recruit_character = CUB_carricarte
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1900.1.1"
+	election_frequency = 60
+	elections_allowed = no
+}
 
-set_technology = {
-	# Navy
-	ww1_battleship0 = 1
-	ww1_battleship0_mtg = 1
+set_popularities = {
+	neutrality = 100
+}
 
-	ww1_light_cruiser0 = 1
-	ww1_light_cruiser0_mtg = 1 # light_cruiser_1890 (Protected Cruiser I)
+create_country_leader = {
+	name = "Tomás Estrada Palma"
+	picture = "gfx/leaders/CUB/DNC/CUB_Tomas_Estrada_Palma.dds"
+	
+	ideology = nationalism
+}
 
-	ww1_destroyer0 = 1
-	ww1_destroyer0_mtg = 1 # destroyer_1890 (Torpedo Boat I)
-	ww1_destroyer1 = 1
-	ww1_destroyer1_mtg = 1 # destroyer_1900 (Destroyer I)
+create_country_leader = {
+	name = "Tomás Estrada Palma"
+	picture = "gfx/leaders/CUB/DNC/CUB_Tomas_Estrada_Palma.dds"
+	
+	ideology = democratic_nationalism
+}
 
-	ww1_moduleMTG_mines = 1
-	ww1_moduleMTG_mines_mtg = 1 # Mines
+create_country_leader = {
+	name = "Fulgencio Batista"
+	desc = "POLITICS_FULGENCIO_BATISTA_DESC"
+	picture = "gfx/leaders/CUB/Fulgencio_Batista.dds"
+	
+	ideology = rw_militarism
+	traits = {
+		union_man
+	}
+}
 
-	ww1_submarine0 = 1
-	ww1_submarine0_mtg = 1 # coastal_submarine_1900 (Coastal Submarine 1900, first available Submarine)
-
-	transport = 1
-	transport_mtg = 1 # Naval Transport
+create_country_leader = {
+	name = "Fidel Castro"
+	picture = "gfx/leaders/CUB/CW/Cuba_FidelCastro.dds"
+	
+	ideology = castroism
 }
 
 1910.1.1 = {
 	oob = "CUB_1910"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1910.1.1"
+		election_frequency = 60
+		elections_allowed = yes
+	}
 
-	#-------------------------------------------------------
-	#							NF
-	#-------------------------------------------------------
+	set_popularities = {
+		democratic = 100
+	}
 
-	#-------------------------------------------------------
-
+	create_country_leader = {
+		name = "José Miguel Gómez"
+		picture = "gfx/leaders/CUB/WW1/Jose_Miguel.dds"
+		
+		ideology = liberalism
+	}
 	set_technology = {
-
-		# Infantry
-		infantry_weapons = 1
-		support_weapons = 1
-		infantry_binoculars = 1
-		motorised_infantry = 1
-		ww1_ambulance1 = 1
-
-
-		# Support
 		tech_support = 1
-		tech_engineers = 1
-		tech_recon = 1
-
-		# Artillery
+		early_infantry_weapons = 1
 		light_field_gun1 = 1
 		heavy_field_gun1 = 1
-
-		# Engineering
-		electronic_mechanical_engineering = 1
+		# Navy
+		ww1_destroyer0 = 1
+		ww1_destroyer1 = 1
+		ww1_light_cruiser1 = 1
+		ww1_light_cruiser0 = 1
+		ww1_battlecruiser0 = 1
+		ww1_battleship0 = 1
+		ww1_submarine1 = 1
+		ww1_coastal_submarine1 = 1
+		transport = 1
+		horses = 1
+		ww1_electronic_mechanical_engineering = 1
 	}
-
-	set_politics = {
-	    ruling_party = democratic
-	    last_election = "1908.11.14"
-	    election_frequency = 48
-	    elections_allowed = yes
-	}
-	set_popularities = {
-	    democratic = 97
-	    fascism = 0
-	    communism = 2
-	    neutrality = 1
-	}
-}
-
-1913.5.20 = {
-	create_country_leader = { name = CUB_mario_g_menocal desc = CUB_mario_g_menocal_DESC picture="gfx/hoi4tgw_portraits/CUB/country_leaders/CUB_mario_g_menocal.dds" expire="1935.1.1" ideology=liberalism traits = { } }
 }
 
 1914.1.1 = {
 	oob = "CUB_1914"
+}
 
-	#-------------------------------------------------------
-	#							NF
-	#-------------------------------------------------------
-
-	#Army
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = ww1_artillery_effort_1
-	complete_national_focus = doctrine_effort
-	complete_national_focus = ww1_trenchwarfare
-
-	#Industrial
-	complete_national_focus = industrial_effort
-	complete_national_focus = infrastructure_effort
-
-	#Political
-	complete_national_focus = political_effort
-
-	#Diplomatic
-	complete_national_focus = ww1_diplomatic_effort
-	complete_national_focus = neutrality_focus
-	complete_national_focus = ww1_military_reserve
-
-	#-------------------------------------------------------
-
-	set_technology = {
-
-		# Infantry
-		infantry_weapons = 1
-		ww1infantry_weapons1 = 1
-		support_weapons = 1
-		infantry_binoculars = 1
-		infantry_grenade = 1
-		motorised_infantry = 1
-		ww1_ambulance1 = 1
-
-		# Support
-		tech_military_police = 1
-		tech_maintenance_company = 1
-		tech_field_hospital = 1
-		tech_logistics_company = 1
-
-		# Armor
-		gwtank = 1 # 1910 Armored Car
-
-		# Artillery
-		light_field_gun1 = 1
-		bonus_artillery1 = 1
-		heavy_field_gun1 = 1
-		bonus_bertha1 = 1
-
-		# Air
-		ww1_fighter1 = 1
-
-		# Engineering
-		electronic_mechanical_engineering = 1
+1919.1.1 = {
+	create_country_leader = {
+		name = "Mario Garcia Menocal"
+		picture = "gfx/leaders/CUB/WW1/Cuba_MarioGarciaMenocal.dds"
+		
+		ideology = conservatism
 	}
+}
 
+1933.1.1 = {
+	set_air_oob = "CUB_1936_air_bba"
+	oob = "CUB_1933"
 	set_politics = {
-	    ruling_party = democratic
-	    last_election = "1912.11.1"
-	    election_frequency = 48
-	    elections_allowed = yes
+		ruling_party = democratic
+		last_election = "1933.1.1"
+		election_frequency = 60
+		elections_allowed = yes
 	}
 	set_popularities = {
-	    democratic = 97
-	    fascism = 0
-	    communism = 2
-	    neutrality = 1
+		democratic = 98
+		communism = 2
+	}
+	create_country_leader = {
+		name = "Federico Laredo Bru"
+		desc = "POLITICS_FEDERICO_LADERO_DESC"
+		picture = "gfx/leaders/CUB/INT/Federico_Laredo_Bru.dds"
+		
+		ideology = nationalism
+		traits = {
+			political_dancer
+		}
 	}
 
-	add_ideas = {
+	create_country_leader = {
+		name = "Miguel Mariano Gómez"
+		desc = "POLITICS_MIGUEL_MARIANO_GÓMEZ_DESC"
+		picture = "gfx/leaders/CUB/Miguel_Mariano_Gomez.dds"
+		
+		ideology = conservatism
+		traits = {
+			dislikes_germany
+		}
+	}
+	create_country_leader = {
+		name = "Gerardo Machado"
+		picture = "gfx/leaders/CUB/INT/Cuba_Gerardo_Machado.dds"
+		expire = "1933.8.24"
+		ideology = market_liberalism
+	}
+	if = {
+		limit = {
+			has_start_date > 1930.01.01
+			has_start_date < 1949.01.01
+		}
+		add_ideas = {
+			CUB_general_staff
+			free_trade
+			limited_conscription
+		}
+	}
+}
 
+1936.1.1 = {
+	set_air_oob = "CUB_1936_air_bba"
+	oob = "CUB_1936"
+	# Starting tech
+	set_technology = {
+		infantry_weapons = 1
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1936.1.10"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 50
+		communism = 15
+		fascism = 5
+		neutrality = 30
+	}
+	create_country_leader = {
+		name = "Federico Laredo Bru"
+		desc = "POLITICS_FEDERICO_LADERO_DESC"
+		picture = "gfx/leaders/CUB/INT/Federico_Laredo_Bru.dds"
+		
+		ideology = nationalism
+		traits = {
+			political_dancer
+		}
+	}
+
+	create_country_leader = {
+		name = "Miguel Mariano Gómez"
+		desc = "POLITICS_MIGUEL_MARIANO_GÓMEZ_DESC"
+		picture = "gfx/leaders/CUB/Miguel_Mariano_Gomez.dds"
+		
+		ideology = conservatism
+		traits = {
+			dislikes_germany
+		}
+	}
+
+}
+
+1939.1.1 = {
+	oob = "CUB_1939"
+	create_country_leader = {
+		name = "Federico Laredo Brú"
+		desc = "POLITICS_FEDERICO_LAREDO_BRU_DESC"
+		picture = "gfx/leaders/CUB/INT/Federico_Laredo_Bru.dds"
+		
+		ideology = socialism
+	}
+}
+
+1940.1.1 = {
+	oob = "CUB_1940"
+}
+
+1949.1.1 = {
+	oob = "CUB_1949"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1949.1.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		neutrality = 70
+		democratic = 30
+	}
+	create_country_leader = {
+		name = "Carlos Prio Socarras"
+		picture = "gfx/leaders/CUB/CW/Cuba_Carlos_Prio_Socarras.dds"
+		
+		ideology = democratic_nationalism
+	}
+	create_country_leader = {
+		name = "Fulgencio Batista"
+		picture = "gfx/leaders/CUB/CW/Cuba_Fulgencio_Batista.dds"
+		
+		ideology = militarism
+	}
+}
+
+1960.1.1 = {
+	set_politics = {
+		ruling_party = communism
+		last_election = "1960.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		communism = 100
+	}
+}
+
+1970.1.1 = {
+	oob = "CUB_1970"
+}
+
+1990.1.1 = {
+	create_country_leader = {
+		name = "Fidel Castro"
+		picture = "gfx/leaders/CUB/CW/Cuba_Old_Fidel_Castro.dds"
+		
+		ideology = castroism
+	}
+}
+
+2000.1.1 = {
+	oob = "CUB_2000"
+	set_naval_oob = "CUB_2000_naval_legacy"
+}
+2008.1.1 = {
+	create_country_leader = {
+		name = "Fidel Castro"
+		picture = "gfx/leaders/CUB/MD/Cuba_Fidel_Castro.dds"
+		
+		ideology = castroism
+	}
+}
+
+2016.1.1 = {
+	oob = "CUB_2016"
+	create_country_leader = {
+		name = "Raul Castro"
+		picture = "gfx/leaders/CUB/MD/CUB_Raul_Castro_Castroism.dds"
+		
+		ideology = castroism
+	}
+}
+
+2020.1.1 = {
+	create_country_leader = {
+		name = "Miguel Díaz-Canel"
+		picture = "gfx/leaders/CUB/MD/CUB_Miguel_Díaz-Canel_Castroism.dds"
+		
+		ideology = castroism
+	}
+	create_country_leader = {
+		name = "Raul Castro"
+		picture = "gfx/leaders/CUB/MD/CUB_Raul_Castro_Castroism.dds"
+		expire = "2021.4.19"
+		ideology = castroism
 	}
 }

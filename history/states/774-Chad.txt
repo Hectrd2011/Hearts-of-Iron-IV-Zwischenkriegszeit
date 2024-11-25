@@ -1,27 +1,30 @@
 state = {
-	id=774
-	name="STATE_774"
+	id = 774
+	name = "STATE_774"
 
-	history={
-		owner = GER
-		1911.11.4={ owner=FRA } # Following Agadir Crisis
-
-		#add_core_of = CHA
+	history = {
+		owner = FRA
+		add_core_of = CHA
 		victory_points = {
 			2081 1
 		}
 		buildings = {
-			infrastructure=2
+			infrastructure = 2
 
 		}
+
+		1941.1.1 = { add_claim_by = VIF }
+		1943.1.1 = { remove_claim_by = VIF }
+
+		1960.1.1 = { owner = CHA controller = CHA }
+
 	}
 
-	provinces={
-		9152
+	provinces = {
+		1473 1883 2081 3123 3181 4897 4978 7919 9152 13138 13211
 	}
-
-	local_supplies = 1.0
-	manpower=1442456
-	buildings_max_level_factor=1.000
-	state_category=pastoral
+	manpower = 1332236
+	buildings_max_level_factor = 1.000
+	state_category = pastoral
+	local_supplies=3.0 
 }

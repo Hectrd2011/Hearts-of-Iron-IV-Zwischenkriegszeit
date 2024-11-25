@@ -1,26 +1,40 @@
 state = {
-	id=449
-	name="STATE_449" # El Agheila
-	local_supplies = 1.0 manpower = 40431
-	state_category=enclave
-	provinces={ 1041 1198 4047 4057 10046 10117 12088 }
-	resources={
-		wood=0
+	id = 449
+	name = "STATE_449"
+
+	history = {
+		owner = OTT
+		buildings = {
+			infrastructure = 3
+
 		}
-	history={
-		owner=TUR
-		add_core_of=LBA
-		add_core_of=TUR
-		1912.10.18 = { owner = ITA }
-		1936.1.1={ 
-			owner=ITA
-			add_core_of=LBA
-			buildings={
-				infrastructure=2
-				}
-			}
-		buildings={
-			infrastructure=2
-			}
+		add_core_of = LBA # add_core_of = OTT 
+		1910.1.1 = {
+			owner = OTT
+			controller = OTT
 		}
+		1914.1.1 = {
+			owner = ITA
+			controller = ITA
+		}
+
+		1943.1.1 = {
+			owner = ENG
+			controller = ENG
+		}
+
+
+		1951.1.1 = {
+			owner = LBA
+			controller = LBA
+		}
+
 	}
+
+	provinces = {
+		1198 4057 4200 7076 8069 12088
+	}
+	manpower = 40431
+	buildings_max_level_factor = 1.000
+	state_category = enclave
+}

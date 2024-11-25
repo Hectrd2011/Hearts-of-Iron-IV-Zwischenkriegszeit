@@ -1,30 +1,34 @@
 state = {
 	id = 5
 	name = "STATE_5"
-	local_supplies = 1.0
-	manpower = 3378108
-	state_category = large_city
-	provinces = { 266 3351 6347 3380 6375 6402 9327 9346 9372 9398 11245 11386 }
-
-	resources = {
-		wood = 12
-	}
+	manpower = 1238108
+	state_category = town
 
 	history = {
-		victory_points = { 6332 10 }
+		victory_points = {
+			6375 3
+		}
+		victory_points = {
+			11386 1
+		}
 		owner = GER
-		add_core_of = GER
 
 		buildings = {
-			infrastructure=4
-			industrial_complex = 2
-			air_base = 1
-			9372 = { trench = 3 bunker = 4 }
-			11386 = { trench = 3 bunker = 4 }
-			9372 = { trench = 3 bunker = 4 }
-			6375 = { trench = 3 bunker = 4 }
-			9346 = { trench = 3 bunker = 4 }
-			3351 = { trench = 3 bunker = 4 }
+			infrastructure = 6
 		}
+		add_core_of = GER
+		add_core_of = PRE
+
+		1945.1.1 = {
+			owner = SOV
+			controller = SOV
+		}
+
+		1946.1.1 = { owner = POL controller = POL add_core_of = POL remove_core_of = GER }
 	}
+
+	provinces = {
+		266 3351 3380 6375 6402 9327 9346 9372 9398 11245 11386
+	}
+	local_supplies=12.0 
 }

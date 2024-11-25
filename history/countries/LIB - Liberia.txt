@@ -1,138 +1,295 @@
-﻿capital = 298
+RON_universal_setup = yes
 
-#-------------------------------------------------------
-#					GENERIC VALUES
-#-------------------------------------------------------
-set_fuel_ratio = 0.20
-set_research_slots = 3
-set_stability = 0.50
+
+
+capital = 298
+oob = "LIB_1900"
+
 set_convoys = 10
 
-#-------------------------------------------------------
-#					POLITICS & ARMY
-#-------------------------------------------------------
+set_politics = {
+	ruling_party = democratic
+	last_election = "1900.1.1"
+	election_frequency = 60
+	elections_allowed = yes
+}
 
-# LEADER
-recruit_character = LIB_arthur_barclay
+set_popularities = {
+	democratic = 100
+}
 
+create_country_leader = {
+	name = "William D. Coleman"
+	picture = "gfx/leaders/LIB/DNC/LIB_William_D._Coleman.dds"
+	
+	ideology = conservatism
+}
+
+create_country_leader = {
+	name = "Charles King"
+	desc = "POLITICS_CHARLES_KING_DESC"
+	picture = "gfx/leaders/LIB/INT/Charles_King.dds"
+	
+	ideology = centrism
+	traits = { resurgent_politician }
+}
+
+create_country_leader = {
+	name = "Didwho Welleh Twe"
+	desc = "POLITICS_CHARLES_KING_DESC"
+	picture = "gfx/leaders/LIB/CW/Didwho_Welleh_Twe.dds"
+	
+	ideology = anti_revisionism
+}
+create_country_leader = {
+	name = "Charles Taylor"
+	picture = "Charles_Taylor.dds"
+	
+	ideology = rw_nationalism
+}
 
 1910.1.1 = {
 	oob = "LIB_1910"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1907.1.12"
+		election_frequency = 60
+		elections_allowed = yes
+	}
 
-	#-------------------------------------------------------
-	#							NF
-	#-------------------------------------------------------
+	set_popularities = {
+		democratic = 100
+	}
 
-	#-------------------------------------------------------
+	create_country_leader = {
+		name = "Arthur Barclay"
+		desc = "POLITICS_EDwIN_BARCLAY_DESC"
+		picture = "gfx/leaders/LIB/WW1/Portrait_Liberia_Arthur_Barclay.dds"
+		expire = "1936.1.1"
+		ideology = liberalism
+	}
 
 	set_technology = {
-
-		# Infantry
-		infantry_weapons = 1
-		support_weapons = 1
-		infantry_binoculars = 1
-		motorised_infantry = 1
-		ww1_ambulance1 = 1
-
-		# Support
 		tech_support = 1
-		tech_engineers = 1
-		tech_recon = 1
-		#tech_military_police = 1
-		#tech_maintenance_company = 1
-		#tech_field_hospital = 1
-		#tech_logistics_company = 1
-
-		# Artillery
+		early_infantry_weapons = 1
 		light_field_gun1 = 1
 		heavy_field_gun1 = 1
-
 		# Navy
 		ww1_destroyer0 = 1
-	ww1_destroyer0_mtg = 1
 		ww1_destroyer1 = 1
-	ww1_destroyer1_mtg = 1
 		ww1_light_cruiser1 = 1
-	ww1_light_cruiser1_mtg = 1
 		ww1_light_cruiser0 = 1
-	ww1_light_cruiser0_mtg = 1
 		ww1_battlecruiser0 = 1
-	ww1_battlecruiser0_mtg = 1
 		ww1_battleship0 = 1
-	ww1_battleship0_mtg = 1
 		ww1_submarine1 = 1
-	ww1_submarine1_mtg = 1
 		ww1_coastal_submarine1 = 1
-	ww1_coastal_submarine1_mtg = 1
 		transport = 1
-	transport_mtg = 1
-
-		# Engineering
-		electronic_mechanical_engineering = 1
-
-		# Industry
-	}
-
-	set_politics = {
-	    ruling_party = democratic
-	    last_election = "1904.1.1"
-	    election_frequency = 96
-	    elections_allowed = yes
-	}
-	set_popularities = {
-	    democratic = 97
-	    fascism = 1
-	    communism = 1
-	    neutrality = 1
+		horses = 1
+		ww1_electronic_mechanical_engineering = 1
 	}
 
 }
 
-1912.1.1 = {
-	create_country_leader={ name = LIB_daniel_howard desc = LIB_daniel_howard_DESC picture="gfx/hoi4tgw_portraits/LIB/country_leaders/LIB_daniel_howard.dds" expire="1935.1.1" ideology=liberalism traits = { } }
+1919.1.1 = {
+	create_country_leader = {
+		name = "Daniel Edward Howard"
+		picture = "gfx/leaders/LIB/WW1/Liberia_DanielEdwardHoward.dds"
+		
+		ideology = conservatism
+	}
 }
 
 1914.1.1 = {
 	oob = "LIB_1914"
+}
 
-
-	#-------------------------------------------------------
-	#							NF
-	#-------------------------------------------------------
-
-	#Army
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = ww1_artillery_effort_1
-	complete_national_focus = doctrine_effort
-	complete_national_focus = ww1_trenchwarfare
-
-	#Industrial
-	complete_national_focus = industrial_effort
-	complete_national_focus = infrastructure_effort
-
-	#Political
-	complete_national_focus = political_effort
-
-	#Diplomatic
-	complete_national_focus = ww1_diplomatic_effort
-	complete_national_focus = neutrality_focus
-	complete_national_focus = ww1_military_reserve
-	
-
-	#-------------------------------------------------------
-
+1933.1.1 = {
+	set_air_oob = "LIB_1936_air_bba"
+	oob = "LIB_1933"
 	set_politics = {
-	    ruling_party = democratic
-	    last_election = "1912.1.1"
-	    election_frequency = 96
-	    elections_allowed = yes
+		ruling_party = democratic
+		last_election = "1931.1.1"
+		election_frequency = 96
+		elections_allowed = yes
 	}
 	set_popularities = {
-	    democratic = 97
-	    fascism = 1
-	    communism = 1
-	    neutrality = 1
+		neutrality = 10
+		democratic = 88
+		fascism = 1
+		communism = 1
+	}
+	create_country_leader = {
+		name = "Edwin Barclay"
+		desc = "POLITICS_EDWIN_BARCLAY_DESC"
+		picture = "gfx/leaders/LIB/Portrait_LIB_edwin_barclay.dds"
+		
+		ideology = conservatism
 	}
 
+	if = {
+		limit = {
+			has_start_date > 1932.01.01
+			has_start_date < 1949.01.01
+		}
+		add_ideas = {
+			LIB_home_of_the_free
+			depression_liberia
+			firestone_debt
+			corruption
+			indigenous_migration
+			limited_exports
+		}
+
+	}
+}
+
+1936.1.1 = {
+	set_air_oob = "LIB_1936_air_bba"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1931.1.1"
+		election_frequency = 96
+		elections_allowed = yes
+	}
+	set_popularities = {
+		neutrality = 10
+		democratic = 88
+		fascism = 1
+		communism = 1
+	}
+	create_country_leader = {
+		name = "Edwin Barclay"
+		desc = "POLITICS_EDWIN_BARCLAY_DESC"
+		picture = "Edwin_Barclay.dds"
+		
+		ideology = conservatism
+	}
+	oob = "LIB_1936"
+	# Starting tech
+	set_technology = {
+		infantry_weapons = 1
+	}
+}
+
+1939.1.1 = {
+	oob = "LIB_1939"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1939.1.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+}
+
+1940.1.1 = {
+	oob = "LIB_1940"
+}
+
+1949.1.1 = {
+	oob = "LIB_1949"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1949.1.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 100
+	}
+	create_country_leader = {
+		name = "William Tubman"
+		picture = "gfx/leaders/LIB/CW/Liberia_William_Tubman.dds"
+		
+		ideology = conservatism
+	}
+}
+
+1980.1.1 = {
+	create_country_leader = {
+		name = "William Tolbert"
+		picture = "gfx/leaders/LIB/CW/Liberia_William_Tolbert.dds"
+		
+		ideology = conservatism
+	}
+	create_country_leader = {
+		name = "Samuel Doe"
+		picture = "gfx/leaders/LIB/CW/Liberia_Samuel_Doe.dds"
+		
+		ideology = nationalism
+	}
+}
+
+1990.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1949.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		neutrality = 100
+	}
+}
+
+2000.1.1 = {
+	oob = "LIB_2000"
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "2000.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		neutrality = 100
+	}
+	create_country_leader = {
+		name = "Charles Taylor"
+		picture = "gfx/leaders/LIB/MD/Liberia_Charles_Taylor.dds"
+		
+		ideology = nationalism
+	}
+	create_country_leader = {
+		name = "Ellen Johnson Sirleaf"
+		picture = "gfx/leaders/LIB/MD/Liberia_EllenJohnsonSirleaf.dds"
+		
+		ideology = market_liberalism
+	}
+}
+2008.1.1 = {
+	create_country_leader = {
+		name = "Ellen Johnson"
+		picture = "gfx/leaders/LIB/MD/Liberia_Ellen_Johnson.dds"
+		
+		ideology = liberalism
+	}
+}
+
+2016.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2016.1.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 100
+	}
+}
+
+2020.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "2020.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		neutrality = 100
+	}
+	create_country_leader = {
+		name = "George Weah"
+		picture = "gfx/leaders/LIB/MD/LIB_George_Weah_Populism.dds"
+		
+		ideology = populism
+	}
 }

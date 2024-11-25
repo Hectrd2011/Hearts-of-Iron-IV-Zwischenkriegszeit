@@ -1,20 +1,28 @@
 state = {
-	id=734
-	name="STATE_734"
-	local_supplies = 1.0
+	id = 734
+	name = "STATE_734"
 	manpower = 5167
-	state_category=tiny_island
-	buildings_max_level_factor=1.000
-	provinces={ 7390 }
-	resources={
-		wood=0
-	}
-	history={
-		owner=FRA
+	state_category = tiny_island
 
-		buildings={
-			infrastructure=2
-			7390={ naval_base=1 }
+	history = {
+		owner = FRA
+		add_core_of = SOL
+		buildings = {
+			infrastructure = 3
+			7390 = {
+				naval_base = 1
+			}
 		}
+
+		1941.1.1 = { owner = VIF controller = VIF add_claim_by = FRA }
+		1943.1.1 = { owner = FRA controller = FRA remove_claim_by = FRA }
+
+		1979.1.1 = { owner = SOL controller = SOL }
+	}
+
+	buildings_max_level_factor = 1.000
+
+	provinces = {
+		7390
 	}
 }

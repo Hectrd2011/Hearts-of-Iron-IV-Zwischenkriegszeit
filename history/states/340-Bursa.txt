@@ -1,27 +1,39 @@
 state = {
 	id = 340
 	name = "STATE_340"
-	local_supplies = 1.0
-	manpower = 1026527
-	state_category=town
-	provinces = { 785 947 3786 3851 6864 6912 9799 9887 11778 11867 }
 	resources = {
-		chromium=1
-		steel=1
+		chromium = 39.000
 	}
-	history = {
-		victory_points = { 947 1 }
-		owner = TUR
-		add_core_of = TUR
 
-		buildings={
-			infrastructure=3
-			industrial_complex=1
-			arms_factory=1
-			6864 = { naval_base=1 }
+	history = {
+		owner = OTT
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+
 		}
-		1919.1.1 = {
-            add_core_of = TUK
-        }
+		victory_points = {
+			947 1
+		}
+		add_core_of = TUR add_core_of = OTT
+		1910.1.1 = {
+			owner = OTT
+			controller = OTT
+		}
+		1920.1.1 = {
+			owner = TUR
+			controller = TUR
+		}
+		1919.7.1 = {
+			owner = TUR
+			controller = TUR
+		}
 	}
+
+	provinces = {
+		785 947 3786 6864 6912 9799 9887 11778 11867
+	}
+	manpower = 1026527
+	buildings_max_level_factor = 1.000
+	state_category = town
 }

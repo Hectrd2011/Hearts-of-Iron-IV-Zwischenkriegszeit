@@ -1,27 +1,34 @@
 state = {
 	id = 277
-	name = "STATE_277" # Mexico City
-	local_supplies = 1.0
+	name = "STATE_277"
 	manpower = 3424403
+
 	state_category = city
 
-	provinces = { 1965 2008 2011 7913 12755 }
-
 	resources = {
-		wood = 5
-		steel = 15
-		coal = 2
+		steel = 6 #was 2 before Mexican steel production was centralized to allow oil concessions
 	}
-	history = {
-		victory_points = { 1965 10 }
-		owner = MEX
-		add_core_of = MEX
 
+	history = {
+		owner = MEX
 		buildings = {
-			1965 = { supply_node = 1 }
-			infrastructure = 3
-			industrial_complex = 2
-			arms_factory = 1
+			infrastructure = 5
+			arms_factory = 2
+			industrial_complex = 4
+			air_base = 3
+		}
+		add_core_of = MEX
+		victory_points = {
+			1965 25
+		}
+		victory_points = {
+			2008 10
 		}
 	}
+
+	provinces = {
+		1965 2008 2011 7913 12755
+	}
+
+	local_supplies=0.0
 }

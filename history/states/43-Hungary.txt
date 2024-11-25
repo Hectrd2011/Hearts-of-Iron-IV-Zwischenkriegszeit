@@ -1,39 +1,53 @@
 state = {
 	id = 43
-	name = "STATE_43" # Budapest (Northern Hungary)
-	local_supplies = 1.0
+	name = "STATE_43" # Northern Hungary
 	manpower = 3750752
+	resources = {
+		steel = 3 # was: 4
+		aluminium = 100 # was: 194
+	}
+
 	state_category = large_city
 
-	provinces = { 684 716 3713 3731 6716 6751 9660 9690 11520 }
-
-	resources = {
-		wood = 26
-		aluminium = 45
-		chromium = 10
-		steel = 12
-	}
-
 	history = {
-		victory_points = { 9660 20 }
-
-		add_core_of = HUN
-		add_core_of = AUH
 		owner = AUH
-
-		1919.1.1 = {
-			add_core_of = HSR
-		}
-
 		buildings = {
-			9660 = { supply_node = 1 }
-			infrastructure = 4
-			industrial_complex = 2
-			arms_factory = 2
+			infrastructure = 6
+			arms_factory = 4
+			industrial_complex = 4
+			air_base = 4
+		}
+		victory_points = {
+			9660 30
+		}
+		victory_points = {
+			6751 5
+		}
+		add_core_of = HUN
+		#add_core_of = HSR
+		add_core_of = AUH
+		1910.1.1 = {
+			owner = AUH
+			controller = AUH
+		}
+		1918.11.11 = {
+			owner = HUN
+			controller = HUN
+			#remove_core_of = AUH
+		}
+		1945.1.1 = {
+			owner = SOV
+			controller = SOV
 		}
 
-		1919.1.1 = {
+		1946.1.1 = {
 			owner = HUN
+			controller = HUN
 		}
 	}
+
+	provinces = {
+		684 716 3713 3731 6716 6751 9660 9690 11520
+	}
+	local_supplies=0.0 
 }

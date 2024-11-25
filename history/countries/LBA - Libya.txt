@@ -1,108 +1,148 @@
-﻿capital = 448
-oob = "LBA_1910"
+RON_universal_setup = yes
 
-set_technology = { 
-	light_field_gun1 = 1
-	 
-	heavy_field_gun1 = 1
-	motorised_infantry = 1
-	electronic_mechanical_engineering = 1
-	infantry_weapons = 1
-	ww1_destroyer0 = 1
-	ww1_destroyer0_mtg = 1
 
-	transport = 1
-	transport_mtg = 1
 
-	tech_support = 1
-	tech_engineers = 1
-	tech_recon = 1
-}
-
-set_politics = {
-    ruling_party = neutrality
-    last_election = "1910.1.1"
-    election_frequency = 48
-    elections_allowed = no
-}
-
-set_popularities = {
-    democratic = 0
-    fascism = 0
-    communism = 0
-    neutrality = 100
-}
-
-set_stability = 0.75
-
-add_ideas = { ww1_Faith_Allah }
-
+capital = 448
 set_convoys = 20
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1900.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 100
+}
 
-1914.1.1 = {
+create_country_leader = {
+	name = "Bashir es Sadawi"
+	picture = "Bashir_es_Sadawi.dds"
+	ideology = liberalism
+}
 
-	oob="LBA_1914"
+create_country_leader = {
+	name = "Ettore Bastico"
+	picture = "Ettore_Bastico.dds"
+	ideology = fascism_ideology
+}
 
-	set_technology = { 
+create_country_leader = {
+	name = "Muammar Gaddafi"
+	picture = "gfx/leaders/LBA/CW/Muammar_Gaddafi_1990.dds"
+	
+	ideology = third_international_theory
+}
 
-		electronic_mechanical_engineering = 1
+create_country_leader = {
+	name = "Idris I"
+	picture = "gfx/leaders/LBA/CW/Libia_Idris_I.dds"
+	
+	ideology = despotism
+}
 
-		mechanical_computing=1
-		computing_machine=1
-		basic_encryption=1
-		basic_decryption=1
-		basic_machine_tools=1
-		improved_machine_tools=1
-		concentrated_industry=1
+1960.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1960.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		neutrality = 100
+	}
+	create_country_leader = {
+		name = "Idris I"
+		picture = "gfx/leaders/LBA/CW/Libia_Idris_I.dds"
+		
+		ideology = despotism
+	}
+}
 
-		construction1 = 1
-		excavation1=1
-		construction2=1
-		excavation2=1
-		infantry_weapons = 1
-		ww1infantry_weapons1=1
-		marines=1
-		tech_mountaineers = 1
-		ww1_destroyer0 = 1
-	ww1_destroyer0_mtg = 1
-		 
-		ww1_destroyer1 = 1
-	ww1_destroyer1_mtg = 1
-		#KiS=1
-		#KiS=1
-		ww1_destroyer2 = 1
-	ww1_destroyer2_mtg = 1
-		 
-		basic_light_cruiser=1
-		#KiS early_protected_cruiser=1
-		ww1_light_cruiser1 = 1
-	ww1_light_cruiser1_mtg = 1
-		ww1_light_cruiser0 = 1
-	ww1_light_cruiser0_mtg = 1
-		 
-		 		 
-		early_battlecruiser=1
+1970.1.1 = {
+	set_politics = {
+		ruling_party = communism
+		last_election = "1969.9.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		communism = 100
+	}
+	if = {
+		limit = {
+			has_start_date > 1968.01.01
+			has_start_date < 1977.01.01
+		}
+		set_cosmetic_tag = LBA_ARAB
+	}
+}
 
-		ww1_battleship0 = 1
-	ww1_battleship0_mtg = 1
-		ww1_battleship1 = 1
-	ww1_battleship1_mtg = 1
-		#early_dreadnought=1
-		ww1_battleship0 = 1
-	ww1_battleship0_mtg = 1
-		transport = 1
-	transport_mtg = 1
-		early_submarine=1
-		ww1_submarine1 = 1
-	ww1_submarine1_mtg = 1 ww1_coastal_submarine1=1
-		ww1_submarine2=1 ww1_coastal_submarine2=1
-		#KiS #improved_coastal_submarine=1
-		tech_support = 1
-		tech_engineers = 1
-		tech_recon = 1
-		tech_military_police=1
-		tech_maintenance_company=1
-		tech_field_hospital = 1
-		tech_logistics_company = 1
+1990.1.1 = {
+	create_country_leader = {
+		name = "Muammar Gaddafi"
+		picture = "gfx/leaders/LBA/CW/Muammar_Gaddafi_1990.dds"
+		
+		ideology = third_international_theory
+	}
+}
+
+2000.1.1 = {
+	oob = "LBA_2000"
+	set_politics = {
+		ruling_party = communism
+		last_election = "2000.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		communism = 100
+	}
+	create_country_leader = {
+		name = "Muammar Gaddafi"
+		picture = "gfx/leaders/LBA/CW/Muammar_Gaddafi_2000.dds"
+		
+		ideology = third_international_theory
+	}
+	create_country_leader = {
+		name = "Fayez Al-Sarraj"
+		picture = "gfx/leaders/LBA/MD/Libya_FayezAl-Sarraj.dds"
+		
+		ideology = liberalism
+	}
+}
+2008.1.1 = {
+	create_country_leader = {
+		name = "Muammar Gaddafi"
+		picture = "gfx/leaders/LBA/MD/Lybia_Muammar_Gaddafi.dds"
+		
+		ideology = third_international_theory
+	}
+}
+
+2012.1.1 = {
+	oob = "LBA_2016"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2011.10.20"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 100
+	}
+}
+
+2020.1.1 = {
+	create_country_leader = {
+		name = "House of Representatives"
+		picture = "gfx/leaders/LBA/MD/LBA_House_of_Representatives.dds"
+		
+		ideology = liberalism
+	}
+	create_country_leader = {
+		name = "Fayez al-Sarraj"
+		picture = "gfx/leaders/LBA/MD/LBA_Fayez_al-Sarraj_Independent.dds"
+		
+		ideology = democratic_independent
 	}
 }

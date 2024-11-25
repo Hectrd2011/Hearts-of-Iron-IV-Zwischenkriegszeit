@@ -1,2 +1,0 @@
-﻿#capital = 841
-capital = 2 # to avoid a bug

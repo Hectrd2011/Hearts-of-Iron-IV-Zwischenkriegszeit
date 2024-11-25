@@ -1,0 +1,12 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_report_event_election"
+		texturefile = "gfx/event_pictures/election.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_alpenfestung"
+		texturefile = "gfx/event_pictures/RON/report_event_alpenfestung.dds"
+	}
+}

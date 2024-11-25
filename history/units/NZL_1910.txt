@@ -1,4 +1,3 @@
-﻿
 ###################################################################
 
 division_template = {
@@ -46,35 +45,34 @@ units = {
 		}
 	}
 
-	division= { 
+	division = {
 		name = "1st NZ Infantry Division"
-		location=1814 # Wellington
-		division_template="Infantry Division"
+		location = 1814 # Wellington
+		division_template = "Infantry Division"
 		start_experience_factor = 0.1
 	}
-	
-	
-	division= { 
+
+
+	division = {
 		name = "North Island Garrison"
 		location = 10609 # Napier
-		division_template="Infantry Brigade"
+		division_template = "Infantry Brigade"
 		start_experience_factor = 0.05
-		# start_equipment_factor = 0.3 
+		# start_equipment_factor = 0.3
 		# start_manpower_factor = 0.3
 	}
-	
-	
-	division= { 
-		name = "South Island Garrison"
-		location=2211 # Dunedin
-		division_template="Infantry Brigade"
-		start_experience_factor = 0.05
-		# start_equipment_factor = 0.3 
-		# start_manpower_factor = 0.3
-	}
-	 
-}
 
+
+	division = {
+		name = "South Island Garrison"
+		location = 2211 # Dunedin
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.05
+		# start_equipment_factor = 0.3
+		# start_manpower_factor = 0.3
+	}
+
+}
 instant_effect = {
-	add_equipment_production = { equipment = { type = infantry_equipment_0 creator = "NZL" } requested_factories = 1 progress = 0.1 efficiency = 50}
+	add_equipment_production = { equipment = { type = early_infantry_equipment_0 creator = "NZL" } requested_factories = 1 progress = 0.1 efficiency = 50 }
 }

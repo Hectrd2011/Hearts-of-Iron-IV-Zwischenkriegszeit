@@ -1,29 +1,42 @@
 state = {
-	id=618
-	name="STATE_618" # Dzungaria
-	local_supplies = 1.0 manpower = 670800
-	state_category=pastoral
-	provinces={ 1708 1783 1844 4714 4788 4823 4849 7693 7737 7866 10674 10691 12590 12737 }
-	resources={
-		wood=0
+	id = 618
+	name = "STATE_618" # Dzungaria
+	manpower = 670800
+
+	state_category = pastoral
+
+	history = {
+		owner = QIN
+		add_core_of = SIK add_core_of = ETR
+		add_core_of = QIN
+		add_core_of = CHI add_core_of = BOX
+
+		1912.1.1 = { owner = CHI controller = CHI add_core_of = CHI }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
 		}
-	history={
-		owner=QIN
-		add_core_of=CHI
-		add_core_of=QIN
-		1912.2.12={ owner=CHI }
-		1936.1.1={ 
-			owner=SIK
-			add_core_of=CHI
-			#add_core_of=PRC
-			buildings={
-				infrastructure=2
-				industrial_complex=1
-				}
-			}
-		buildings={
-			infrastructure=2
-			industrial_complex=1
-			}
+
+		1919.7.1 = { owner = SIK controller = SIK }
+		1933.1.1 = {
+			owner = SIK
+			controller = SIK
 		}
+
+		1946.1.1 = {
+			owner = ETR
+			controller = ETR
+			add_core_of = PRC
+		}
+
+		1950.1.1 = {
+			owner = PRC
+			controller = PRC
+		}
+
 	}
+
+	provinces = {
+		1708 1783 1844 4714 4788 4823 4849 7693 7737 7866 10674 10691 12590 12737
+	}
+}

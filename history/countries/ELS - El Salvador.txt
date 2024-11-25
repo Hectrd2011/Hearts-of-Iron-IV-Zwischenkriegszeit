@@ -1,238 +1,280 @@
-﻿capital = 314
-
-#-------------------------------------------------------
-#					GENERIC VALUES
-#-------------------------------------------------------
-set_fuel_ratio = 0.20
-set_research_slots = 3
-set_stability = 0.75
-set_convoys = 20
-set_country_flag=monroe_doctrine
-#-------------------------------------------------------
-#					POLITICS & ARMY
-#-------------------------------------------------------
-
-# LEADERS
-recruit_character = ELS_fernando_figueroa
-recruit_character = ELS_alfonso_quinonez_molina
-recruit_character = ELS_jorge_melendez_ramirez
-
-# ARMY
-recruit_character = ELS_preza
-recruit_character = ELS_duarte
-recruit_character = ELS_arevalo
-recruit_character = ELS_flores
-recruit_character = ELS_rodolfo_cristales
-recruit_character = ELS_tercero
-recruit_character = ELS_ruiz
-recruit_character = ELS_rivera
-recruit_character = ELS_ascencio
-recruit_character = ELS_marin
-recruit_character = ELS_rivas
-recruit_character = ELS_montenegro
-recruit_character = ELS_duron
-recruit_character = ELS_bustamante
-recruit_character = ELS_romero
+RON_universal_setup = yes
 
 
-set_technology = {
-	# Navy
-	ww1_battleship0 = 1
-	ww1_battleship0_mtg = 1
+
+capital = 314
+oob = "ELS_1900"
+
+set_country_flag = monroe_doctrine
+set_war_support = 0.1
+set_convoys = 5
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1900.1.1"
+	election_frequency = 60
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 100
+}
+
+create_country_leader = {
+	name = "Tomás Regalado"
+	picture = "gfx/leaders/ELS/DNC/ELS_Tomás_Regalado.dds"
 	
-	ww1_battleship1 = 1
-	ww1_battleship1_mtg = 1
+	ideology = militarism
+}
+
+create_country_leader = {
+	name = "Fernando Figueroa"
+	picture = "gfx/leaders/ELS/DNC/Fernando_Figueroa.dds"
 	
-	###ww1_battleship2 = 0 #  ww1_battleship_1906 (Dreadnought I)
-	###ww1_battleship3 = 0 #  ww1_battleship_1910 (Dreadnought II)
-	###ww1_battleship4 = 0 #  ww1_battleship_1914 (Dreadnought III)
+	ideology = market_liberalism
+}
 
-	###ww1_battlecruiser1 = 0 # ww1_battlecruiser_1906 (Battlecruiser I)
-	###ww1_battlecruiser2 = 0 # ww1_battlecruiser_1910 (Battlecruiser II)
-	###ww1_battlecruiser3 = 0 # ww1_battlecruiser_1910 (Battlecruiser III)
+create_country_leader = {
+	name = "Maximiliano Hernández Martínez"
+	desc = "POLITICS_MAXIMILIANO_HERNANDEZ_MARTINEZ_DESC"
+	picture = "gfx/leaders/ELS/INT/El_Salvador_Maximiliano_Hernández_Martínez.dds"
+	
+	ideology = rw_nationalism
+}
 
-	ww1_heavy_cruiser0 = 1
-	ww1_heavy_cruiser0_mtg = 1 # heavy_cruiser_1890 (Armored Cruiser I)
-	ww1_heavy_cruiser1 = 1
-	ww1_heavy_cruiser1_mtg = 1 # heavy_cruiser_1900 (Armored Cruiser II)
-
-	ww1_light_cruiser0 = 1
-	ww1_light_cruiser0_mtg = 1 # light_cruiser_1890 (Protected Cruiser I)
-	ww1_light_cruiser1 = 1
-	ww1_light_cruiser1_mtg = 1 # light_cruiser_1900 (Protected Cruiser II)
-	###ww1_light_cruiser2 = 0 # light_cruiser_1906 (Light Cruiser I)
-	###ww1_light_cruiser3 = 0 # light_cruiser_1910 (Light Cruiser II)
-	###ww1_light_cruiser4 = 0 # light_cruiser_1914 (Light Cruiser III)
-
-	ww1_destroyer0 = 1
-	ww1_destroyer0_mtg = 1 # destroyer_1890 (Torpedo Boat I)
-	ww1_destroyer1 = 1
-	ww1_destroyer1_mtg = 1 # destroyer_1900 (Destroyer I)
-	ww1_destroyer2 = 1
-	ww1_destroyer2_mtg = 1 # destroyer_1906 (Destroyer II)
-	###ww1_destroyer3 = 0 # destroyer_1910 (Destroyer III)
-	###ww1_destroyer4 = 0 # destroyer_1914 (Destroyer IV)	
-
-	ww1_moduleMTG_mines = 1
-	ww1_moduleMTG_mines_mtg = 1 # Mines
-
-	ww1_submarine0 = 1
-	ww1_submarine0_mtg = 1 # coastal_submarine_1900 (Coastal Submarine 1900, first available Submarine)
-	###ww1_submarine1 = 0 # submarine_1906 (Submarine I)
-	###ww1_submarine2 = 0 # submarine_1910 (Submarine II)
-	###ww1_submarine3 = 0 # submarine_1914 (Submarine III)
-
-	transport = 1
-	transport_mtg = 1 # Naval Transport
+create_country_leader = {
+	name = "Miguel Mármol"
+	picture = "gfx/leaders/ELS/CW/Miguel_Marmol.dds"
+	
+	ideology = marxism
 }
 
 1910.1.1 = {
 	oob = "ELS_1910"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1910.1.1"
+		election_frequency = 60
+		elections_allowed = yes
+	}
 
-	#-------------------------------------------------------
-	#							NF
-	#-------------------------------------------------------
-
-	#-------------------------------------------------------
+	set_popularities = {
+		democratic = 100
+	}
 
 	set_technology = {
-
-		# Infantry
-		infantry_weapons = 1
-		support_weapons = 1
-		infantry_binoculars = 1
-		motorised_infantry = 1
-		ww1_ambulance1 = 1
-
-
-		# Support
 		tech_support = 1
-		tech_engineers = 1
-		tech_recon = 1
-		#tech_military_police = 1
-		#tech_maintenance_company = 1
-		#tech_field_hospital = 1
-		#tech_logistics_company = 1
-
-		# Armor
-
-		# Artillery
+		early_infantry_weapons = 1
 		light_field_gun1 = 1
 		heavy_field_gun1 = 1
-
-		# Air
-
-		# Engineering
-		electronic_mechanical_engineering = 1
-
-		# Industry
+		# Navy
+		ww1_destroyer0 = 1
+		ww1_destroyer1 = 1
+		ww1_light_cruiser1 = 1
+		ww1_light_cruiser0 = 1
+		ww1_battlecruiser0 = 1
+		ww1_battleship0 = 1
+		ww1_submarine1 = 1
+		ww1_coastal_submarine1 = 1
+		transport = 1
+		horses = 1
+		ww1_electronic_mechanical_engineering = 1
 	}
 
-	set_politics = {
-	    ruling_party = neutrality
-	    last_election = "1910.1.1"
-	    election_frequency = 48
-	    elections_allowed = no
-	}
-	set_popularities = {
-	    democratic = 0
-	    fascism = 0
-	    communism = 0
-	    neutrality = 100
-	}
-
-	add_ideas = {
-
-	}	
-}
-
-1911.3.1 = {
-	recruit_character = ELS_carlos_melendez # He is the New President of El Salvador
 }
 
 1914.1.1 = {
 	oob = "ELS_1914"
+}
 
-	#-------------------------------------------------------
-	#							NF
-	#-------------------------------------------------------
-
-	#Army
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = ww1_artillery_effort_1
-	complete_national_focus = doctrine_effort
-	complete_national_focus = ww1_trenchwarfare
-
-	#Industrial
-	complete_national_focus = industrial_effort
-	complete_national_focus = infrastructure_effort
-
-	#Political
-	complete_national_focus = political_effort
-
-	#Diplomatic
-	complete_national_focus = ww1_diplomatic_effort
-	complete_national_focus = neutrality_focus
-	complete_national_focus = ww1_military_reserve
-	
-
-	#-------------------------------------------------------
-
-	set_technology = {
-
-		# Infantry
-		infantry_weapons = 1
-		ww1infantry_weapons1 = 1
-		support_weapons = 1
-		infantry_binoculars = 1
-		infantry_grenade = 1
-		motorised_infantry = 1
-		ww1_ambulance1 = 1
-
-
-		# Support
-		tech_support = 1
-		tech_engineers = 1
-		tech_recon = 1
-		tech_military_police = 1
-		tech_maintenance_company = 1
-		tech_field_hospital = 1
-		tech_logistics_company = 1
-
-		# Armor
-		gwtank = 1 # 1910 Armored Car
-
-		# Artillery
-		light_field_gun1 = 1
-		bonus_artillery1 = 1
-		heavy_field_gun1 = 1
-		bonus_bertha1 = 1
-
-		# Air
-		ww1_fighter1 = 1
-
-		# Engineering
-		electronic_mechanical_engineering = 1
-
-		# Industry
+1919.1.1 = {
+	create_country_leader = {
+		name = "Jorge Melendez"
+		picture = "gfx/leaders/ELS/WW1/ElSalvador_JorgeMelendez.dds"
+		
+		ideology = liberalism
 	}
+}
 
-
+1933.1.1 = {
+	set_air_oob = "ELS_1936_air_bba"
+	oob = "ELS_1933"
 	set_politics = {
-	    ruling_party = neutrality
-	    last_election = "1913.2.9"
-	    election_frequency = 48
-	    elections_allowed = yes
+		ruling_party = fascism
+		last_election = "1933.1.1"
+		election_frequency = 60
+		elections_allowed = no
 	}
 	set_popularities = {
-	    democratic = 0
-	    fascism = 0
-	    communism = 0
-	    neutrality = 100
+		fascism = 100
 	}
+}
 
-	add_ideas = {
+1936.1.1 = {
+	set_air_oob = "ELS_1936_air_bba"
+	oob = "ELS_1936"
+	# Starting tech
+	set_technology = {
+		infantry_weapons = 1
+	}
+	set_politics = {
+		ruling_party = fascism
+		last_election = "1935.1.15"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		fascism = 100
+	}
+}
 
+1939.1.1 = {
+	oob = "ELS_1939"
+	set_politics = {
+		ruling_party = fascism
+		last_election = "1939.1.3"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+}
+
+1940.1.1 = {
+	oob = "ELS_1940"
+}
+
+1949.1.1 = {
+	oob = "ELS_1949"
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1949.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		neutrality = 100
+	}
+	create_country_leader = {
+		name = "Revolutionary Council"
+		picture = "gfx/leaders/ELS/CW/El_Salvador_Revolutionary_Council.dds"
+		
+		ideology = authoritarian_democracy
+	}
+}
+
+1960.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1960.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		neutrality = 100
+	}
+	create_country_leader = {
+		name = "Jose Maria Lemus"
+		picture = "gfx/leaders/ELS/CW/ElSalvador_JoseMariaLemus.dds"
+		
+		ideology = authoritarian_democracy
+	}
+}
+
+1970.1.1 = {
+	oob = "ELS_1970"
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1970.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		neutrality = 100
+	}
+	create_country_leader = {
+		name = "Fidel Sanchez Hernandez"
+		picture = "gfx/leaders/ELS/CW/ElSalvador_FidelSanchezHernandez.dds"
+		
+		ideology = nationalism
+	}
+}
+
+1980.1.1 = {
+	create_country_leader = {
+		name = "Jose Napoleon Duarte"
+		picture = "gfx/leaders/ELS/CW/El_Salvador_Jose_Napoleon_Duarte.dds"
+		
+		ideology = militarism
+	}
+	create_country_leader = {
+		name = "Alfredo Cristiani"
+		picture = "CW/El_Salvador-Alfredo_Cristiani.dds"
+		
+		ideology = conservatism
+	}
+}
+
+1990.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1990.1.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 100
+	}
+}
+
+2000.1.1 = {
+	oob = "ELS_2000"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2016.1.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 100
+	}
+	create_country_leader = {
+		name = "Francisco Flores Perez"
+		picture = "gfx/leaders/ELS/MD/El_Salvador-Francisco_Flores_Perez.dds"
+		
+		ideology = conservatism
+	}
+	create_country_leader = {
+		name = "Salvador Sanchez Ceren"
+		picture = "gfx/leaders/ELS/MD/El_Salvador_Salvador_Sanchez_Ceren.dds"
+		
+		ideology = syndicalism
+	}
+}
+2008.1.1 = {
+	create_country_leader = {
+		name = "Antonio Saca"
+		picture = "gfx/leaders/ELS/MD/El_Salvador_Antonio_Saca.dds"
+		
+		ideology = democratic_nationalism
+	}
+}
+
+2016.1.1 = {
+	set_politics = {
+		ruling_party = communism
+		last_election = "2016.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		communism = 100
+	}
+}
+
+2020.1.1 = {
+	create_country_leader = {
+		name = "Nayib Bukele"
+		picture = "gfx/leaders/ELS/MD/ELS_Nayib_Bukele_Lw_Socialism.dds"
+		
+		ideology = lw_socialism
 	}
 }

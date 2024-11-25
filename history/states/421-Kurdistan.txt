@@ -1,24 +1,27 @@
 state = {
-	id=421
-	name="STATE_421"
-	local_supplies = 1.0 manpower = 780278
-	state_category=rural
-	provinces={ 829 4943 5050 5098 9816 10774 12773 }
-	resources={
-		wood=0
+	id = 421
+	name = "STATE_421"
+	manpower = 780278
+
+	state_category = rural
+
+	history = {
+		owner = PER
+		victory_points = {
+			12773 1
 		}
-	history={
-		owner=PER
-		add_core_of=PER
-		1936.1.1={ 
-			owner=PER
-			add_core_of=PER
-			buildings={
-				infrastructure=2
-				}
-			}
-		buildings={
-			infrastructure=2
-			}
+
+		buildings = {
+			infrastructure = 3
 		}
+		add_core_of = PER #add_core_of = SPE
+		add_core_of = KUR
+
+		1942.1.1 = { owner = ENG controller = ENG }
+		1949.1.1 = { owner = PER controller = PER }
 	}
+
+	provinces = {
+		829 4943 5050 5098 9816 10774 12773 13304
+	}
+}

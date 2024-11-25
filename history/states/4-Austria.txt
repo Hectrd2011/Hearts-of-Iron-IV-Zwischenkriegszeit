@@ -1,35 +1,72 @@
 state = {
 	id = 4
 	name = "STATE_4"
-	local_supplies = 1.0
-	manpower = 2595983
-	state_category = large_city
-	provinces = { 653 704 3700 3718 6690 6739 9527 9646 9648 9661 9679 11630 11666 }
-
 	resources = {
-		wood = 14
-		coal = 58
-		oil = 10
-		steel = 11
+		oil = 1.000
 	}
 
 	history = {
-		victory_points = { 11666 30 }
-		victory_points = { 9648 5 }
 		owner = AUH
-		# add_core_of = AUS
-		add_core_of = AUH
-
-		buildings = {
-			11666 = { supply_node = 1 }
-			infrastructure=4
-			industrial_complex = 5
-			air_base = 1
-			arms_factory = 2
+		victory_points = {
+			11666 30.0
 		}
-		1919.1.1 = {
-            owner = AUS
-            add_core_of = AUS
-        }
+		buildings = {
+			infrastructure = 7
+			arms_factory = 1
+			industrial_complex = 3
+			air_base = 6
+            11666 = {
+                landmark_hofburg_palace = {
+                    level = 1
+                    allowed = {
+                        has_dlc = "Gotterdammerung"
+                    }
+                }
+            }
+		}
+		add_core_of = AUS
+		add_core_of = AUC
+		add_core_of = AUH
+		1910.1.1 = {
+			owner = AUH
+			controller = AUH
+		}
+		1918.11.11 = {
+			owner = AUS
+			controller = AUS
+			#remove_core_of = AUH
+		}
+		1938.3.12 = {
+			owner = GER
+			controller = GER
+			add_core_of = GER
+
+		}
+		1939.1.1 = {
+			buildings = {
+				anti_air_building = 5
+
+			}
+
+		}
+
+		1946.1.1 = {
+			owner = SOV
+			controller = SOV
+		}
+
+		1956.1.1 = {
+			owner = AUS
+			controller = AUS
+		}
+
 	}
+
+	provinces = {
+		704 6690 11666
+	}
+	manpower = 1231431
+	buildings_max_level_factor = 1.000
+	state_category = large_city
+	local_supplies=0.0 
 }

@@ -1,65 +1,89 @@
-﻿capital = 765
+RON_universal_setup = yes
+  
+capital = 765
+oob = "generic_1910"
+set_convoys = 5
 
-# Starting tech
-set_technology = {
-	infantry_weapons = 1
+set_politics = {
+	ruling_party = islamism
+	last_election = "1910.1.1"
+	election_frequency = 48
+	elections_allowed = no
 }
 
-set_convoys = 1
-set_stability = 0.50
-
-1910.1.1 = {
-
-	TUR = {
-		if = { 
-			limit = { has_dlc = "Together for Victory" }
-			set_autonomy = {
-				target = QAT
-				autonomous_state = autonomy_colony
-			}
-			else = {
-				puppet = QAT
-			}
-		}
-	}
-
-	set_politics = {
-		ruling_party = neutrality
-		last_election = "1910.1.1"
-	    election_frequency = 48
-	    elections_allowed = no
-	}
-	set_popularities = {
-		democratic = 0
-		fascism = 0
-	    communism = 0
-		neutrality = 100
-	}
-
-	# LEADER
-	recruit_character = QAT_abdullah_bin_jassim_al_thani
+set_popularities = {
+	islamism = 100
 }
 
-1914.1.1 = {
+create_country_leader = {
+	name = "Khalifa bin Hamad Al-Thani"
+	picture = "gfx/leaders/QAT/CW/QAT_Hamad_bin_Khalifa_Al_Thani.dds"
+	
+	ideology = emiratism
+}
+create_country_leader = {
+	name = "Khalifa bin Hamad Al-Thani"
+	picture = "gfx/leaders/QAT/CW/QAT_Hamad_bin_Khalifa_Al_Thani.dds"
+	
+	ideology = constitutional_monarchism
+}
+create_country_leader = {
+	name = "Khalifa bin Hamad Al-Thani"
+	picture = "gfx/leaders/QAT/CW/QAT_Hamad_bin_Khalifa_Al_Thani.dds"
+	
+	ideology = despotism
+}
 
-	TUR = {
-		end_puppet = QAT
-	}
-	ENG = {
-		puppet = QAT
-		give_guarantee = QAT
-	}
 
-	set_politics = {
-		ruling_party = neutrality
-		last_election = "1910.1.1"
-	    election_frequency = 48
-	    elections_allowed = no
+2000.1.1 = {
+	oob = "QAT_2000"
+	create_country_leader = {
+		name = "Hamad bin Khalifa Al-Thani"
+		picture = "gfx/leaders/QAT/CW/QAT_Hamad_bin_Khalifa_Al_Thani.dds"
+		
+		ideology = emiratism
 	}
-	set_popularities = {
-		democratic = 0
-		fascism = 0
-	    communism = 0
-		neutrality = 100
+	create_country_leader = {
+		name = "Hamad bin Khalifa Al-Thani"
+		picture = "gfx/leaders/QAT/CW/QAT_Hamad_bin_Khalifa_Al_Thani.dds"
+		
+		ideology = despotism
+	}
+	create_country_leader = {
+		name = "Hamad bin Khalifa Al-Thani"
+		picture = "gfx/leaders/QAT/CW/QAT_Hamad_bin_Khalifa_Al_Thani.dds"
+		
+		ideology = constitutional_monarchism
+	}
+}
+
+2016.1.1 = {
+	oob = "QAT_2016"
+	create_country_leader = {
+		name = "Tamim Bin Hamad Al-Than"
+		picture = "gfx/leaders/QAT/MD/Qatar_TamimBinHamadAlThan.dds"
+		
+		ideology = emiratism
+	}
+	create_country_leader = {
+		name = "Tamim Bin Hamad Al-Than"
+		picture = "gfx/leaders/QAT/MD/Qatar_TamimBinHamadAlThan.dds"
+		
+		ideology = despotism
+	}
+}
+
+2020.1.1 = {
+	create_country_leader = {
+		name = "Tamim bin Hamad Al Thani"
+		picture = "gfx/leaders/QAT/MD/QAT_Tamim_bin_Hamad_Al_Thani_Emiratism.dds"
+		
+		ideology = emiratism
+	}
+	create_country_leader = {
+		name = "Tamim bin Hamad Al Thani"
+		picture = "gfx/leaders/QAT/MD/QAT_Tamim_bin_Hamad_Al_Thani_Emiratism.dds"
+		
+		ideology = despotism
 	}
 }

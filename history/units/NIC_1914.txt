@@ -1,4 +1,4 @@
-﻿###################################################################
+###################################################################
 
 division_template = {
 	name = "Infantry Division"
@@ -32,14 +32,14 @@ division_template = {
 ###################################################################
 
 units = {
-	division= { 
+	division = {
 		name = "Guardia de Presidente"
-		location=12738 # Managua
-		division_template="Infantry Division"
+		location = 12738 # Managua
+		division_template = "Infantry Division"
 		start_experience_factor = 0
 	}
-}
 
+}
 instant_effect = {
-	add_equipment_production = { equipment = { type = infantry_equipment_0 creator = "NIC" } requested_factories = 1 progress = 0.1 efficiency = 50}
+	add_equipment_production = { equipment = { type = early_infantry_equipment_0 creator = "NIC" } requested_factories = 1 progress = 0.1 efficiency = 50 }
 }

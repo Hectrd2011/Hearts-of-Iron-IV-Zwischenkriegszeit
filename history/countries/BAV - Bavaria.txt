@@ -1,54 +1,60 @@
-﻿# Kingdom of Bavaria
-# ------------------
-# https://en.wikipedia.org/wiki/Kingdom_of_Bavaria
-capital = 52# Munich
-#-------------------------------------------------------
-#					GENERIC VALUES
-#-------------------------------------------------------
-set_fuel_ratio = 0.2
-set_research_slots = 2
-set_stability = 0.86
-#-------------------------------------------------------
-#					POLITICS & ARMY
-#-------------------------------------------------------
-#LEADERS
-create_country_leader = {
-	name = BAV_Luitpold
-	desc = BAV_Luitpold_DESC
-	picture = "gfx/hoi4tgw_portraits/BAV/country_leaders/BAV_Luitpold.dds"
-	expire = "1945.1.1"
-	ideology = autocracy
-	traits = {
-	}
-}
+﻿RON_universal_setup = yes
+  
+capital = 52
+set_research_slots = 3
+#oob = "BAV_1936"
 
-oob = "BAV_1910"
 set_politics = {
-	ruling_party = neutrality
-	last_election = "1910.1.1"
+	ruling_party = democratic
+	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 
 set_popularities = {
-	democratic = 4
-	fascism = 2
-	communism = 3
-	neutrality = 91
+	fascism = 30
+	communism = 10
+	neutrality = 50
+	democratic = 10
 }
 
-1914.1.1 = {
-	create_country_leader = {
-		name = BAV_Ludwig_III
-		desc = BAV_Ludwig_III_DESC
-		picture = "gfx/hoi4tgw_portraits/BAV/country_leaders/BAV_Ludwig_III.dds"
-		expire = "1945.1.1"
-		ideology = autocracy
-		traits = {
-		}
+create_country_leader = {
+	name = "Paul Giesler"
+	picture = "gfx/leaders/BAV/Portrait_Bavaria_Paul Giesler.dds"
+	expire = "1960.1.1"
+	ideology = nazism
+}
+
+create_country_leader = {
+	name = "Ernst Toller"
+	picture = "gfx/leaders/BAV/Portrait_Bavaria_Ernst.dds"
+	expire = "1960.1.1"
+	ideology = stalinism
+}
+
+create_country_leader = {
+	name = "Fritz Schäffer"
+	picture = "gfx/leaders/BAV/Portrait_Bavaria_Fritz.dds"
+	expire = "1960.1.1"
+	ideology = socialism
+}
+
+create_country_leader = {
+	name = "Prince Rupprecht"
+	picture = "gfx/leaders/BAV/Portrait_Bavaria_Rupprecht.dds"
+	expire = "1951.1.1"
+	ideology = despotism
+}
+1919.1.1 = {
+	set_politics = {
+		ruling_party = communism
+		elections_allowed = no
 	}
-}
+	set_popularities = {
+		fascism = 30
+		communism = 50
+		neutrality = 10
+		democratic = 10
+	}
 
-add_ideas = {
-	limited_conscription
 }

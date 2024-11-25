@@ -1,26 +1,37 @@
 state = {
-	id=726
-	name="STATE_726"
-	local_supplies = 1.0 manpower=123214
-	state_category=small_island
-	provinces={ 7290 13080 }
-	resources={
-		wood=0
+	id = 726
+	name = "STATE_726"
+
+	history = {
+		owner = ENG
+		add_core_of = SMO
+
+		victory_points = {
+			7290 1
 		}
-	history={
-		owner=USA
-		add_core_of=USA
-		1936.1.1={ 
-			owner=USA
-			add_core_of=USA
-			buildings={
-				infrastructure=2
-				7290={ naval_base=1 }
-				}
+
+		buildings = {
+			infrastructure = 3
+			7290 = {
+				naval_base = 1
+
 			}
-		buildings={
-			infrastructure=2
-			7290={ naval_base=1 }
-			}
+
 		}
+
+		1907.1.1 = {
+			owner = NZL
+			controller = NZL
+		}
+
+		1962.1.1 = { owner = SMO controller = SMO }
+
 	}
+
+	provinces = {
+		7290
+	}
+	manpower = 77210
+	buildings_max_level_factor = 1.000
+	state_category = tiny_island
+}

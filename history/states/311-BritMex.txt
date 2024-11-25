@@ -1,26 +1,30 @@
-state = {
-	id=311
-	name="STATE_311"
-	local_supplies = 1.0 manpower = 51000
-	state_category=enclave
-	provinces={ 2077 }
-	resources={
-		wood=0
+state =
+{
+	id = 311
+	name = "STATE_311"
+	manpower = 51000
+
+	state_category = pastoral
+	history =
+	{
+		add_core_of = BLZ
+		owner = ENG
+		victory_points = {
+			2077 1
 		}
-	history={
-		owner=ENG
-		add_core_of=ENG
-		1936.1.1={ 
-			owner=ENG
-			add_core_of=ENG
-			buildings={
-				infrastructure=3
-				2077={ naval_base=1 }
-				}
+		buildings = {
+			infrastructure = 4
+			2077 = {
+				naval_base = 1
 			}
-		buildings={
-			infrastructure=3
-			2077={ naval_base=1 }
-			}
+		}
+
+		1981.1.1 = {
+			owner = BLZ
+			controller = BLZ
 		}
 	}
+	provinces = { 2077 }
+
+	local_supplies=0.0
+}

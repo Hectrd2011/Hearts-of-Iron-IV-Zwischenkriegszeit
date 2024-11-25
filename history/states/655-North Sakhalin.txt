@@ -1,31 +1,27 @@
 state = {
-	id=655
-	name="STATE_655"
-	local_supplies = 1.0
+	id = 655
+	name = "STATE_655"
 	manpower = 94759
-	state_category=pastoral
-	provinces={ 855 1742 1755 }
-	resources={
-		wood=0
-		}
-	history={
-		owner=RUS
-		add_core_of=RUS
-		add_claim_by=JAP
-		1936.1.1={ 
-			owner=SOV
-			add_core_of=SOV
-			add_claim_by=JAP
-			buildings={
-				infrastructure=2
-				air_base=1
-				}
-			}
-		buildings={
-			infrastructure=2
-			}
-		1919.1.1 = {
-            add_core_of = SOV
-        }
+
+	state_category = pastoral
+	history = {
+		owner = RUS
+		add_core_of = RUS
+		set_state_flag = RUS_core
+		add_core_of = SOV
+		add_claim_by = JAP		
+		
+		1918.11.11 = { owner = RUS controller = RUS } 
+		1923.1.1 = { owner = SOV controller = SOV }
+		1992.1.1 = { owner = RUS controller = RUS }
+
+		buildings = {
+			infrastructure = 3
+			air_base = 1
 		}
 	}
+
+	provinces = {
+		855 1742 1755
+	}
+}

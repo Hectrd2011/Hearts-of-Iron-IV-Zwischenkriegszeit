@@ -1,26 +1,28 @@
 state = {
-	id=709
-	name="STATE_709"
-	local_supplies = 1.0 manpower = 126703
-	state_category=small_island
-	provinces={ 2188 }
-	resources={
-		wood=0
+	id = 709
+	name = "STATE_709"
+	manpower = 126703
+
+	state_category = small_island
+
+	history =
+	{
+		add_core_of = SEY
+		owner = ENG
+		buildings = {
+			infrastructure = 3
+			2188 = {
+				naval_base = 1
+			}
 		}
-	history={
-		owner=ENG
-		add_core_of=ENG
-		1936.1.1={ 
-			owner=ENG
-			add_core_of=ENG
-			buildings={
-				infrastructure=2
-				2188={ naval_base=1 }
-				}
-			}
-		buildings={
-			infrastructure=2
-			2188={ naval_base=1 }
-			}
+		1976.1.1 = {
+			owner = SEY
+			controller = SEY
 		}
 	}
+
+	provinces = {
+		2188
+	}
+
+}

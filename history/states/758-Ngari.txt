@@ -1,23 +1,27 @@
 state = {
 	id = 758
 	name = "STATE_758"
-	local_supplies = 1.0
-	manpower = 65000
-	state_category = rural
-
-	provinces = { 9805 3914 3980 841 9837 }
-
-	resources = {
-		wood = 0
+	provinces = {
+		1961 5094 8029 10802 12784 12801
 	}
-
+	manpower = 1000000
+	buildings_max_level_factor = 1.000
+	state_category = pastoral
 	history = {
-		owner = TUR
-		add_claim_by = GRE
-		1913.5.30 = { owner = GRE }
+		owner = QIN
 		buildings = {
-			infrastructure = 3
-			9805 = { naval_base = 1 }
+			infrastructure = 1
 		}
+		add_core_of = TIB
+		add_core_of = QIN
+
+		1900.1.1 = {
+			set_state_flag = ENG_influence
+
+		}
+
+		1910.1.1 = { owner = TIB controller = TIB }
+		1950.1.1 = { owner = PRC controller = PRC }
+
 	}
 }

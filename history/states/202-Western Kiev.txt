@@ -1,33 +1,54 @@
 state = {
 	id = 202
 	name = "STATE_202"
-	local_supplies = 1.0
 	manpower = 2495352
+	buildings_max_level_factor = 1.000
+	resources = {
+		oil = 8.000
+		aluminium = 7.000
+	}
+
 	state_category = city
 
-	provinces = { 489 504 525 582 3494 3543 6497 9465 9543 9568 11557 }
-
-	resources = {
-		coal = 11
-		oil = 22
-	}
-
 	history = {
-		victory_points = { 525 25 }
 		owner = RUS
-		add_core_of = RUS
-
+		victory_points = {
+			525 25
+		}
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 2
-			air_base = 2
-			arms_factory = 1
+			infrastructure = 6
+			arms_factory = 2
+			fuel_silo = 1
+			air_base = 8
+
+		}
+		add_core_of = RUS
+		set_state_flag = RUS_core
+		add_core_of = SOV
+		add_core_of = UKR
+
+		1918.11.11 = { owner = UKR controller = UKR }
+		1919.1.1 = { owner = UKR controller = SOV }
+		1923.1.1 = { owner = SOV controller = SOV }
+		1942.1.1 = { owner = GER controller = GER }
+		1944.1.1 = { owner = SOV controller = SOV }
+		1992.1.1 = { owner = UKR controller = UKR }
+
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 1
+				industrial_complex = 2
+
+			}
+
 		}
 
-		1919.1.1 = {
-            owner = UKR
-            add_core_of = UKR
-            add_core_of = SOV
-        }
+
 	}
+
+	provinces = {
+		504 525 3494 3543 6497 9465 9568
+	}
+	
+	local_supplies=0.0	
 }

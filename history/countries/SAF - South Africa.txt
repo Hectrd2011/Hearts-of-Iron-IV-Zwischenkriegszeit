@@ -1,204 +1,430 @@
-﻿capital = 275
+RON_universal_setup = yes
 
-#-------------------------------------------------------
-#					GENERIC VALUES
-#-------------------------------------------------------
-set_fuel_ratio = 0.20
-set_research_slots = 3
+
+
+capital = 275
+oob = "SAF_1910"
+add_ideas = {
+	press_regulated
+	train_medium
+	education_budget5
+	health_budget5
+}
+
+if = {
+	limit = {
+		has_start_date < 1945.01.01
+	}
+	set_cosmetic_tag = SAF_DOMINION
+}
+
 set_stability = 0.6
+set_war_support = 0.1
+if = {
+	limit = {
+		has_dlc = "Together for Victory"
+	}
+	#add_ideas = SAF_history_of_segregation
+	add_to_tech_sharing_group = commonwealth_research
+	add_opinion_modifier = {
+		target = ENG
+		modifier = SAF_anti_british_sentiment
+	}
+}
+
 set_convoys = 25
+set_politics = {
+	ruling_party = democratic
+	last_election = "1910.1.1"
+	election_frequency = 60
+	elections_allowed = yes
+}
 
-#-------------------------------------------------------
-#					POLITICS & ARMY
-#-------------------------------------------------------
+set_popularities = {
+	democratic = 96
+	communism = 4
+}
 
-# LEADERS
-recruit_character = SAF_louis_botha
-recruit_character = SAF_christiaan_de_wet
-recruit_character = SAF_sydney_buxton
-recruit_character = SAF_herbert_gladstone
-
-# ARMY
-recruit_character = SAF_lukin
-recruit_character = SAF_smuts_jc
-recruit_character = SAF_van_deventer
-recruit_character = SAF_brink_aje
-recruit_character = SAF_delarey
-recruit_character = SAF_maritz
-recruit_character = SAF_fourie
-recruit_character = SAF_de_wet
-
-# ADVISORS
-recruit_character = SAF_henry_lukin
-recruit_character = SAF_daniel_malan
-recruit_character = SAF_andries_brink
-recruit_character = SAF_theodorus_truter
-recruit_character = SAF_john_collyer
-recruit_character = SAF_jan_smuts
-recruit_character = SAF_christiaan_beyers
-
-
-set_technology = {
-
-	# Train
-	ww1_train = 1
-
-	# Navy
-	ww1_battleship0 = 1
-	ww1_battleship0_mtg = 1
+create_country_leader = {
+	name = "Louis Botha"
+	desc = "POLITICS_LOUIS_BOTHA_DESC"
+	picture = "gfx/leaders/SAF/WW1/Portrait_South_Africa_Louis_Botha.dds"
 	
-	ww1_heavy_cruiser0 = 1
-	ww1_heavy_cruiser0_mtg = 1 # heavy_cruiser_1890 (Armored Cruiser I)
-	ww1_heavy_cruiser1 = 1
-	ww1_heavy_cruiser1_mtg = 1 # heavy_cruiser_1900 (Armored Cruiser II)
+	ideology = conservatism
+}
 
-	ww1_light_cruiser0 = 1
-	ww1_light_cruiser0_mtg = 1 # light_cruiser_1890 (Protected Cruiser I)
-	ww1_light_cruiser1 = 1
-	ww1_light_cruiser1_mtg = 1 # light_cruiser_1900 (Protected Cruiser II)
+create_country_leader = {
+	name = "Louis Weichardt"
+	picture = "gfx/leaders/SAF/Louis_Weichardt.tga"
+	
+	ideology = nazism
+}
 
-	ww1_destroyer0 = 1
-	ww1_destroyer0_mtg = 1 # destroyer_1890 (Torpedo Boat I)
-	ww1_destroyer1 = 1
-	ww1_destroyer1_mtg = 1 # destroyer_1900 (Destroyer I)
-	ww1_destroyer2 = 1
-	ww1_destroyer2_mtg = 1 # destroyer_1906 (Destroyer II)
+create_country_leader = {
+	name = "Moses Kotane"
+	desc = "POLITICS_MOSES_KOTANE_DESC"
+	picture = "gfx/leaders/SAF/Portrait_South_Africa_Moses_Kotane.dds"
+	
+	ideology = marxism
+}
 
-	ww1_moduleMTG_mines = 1
-	ww1_moduleMTG_mines_mtg = 1 # Mines
-
-	ww1_submarine0 = 1
-	ww1_submarine0_mtg = 1 # coastal_submarine_1900 (Coastal Submarine 1900, first available Submarine)
-
-	transport = 1
-	transport_mtg = 1 # Naval Transport
+create_country_leader = {
+	name = "D. F. Malan"
+	desc = "POLITICS_DF_MALAN_DESC"
+	picture = "GFX_SAF_daniel_malan" #Portrait_South_Africa_Daniel_Malan.dds
+	
+	ideology = centrism
+	traits = {
+		headstrong
+	}
 }
 
 1910.1.1 = {
-	oob = "SAF_1910"
-
-	#-------------------------------------------------------
-	#							NF
-	#-------------------------------------------------------
-
-	#-------------------------------------------------------
-
 	set_technology = {
-
-		# Infantry
-		infantry_weapons = 1
-		support_weapons = 1
-		infantry_binoculars = 1
-		motorised_infantry = 1
-		ww1_ambulance1 = 1
-
-		# Support
 		tech_support = 1
-		tech_engineers = 1
-		tech_recon = 1
-
-		# Artillery
+		early_infantry_weapons = 1
 		light_field_gun1 = 1
 		heavy_field_gun1 = 1
-
-		# Engineering
-		electronic_mechanical_engineering = 1
+		# Navy
+		ww1_destroyer0 = 1
+		ww1_destroyer1 = 1
+		ww1_light_cruiser1 = 1
+		ww1_light_cruiser0 = 1
+		ww1_battlecruiser0 = 1
+		ww1_battleship0 = 1
+		ww1_submarine1 = 1
+		ww1_coastal_submarine1 = 1
+		transport = 1
+		horses = 1
+		ww1_electronic_mechanical_engineering = 1
 	}
+}
 
+1914.1.1 = {
+	oob = "SAF_1914"
+}
+
+
+1919.1.1 = {
+	create_country_leader = {
+		name = "Jan Smuts"
+		picture = "gfx/leaders/SAF/Portrait_SouthAfrica_Jan_Smuts.dds"
+		
+		ideology = liberalism
+	}
+}
+
+1933.1.1 = {
+	set_air_oob = "SAF_1936_air_bba"
+	oob = "SAF_1933"
 	set_politics = {
-	    ruling_party = democratic
-	    last_election = "1910.9.15"
-	    election_frequency = 60
-	    elections_allowed = yes
+		ruling_party = democratic
+		last_election = "1933.1.1"
+		election_frequency = 60
+		elections_allowed = yes
 	}
 	set_popularities = {
-	    democratic = 100
-	    fascism = 0
-	    communism = 0
-	    neutrality = 0
+		democratic = 75
+		fascism = 20
+		communism = 5
+	}
+	create_country_leader = {
+		name = "J. B. M. Hertzog"
+		desc = "POLITICS_J_B_M_HERTZOG_DESC"
+		picture = "GFX_SAF_james_hertzog"
+		
+		ideology = conservatism
+	}
+
+	create_country_leader = {
+		name = "D. F. Malan"
+		desc = "POLITICS_DF_MALAN_DESC"
+		picture = "gfx/leaders/SAF/Portrait_South_Africa_Daniel_Malan.dds"
+		
+		ideology = fascism_ideology
+	}
+
+	create_country_leader = {
+		name = "Moses Kotane"
+		desc = "POLITICS_MOSES_KOTANE_DESC"
+		picture = "gfx/leaders/SAF/Portrait_South_Africa_Moses_Kotane.dds"
+		
+		ideology = marxism
+	}
+
+	create_country_leader = {
+		name = "D. F. Malan"
+		desc = "POLITICS_DF_MALAN_DESC"
+		picture = "GFX_SAF_daniel_malan" #Portrait_South_Africa_Daniel_Malan.dds
+		
+		ideology = centrism
+		traits = {
+			headstrong
+		}
+	}
+
+
+	if = {
+		limit = {
+			has_start_date > 1930.01.01
+			has_start_date < 1948.01.01
+		}
+
+		add_ideas = SAF_history_of_segregation
+		add_ideas = SAF_worker_restrictions
 	}
 
 }
 
-
-1914.1.1 = {
-	oob = "SAF_1914"
-
-
-	#-------------------------------------------------------
-	#							NF
-	#-------------------------------------------------------
-
-	#Army
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = ww1_artillery_effort_1
-	complete_national_focus = doctrine_effort
-	complete_national_focus = ww1_trenchwarfare
-
-	#Industrial
-	complete_national_focus = industrial_effort
-	complete_national_focus = infrastructure_effort
-
-	#Political
-	complete_national_focus = political_effort
-
-	#Diplomatic
-	complete_national_focus = ww1_diplomatic_effort
-	complete_national_focus = neutrality_focus
-	complete_national_focus = ww1_military_reserve
-	
-
-	#-------------------------------------------------------
-
+1936.1.1 = {
+	set_air_oob = "SAF_1936_air_bba"
+	oob = "SAF_1936"
+	# Starting tech
 	set_technology = {
-
-		# Infantry
-		ww1infantry_weapons1 = 1
-		support_weapons = 1
-		infantry_binoculars = 1
-		infantry_grenade = 1
-		motorised_infantry = 1
-		ww1_ambulance1 = 1
-
-		# Support
+		infantry_weapons = 1
+		infantry_weapons1 = 1
 		tech_support = 1
 		tech_engineers = 1
 		tech_recon = 1
-		tech_military_police = 1
-		tech_maintenance_company = 1
-		tech_field_hospital = 1
-		tech_logistics_company = 1
-
-		# Armor
-		gwtank = 1 # 1910 Armored Car
-
-		# Artillery
-		light_field_gun1 = 1
-		bonus_artillery1 = 1
-		heavy_field_gun1 = 1
-		bonus_bertha1 = 1
-
-		# Air
-		ww1_fighter1 = 1
-
-		# Engineering
-		electronic_mechanical_engineering = 1
-
-		# Industry
+		gw_artillery = 1
+		basic_light_tank = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		fuel_silos = 1
+		early_destroyer = 1
+		transport = 1
 	}
-
+	if = {
+		limit = {
+			has_dlc = "No Step Back"
+		}
+		set_technology = {
+			basic_light_tank_chassis = 1
+		}
+	}
 	set_politics = {
-	    ruling_party = democratic
-	    last_election = "1910.9.15"
-	    election_frequency = 60
-	    elections_allowed = yes
+		ruling_party = democratic
+		last_election = "1933.5.17"
+		election_frequency = 60
+		elections_allowed = yes
 	}
 	set_popularities = {
-	    democratic = 100
-	    fascism = 0
-	    communism = 0
-	    neutrality = 0
+		democratic = 55
+		neutrality = 25
+		fascism = 15
+		communism = 5
+	}
+	create_country_leader = {
+		name = "J. B. M. Hertzog"
+		desc = "POLITICS_J_B_M_HERTZOG_DESC"
+		picture = "GFX_SAF_james_hertzog"
+		
+		ideology = conservatism
 	}
 
+
+}
+
+1939.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1938.5.18"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 100
+	}
+	# Took office 5 days after this date
+	create_country_leader = {
+		name = "Jan Smuts"
+		desc = "POLITICS_JAN_SMUTS_DESC"
+		picture = "gfx/leaders/SAF/Portrait_SouthAfrica_Jan_Smuts.dds"
+		
+		ideology = conservatism
+	}
+}
+
+1939.1.1 = {
+	oob = "SAF_1939"
+	set_naval_oob = "SAF_1939_naval_legacy"
+}
+
+1940.1.1 = {
+	oob = "SAF_1940"
+	set_naval_oob = "SAF_1940_naval_legacy"
+}
+
+1941.1.1 = {
+	oob = "SAF_1941"
+	set_naval_oob = "SAF_1941_naval_legacy"
+}
+
+1944.1.1 = {
+	oob = "SAF_1944"
+	if = {
+		limit = {
+			has_start_date > 1944.01.01
+			has_start_date < 1995.01.01
+		}
+		set_cosmetic_tag = SAF_OLD
+	}
+}
+
+1949.1.1 = {
+	oob = "SAF_1949"
+	set_politics = {
+		ruling_party = fascism
+		last_election = "1949.1.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		fascism = 60
+		democratic = 40
+	}
+	create_country_leader = {
+		name = "J. G. Strijdom"
+		picture = "gfx/leaders/SAF/CW/South_Africa_J_G_Strijdom.dds"
+		
+		ideology = white_nationalism
+	}
+	create_country_leader = {
+		name = "Nelson Mandela"
+		picture = "CW/Nelson_Mandela.dds"
+		expire = "2013.12.5"
+		ideology = socialism
+	}
+}
+
+1960.1.1 = {
+	set_politics = {
+		ruling_party = fascism
+		last_election = "1960.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		fascism = 100
+	}
+	create_country_leader = {
+		name = "Hendrik Verwoerd"
+		picture = "gfx/leaders/SAF/CW/South_Africa_Hendrik_Verwoerd.dds"
+		
+		ideology = white_nationalism
+	}
+}
+
+1970.1.1 = {
+	oob = "SAF_1970"
+	set_politics = {
+		ruling_party = fascism
+		last_election = "1970.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		fascism = 100
+	}
+	create_country_leader = {
+		name = "Jim Fouche"
+		picture = "gfx/leaders/SAF/CW/SouthAfrica_JimFouche.dds"
+		
+		ideology = white_nationalism
+	}
+}
+
+1980.1.1 = {
+	create_country_leader = {
+		name = "P. W. Botha"
+		picture = "CW/SouthAfrica_PWBotha.dds"
+		
+		ideology = white_nationalism
+	}
+}
+
+1990.1.1 = {
+
+	if = {
+		limit = {
+			has_start_date > 1994.01.01
+		}
+		set_cosmetic_tag = SAF_NEW
+	}
+
+	create_country_leader = {
+		name = "F. W. de Klerk"
+		picture = "CW/South_Africa_F._W._de_Klerk.dds"
+		
+		ideology = white_nationalism
+	}
+}
+
+
+2000.1.1 = {
+	oob = "SAF_2000"
+	set_naval_oob = "SAF_2000_naval_legacy"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1999.6.2"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+	set_popularities = {
+		neutrality = 5
+		democratic = 95
+	}
+	create_country_leader = {
+		name = "Thabo Mbeki"
+		picture = "gfx/leaders/SAF/MD/South_Africa_Thabo_Mbeki.dds"
+		
+		ideology = socialism
+	}
+}
+2008.1.1 = {
+	create_country_leader = {
+		name = "Thabo Mbeki"
+		picture = "gfx/leaders/SAF/MD/South_Africa_Thabo_Mbeki.dds"
+		
+		ideology = socialism
+	}
+}
+2016.1.1 = {
+	oob = "SAF_2016"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2014.5.7"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+	set_popularities = {
+		neutrality = 1
+		democratic = 99
+	}
+
+	create_country_leader = {
+		name = "Cyril Ramaphosa"
+		picture = "gfx/leaders/SAF/MD/SouthAfrica_CyrilRamaphosa.dds"
+		
+		ideology = socialism
+	}
+
+}
+
+2020.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "2020.1.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		neutrality = 100
+	}
+	create_country_leader = {
+		name = "Cyril Ramaphosa"
+		picture = "gfx/leaders/SAF/MD/SAF_Cyril_Ramaphosa_African_Nationalism.dds"
+		
+		ideology = african_nationalism
+	}
 }

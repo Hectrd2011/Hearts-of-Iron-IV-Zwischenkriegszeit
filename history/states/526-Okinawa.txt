@@ -1,29 +1,40 @@
 state = {
-	id=526
-	name="STATE_526"
-	local_supplies = 1.0 manpower = 578000
-	state_category=small_island
-	provinces={ 1123 7115 10124 11932 }
-	resources={
-		wood=0
-		}
-	history={
-		victory_points={ 11932 10 }
-		owner=JAP
-		add_core_of=JAP
-		1936.1.1={ 
-			owner=JAP
-			add_core_of=JAP
-			victory_points={ 11932 10 }
-			buildings={
-				infrastructure=2
-				air_base=3
-				11932={ naval_base=3  }
-				}
+	id = 526
+	name = "STATE_526"
+
+	history = {
+		owner = JAP
+		add_core_of = JAP
+		add_core_of = RYU
+		buildings = {
+			infrastructure = 3
+			air_base = 3
+			11932 = {
+				naval_base = 3
+
 			}
-		buildings={
-			infrastructure=2
-			11932={ naval_base=3  }
-			}
+
 		}
+		victory_points = {
+			11932 10
+		}
+
+		1946.1.1 = {
+			owner = USA
+			controller = USA
+		}
+
+		1971.1.1 = {
+			owner = JAP
+			controller = JAP
+		}
+
 	}
+
+	provinces = {
+		10124 11932
+	}
+	manpower = 577000
+	buildings_max_level_factor = 1.000
+	state_category = small_island
+}

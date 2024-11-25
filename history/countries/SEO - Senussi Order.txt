@@ -1,0 +1,28 @@
+RON_universal_setup = yes
+  
+
+capital = 277
+
+oob = "SEN_1914"
+
+set_convoys = 45
+
+set_politics = {
+	ruling_party = islamism
+	last_election = "1907.1.12"
+	election_frequency = 60
+	elections_allowed = no
+}
+
+set_popularities = {
+	islamism = 80
+	democratic = 5
+	communism = 15
+}
+
+create_country_leader = {
+	name = "Ahmed Sharif as-Senussi"
+	picture = "Portrait_Senussi_Order_Ahmed_Sharif_as_Senussi.dds"
+	
+	ideology = islamic_authoritarian
+}

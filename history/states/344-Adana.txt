@@ -1,39 +1,47 @@
-state = {
+
+state={
 	id=344
 	name="STATE_344"
-	local_supplies = 1.0 manpower = 727198
-	state_category=town
-	provinces={ 806 886 3889 3921 6813 6956 9893 11746 11810 }
-	resources={
-		wood=0
-		}
-	history={
-		victory_points={ 9893 3 }
-		victory_points={ 11746 1 }
-		owner=TUR
-		add_core_of=TUR
-		1936.1.1={ 
-			owner=TUR
-			add_core_of=TUR
-			victory_points={ 9893 3 }
-			victory_points={ 11746 1 }
-			buildings={
-				infrastructure=3
-				industrial_complex=2
-				11746={ naval_base=3 }
-				}
-			}
-		buildings={
-			infrastructure=3
-			industrial_complex=2
-			11746={ naval_base=3 }
-			}
-		1919.1.1 = {
-            add_core_of = TUK
 
-            TUK = {
-				set_province_controller = 3921
+	history={
+		owner = OTT
+		victory_points = {
+			11746 1 
+		}
+		victory_points = {
+			886 1 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			11746 = {
+				naval_base = 3
+
 			}
-        }
+
+		}
+		add_core_of = TUR
+		add_core_of = OTT
+		1910.1.1 = {
+			owner = OTT
+			controller = OTT
+
+		}
+		1920.1.1 = {
+			owner = TUR
+			controller = TUR
+
+		}
+		1919.7.1 = {
+			owner = FRA
+			controller = FRA
 		}
 	}
+
+	provinces={
+		806 886 3921 6956 11746 
+	}
+	manpower=225154
+	buildings_max_level_factor=1.000
+	state_category=town
+}

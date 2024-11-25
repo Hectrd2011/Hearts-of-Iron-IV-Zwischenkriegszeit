@@ -1,87 +1,54 @@
-﻿capital = 329
+RON_universal_setup = yes
+  
+capital = 329
+oob = "TAN_1936"
+add_ideas = {
+	limited_conscription
+}
 
-oob = "TAN_1910"
-
-set_technology = { 
-	light_field_gun1 = 1
-	 
-	heavy_field_gun1 = 1
-
-	motorised_infantry = 1
-	electronic_mechanical_engineering = 1
-	infantry_weapons = 1
-
-	transport = 1
-	transport_mtg = 1
-
-	tech_support = 1
-	tech_engineers = 1
-	tech_recon = 1
+add_ideas = {
+	press_state
+	security_police_state
+	planned_economy
 }
 
 set_politics = {
-    ruling_party = communism
-    last_election = "1910.1.1"
-    election_frequency = 48
-    elections_allowed = no
+	ruling_party = neutrality
+	last_election = "1900.1.1"
+	election_frequency = 48
+	elections_allowed = no
 }
 
 set_popularities = {
-    democratic = 0
-    fascism = 0
-    communism = 100
-    neutrality = 0
+	neutrality = 100
 }
 
-add_ideas = { limited_conscription }
+create_country_leader = {
+	name = "Salchak Toka"
+	desc = "POLITICS_SALCHAK_TOKA_DESC"
+	picture = "portrait_tan_salchak_toka.dds"
+	
+	ideology = stalinism
+}
 
-set_stability = 0.75
+create_country_leader = {
+	name = "Donduk Kuular"
+	picture = "Donduk_Kuular.dds"
+	
+	ideology = buddhism
+}
 
-1914.1.1 = {
+1929.1.1 = {
 
-	oob="TAN_1914"
-
-	set_technology = { 
-
-		light_field_gun2 = 1
-		 
-		 
-		heavy_field_gun1 = 1
-		heavy_field_gun2=1
-		motorised_infantry = 1
-
-		electronic_mechanical_engineering = 1
-
-		mechanical_computing=1
-		computing_machine=1
-		basic_encryption=1
-		basic_decryption=1
-		basic_machine_tools=1
-		improved_machine_tools=1
-		concentrated_industry=1
-		concentrated_industry2=1
-		synth_oil_experiments=1
-		oil_plant=1
-		construction1 = 1
-		excavation1=1
-		construction2=1
-		excavation2=1
-		infantry_weapons = 1
-		ww1infantry_weapons1=1
-		marines=1
-		tech_mountaineers = 1
-
-		transport = 1
-	transport_mtg = 1
-
-		tech_support = 1
-		tech_engineers = 1
-		tech_recon = 1
-		tech_military_police=1
-		tech_maintenance_company=1
-		tech_field_hospital = 1
-		tech_logistics_company = 1
+	set_politics = {
+		ruling_party = communism
+		last_election = "1929.1.1"
+		election_frequency = 48
+		elections_allowed = no
 	}
-}
 
-create_country_leader={ name = TAN_donduk_kuular desc = TAN_donduk_kuular_DESC picture="gfx/hoi4tgw_portraits/TAN/country_leaders/TAN_donduk_kuular.dds" expire="1935.1.1" ideology=leninism traits = { } }
+	set_popularities = {
+		communism = 100
+	}
+
+}

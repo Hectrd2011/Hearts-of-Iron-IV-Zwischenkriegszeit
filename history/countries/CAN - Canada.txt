@@ -1,277 +1,511 @@
-﻿capital = 276
-
-#-------------------------------------------------------
-#					GENERIC VALUES
-#-------------------------------------------------------
-set_fuel_ratio = 0.20
-set_research_slots = 3
-set_stability = 0.9
-set_convoys = 100
-
-#-------------------------------------------------------
-#					POLITICS & ARMY
-#-------------------------------------------------------
-
-# LEADER
-recruit_character = CAN_wilfrid_laurier
-recruit_character = CAN_albert_grey
-recruit_character = CAN_regency_council
-recruit_character = CAN_crown_prince_arthur
-recruit_character = CAN_arthur_meighen
-recruit_character = CAN_robert_borden # LEADER IN 1914
-
-# GENERALS
-recruit_character = CAN_edwin_alderson
-recruit_character = CAN_boyle
-recruit_character = CAN_burstall_he
-recruit_character = CAN_currie_ja
-recruit_character = CAN_hartmcharg
-recruit_character = CAN_samuel_hughes
-recruit_character = CAN_hutton
-recruit_character = CAN_herbert_cyril_thacker
-recruit_character = CAN_lake
-recruit_character = CAN_louis_lipsett
-recruit_character = CAN_loomis_cb
-recruit_character = CAN_macdonell_ac
-recruit_character = CAN_meighen
-recruit_character = CAN_malcolm_mercer
-recruit_character = CAN_ogradyhaly
-recruit_character = CAN_otter
-recruit_character = CAN_radcliffe
-recruit_character = CAN_steele
-recruit_character = CAN_richard_turner
-recruit_character = CAN_tuxford
-recruit_character = CAN_cochrane # Field Marshal
-recruit_character = CAN_arthur_currie # Field Marshal
-
-# ADVISORS
-recruit_character = CAN_colin_mackenzie
-recruit_character = CAN_william_bishop
-recruit_character = CAN_charles_kingsmill
-recruit_character = CAN_george_halsey_perley
-recruit_character = CAN_william_white
-recruit_character = CAN_willoughby_gwatkin
-recruit_character = CAN_francis_stanley
-recruit_character = CAN_henry_ross
-recruit_character = CAN_francis_young
-recruit_character = CAN_lloyd_samuel_breadner
-recruit_character = CAN_tasker_cook
-recruit_character = CAN_george_pearkes
-recruit_character = CAN_john_murchie
-recruit_character = CAN_ian_a_mackenzie
-recruit_character = CAN_c_d_howe
-recruit_character = CAN_newton_wesley_rowell
-recruit_character = CAN_harold_edwards
-recruit_character = CAN_frederick_m_w_harvey
-recruit_character = CAN_harry_crerar
-recruit_character = CAN_robert_leckie
-recruit_character = CAN_james_ilsley
-recruit_character = CAN_kenneth_stuart
-recruit_character = CAN_leo_richer_lafleche
-recruit_character = CAN_andrew_mcnaughton
-recruit_character = CAN_george_jones
-recruit_character = CAN_louis_st_laurent
-recruit_character = CAN_raymond_collishaw
-recruit_character = CAN_guy_simonds
-recruit_character = CAN_gino_verchiella
-recruit_character = CAN_r_b_bennett
-recruit_character = CAN_alasdair_murray
-recruit_character = CAN_george_volkoff
-recruit_character = CAN_george_croil
-recruit_character = CAN_percy_nelles
-
-set_technology = {
-
-	# Train
-	ww1_train = 1
-
-	# Navy
-	ww1_battleship0 = 1
-	ww1_battleship0_mtg = 1
-	
-	ww1_battleship1 = 1
-	ww1_battleship1_mtg = 1
-	
-	###ww1_battleship2 = 0 #  ww1_battleship_1906 (Dreadnought I)
-	###ww1_battleship3 = 0 #  ww1_battleship_1910 (Dreadnought II)
-	###ww1_battleship4 = 0 #  ww1_battleship_1914 (Dreadnought III)
-
-	###ww1_battlecruiser1 = 0 # ww1_battlecruiser_1906 (Battlecruiser I)
-	###ww1_battlecruiser2 = 0 # ww1_battlecruiser_1910 (Battlecruiser II)
-	###ww1_battlecruiser3 = 0 # ww1_battlecruiser_1910 (Battlecruiser III)
-
-	ww1_heavy_cruiser0 = 1
-	ww1_heavy_cruiser0_mtg = 1 # heavy_cruiser_1890 (Armored Cruiser I)
-	ww1_heavy_cruiser1 = 1
-	ww1_heavy_cruiser1_mtg = 1 # heavy_cruiser_1900 (Armored Cruiser II)
-
-	ww1_light_cruiser0 = 1
-	ww1_light_cruiser0_mtg = 1 # light_cruiser_1890 (Protected Cruiser I)
-	ww1_light_cruiser1 = 1
-	ww1_light_cruiser1_mtg = 1 # light_cruiser_1900 (Protected Cruiser II)
-	###ww1_light_cruiser2 = 0 # light_cruiser_1906 (Light Cruiser I)
-	###ww1_light_cruiser3 = 0 # light_cruiser_1910 (Light Cruiser II)
-	###ww1_light_cruiser4 = 0 # light_cruiser_1914 (Light Cruiser III)
-
-	ww1_destroyer0 = 1
-	ww1_destroyer0_mtg = 1 # destroyer_1890 (Torpedo Boat I)
-	ww1_destroyer1 = 1
-	ww1_destroyer1_mtg = 1 # destroyer_1900 (Destroyer I)
-	ww1_destroyer2 = 1
-	ww1_destroyer2_mtg = 1 # destroyer_1906 (Destroyer II)
-	###ww1_destroyer3 = 0 # destroyer_1910 (Destroyer III)
-	###ww1_destroyer4 = 0 # destroyer_1914 (Destroyer IV)	
-
-	ww1_moduleMTG_mines = 1
-	ww1_moduleMTG_mines_mtg = 1 # Mines
-
-	ww1_submarine0 = 1
-	ww1_submarine0_mtg = 1 # coastal_submarine_1900 (Coastal Submarine 1900, first available Submarine)
-	###ww1_submarine1 = 0 # submarine_1906 (Submarine I)
-	###ww1_submarine2 = 0 # submarine_1910 (Submarine II)
-	###ww1_submarine3 = 0 # submarine_1914 (Submarine III)
-
-	transport = 1
-	transport_mtg = 1 # Naval Transport
+RON_universal_setup = yes
+capital = 276
+oob = "CAN_1900"
+if = {
+	limit = {
+		has_start_date < 1945.01.01
+	}
+	set_cosmetic_tag = CAN_DOMINION
 }
+
+if = {
+	limit = {
+		has_start_date > 1944.01.01
+		has_start_date < 1966.01.01
+	}
+	set_cosmetic_tag = CAN_OLD
+}
+
+add_ideas = {
+	export_focus
+	tax_average
+	tariffs_average
+	security_liberty_first
+	civilian_economy
+	press_free
+	private_control
+	fdi_regulated
+	train_medium
+	officer_train_low
+	education_budget5
+	health_budget5
+	foreign_neutral
+	foreign_volunteers
+	police_budget5
+}
+
+set_research_slots = 3
+set_country_flag = monroe_doctrine
+set_stability = 0.8
+set_war_support = 0.1
+set_convoys = 100
+set_stability = 0.75
+if = {
+	limit = {
+		has_dlc = "Together for Victory"
+	}
+	add_to_tech_sharing_group = commonwealth_research
+}
+
+promote_character = CAN_wilfrid_laurier
+recruit_character = CAN_wilfrid_laurier
+recruit_character = CAN_robert_borden
+recruit_character = CAN_julian_byng
+recruit_character = CAN_louis_lipsett
+recruit_character = CAN_malcolm_mercer
+recruit_character = CAN_herbert_cyril_thacker
+recruit_character = CAN_edwin_alderson
+recruit_character = CAN_richard_turner
+recruit_character = CAN_newton_wesley_rowell
+
+recruit_character = CAN_first_nations_council
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1896.7.11"
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 92
+	neutrality = 8
+}
+
+1905.1.1 = {
+ recruit_character = CAN_r_b_bennett
+}
+recruit_character = CAN_george_volkoff
 
 1910.1.1 = {
 	oob = "CAN_1910"
-
-	#-------------------------------------------------------
-	#							NF
-	#-------------------------------------------------------
-
-	#-------------------------------------------------------
-
-	set_technology = {
-
-		# Infantry
-		infantry_weapons = 1
-		support_weapons = 1
-		infantry_binoculars = 1
-		motorised_infantry = 1
-		ww1_ambulance1 = 1
-
-
-		# Support
-		tech_support = 1
-		tech_engineers = 1
-		tech_recon = 1
-		#tech_military_police = 1
-		#tech_maintenance_company = 1
-		#tech_field_hospital = 1
-		#tech_logistics_company = 1
-
-		# Armor
-
-		# Artillery
-		light_field_gun1 = 1
-		heavy_field_gun1 = 1
-
-		# Air
-
-		# Engineering
-		electronic_mechanical_engineering = 1
-
-		# Industry
-	}
-
 	set_politics = {
 		ruling_party = democratic
-		last_election = "1908.10.26" 
-		election_frequency = 48 
+		last_election = "1907.1.12"
+		election_frequency = 60
 		elections_allowed = yes
 	}
+
 	set_popularities = {
-		fascism = 2
-		communism = 0
-		democratic = 62
-		neutrality = 36
+		democratic = 92
+		neutrality = 8
 	}
 
-	add_ideas = {
-		CAN_idea_quebec_tension
-		CAN_broken_economy
-		CAN_broken_infrastructure
-		CAN_broken_industry
+	set_technology = {
+		tech_support = 1
+		early_infantry_weapons = 1
+		light_field_gun1 = 1
+		heavy_field_gun1 = 1
+		# Navy
+		ww1_destroyer0 = 1
+		ww1_destroyer1 = 1
+		ww1_light_cruiser1 = 1
+		ww1_light_cruiser0 = 1
+		ww1_battlecruiser0 = 1
+		ww1_battleship0 = 1
+		ww1_submarine1 = 1
+		ww1_coastal_submarine1 = 1
+		transport = 1
+		horses = 1
+		ww1_electronic_mechanical_engineering = 1
 	}
+
+	recruit_character = CAN_arthur_currie
+	recruit_character = CAN_robert_manion
+	recruit_character = CAN_lindsay_gordon
+	recruit_character = CAN_raymond_collishaw	
+	recruit_character = CAN_lloyd_samuel_breadner
+
+	recruit_character = CAN_j_s_woodsworth
 }
 
 1914.1.1 = {
 	oob = "CAN_1914"
 
-	# Robert Borden is the Leader in 1914
 	promote_character = CAN_robert_borden
+	recruit_character = CAN_robert_leckie
+	recruit_character = CAN_ht_bailliegrohman
+	recruit_character = CAN_percival_john_montague
+}
 
-	#-------------------------------------------------------
-	#							NF
-	#-------------------------------------------------------
+1919.1.1 = {
 
-	unlock_national_focus = CAN_political
-	complete_national_focus = CAN_industrial_tree
-	complete_national_focus = CAN_army_focus
-	unlock_national_focus = CAN_navy_focus
-	unlock_national_focus = CAN_air_focus	
+	retire_character = CAN_malcolm_mercer
+	retire_character = CAN_louis_lipsett	
 
-	#-------------------------------------------------------
+	recruit_character = CAN_james_stanley_scott
+	recruit_character = CAN_harold_edwards	
+	recruit_character = CAN_george_croil
+	recruit_character = CAN_george_jones
+	recruit_character = CAN_alasdair_murray
+	recruit_character = CAN_percy_nelles
+	recruit_character = CAN_george_pearkes
+	recruit_character = CAN_john_murchie
+	recruit_character = CAN_james_ilsley
+	recruit_character = CAN_leo_richer_lafleche
+	recruit_character = CAN_kenneth_stuart
+	recruit_character = CAN_leonard_w_murray
+	recruit_character = CAN_charles_foulkes
 
+	recruit_character = CAN_mackenzie_king
+}
+
+1925.1.1 = {
+	recruit_character = CAN_ian_a_mackenzie
+	recruit_character = CAN_andrew_mcnaughton
+	recruit_character = CAN_harry_crerar
+	recruit_character = CAN_harry_dewolf
+	recruit_character = CAN_thomas_victor_anderson
+	recruit_character = CAN_rod_keller
+
+	retire_character = CAN_wilfrid_laurier
+
+	recruit_character = CAN_adrien_arcand
+	recruit_character = CAN_louis_st_laurent
+	recruit_character = CAN_tim_buck
+}
+
+1930.1.1 = {
+	recruit_character = CAN_c_d_howe
+	recruit_character = CAN_james_d_prentice
+	recruit_character = CAN_john_whitmore
+	recruit_character = CAN_harry_foster
+}
+
+1933.1.1 = {
+	set_air_oob = "CAN_1936_air_bba"
+	oob = "CAN_1933"
+	set_naval_oob = "CAN_1933_naval_legacy"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1930.8.7"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 92
+		neutrality = 8
+	}
+
+	if = {
+		limit = {
+			has_start_date > 1930.01.01
+			has_start_date < 1949.01.01
+		}
+		add_ideas = canada_tepid_war_response
+		add_ideas = quebecois_no_conscription
+	}
+
+	promote_character = CAN_r_b_bennett
+
+	recruit_character = CAN_guy_simonds
+	recruit_character = CAN_chuck_crate
+	recruit_character = CAN_william_kashtan
+	recruit_character = CAN_george_volkoff
+	recruit_character = CAN_bert_hoffmeister
+
+	retire_character = CAN_julian_byng
+	retire_character = CAN_richard_turner
+	retire_character = CAN_arthur_currie
+	retire_character = CAN_edwin_alderson
+	retire_character = CAN_herbert_cyril_thacker
+	retire_character = CAN_robert_borden
+}
+
+1936.1.1 = {
+	set_air_oob = "CAN_1936_air_bba"
+	oob = "CAN_1936"
+	set_naval_oob = "CAN_1936_naval_legacy"
+	# Starting tech
 	set_technology = {
-
-		# Infantry
 		infantry_weapons = 1
-		ww1infantry_weapons1 = 1
-		support_weapons = 1
-		infantry_binoculars = 1
-		infantry_grenade = 1
-		motorised_infantry = 1
-		ww1_ambulance1 = 1
-
-		# Support
+		infantry_weapons1 = 1
 		tech_support = 1
 		tech_engineers = 1
 		tech_recon = 1
-		tech_military_police = 1
-		tech_maintenance_company = 1
-		tech_field_hospital = 1
-		tech_logistics_company = 1
-
-		# Armor
-		gwtank = 1 # 1910 Armored Car
-		gwtank__nostepback = 1
-
-		# Artillery
-		light_field_gun1 = 1
-		bonus_artillery1 = 1
-		heavy_field_gun1 = 1
-		bonus_bertha1 = 1
-
-		# Air
-		ww1_fighter1 = 1
-			bba_ww1_fighter1 = 1
-
-		# Engineering
-		electronic_mechanical_engineering = 1
-
-		# Industry
+		gw_artillery = 1
+		basic_light_tank = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
 	}
-
+	if = {
+		limit = {
+			has_dlc = "No Step Back"
+		}
+		set_technology = {
+			basic_light_tank_chassis = 1
+		}
+	}
 	set_politics = {
-	    ruling_party = democratic
-	    last_election = "1913.5.31"
-	    election_frequency = 48
-	    elections_allowed = yes
+		ruling_party = democratic
+		last_election = "1935.10.14"
+		election_frequency = 60
+		elections_allowed = yes
 	}
 	set_popularities = {
-	    democratic = 97
-	    fascism = 1
-	    communism = 1
-	    neutrality = 1
+		democratic = 98
+		fascism = 1
+		communism = 1
 	}
 
-	add_ideas = {
-		limited_conscription
+	### VARIANTS ###
+	# 1936 Start #
+	### Ship Variants ###
+	create_equipment_variant = {
+		name = "Sanguenay Class"
+		type = destroyer_1
+		upgrades = {
+			ship_torpedo_upgrade = 1
+			destroyer_engine_upgrade = 1
+			ship_ASW_upgrade = 1
+			ship_anti_air_upgrade = 1
+		}
+	}
+    promote_character = CAN_mackenzie_king
+	recruit_character = CAN_frederick_m_w_harvey
+	recruit_character = CAN_christopher_vokes
+	recruit_character = CAN_bruce_matthews
+	recruit_character = CAN_stuart_wood
+}
+
+1939.1.1 = {
+	oob = "CAN_1939"
+	set_naval_oob = "CAN_1939_naval_legacy"
+	recruit_character = CAN_john_rockingham
+	recruit_character = CAN_donald_williamson
+}
+
+1940.1.1 = {
+	oob = "CAN_1940"
+	set_naval_oob = "CAN_1940_naval_legacy"
+}
+
+1941.1.1 = {
+	oob = "CAN_1941"
+	set_naval_oob = "CAN_1941_naval_legacy"
+}
+
+1944.1.1 = {
+	oob = "CAN_1944"
+	retire_character = CAN_newton_wesley_rowell	
+}
+
+1949.1.1 = {
+	oob = "CAN_1949"
+	set_naval_oob = "CAN_1949_naval_legacy"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1948.11.15"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		democratic = 98
+		communism = 2
 	}
 
-	set_country_flag = grey_retired
+	promote_character = CAN_louis_st_laurent
+
+	retire_character = CAN_lloyd_samuel_breadner
+	retire_character = CAN_james_stanley_scott
+	retire_character = CAN_robert_manion
+	retire_character = CAN_lindsay_gordon
+	retire_character = CAN_raymond_collishaw
+	retire_character = CAN_harold_edwards	
+	retire_character = CAN_george_croil	
+	retire_character = CAN_george_jones	
+	retire_character = CAN_alasdair_murray	
+	retire_character = CAN_john_murchie
+	retire_character = CAN_james_ilsley
+	retire_character = CAN_andrew_mcnaughton
+	retire_character = CAN_harry_crerar
+	retire_character = CAN_robert_leckie
+	retire_character = CAN_kenneth_stuart
+	retire_character = CAN_james_d_prentice
+	retire_character = CAN_ht_bailliegrohman
+	retire_character = CAN_leonard_w_murray
+	retire_character = CAN_bert_hoffmeister
+	retire_character = CAN_thomas_victor_anderson
+	retire_character = CAN_r_b_bennett
+	retire_character = CAN_j_s_woodsworth
+
+	recruit_character = CAN_john_diefenbaker
+
+	create_country_leader = {
+		name = "Real Caouette"
+		picture = "gfx/leaders/CAN/CW/Canada_1970_Real_Caouette_Agrarianism.dds"
+		
+		ideology = agrarianism
+	}
+	create_country_leader = {
+		name = "William John Beattie"
+		picture = "gfx/leaders/CAN/CW/Canada_1970_William_John_Beattie_Neo_Nazism.dds"
+		
+		ideology = neo_nazism
+	}
+}
+
+1955.1.1 = {
+	retire_character = CAN_mackenzie_king
+	retire_character = CAN_rod_keller
+	retire_character = CAN_stuart_wood
+}
+
+1960.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1960.1.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 100
+	}
+
+	promote_character = CAN_william_kashtan
+	promote_character = CAN_john_diefenbaker
+	recruit_character = CAN_pierre_trudeau
+
+	retire_character = CAN_louis_st_laurent
+	retire_character = CAN_percy_nelles
+	retire_character = CAN_george_pearkes
+	retire_character = CAN_guy_simonds
+	retire_character = CAN_frederick_m_w_harvey
+	retire_character = CAN_c_d_howe
+	retire_character = CAN_leo_richer_lafleche
+	retire_character = CAN_ian_a_mackenzie
+	retire_character = CAN_harry_dewolf
+	retire_character = CAN_percival_john_montague
+	retire_character = CAN_charles_foulkes
+	retire_character = CAN_christopher_vokes
+	retire_character = CAN_bruce_matthews
+	retire_character = CAN_john_whitmore
+	retire_character = CAN_donald_williamson
+	retire_character = CAN_harry_foster
+}
+
+1965.1.1 = {
+	recruit_character = CAN_john_beattie
+	promote_character = CAN_john_beattie
+}
+
+1970.1.1 = {
+	oob = "CAN_1970"
+	set_naval_oob = "CAN_1970_naval_legacy"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1970.1.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 100
+	}
+	recruit_character = CAN_joe_clark
+	promote_character = CAN_pierre_trudeau
+    retire_character = CAN_adrien_arcand
+	retire_character = CAN_john_rockingham
+
+}
+
+1980.1.1 = {
+ 
+	retire_character = CAN_tim_buck
+	retire_character = CAN_chuck_crate
+	retire_character = CAN_john_diefenbaker
+
+	promote_character = CAN_joe_clark
+	recruit_character = CAN_brian_mulroney
+}
+
+1990.1.1 = {
+ promote_character = CAN_brian_mulroney
+}
+
+2000.1.1 = {
+	oob = "CAN_2000"
+	set_naval_oob = "CAN_2000_naval_legacy"
+
+    retire_character = CAN_william_kashtan 
+	retire_character = CAN_george_volkoff
+	retire_character = CAN_pierre_trudeau
+
+	create_country_leader = {
+		name = "Jean Chretien"
+		picture = "gfx/leaders/CAN/MD/Canada-Jean_Chretien.dds"
+		
+		ideology = liberalism
+	}
+	create_country_leader = {
+		name = "Don Andrews"
+		picture = "gfx/leaders/CAN/MD/Canada_2000_Don_Andrews_White_Nationalism.dds"
+		
+		ideology = white_nationalism
+	}
+	create_country_leader = {
+		name = "Miguel Figueroa"
+		picture = "gfx/leaders/CAN/MD/Canada_2000_Miguel_Figueroa_Marxism.dds"
+		
+		ideology = marxism
+	}
+	create_country_leader = {
+		name = "Paul Hellyer"
+		picture = "gfx/leaders/CAN/MD/Canada_2000_Paul_Hellyer_Nationalism.dds"
+		
+		ideology = nationalism
+	}
+
+
+}
+2008.1.1 = {
+	create_country_leader = {
+		name = "Stephen Harper"
+		picture = "gfx/leaders/CAN/MD/Canada_Stephen_Harper.dds"
+		
+		ideology = liberalism
+	}
+}
+
+2016.1.1 = {
+	oob = "CAN_2016"
+	set_naval_oob = "CAN_2016_naval_legacy"
+	create_country_leader = {
+		name = "Justin Trudeau"
+		picture = "gfx/leaders/CAN/MD/Canada_Justin_Trudeau.dds"
+		
+		ideology = liberalism
+	}
+	create_country_leader = {
+		name = "Travis Patron"
+		picture = "gfx/leaders/CAN/MD/Canada_2017_Travis_Patron_White_Nationalism.dds"
+		
+		ideology = white_nationalism
+	}
+	create_country_leader = {
+		name = "Elizabeth Rowley"
+		picture = "gfx/leaders/CAN/MD/Canada_2017_Elizabeth_Rowley_Marxism.dds"
+		
+		ideology = marxism
+	}
+	create_country_leader = {
+		name = "Maxime Bernier"
+		picture = "gfx/leaders/CAN/MD/Canda_2017_Maxime_Bernier_Nationalism.dds"
+		
+		ideology = nationalism
+	}
+}
+
+2020.1.1 = {
+
+   retire_character = CAN_brian_mulroney
+
+	create_country_leader = {
+		name = "Justin Trudeau"
+		picture = "gfx/leaders/CAN/MD/CAN_Justin_Trudeau_Liberalism.dds"
+		
+		ideology = liberalism
+	}
 }

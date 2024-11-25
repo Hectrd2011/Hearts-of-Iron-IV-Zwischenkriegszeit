@@ -1,24 +1,33 @@
 state = {
-	id=757
-	name="STATE_757"
-	local_supplies = 1.0 manpower=75000
-	state_category=rural
-	provinces={ 11774 11905 }
-	resources={
-		wood=0
+	id = 757
+	name = "STATE_757"
+
+	history = {
+		owner = QIN
+		buildings = {
+			infrastructure = 4
 		}
-	history={
-		owner=TUR
-		add_claim_by=BUL
-		add_core_of=GRE
-		1913.5.30 = { owner = BUL }
-		1936.1.1={ owner=GRE }
-		buildings={
-			infrastructure=3
-			}
-		1919.1.1 = {
-			owner = GRE
-        }
+		victory_points = {
+			5033 5
+		}
+		add_core_of = TIB
+		add_core_of = QIN
+
+
+		1900.1.1 = {
+			set_state_flag = ENG_influence
+
 		}
 
+		1910.1.1 = { owner = TIB controller = TIB }
+		1950.1.1 = { owner = PRC controller = PRC }
+
 	}
+
+	provinces = {
+		1991 2014 2098 4900 5018 5033 8121 10741 12807
+	}
+	manpower = 1000000
+	buildings_max_level_factor = 1.000
+	state_category = rural
+}

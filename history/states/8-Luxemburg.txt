@@ -1,40 +1,41 @@
-state = {
-    id = 8
-    name = "STATE_8"
-    local_supplies = 1.0
-    manpower = 214748
-    state_category = town
+state =
+{
+	id = 8
+	name = "STATE_8"
 
-    provinces = {
-        6583
-    }
-    resources = {
-        wood = 5
-        steel = 165
-    }
-    history = {
-        victory_points = {
-            6583 5
-        }
-        owner = LUX
-        add_core_of = LUX
+	state_category = town
 
-        1936.1.1 = {
-            owner = LUX
-            add_core_of = LUX
-            victory_points = {
-                6583 5
-            }
-            buildings = {
-                infrastructure=4
-                industrial_complex = 3
-                arms_factory = 1
-            }
-        }
-        buildings = {
-            infrastructure=4
-            industrial_complex = 1
-            arms_factory = 1
-        }
-    }
+	manpower = 294748
+	resources = {
+		steel = 5 # was: 8
+	}
+
+	history =
+	{
+		owner = LUX
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+			industrial_complex = 3
+		}
+		victory_points = { 6583 5 }
+		add_core_of = LUX
+
+		1941.1.1 = {
+			owner = GER
+			controller = GER
+		}
+
+		1945.1.1 = {
+			owner = LUX
+			controller = LUX
+		}
+
+
+	}
+
+	provinces =
+	{
+		6583 }
+		local_supplies=0.0 
 }

@@ -1,23 +1,31 @@
 state = {
-	id=738
-	name="STATE_738"
+	id = 738
+	name = "STATE_738"
 
-	history={
-		owner = INS
+	history = {
+		owner = HOL
 		add_core_of = INS
 		buildings = {
-			infrastructure=1
+			infrastructure = 1
+
 			4579 = {
 				naval_base = 1
 
 			}
+
+
 		}
+
+		1910.1.1 = { owner = INS controller = INS }
+		1942.1.1 = { owner = JAP controller = JAP }
+		1946.1.1 = { owner = INS controller = INS }
+
 	}
 
-	provinces={
-		4579 
+	provinces = {
+		4579
 	}
-	local_supplies = 1.0 manpower=36146
-	buildings_max_level_factor=1	
-	state_category="small_island"
+	manpower = 36146
+	buildings_max_level_factor = 1
+	state_category = "small_island"
 }

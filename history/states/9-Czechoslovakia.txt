@@ -1,40 +1,66 @@
-state = {
-    id = 9
-    name = "STATE_9" # Prague
-    local_supplies = 1.0
-    manpower = 4492600
-    state_category = large_city
 
-    provinces = {
-        445 494 583 3462 6418 6440 6592 9414 9421 9429 9541 9569 11542 11556
-    }
+state={
+	id=9
+	name="STATE_9"
+	resources={
+		steel=5.000
+	}
 
-    resources = {
-        wood = 19
-        coal = 17
-        steel = 1
-    }
+	history={
+		owner = AUH
+		victory_points = {
+			11542 30 
+		}
+		victory_points = {
+			6418 5 
+		}
+		victory_points = {
+			9569 5 
+		}
+		buildings = {
+			infrastructure = 7
+			arms_factory = 6
+			industrial_complex = 1
+			
+			air_base = 5
 
-    history = {
-        victory_points = {
-            11542 20
-        }
-        victory_points = {
-            6418 5
-        }
-        owner = AUH
-        add_core_of = CZE
-        add_core_of = AUH
+		}
+		add_core_of = CZE
+		add_core_of = CZR
+		add_core_of = AUH
+		1910.1.1 = {
+			owner = AUH
+			controller = AUH
 
-        buildings = {
-            11542 = { supply_node = 1 }
-            infrastructure = 4
-            industrial_complex = 2
-            arms_factory = 1
-        }
+		}
+		1918.11.11 = {
+			owner = CZE
+			controller = CZE
 
-        1919.1.1 = {
-            owner = CZE
-        }
-    }
+		}
+		1939.3.14 = {
+			owner = GER
+			controller = GER
+
+		}
+		1946.1.1 = {
+			owner = CZE
+			controller = CZE
+
+		}
+		1993.1.1 = {
+			owner = CZR
+			controller = CZR
+
+		}
+
+	}
+
+	provinces={
+		583 6418 6440 6592 9421 9429 9541 9569 11542 11556 13312 13314 13315 13316 
+	}
+	manpower=1641600
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=0.000
 }

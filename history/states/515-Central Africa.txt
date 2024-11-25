@@ -1,25 +1,28 @@
 state = {
 	id = 515
 	name = "STATE_515"
-	local_supplies = 1.0 manpower = 1482744
-	state_category = wasteland
+
+	state_category = pastoral
 	impassable = yes
-	buildings_max_level_factor = 1.000
-	#provinces = { 1473 1956 2068 3123 4897 4902 4913 4978 5136 7939 8028 8128 10758 10780 10805 10893 10917 13138 }
-	provinces = { 1956 4913 7939 8028 8128 10758 10780 10805 10917 }
-	resources = {
-		wood = 0
-	}
+
 	history = {
 		owner = FRA
-		1936.1.1 = { 
-			owner = FRA
-			buildings = {
-				infrastructure=1
-			}
-		}
+		add_core_of = NGR
 		buildings = {
-			infrastructure=1
+			infrastructure = 1
+
 		}
+
+		1941.1.1 = { owner = VIF controller = VIF add_claim_by = FRA }
+		1943.1.1 = { owner = FRA controller = FRA remove_claim_by = FRA }
+
+		1960.1.1 = { owner = NGR controller = NGR }
+
 	}
+
+	provinces = {
+		1956 4913 7939 8028 8128 10758 10780 10805 10917
+	}
+	manpower = 1456356
+	buildings_max_level_factor = 1.000
 }

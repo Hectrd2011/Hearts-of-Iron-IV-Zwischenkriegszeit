@@ -1,32 +1,40 @@
 state = {
-	id=659
-	name="STATE_659"
-	local_supplies = 1.0
-	manpower = 891505
-	state_category=pastoral
-	provinces={ 2029 4976 5074 8000 12821 12894 13079 }
-	resources={
-		wood=0
+	id = 659
+	name = "STATE_659"
+
+	history = {
+		owner = ENG
+		victory_points = {
+			5074 1
 		}
-	history={
-		victory_points={ 5074 1 }
-		owner=ENG
-		add_core_of=YEM
-		1936.1.1={ 
-			owner=ENG
-			add_core_of=YEM
-			victory_points={ 5074 1 }
-			buildings={
-				infrastructure=2
-				air_base=4
-				5074={ naval_base=3 }
-				8000={ naval_base=1 }
-				}
+		buildings = {
+			infrastructure = 3
+			air_base = 4
+			5074 = {
+				naval_base = 3
+
 			}
-		buildings={
-			infrastructure=2
-			5074={ naval_base=3 }
-			8000={ naval_base=1 }
-			}
+
 		}
+		add_core_of = YEM
+		add_core_of = SYE
+
+		1967.1.1 = {
+			owner = SYE
+			controller = SYE
+		}
+
+		1991.1.1 = {
+			owner = YEM
+			controller = YEM
+		}
+
 	}
+
+	provinces = {
+		2029 4976 5074 12821 12894 13079
+	}
+	manpower = 851302
+	buildings_max_level_factor = 1.000
+	state_category = pastoral
+}

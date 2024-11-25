@@ -1,178 +1,332 @@
 characters = {
-	HUN_tersztyanszky_von_nadas = {
-		name = HUN_tersztyanszky_von_nadas
-		portraits = {
-			army = {
-				large = GFX_Portrait_HUN_tersztyanszky_von_nadas
+
+HUN_gyorgy_jendrassik = {
+    name = HUN_gyorgy_jendrassik
+    portraits = {
+        army = {
+            large = GFX_portrait_HUN_gyorgy_jendrassik
+            small = GFX_idea_HUN_gyorgy_jendrassik
+        }
+    }
+    scientist = {
+        traits = { scientist_trait_jet_expert }
+        skills = {
+            specialization_air = 2
+        }
+        
+        visible = {
+            date < 1940.1.1
+            date > 1910.1.1
+        }
+    }
+    advisor = {
+        cost = 100
+        slot = theorist
+        idea_token = HUN_gyorgy_jendrassik
+        ledger = air
+        allowed = {
+            original_tag = HUN
+        }
+        available = {
+            if = {
+                limit = {
+                    has_dlc = "Gotterdammerung"
+                    OR = {
+                        # has_completed_focus = wuw_HUN_undercover_air_maneuvers
+                        # wuw_HUN_does_not_have_trianon = yes
+                    }
+                }
+            }
+        }
+        visible = {
+            date < 1940.1.1
+            date > 1910.1.1
+        }
+        traits = {
+            air_warfare_theorist
+        }
+        ai_will_do = {
+            base = 1
+        }
+    }
+}
+
+HUN_nicholas_straussler = {
+    name = HUN_nicholas_straussler
+    portraits = {
+        army = {
+            large = GFX_portrait_HUN_nicholas_straussler
+        }
+    }
+    scientist = {
+        traits = { scientist_trait_armored_specialist }
+        skills = {
+            specialization_land = 2
+        }
+        visible = {
+            date < 1940.1.1
+            date > 1910.1.1
+        }
+    }
+}
+
+HUN_asboth_oszkar = {
+    name = HUN_asboth_oszkar
+    portraits = {
+        army = {
+            large = GFX_portrait_HUN_asboth_oszkar
+        }
+    }
+    scientist = {
+        traits = { scientist_trait_helicopter_expert }
+        skills = {
+            specialization_air = 1
+        }
+        visible = {
+            date < 1940.1.1
+            date > 1910.1.1
+        }
+    }
+}
+
+HUN_leo_szilard = {
+    name = HUN_leo_szilard
+    portraits = {
+        army = {
+            large = GFX_portrait_HUN_leo_szilard
+        }
+    }
+    scientist = {
+        traits = { scientist_trait_nuclear_power_expert }
+        skills = {
+            specialization_nuclear = 2
+        }
+        visible = {
+            date < 1940.1.1
+            date > 1910.1.1
+        }
+    }
+}
+
+HUN_john_von_neumann = {
+    name = HUN_john_von_neumann
+    portraits = {
+        army = {
+            large = GFX_portrait_HUN_john_von_neumann
+        }
+    }
+    scientist = {
+        traits = { scientist_trait_nuclear_specialist }
+        skills = {
+            specialization_nuclear = 2
+        }
+        visible = {
+            date < 1940.1.1
+            date > 1910.1.1
+        }
+    }
+}
+
+HUN_edward_teller = {
+    name = HUN_edward_teller
+    portraits = {
+        army = {
+            large = GFX_portrait_HUN_edward_teller
+        }
+    }
+    scientist = {
+        traits = { scientist_trait_nuclear_warfare_expert }
+        skills = {
+            specialization_nuclear = 2
+        }
+        visible = {
+            date < 1940.1.1
+            date > 1910.1.1
+        }
+    }
+}
+
+HUN_laszlo_varga = {
+    name = HUN_laszlo_varga
+    portraits = {
+        army = {
+            large = GFX_portrait_generic_europe_male_04
+        }
+    }
+    scientist = {
+        traits = { scientist_trait_aircraft_specialist }
+        skills = {
+            specialization_air = 2
+        }
+        visible = {
+            date < 1940.1.1
+            date > 1910.1.1
+        }
+    }
+}
+
+   HUN_lajos_remenyi_schneller = {
+        name = "Lajos Remenyi Schneller"
+
+        advisor = {
+            slot = political_advisor
+            idea_token = HUN_lajos_remenyi_schneller
+            allowed = {
+				original_tag = HUN
 			}
-		}
-		corps_commander = {
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 41003
-		}
-	}
-	HUN_kolossvary_de_kolosvar = {
-		name = HUN_kolossvary_de_kolosvar
-		portraits = {
-			army = {
-				large = GFX_Portrait_HUN_kolossvary_de_kolosvar
+
+			visible = {
+				date > 1933.1.1
+				date < 1949.1.1
 			}
-		}
-		corps_commander = {
-			skill = 3
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 41004
-		}
-	}
-	HUN_von_hegedus = {
-		name = HUN_von_hegedus
-		portraits = {
-			army = {
-				large = GFX_Portrait_HUN_von_hegedus
+			available = {
+				date > 1933.1.1
+				date < 1949.1.1
 			}
-		}
-		corps_commander = {
-			skill = 2
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 41007
-		}
-	}
-	HUN_von_hoffman = {
-		name = HUN_von_hoffman
-		portraits = {
-			army = {
-				large = GFX_Portrait_HUN_von_hoffman
+
+			traits = { captain_of_industry }
+        }
+
+   }
+
+   HUN_kalman_daranyi = {
+        name = "Kalman Daranyi"
+
+        advisor = {
+            slot = political_advisor
+            idea_token = HUN_kalman_daranyi
+            allowed = {
+				original_tag = HUN
 			}
-		}
-		corps_commander = {
-			skill = 2
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 41008
-		}
-	}
-	HUN_von_mecenseffy = {
-		name = HUN_von_mecenseffy
-		portraits = {
-			army = {
-				large = GFX_Portrait_HUN_von_mecenseffy
+
+			visible = {
+				date > 1933.1.1
+				date < 1949.1.1
 			}
-		}
-		corps_commander = {
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 41009
-		}
-	}
-	HUN_tamasy_von_fogaras = {
-		name = HUN_tamasy_von_fogaras
-		portraits = {
-			army = {
-				large = GFX_Portrait_HUN_tamasy_von_fogaras
+			available = {
+				date > 1933.1.1
+				date < 1949.1.1
 			}
-		}
-		corps_commander = {
-			skill = 2
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 41010
-		}
-	}
-	HUN_bertalan = {
-		name = HUN_bertalan
-		portraits = {
-			army = {
-				large = GFX_Portrait_HUN_bertalan
+
+			traits = { smooth_talking_charmer }
+        }
+   }
+
+   HUN_jozsef_szell = {
+        name = "Joszef Szell"
+
+        advisor = {
+            slot = political_advisor
+            idea_token = HUN_jozsef_szell
+
+            allowed = {
+				original_tag = HUN
 			}
-		}
-		corps_commander = {
-			traits = {
-				commando
+
+			available = {
+				date > 1933.1.1
+				date < 1949.1.1
+				if = {
+					limit = { has_dlc = "Man the Guns" }
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
 			}
-			skill = 4
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 41012
-		}
-	}
-	HUN_poppr = {
-		name = HUN_poppr
-		portraits = {
-			army = {
-				large = GFX_Portrait_HUN_poppr
+
+			visible = {
+				date > 1933.1.1
+				date < 1949.1.1
 			}
-		}
-		corps_commander = {
-			skill = 2
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 41013
-		}
-	}
-	HUN_riedl = {
-		name = HUN_riedl
-		portraits = {
-			army = {
-				large = GFX_Portrait_HUN_riedl
+
+			traits = { democratic_reformer }
+        }
+   }
+
+   HUN_gyula_gombos_de_jakfa = {
+        name = "Gyula Gombos de Jafka"
+
+        advisor = {
+            slot = political_advisor
+            idea_token = HUN_gyula_gombos_de_jakfa
+
+            allowed = {
+				original_tag = HUN
 			}
-		}
-		corps_commander = {
-			skill = 2
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 41014
-		}
-	}
-	HUN_joseph_august = {
-		name = HUN_joseph_august
-		portraits = {
-			civilian = {
-				large = GFX_Portrait_HUN_joseph_august
+
+			available = {
+				date > 1933.1.1
+				date < 1949.1.1
+				if = {
+					limit = { has_dlc = "Man the Guns" }
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
 			}
-		}
-		country_leader = {
-			ideology = conservatism
-			expire = "1935.1.1.1"
-			id = -1
-		}
-	}
-	HUN_franz_ferdinand = {
-		name = HUN_franz_ferdinand
-		portraits = {
-			civilian = {
-				large = GFX_Portrait_HUN_franz_ferdinand
+
+			visible = {
+				date > 1933.1.1
+				date < 1949.1.1
 			}
-		}
-		country_leader = {
-			desc = AUH_franz_ferdinand_DESC
-			ideology = autocracy
-			traits = {
+
+			traits = { fascist_demagogue }
+
+        }
+   }
+
+   HUN_gusztav_jany = {
+        name = "Gustav Jany"
+
+        advisor = {
+            slot = high_command
+            idea_token = HUN_gusztav_jany
+
+            allowed = {
+				original_tag = HUN
 			}
-			expire = "1935.1.1"
-			id = -1
-		}
-	}
+
+			available = {
+				date > 1933.1.1
+				date < 1949.1.1
+			}
+
+			visible = {
+				date > 1933.1.1
+				date < 1949.1.1
+			}
+
+			traits = { army_armored_1 }
+
+			ai_will_do = {
+				factor = 1
+			}
+        }
+   }
+
+   HUN_dezso_laszlo = {
+        name = "Dezso Laszlo"
+
+        advisor = {
+            slot = high_command
+            idea_token = HUN_dezso_laszlo
+
+            allowed = {
+				original_tag = HUN
+			}
+
+			available = {
+				date > 1933.1.1
+				date < 1949.1.1
+			}
+
+			visible = {
+				date > 1933.1.1
+				date < 1949.1.1
+			}
+
+
+			traits = { army_regrouping_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+        }
+   }
 }

@@ -1,4 +1,4 @@
-﻿###################################################################
+###################################################################
 
 division_template = {
 	name = "Infantry Division"
@@ -27,25 +27,20 @@ division_template = {
 		cavalry = { x = 1 y = 0 }
 		cavalry = { x = 1 y = 1 }
 	}
-	priority = 0
 }
 
 ###################################################################
 
 units = {
-	division= { 
+	division = {
 		name = "Yemen Army"
 		location = 10840 # San'a'
-		division_template="Infantry Brigade"
+		division_template = "Infantry Brigade"
 		start_experience_factor = 0.05
 	}
-}
 
+}
 instant_effect = {
-	add_equipment_production = {
-		equipment = { type = infantry_equipment_0 creator = "YEM" }
-		requested_factories = 1
-		progress = 0.1
-		efficiency = 50
-	}
+	add_equipment_production = { equipment = { type = early_infantry_equipment_0 creator = "YEM" } requested_factories = 1 progress = 0.1 efficiency = 50 }
+
 }

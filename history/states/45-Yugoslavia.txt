@@ -1,28 +1,53 @@
 state = {
 	id = 45
-	name = "STATE_45" # Vojvodina
-	local_supplies = 1.0
-	manpower = 1026200
-	state_category = rural
-	provinces = { 619 3617 3623 9608 9621 }
-
-	resources = {
-		wood = 0
-		steel = 7
-	}
+	name = "STATE_45"
 
 	history = {
+		victory_points = {
+			619 3
+		}
 		owner = AUH
-		add_core_of = AUH
-		add_claim_by = HUN
-
 		buildings = {
-			infrastructure = 4
+			infrastructure = 6
+
+		}
+		add_core_of = YUG
+		add_core_of = SER
+		add_core_of = AUH
+		1910.1.1 = {
+			owner = AUH
+			controller = AUH
+		}
+		1918.11.11 = {
+			owner = YUG
+			controller = YUG
+			#remove_core_of = AUH
 		}
 
-		1919.1.1 = {
-            owner = YUG
-            add_core_of = YUG
-        }
+		1941.1.1 = {
+			owner = HUN
+			controller = HUN
+		}
+
+		1945.1.1 = {
+			owner = YUG
+			controller = YUG
+		}
+
+
+
+		2003.1.1 = {
+			owner = SER
+			controller = SER
+		}
+
 	}
+
+	provinces = {
+		619 3617 3623 9621
+	}
+	manpower = 320120
+	buildings_max_level_factor = 1.000
+	state_category = rural
+	local_supplies=0.0 
 }
