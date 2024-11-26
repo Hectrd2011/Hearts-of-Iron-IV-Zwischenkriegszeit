@@ -30,11 +30,6 @@ spriteType = {
 		texturefile = "gfx/interface/ideas/GER/RON_German_Heer.dds"
 	}
 	
-	SpriteType = {
-		name = "GFX_hoi4tgw_ger_honor"
-		texturefile = "gfx/interface/goals/ww1_ger_honor.dds"
-	}
-
 	spriteType = {
 		name = "GFX_idea_RON_German_Luftwaffe"
 		texturefile = "gfx/interface/ideas/GER/RON_German_Luftwaffe.dds"
